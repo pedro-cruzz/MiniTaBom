@@ -1,0 +1,4801 @@
+{
+  "formato": "statlab-inspecao-instalacao",
+  "versao": 1,
+  "data_utc": "2026-11-03T21:22:15.518646+00:00",
+  "raiz": "C:\\Program Files\\Minitab\\Minitab 22",
+  "operacao": "Leitura estática; nenhum arquivo da instalação foi alterado ou executado",
+  "produto": "Minitab 22",
+  "versao_produto": "22.6.0.0",
+  "fonte_versao": "regid.1994-02.com.minitab_Minitab 22_22.6.0.0.swidtag",
+  "arquivos": 209,
+  "bytes": 793122481,
+  "extensoes": {
+    ".bin": 1,
+    ".cs": 56,
+    ".dat": 2,
+    ".data": 4,
+    ".dlg": 8,
+    ".dll": 58,
+    ".exe": 4,
+    ".ico": 6,
+    ".ini": 1,
+    ".inx": 8,
+    ".json": 1,
+    ".lnk": 8,
+    ".mac": 16,
+    ".pak": 11,
+    ".resx": 24,
+    ".swidtag": 1
+  },
+  "inventario": [
+    {
+      "caminho": "Authentication.dll",
+      "bytes": 5614696
+    },
+    {
+      "caminho": "AuthenticationCHS.dll",
+      "bytes": 460392
+    },
+    {
+      "caminho": "AuthenticationDEU.dll",
+      "bytes": 471656
+    },
+    {
+      "caminho": "AuthenticationESP.dll",
+      "bytes": 470640
+    },
+    {
+      "caminho": "AuthenticationFRA.dll",
+      "bytes": 471144
+    },
+    {
+      "caminho": "AuthenticationJPN.dll",
+      "bytes": 462960
+    },
+    {
+      "caminho": "AuthenticationKOR.dll",
+      "bytes": 462960
+    },
+    {
+      "caminho": "AuthenticationPTB.dll",
+      "bytes": 470128
+    },
+    {
+      "caminho": "chrome_100_percent.pak",
+      "bytes": 775741
+    },
+    {
+      "caminho": "chrome_200_percent.pak",
+      "bytes": 1298467
+    },
+    {
+      "caminho": "chrome_elf.dll",
+      "bytes": 1786472
+    },
+    {
+      "caminho": "cpprest_2_10.dll",
+      "bytes": 975976
+    },
+    {
+      "caminho": "d3dcompiler_47.dll",
+      "bytes": 4691520
+    },
+    {
+      "caminho": "Deutsch/Makros/Simproc.mac",
+      "bytes": 27280
+    },
+    {
+      "caminho": "Deutsch/Makros/Userfunc.mac",
+      "bytes": 19586
+    },
+    {
+      "caminho": "Deutsch/MyMenu/AddIn.cs",
+      "bytes": 18161
+    },
+    {
+      "caminho": "Deutsch/MyMenu/FormDescribe.cs",
+      "bytes": 464
+    },
+    {
+      "caminho": "Deutsch/MyMenu/FormDescribe.designer.cs",
+      "bytes": 9928
+    },
+    {
+      "caminho": "Deutsch/MyMenu/FormDescribe.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "Deutsch/MyMenu/FormGeoMean.cs",
+      "bytes": 360
+    },
+    {
+      "caminho": "Deutsch/MyMenu/FormGeoMean.designer.cs",
+      "bytes": 4590
+    },
+    {
+      "caminho": "Deutsch/MyMenu/FormGeoMean.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "Deutsch/MyMenu/FormRename.cs",
+      "bytes": 357
+    },
+    {
+      "caminho": "Deutsch/MyMenu/FormRename.designer.cs",
+      "bytes": 5793
+    },
+    {
+      "caminho": "Deutsch/MyMenu/FormRename.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "Deutsch/MyMenu/MyMenu.dll",
+      "bytes": 49776
+    },
+    {
+      "caminho": "Deutsch/Restore Minitab Defaults Deutsch.lnk",
+      "bytes": 1017
+    },
+    {
+      "caminho": "Dialogs.data",
+      "bytes": 6543904
+    },
+    {
+      "caminho": "English/Macros/Simproc.mac",
+      "bytes": 13294
+    },
+    {
+      "caminho": "English/Macros/Userfunc.mac",
+      "bytes": 9596
+    },
+    {
+      "caminho": "English/MyMenu/AddIn.cs",
+      "bytes": 18161
+    },
+    {
+      "caminho": "English/MyMenu/FormDescribe.cs",
+      "bytes": 464
+    },
+    {
+      "caminho": "English/MyMenu/FormDescribe.designer.cs",
+      "bytes": 9928
+    },
+    {
+      "caminho": "English/MyMenu/FormDescribe.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "English/MyMenu/FormGeoMean.cs",
+      "bytes": 360
+    },
+    {
+      "caminho": "English/MyMenu/FormGeoMean.designer.cs",
+      "bytes": 4590
+    },
+    {
+      "caminho": "English/MyMenu/FormGeoMean.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "English/MyMenu/FormRename.cs",
+      "bytes": 357
+    },
+    {
+      "caminho": "English/MyMenu/FormRename.designer.cs",
+      "bytes": 5793
+    },
+    {
+      "caminho": "English/MyMenu/FormRename.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "English/MyMenu/MyMenu.dll",
+      "bytes": 49776
+    },
+    {
+      "caminho": "English/Restore Minitab Defaults English.lnk",
+      "bytes": 1017
+    },
+    {
+      "caminho": "español/Macros/Simproc.mac",
+      "bytes": 27264
+    },
+    {
+      "caminho": "español/Macros/Userfunc.mac",
+      "bytes": 19612
+    },
+    {
+      "caminho": "español/MyMenu/AddIn.cs",
+      "bytes": 18161
+    },
+    {
+      "caminho": "español/MyMenu/FormDescribe.cs",
+      "bytes": 464
+    },
+    {
+      "caminho": "español/MyMenu/FormDescribe.designer.cs",
+      "bytes": 9928
+    },
+    {
+      "caminho": "español/MyMenu/FormDescribe.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "español/MyMenu/FormGeoMean.cs",
+      "bytes": 360
+    },
+    {
+      "caminho": "español/MyMenu/FormGeoMean.designer.cs",
+      "bytes": 4590
+    },
+    {
+      "caminho": "español/MyMenu/FormGeoMean.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "español/MyMenu/FormRename.cs",
+      "bytes": 357
+    },
+    {
+      "caminho": "español/MyMenu/FormRename.designer.cs",
+      "bytes": 5793
+    },
+    {
+      "caminho": "español/MyMenu/FormRename.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "español/MyMenu/MyMenu.dll",
+      "bytes": 49776
+    },
+    {
+      "caminho": "español/Restore Minitab Defaults español.lnk",
+      "bytes": 1017
+    },
+    {
+      "caminho": "français/Macros/Simproc.mac",
+      "bytes": 26990
+    },
+    {
+      "caminho": "français/Macros/Userfunc.mac",
+      "bytes": 19744
+    },
+    {
+      "caminho": "français/MyMenu/AddIn.cs",
+      "bytes": 18161
+    },
+    {
+      "caminho": "français/MyMenu/FormDescribe.cs",
+      "bytes": 464
+    },
+    {
+      "caminho": "français/MyMenu/FormDescribe.designer.cs",
+      "bytes": 9928
+    },
+    {
+      "caminho": "français/MyMenu/FormDescribe.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "français/MyMenu/FormGeoMean.cs",
+      "bytes": 360
+    },
+    {
+      "caminho": "français/MyMenu/FormGeoMean.designer.cs",
+      "bytes": 4590
+    },
+    {
+      "caminho": "français/MyMenu/FormGeoMean.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "français/MyMenu/FormRename.cs",
+      "bytes": 357
+    },
+    {
+      "caminho": "français/MyMenu/FormRename.designer.cs",
+      "bytes": 5793
+    },
+    {
+      "caminho": "français/MyMenu/FormRename.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "français/MyMenu/MyMenu.dll",
+      "bytes": 49776
+    },
+    {
+      "caminho": "français/Restore Minitab Defaults français.lnk",
+      "bytes": 1017
+    },
+    {
+      "caminho": "gflags.dll",
+      "bytes": 134760
+    },
+    {
+      "caminho": "HRW15.DLL",
+      "bytes": 705648
+    },
+    {
+      "caminho": "HTW21.DLL",
+      "bytes": 1339504
+    },
+    {
+      "caminho": "icudt77.dll",
+      "bytes": 31910000
+    },
+    {
+      "caminho": "icudtl.dat",
+      "bytes": 10467680
+    },
+    {
+      "caminho": "icuin77.dll",
+      "bytes": 3560552
+    },
+    {
+      "caminho": "icuuc77.dll",
+      "bytes": 2432112
+    },
+    {
+      "caminho": "ifs.dll",
+      "bytes": 11376752
+    },
+    {
+      "caminho": "libcef.dll",
+      "bytes": 239205488
+    },
+    {
+      "caminho": "libEGL.dll",
+      "bytes": 515184
+    },
+    {
+      "caminho": "libGLESv2.dll",
+      "bytes": 7908456
+    },
+    {
+      "caminho": "libiomp5md.dll",
+      "bytes": 2047000
+    },
+    {
+      "caminho": "libmmd.dll",
+      "bytes": 3933208
+    },
+    {
+      "caminho": "libpng16.dll",
+      "bytes": 254568
+    },
+    {
+      "caminho": "libxl.dll",
+      "bytes": 5635184
+    },
+    {
+      "caminho": "libxml2.dll",
+      "bytes": 1279592
+    },
+    {
+      "caminho": "locales/de.pak",
+      "bytes": 684486
+    },
+    {
+      "caminho": "locales/en-US.pak",
+      "bytes": 556353
+    },
+    {
+      "caminho": "locales/es-419.pak",
+      "bytes": 669998
+    },
+    {
+      "caminho": "locales/fr.pak",
+      "bytes": 722407
+    },
+    {
+      "caminho": "locales/ja.pak",
+      "bytes": 801936
+    },
+    {
+      "caminho": "locales/ko.pak",
+      "bytes": 679774
+    },
+    {
+      "caminho": "locales/pt-BR.pak",
+      "bytes": 657260
+    },
+    {
+      "caminho": "locales/zh-CN.pak",
+      "bytes": 562608
+    },
+    {
+      "caminho": "minitab-treeviewer.data",
+      "bytes": 462422
+    },
+    {
+      "caminho": "mss-graph-editing.data",
+      "bytes": 540728
+    },
+    {
+      "caminho": "mss-graphs.data",
+      "bytes": 1290028
+    },
+    {
+      "caminho": "Mss22.ico",
+      "bytes": 50406
+    },
+    {
+      "caminho": "Mss22CSV.ico",
+      "bytes": 66421
+    },
+    {
+      "caminho": "Mss22Project.ico",
+      "bytes": 275739
+    },
+    {
+      "caminho": "Mss22ProjectX.ico",
+      "bytes": 121618
+    },
+    {
+      "caminho": "Mss22Worksheet.ico",
+      "bytes": 275876
+    },
+    {
+      "caminho": "Mss22WorksheetX.ico",
+      "bytes": 119076
+    },
+    {
+      "caminho": "MssUpdater.exe",
+      "bytes": 2626152
+    },
+    {
+      "caminho": "MssUpdater.ini",
+      "bytes": 547
+    },
+    {
+      "caminho": "Mtb.exe",
+      "bytes": 11488360,
+      "sha256": "5de65f93c23373180a3f88c711b4527ee85f71b97910012f73abbd0e05e27d1b"
+    },
+    {
+      "caminho": "MtbBCG.dll",
+      "bytes": 7404648
+    },
+    {
+      "caminho": "MtbCore.dll",
+      "bytes": 66099816,
+      "sha256": "b3328021fbf3b4f27bd897c3995c05053242856d5ab83fde9326759a0fa7b3da"
+    },
+    {
+      "caminho": "MtbDlg.dll",
+      "bytes": 3064432,
+      "sha256": "fdc630170e676ac274dab8ab0a7db82b2e18c9805c15c32414a087e4657e8a7e"
+    },
+    {
+      "caminho": "MtbEDT.dll",
+      "bytes": 200816
+    },
+    {
+      "caminho": "MtbHOB.dll",
+      "bytes": 564328
+    },
+    {
+      "caminho": "MtbHVW.dll",
+      "bytes": 1163880
+    },
+    {
+      "caminho": "MtbObjectiveGrid.dll",
+      "bytes": 1355880,
+      "sha256": "3bb346eb9e4ca63ea48be0816ad67286f463924c8c8b591fd2f520bf9cb4f759"
+    },
+    {
+      "caminho": "MtbRCH.dll",
+      "bytes": 119912
+    },
+    {
+      "caminho": "MtbRender.exe",
+      "bytes": 567912
+    },
+    {
+      "caminho": "MtbSED.dll",
+      "bytes": 326248
+    },
+    {
+      "caminho": "MtbUTL.dll",
+      "bytes": 175216
+    },
+    {
+      "caminho": "Português/Macros/Simproc.mac",
+      "bytes": 27026
+    },
+    {
+      "caminho": "Português/Macros/Userfunc.mac",
+      "bytes": 9665
+    },
+    {
+      "caminho": "Português/MyMenu/AddIn.cs",
+      "bytes": 18161
+    },
+    {
+      "caminho": "Português/MyMenu/FormDescribe.cs",
+      "bytes": 464
+    },
+    {
+      "caminho": "Português/MyMenu/FormDescribe.designer.cs",
+      "bytes": 9928
+    },
+    {
+      "caminho": "Português/MyMenu/FormDescribe.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "Português/MyMenu/FormGeoMean.cs",
+      "bytes": 360
+    },
+    {
+      "caminho": "Português/MyMenu/FormGeoMean.designer.cs",
+      "bytes": 4590
+    },
+    {
+      "caminho": "Português/MyMenu/FormGeoMean.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "Português/MyMenu/FormRename.cs",
+      "bytes": 357
+    },
+    {
+      "caminho": "Português/MyMenu/FormRename.designer.cs",
+      "bytes": 5793
+    },
+    {
+      "caminho": "Português/MyMenu/FormRename.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "Português/MyMenu/MyMenu.dll",
+      "bytes": 49776
+    },
+    {
+      "caminho": "Português/Restore Minitab Defaults Português.lnk",
+      "bytes": 1017
+    },
+    {
+      "caminho": "regid.1994-02.com.minitab_Minitab 22_22.6.0.0.swidtag",
+      "bytes": 1444
+    },
+    {
+      "caminho": "Resources/1031/mtb.dlg",
+      "bytes": 1121512
+    },
+    {
+      "caminho": "Resources/1031/mtb.inx",
+      "bytes": 2012
+    },
+    {
+      "caminho": "Resources/1031/MtbResources.dll",
+      "bytes": 36415600
+    },
+    {
+      "caminho": "Resources/1033/mtb.dlg",
+      "bytes": 1083596
+    },
+    {
+      "caminho": "Resources/1033/mtb.inx",
+      "bytes": 2012
+    },
+    {
+      "caminho": "Resources/1033/MtbResources.dll",
+      "bytes": 36417136
+    },
+    {
+      "caminho": "Resources/1034/mtb.dlg",
+      "bytes": 1143788
+    },
+    {
+      "caminho": "Resources/1034/mtb.inx",
+      "bytes": 2012
+    },
+    {
+      "caminho": "Resources/1034/MtbResources.dll",
+      "bytes": 36467312
+    },
+    {
+      "caminho": "Resources/1036/mtb.dlg",
+      "bytes": 1160596
+    },
+    {
+      "caminho": "Resources/1036/mtb.inx",
+      "bytes": 2012
+    },
+    {
+      "caminho": "Resources/1036/MtbResources.dll",
+      "bytes": 36512368
+    },
+    {
+      "caminho": "Resources/1041/mtb.dlg",
+      "bytes": 953064
+    },
+    {
+      "caminho": "Resources/1041/mtb.inx",
+      "bytes": 2012
+    },
+    {
+      "caminho": "Resources/1041/MtbResources.dll",
+      "bytes": 35608168
+    },
+    {
+      "caminho": "Resources/1042/mtb.dlg",
+      "bytes": 959640
+    },
+    {
+      "caminho": "Resources/1042/mtb.inx",
+      "bytes": 2012
+    },
+    {
+      "caminho": "Resources/1042/MtbResources.dll",
+      "bytes": 35537512
+    },
+    {
+      "caminho": "Resources/1046/mtb.dlg",
+      "bytes": 1126120
+    },
+    {
+      "caminho": "Resources/1046/mtb.inx",
+      "bytes": 2012
+    },
+    {
+      "caminho": "Resources/1046/MtbResources.dll",
+      "bytes": 36264552
+    },
+    {
+      "caminho": "Resources/2052/mtb.dlg",
+      "bytes": 929440
+    },
+    {
+      "caminho": "Resources/2052/mtb.inx",
+      "bytes": 2012
+    },
+    {
+      "caminho": "Resources/2052/MtbResources.dll",
+      "bytes": 35288688
+    },
+    {
+      "caminho": "Resources/mss_core_resources.dat",
+      "bytes": 16630848
+    },
+    {
+      "caminho": "resources.pak",
+      "bytes": 11690452
+    },
+    {
+      "caminho": "rmd.exe",
+      "bytes": 128624
+    },
+    {
+      "caminho": "ShaferFilechck.dll",
+      "bytes": 2699880
+    },
+    {
+      "caminho": "SSGPW.DLL",
+      "bytes": 665704
+    },
+    {
+      "caminho": "TEW26.dll",
+      "bytes": 4137064
+    },
+    {
+      "caminho": "v8_context_snapshot.bin",
+      "bytes": 699577
+    },
+    {
+      "caminho": "vk_swiftshader.dll",
+      "bytes": 5360752
+    },
+    {
+      "caminho": "vk_swiftshader_icd.json",
+      "bytes": 106
+    },
+    {
+      "caminho": "vulkan-1.dll",
+      "bytes": 913512
+    },
+    {
+      "caminho": "xmcr.dll",
+      "bytes": 479336
+    },
+    {
+      "caminho": "中文(简体)/MyMenu/AddIn.cs",
+      "bytes": 18161
+    },
+    {
+      "caminho": "中文(简体)/MyMenu/FormDescribe.cs",
+      "bytes": 464
+    },
+    {
+      "caminho": "中文(简体)/MyMenu/FormDescribe.designer.cs",
+      "bytes": 9928
+    },
+    {
+      "caminho": "中文(简体)/MyMenu/FormDescribe.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "中文(简体)/MyMenu/FormGeoMean.cs",
+      "bytes": 360
+    },
+    {
+      "caminho": "中文(简体)/MyMenu/FormGeoMean.designer.cs",
+      "bytes": 4590
+    },
+    {
+      "caminho": "中文(简体)/MyMenu/FormGeoMean.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "中文(简体)/MyMenu/FormRename.cs",
+      "bytes": 357
+    },
+    {
+      "caminho": "中文(简体)/MyMenu/FormRename.designer.cs",
+      "bytes": 5793
+    },
+    {
+      "caminho": "中文(简体)/MyMenu/FormRename.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "中文(简体)/MyMenu/MyMenu.dll",
+      "bytes": 49776
+    },
+    {
+      "caminho": "中文(简体)/Restore Minitab Defaults 中文(简体).lnk",
+      "bytes": 1017
+    },
+    {
+      "caminho": "中文(简体)/宏/Simproc.mac",
+      "bytes": 25076
+    },
+    {
+      "caminho": "中文(简体)/宏/Userfunc.mac",
+      "bytes": 16708
+    },
+    {
+      "caminho": "日本語/MyMenu/AddIn.cs",
+      "bytes": 18161
+    },
+    {
+      "caminho": "日本語/MyMenu/FormDescribe.cs",
+      "bytes": 464
+    },
+    {
+      "caminho": "日本語/MyMenu/FormDescribe.designer.cs",
+      "bytes": 9928
+    },
+    {
+      "caminho": "日本語/MyMenu/FormDescribe.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "日本語/MyMenu/FormGeoMean.cs",
+      "bytes": 360
+    },
+    {
+      "caminho": "日本語/MyMenu/FormGeoMean.designer.cs",
+      "bytes": 4590
+    },
+    {
+      "caminho": "日本語/MyMenu/FormGeoMean.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "日本語/MyMenu/FormRename.cs",
+      "bytes": 357
+    },
+    {
+      "caminho": "日本語/MyMenu/FormRename.designer.cs",
+      "bytes": 5793
+    },
+    {
+      "caminho": "日本語/MyMenu/FormRename.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "日本語/MyMenu/MyMenu.dll",
+      "bytes": 49776
+    },
+    {
+      "caminho": "日本語/Restore Minitab Defaults 日本語.lnk",
+      "bytes": 1017
+    },
+    {
+      "caminho": "日本語/マクロ/Simproc.mac",
+      "bytes": 25574
+    },
+    {
+      "caminho": "日本語/マクロ/Userfunc.mac",
+      "bytes": 17370
+    },
+    {
+      "caminho": "한국어/MyMenu/AddIn.cs",
+      "bytes": 18161
+    },
+    {
+      "caminho": "한국어/MyMenu/FormDescribe.cs",
+      "bytes": 464
+    },
+    {
+      "caminho": "한국어/MyMenu/FormDescribe.designer.cs",
+      "bytes": 9928
+    },
+    {
+      "caminho": "한국어/MyMenu/FormDescribe.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "한국어/MyMenu/FormGeoMean.cs",
+      "bytes": 360
+    },
+    {
+      "caminho": "한국어/MyMenu/FormGeoMean.designer.cs",
+      "bytes": 4590
+    },
+    {
+      "caminho": "한국어/MyMenu/FormGeoMean.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "한국어/MyMenu/FormRename.cs",
+      "bytes": 357
+    },
+    {
+      "caminho": "한국어/MyMenu/FormRename.designer.cs",
+      "bytes": 5793
+    },
+    {
+      "caminho": "한국어/MyMenu/FormRename.resx",
+      "bytes": 12549
+    },
+    {
+      "caminho": "한국어/MyMenu/MyMenu.dll",
+      "bytes": 49776
+    },
+    {
+      "caminho": "한국어/Restore Minitab Defaults 한국어.lnk",
+      "bytes": 1017
+    },
+    {
+      "caminho": "한국어/매크로/Simproc.mac",
+      "bytes": 25572
+    },
+    {
+      "caminho": "한국어/매크로/Userfunc.mac",
+      "bytes": 17266
+    }
+  ],
+  "pacotes": [
+    {
+      "arquivo": "Dialogs.data",
+      "sha256": "41d85ca8ee0dcbe62ada4822ed41b348f94f97395645a22b72814f6409bc7bea",
+      "entradas": 431,
+      "arquivos": 428,
+      "bytes_descompactados": 35330946,
+      "extensoes": {
+        ".bmp": 253,
+        ".gif": 1,
+        ".html": 1,
+        ".ico": 1,
+        ".js": 161,
+        ".png": 4,
+        ".svg": 2,
+        ".txt": 5
+      },
+      "membros": [
+        {
+          "caminho": "favicon.ico",
+          "bytes": 568,
+          "bytes_comprimidos": 470,
+          "crc32": "b36fba94"
+        },
+        {
+          "caminho": "index.html",
+          "bytes": 316,
+          "bytes_comprimidos": 216,
+          "crc32": "bdbdb57d"
+        },
+        {
+          "caminho": "static/js/1003.5b535413.chunk.js",
+          "bytes": 11287,
+          "bytes_comprimidos": 3896,
+          "crc32": "132ce3d5"
+        },
+        {
+          "caminho": "static/js/1041.5df8112a.chunk.js",
+          "bytes": 2597,
+          "bytes_comprimidos": 916,
+          "crc32": "f4efa8e1"
+        },
+        {
+          "caminho": "static/js/1162.4d00b9ca.chunk.js",
+          "bytes": 9129,
+          "bytes_comprimidos": 3225,
+          "crc32": "86c39518"
+        },
+        {
+          "caminho": "static/js/128.0f87d80d.chunk.js",
+          "bytes": 1757,
+          "bytes_comprimidos": 794,
+          "crc32": "ebaee016"
+        },
+        {
+          "caminho": "static/js/1297.ed41cd83.chunk.js",
+          "bytes": 9123,
+          "bytes_comprimidos": 3225,
+          "crc32": "7de37f85"
+        },
+        {
+          "caminho": "static/js/1341.e7846412.chunk.js",
+          "bytes": 8691,
+          "bytes_comprimidos": 3176,
+          "crc32": "e5ebbe30"
+        },
+        {
+          "caminho": "static/js/1358.358cf8b6.chunk.js",
+          "bytes": 6179,
+          "bytes_comprimidos": 1540,
+          "crc32": "1fe1d153"
+        },
+        {
+          "caminho": "static/js/1364.5ab885e4.chunk.js",
+          "bytes": 4217,
+          "bytes_comprimidos": 1691,
+          "crc32": "b7e2a782"
+        },
+        {
+          "caminho": "static/js/1406.f0138819.chunk.js",
+          "bytes": 9128,
+          "bytes_comprimidos": 3229,
+          "crc32": "3da3f458"
+        },
+        {
+          "caminho": "static/js/1450.4c17a45f.chunk.js",
+          "bytes": 2411,
+          "bytes_comprimidos": 1021,
+          "crc32": "fd1405fd"
+        },
+        {
+          "caminho": "static/js/1463.a21e432d.chunk.js",
+          "bytes": 1740,
+          "bytes_comprimidos": 821,
+          "crc32": "ca98f906"
+        },
+        {
+          "caminho": "static/js/1531.eef62983.chunk.js",
+          "bytes": 6822,
+          "bytes_comprimidos": 1486,
+          "crc32": "e6a2b310"
+        },
+        {
+          "caminho": "static/js/1568.6cc55579.chunk.js",
+          "bytes": 11289,
+          "bytes_comprimidos": 3900,
+          "crc32": "107b7e01"
+        },
+        {
+          "caminho": "static/js/1579.717f527e.chunk.js",
+          "bytes": 2892,
+          "bytes_comprimidos": 1084,
+          "crc32": "4addc8a5"
+        },
+        {
+          "caminho": "static/js/1634.e3a7c144.chunk.js",
+          "bytes": 7302,
+          "bytes_comprimidos": 1534,
+          "crc32": "984f0906"
+        },
+        {
+          "caminho": "static/js/1689.3c85915c.chunk.js",
+          "bytes": 85175,
+          "bytes_comprimidos": 15853,
+          "crc32": "71b40a75"
+        },
+        {
+          "caminho": "static/js/1708.14ed108b.chunk.js",
+          "bytes": 4183,
+          "bytes_comprimidos": 1130,
+          "crc32": "01741c52"
+        },
+        {
+          "caminho": "static/js/1729.16c0f546.chunk.js",
+          "bytes": 3382,
+          "bytes_comprimidos": 1256,
+          "crc32": "14bfbe4e"
+        },
+        {
+          "caminho": "static/js/1751.dd9a9476.chunk.js",
+          "bytes": 8569,
+          "bytes_comprimidos": 2896,
+          "crc32": "b7310c89"
+        },
+        {
+          "caminho": "static/js/188.b2f45597.chunk.js",
+          "bytes": 8784,
+          "bytes_comprimidos": 3354,
+          "crc32": "0ef5425e"
+        },
+        {
+          "caminho": "static/js/1919.4d71a337.chunk.js",
+          "bytes": 219833,
+          "bytes_comprimidos": 29738,
+          "crc32": "c99e576d"
+        },
+        {
+          "caminho": "static/js/1960.c9762f48.chunk.js",
+          "bytes": 4146,
+          "bytes_comprimidos": 1234,
+          "crc32": "f35ae2bc"
+        },
+        {
+          "caminho": "static/js/1963.e3b3f4e0.chunk.js",
+          "bytes": 2767,
+          "bytes_comprimidos": 965,
+          "crc32": "29fe4056"
+        },
+        {
+          "caminho": "static/js/2029.6b6b4894.chunk.js",
+          "bytes": 331,
+          "bytes_comprimidos": 247,
+          "crc32": "32d8fcae"
+        },
+        {
+          "caminho": "static/js/2039.6dad080e.chunk.js",
+          "bytes": 6820,
+          "bytes_comprimidos": 1388,
+          "crc32": "f22b8b26"
+        },
+        {
+          "caminho": "static/js/2050.8b5e1d72.chunk.js",
+          "bytes": 11295,
+          "bytes_comprimidos": 3901,
+          "crc32": "05eaaedf"
+        },
+        {
+          "caminho": "static/js/211.bcad38ac.chunk.js",
+          "bytes": 20128,
+          "bytes_comprimidos": 3463,
+          "crc32": "8ac845cd"
+        },
+        {
+          "caminho": "static/js/2177.80798852.chunk.js",
+          "bytes": 3533,
+          "bytes_comprimidos": 1093,
+          "crc32": "d3af0e3e"
+        },
+        {
+          "caminho": "static/js/2182.54b18781.chunk.js",
+          "bytes": 13858,
+          "bytes_comprimidos": 3445,
+          "crc32": "b7f9af7e"
+        },
+        {
+          "caminho": "static/js/225.9aeed56d.chunk.js",
+          "bytes": 329,
+          "bytes_comprimidos": 246,
+          "crc32": "fc1b6d74"
+        },
+        {
+          "caminho": "static/js/2393.c4cca7a1.chunk.js",
+          "bytes": 1601,
+          "bytes_comprimidos": 558,
+          "crc32": "2ae876a5"
+        },
+        {
+          "caminho": "static/js/2401.e23f6f7e.chunk.js",
+          "bytes": 6128,
+          "bytes_comprimidos": 1862,
+          "crc32": "62028862"
+        },
+        {
+          "caminho": "static/js/2402.a41ae82a.chunk.js",
+          "bytes": 9128,
+          "bytes_comprimidos": 3227,
+          "crc32": "f52163d5"
+        },
+        {
+          "caminho": "static/js/2569.c83805d8.chunk.js",
+          "bytes": 5817,
+          "bytes_comprimidos": 2425,
+          "crc32": "82140905"
+        },
+        {
+          "caminho": "static/js/2592.08cc42f7.chunk.js",
+          "bytes": 804014,
+          "bytes_comprimidos": 140344,
+          "crc32": "c38a3010"
+        },
+        {
+          "caminho": "static/js/2605.f0ba575f.chunk.js",
+          "bytes": 2922,
+          "bytes_comprimidos": 740,
+          "crc32": "5d2df5f3"
+        },
+        {
+          "caminho": "static/js/2750.0115105a.chunk.js",
+          "bytes": 9128,
+          "bytes_comprimidos": 3223,
+          "crc32": "d6d19668"
+        },
+        {
+          "caminho": "static/js/2784.cd9a50e7.chunk.js",
+          "bytes": 11291,
+          "bytes_comprimidos": 3899,
+          "crc32": "64d1ab4e"
+        },
+        {
+          "caminho": "static/js/2835.c4f736f8.chunk.js",
+          "bytes": 3490,
+          "bytes_comprimidos": 1697,
+          "crc32": "cdd4781d"
+        },
+        {
+          "caminho": "static/js/3021.de9b9708.chunk.js",
+          "bytes": 6521,
+          "bytes_comprimidos": 2614,
+          "crc32": "6f2720a6"
+        },
+        {
+          "caminho": "static/js/3026.1362fb33.chunk.js",
+          "bytes": 12086,
+          "bytes_comprimidos": 4426,
+          "crc32": "4e21d105"
+        },
+        {
+          "caminho": "static/js/3040.6d8f16b1.chunk.js",
+          "bytes": 1894,
+          "bytes_comprimidos": 568,
+          "crc32": "d1496bb4"
+        },
+        {
+          "caminho": "static/js/3042.75cd5fb1.chunk.js",
+          "bytes": 91049,
+          "bytes_comprimidos": 25506,
+          "crc32": "0d4af3cb"
+        },
+        {
+          "caminho": "static/js/3133.4259302e.chunk.js",
+          "bytes": 1777,
+          "bytes_comprimidos": 706,
+          "crc32": "65dd6cc8"
+        },
+        {
+          "caminho": "static/js/3163.5d6d388e.chunk.js",
+          "bytes": 22215,
+          "bytes_comprimidos": 8097,
+          "crc32": "9990ba00"
+        },
+        {
+          "caminho": "static/js/3202.9fcb9f5d.chunk.js",
+          "bytes": 4278,
+          "bytes_comprimidos": 1873,
+          "crc32": "5e273682"
+        },
+        {
+          "caminho": "static/js/3286.aa371b12.chunk.js",
+          "bytes": 11299,
+          "bytes_comprimidos": 3904,
+          "crc32": "6c6a2e2f"
+        },
+        {
+          "caminho": "static/js/3320.dc471155.chunk.js",
+          "bytes": 9125,
+          "bytes_comprimidos": 3226,
+          "crc32": "ce195836"
+        },
+        {
+          "caminho": "static/js/3359.a49ddc76.chunk.js",
+          "bytes": 47608,
+          "bytes_comprimidos": 14903,
+          "crc32": "1bfcd98c"
+        },
+        {
+          "caminho": "static/js/3374.60bc431e.chunk.js",
+          "bytes": 9137,
+          "bytes_comprimidos": 3231,
+          "crc32": "104d3cab"
+        },
+        {
+          "caminho": "static/js/3405.3728ec4c.chunk.js",
+          "bytes": 9123,
+          "bytes_comprimidos": 3225,
+          "crc32": "3ab3c959"
+        },
+        {
+          "caminho": "static/js/3634.e079280d.chunk.js",
+          "bytes": 4155,
+          "bytes_comprimidos": 1668,
+          "crc32": "321a7fdf"
+        },
+        {
+          "caminho": "static/js/3722.f2a68173.chunk.js",
+          "bytes": 1845,
+          "bytes_comprimidos": 804,
+          "crc32": "2b45068b"
+        },
+        {
+          "caminho": "static/js/3839.8a721ca1.chunk.js",
+          "bytes": 278561,
+          "bytes_comprimidos": 56149,
+          "crc32": "2d80d1f4"
+        },
+        {
+          "caminho": "static/js/3954.eab5ec96.chunk.js",
+          "bytes": 2358,
+          "bytes_comprimidos": 933,
+          "crc32": "cf07ac9d"
+        },
+        {
+          "caminho": "static/js/3967.a1594ae1.chunk.js",
+          "bytes": 345,
+          "bytes_comprimidos": 260,
+          "crc32": "8adfbbb4"
+        },
+        {
+          "caminho": "static/js/3996.ea7786af.chunk.js",
+          "bytes": 1196,
+          "bytes_comprimidos": 643,
+          "crc32": "98ef4939"
+        },
+        {
+          "caminho": "static/js/400.317a4cdc.chunk.js",
+          "bytes": 407218,
+          "bytes_comprimidos": 68930,
+          "crc32": "ce663ed6"
+        },
+        {
+          "caminho": "static/js/4026.7a44540f.chunk.js",
+          "bytes": 65370,
+          "bytes_comprimidos": 19325,
+          "crc32": "d3a10e76"
+        },
+        {
+          "caminho": "static/js/4117.28bf8745.chunk.js",
+          "bytes": 2426,
+          "bytes_comprimidos": 908,
+          "crc32": "6b84b397"
+        },
+        {
+          "caminho": "static/js/4150.6a6be787.chunk.js",
+          "bytes": 2842337,
+          "bytes_comprimidos": 786995,
+          "crc32": "a025c2fb"
+        },
+        {
+          "caminho": "static/js/4150.6a6be787.chunk.js.LICENSE.txt",
+          "bytes": 4206,
+          "bytes_comprimidos": 714,
+          "crc32": "dd14ab78"
+        },
+        {
+          "caminho": "static/js/4269.a59a9e1c.chunk.js",
+          "bytes": 12415,
+          "bytes_comprimidos": 4160,
+          "crc32": "e50e0268"
+        },
+        {
+          "caminho": "static/js/4331.9981e0e2.chunk.js",
+          "bytes": 574858,
+          "bytes_comprimidos": 109131,
+          "crc32": "a01fe566"
+        },
+        {
+          "caminho": "static/js/443.60a74b2e.chunk.js",
+          "bytes": 2434,
+          "bytes_comprimidos": 858,
+          "crc32": "88407ad7"
+        },
+        {
+          "caminho": "static/js/4573.aefcb1f8.chunk.js",
+          "bytes": 304494,
+          "bytes_comprimidos": 60777,
+          "crc32": "c758a67e"
+        },
+        {
+          "caminho": "static/js/4607.3d7e42aa.chunk.js",
+          "bytes": 342,
+          "bytes_comprimidos": 258,
+          "crc32": "69234d19"
+        },
+        {
+          "caminho": "static/js/4650.011e6888.chunk.js",
+          "bytes": 207092,
+          "bytes_comprimidos": 39839,
+          "crc32": "ee15eb5b"
+        },
+        {
+          "caminho": "static/js/4884.7a728b19.chunk.js",
+          "bytes": 8783,
+          "bytes_comprimidos": 3183,
+          "crc32": "c10780d0"
+        },
+        {
+          "caminho": "static/js/4890.a3e05d93.chunk.js",
+          "bytes": 9109,
+          "bytes_comprimidos": 3222,
+          "crc32": "3742a213"
+        },
+        {
+          "caminho": "static/js/4929.8b354f09.chunk.js",
+          "bytes": 331,
+          "bytes_comprimidos": 247,
+          "crc32": "fe45fa0e"
+        },
+        {
+          "caminho": "static/js/493.9cd33ec0.chunk.js",
+          "bytes": 11284,
+          "bytes_comprimidos": 3895,
+          "crc32": "fc826359"
+        },
+        {
+          "caminho": "static/js/4933.84308821.chunk.js",
+          "bytes": 180956,
+          "bytes_comprimidos": 40545,
+          "crc32": "70342bfc"
+        },
+        {
+          "caminho": "static/js/4933.84308821.chunk.js.LICENSE.txt",
+          "bytes": 149,
+          "bytes_comprimidos": 129,
+          "crc32": "a269e886"
+        },
+        {
+          "caminho": "static/js/4967.9a41ad8f.chunk.js",
+          "bytes": 2052,
+          "bytes_comprimidos": 819,
+          "crc32": "f1c50aaa"
+        },
+        {
+          "caminho": "static/js/498.e38231bd.chunk.js",
+          "bytes": 7344,
+          "bytes_comprimidos": 2853,
+          "crc32": "f1f2d249"
+        },
+        {
+          "caminho": "static/js/4995.2dda7c9a.chunk.js",
+          "bytes": 1717,
+          "bytes_comprimidos": 580,
+          "crc32": "0b71567d"
+        },
+        {
+          "caminho": "static/js/5021.b514c4de.chunk.js",
+          "bytes": 1314,
+          "bytes_comprimidos": 541,
+          "crc32": "af0dcb49"
+        },
+        {
+          "caminho": "static/js/5028.f2d41577.chunk.js",
+          "bytes": 790921,
+          "bytes_comprimidos": 168867,
+          "crc32": "7545a1b5"
+        },
+        {
+          "caminho": "static/js/5047.3e9fa417.chunk.js",
+          "bytes": 2770,
+          "bytes_comprimidos": 1340,
+          "crc32": "6af8b6be"
+        },
+        {
+          "caminho": "static/js/5097.e511f627.chunk.js",
+          "bytes": 37380,
+          "bytes_comprimidos": 8452,
+          "crc32": "29420d02"
+        },
+        {
+          "caminho": "static/js/5138.fcd752f1.chunk.js",
+          "bytes": 200392,
+          "bytes_comprimidos": 36658,
+          "crc32": "3080bc91"
+        },
+        {
+          "caminho": "static/js/5196.62eb5b41.chunk.js",
+          "bytes": 1155,
+          "bytes_comprimidos": 461,
+          "crc32": "c558ff43"
+        },
+        {
+          "caminho": "static/js/5200.d421a178.chunk.js",
+          "bytes": 84204,
+          "bytes_comprimidos": 16646,
+          "crc32": "d3590117"
+        },
+        {
+          "caminho": "static/js/5207.c8c3db0e.chunk.js",
+          "bytes": 11286,
+          "bytes_comprimidos": 3896,
+          "crc32": "7ad43ff7"
+        },
+        {
+          "caminho": "static/js/5216.58fb19e2.chunk.js",
+          "bytes": 1003,
+          "bytes_comprimidos": 509,
+          "crc32": "21943a27"
+        },
+        {
+          "caminho": "static/js/5264.9a646eca.chunk.js",
+          "bytes": 9132,
+          "bytes_comprimidos": 3226,
+          "crc32": "b378cdfa"
+        },
+        {
+          "caminho": "static/js/5298.9eb3532a.chunk.js",
+          "bytes": 331,
+          "bytes_comprimidos": 248,
+          "crc32": "c846b414"
+        },
+        {
+          "caminho": "static/js/5396.fab9d420.chunk.js",
+          "bytes": 4797,
+          "bytes_comprimidos": 2113,
+          "crc32": "199e0acf"
+        },
+        {
+          "caminho": "static/js/5505.5e3e765e.chunk.js",
+          "bytes": 2189,
+          "bytes_comprimidos": 1092,
+          "crc32": "b2c05ce6"
+        },
+        {
+          "caminho": "static/js/5543.75251462.chunk.js",
+          "bytes": 325,
+          "bytes_comprimidos": 243,
+          "crc32": "0b63dc48"
+        },
+        {
+          "caminho": "static/js/561.126ec9a6.chunk.js",
+          "bytes": 441860,
+          "bytes_comprimidos": 146180,
+          "crc32": "3110c6c6"
+        },
+        {
+          "caminho": "static/js/5679.78cd1b5b.chunk.js",
+          "bytes": 11288,
+          "bytes_comprimidos": 3899,
+          "crc32": "cb89c636"
+        },
+        {
+          "caminho": "static/js/5697.2aa33753.chunk.js",
+          "bytes": 1120,
+          "bytes_comprimidos": 549,
+          "crc32": "82abd1fc"
+        },
+        {
+          "caminho": "static/js/5725.f8e0a6cf.chunk.js",
+          "bytes": 3949,
+          "bytes_comprimidos": 1678,
+          "crc32": "4330b0c9"
+        },
+        {
+          "caminho": "static/js/5970.f8e4fddc.chunk.js",
+          "bytes": 4841,
+          "bytes_comprimidos": 2219,
+          "crc32": "1be577c9"
+        },
+        {
+          "caminho": "static/js/5971.fbe6d398.chunk.js",
+          "bytes": 9123,
+          "bytes_comprimidos": 3225,
+          "crc32": "f4285652"
+        },
+        {
+          "caminho": "static/js/598.c6d9fe88.chunk.js",
+          "bytes": 4693,
+          "bytes_comprimidos": 1112,
+          "crc32": "a1636799"
+        },
+        {
+          "caminho": "static/js/5981.0ebe38f9.chunk.js",
+          "bytes": 325,
+          "bytes_comprimidos": 243,
+          "crc32": "59b8d714"
+        },
+        {
+          "caminho": "static/js/6110.38c3a9e1.chunk.js",
+          "bytes": 4971,
+          "bytes_comprimidos": 2138,
+          "crc32": "81d84708"
+        },
+        {
+          "caminho": "static/js/630.7b5995ea.chunk.js",
+          "bytes": 9121,
+          "bytes_comprimidos": 3224,
+          "crc32": "963b76f4"
+        },
+        {
+          "caminho": "static/js/6348.97015ff1.chunk.js",
+          "bytes": 9129,
+          "bytes_comprimidos": 3231,
+          "crc32": "b6c85975"
+        },
+        {
+          "caminho": "static/js/6422.53d9356a.chunk.js",
+          "bytes": 1260,
+          "bytes_comprimidos": 552,
+          "crc32": "b93537dc"
+        },
+        {
+          "caminho": "static/js/6437.f344c6af.chunk.js",
+          "bytes": 14862,
+          "bytes_comprimidos": 4778,
+          "crc32": "29363f87"
+        },
+        {
+          "caminho": "static/js/645.3fea3b07.chunk.js",
+          "bytes": 29590,
+          "bytes_comprimidos": 8353,
+          "crc32": "de7edc81"
+        },
+        {
+          "caminho": "static/js/6512.60b3ab0b.chunk.js",
+          "bytes": 333,
+          "bytes_comprimidos": 247,
+          "crc32": "43aec057"
+        },
+        {
+          "caminho": "static/js/6562.0478bdbe.chunk.js",
+          "bytes": 183471,
+          "bytes_comprimidos": 43786,
+          "crc32": "b9959d76"
+        },
+        {
+          "caminho": "static/js/6608.542588dd.chunk.js",
+          "bytes": 18415,
+          "bytes_comprimidos": 4688,
+          "crc32": "c99daa7b"
+        },
+        {
+          "caminho": "static/js/6745.ae3591c6.chunk.js",
+          "bytes": 218930,
+          "bytes_comprimidos": 51005,
+          "crc32": "04d1971d"
+        },
+        {
+          "caminho": "static/js/6745.ae3591c6.chunk.js.LICENSE.txt",
+          "bytes": 373,
+          "bytes_comprimidos": 240,
+          "crc32": "4685fcec"
+        },
+        {
+          "caminho": "static/js/6854.7c479af5.chunk.js",
+          "bytes": 3934,
+          "bytes_comprimidos": 1298,
+          "crc32": "fc87e3d1"
+        },
+        {
+          "caminho": "static/js/6977.aba3a796.chunk.js",
+          "bytes": 1381,
+          "bytes_comprimidos": 647,
+          "crc32": "3ab5e91d"
+        },
+        {
+          "caminho": "static/js/6988.4df41a3b.chunk.js",
+          "bytes": 11297,
+          "bytes_comprimidos": 3905,
+          "crc32": "79432adc"
+        },
+        {
+          "caminho": "static/js/7006.e4bb1c76.chunk.js",
+          "bytes": 1942,
+          "bytes_comprimidos": 845,
+          "crc32": "523b7195"
+        },
+        {
+          "caminho": "static/js/7011.4083c891.chunk.js",
+          "bytes": 2336,
+          "bytes_comprimidos": 717,
+          "crc32": "2207121b"
+        },
+        {
+          "caminho": "static/js/7118.5d1e1eb2.chunk.js",
+          "bytes": 9123,
+          "bytes_comprimidos": 3224,
+          "crc32": "21cc64c5"
+        },
+        {
+          "caminho": "static/js/720.35381d95.chunk.js",
+          "bytes": 9121,
+          "bytes_comprimidos": 3225,
+          "crc32": "444b2dfb"
+        },
+        {
+          "caminho": "static/js/7237.b1e0dcca.chunk.js",
+          "bytes": 11292,
+          "bytes_comprimidos": 3898,
+          "crc32": "a5f94640"
+        },
+        {
+          "caminho": "static/js/7362.57f4da3f.chunk.js",
+          "bytes": 1191437,
+          "bytes_comprimidos": 312777,
+          "crc32": "6e0a6fb0"
+        },
+        {
+          "caminho": "static/js/7362.57f4da3f.chunk.js.LICENSE.txt",
+          "bytes": 149,
+          "bytes_comprimidos": 129,
+          "crc32": "a269e886"
+        },
+        {
+          "caminho": "static/js/7406.c1badc96.chunk.js",
+          "bytes": 1805,
+          "bytes_comprimidos": 752,
+          "crc32": "2727b923"
+        },
+        {
+          "caminho": "static/js/7481.6a1ca518.chunk.js",
+          "bytes": 42223,
+          "bytes_comprimidos": 6367,
+          "crc32": "b172f955"
+        },
+        {
+          "caminho": "static/js/7489.dd9832bf.chunk.js",
+          "bytes": 3520,
+          "bytes_comprimidos": 1142,
+          "crc32": "10ceb2cc"
+        },
+        {
+          "caminho": "static/js/7615.182719bf.chunk.js",
+          "bytes": 1565,
+          "bytes_comprimidos": 842,
+          "crc32": "f1a6c664"
+        },
+        {
+          "caminho": "static/js/7657.0020af08.chunk.js",
+          "bytes": 98763,
+          "bytes_comprimidos": 11467,
+          "crc32": "1c847417"
+        },
+        {
+          "caminho": "static/js/7738.4b731025.chunk.js",
+          "bytes": 6513,
+          "bytes_comprimidos": 2610,
+          "crc32": "b044ecaf"
+        },
+        {
+          "caminho": "static/js/7791.08f8ea2c.chunk.js",
+          "bytes": 3581,
+          "bytes_comprimidos": 1240,
+          "crc32": "7fdecd58"
+        },
+        {
+          "caminho": "static/js/7828.58bafce2.chunk.js",
+          "bytes": 1100500,
+          "bytes_comprimidos": 211698,
+          "crc32": "fc2c2df7"
+        },
+        {
+          "caminho": "static/js/7904.42524e36.chunk.js",
+          "bytes": 2965,
+          "bytes_comprimidos": 768,
+          "crc32": "750c19b5"
+        },
+        {
+          "caminho": "static/js/8019.b8c06e60.chunk.js",
+          "bytes": 12115,
+          "bytes_comprimidos": 4712,
+          "crc32": "bdb5ad3e"
+        },
+        {
+          "caminho": "static/js/8023.74278e6e.chunk.js",
+          "bytes": 40306,
+          "bytes_comprimidos": 10819,
+          "crc32": "09a79002"
+        },
+        {
+          "caminho": "static/js/8084.d72b60e3.chunk.js",
+          "bytes": 69301,
+          "bytes_comprimidos": 14261,
+          "crc32": "5d5163b4"
+        },
+        {
+          "caminho": "static/js/8094.470be8e0.chunk.js",
+          "bytes": 3859,
+          "bytes_comprimidos": 1114,
+          "crc32": "654a745b"
+        },
+        {
+          "caminho": "static/js/822.7c4cc36e.chunk.js",
+          "bytes": 331,
+          "bytes_comprimidos": 247,
+          "crc32": "aa618b69"
+        },
+        {
+          "caminho": "static/js/8238.a6637fcb.chunk.js",
+          "bytes": 81013,
+          "bytes_comprimidos": 14414,
+          "crc32": "f4bf6fb1"
+        },
+        {
+          "caminho": "static/js/8255.c9640549.chunk.js",
+          "bytes": 2713,
+          "bytes_comprimidos": 1288,
+          "crc32": "3f71b6d2"
+        },
+        {
+          "caminho": "static/js/826.8a2b63cc.chunk.js",
+          "bytes": 329,
+          "bytes_comprimidos": 247,
+          "crc32": "884a10af"
+        },
+        {
+          "caminho": "static/js/8335.79b40907.chunk.js",
+          "bytes": 9123,
+          "bytes_comprimidos": 3226,
+          "crc32": "8af4f407"
+        },
+        {
+          "caminho": "static/js/8341.8db539b3.chunk.js",
+          "bytes": 11292,
+          "bytes_comprimidos": 3899,
+          "crc32": "7a8b0a86"
+        },
+        {
+          "caminho": "static/js/8449.81ce73b3.chunk.js",
+          "bytes": 719750,
+          "bytes_comprimidos": 139439,
+          "crc32": "f1f31121"
+        },
+        {
+          "caminho": "static/js/8491.3128545e.chunk.js",
+          "bytes": 4850,
+          "bytes_comprimidos": 1235,
+          "crc32": "29db1329"
+        },
+        {
+          "caminho": "static/js/8764.bebf5da8.chunk.js",
+          "bytes": 26616,
+          "bytes_comprimidos": 7086,
+          "crc32": "ec402d6f"
+        },
+        {
+          "caminho": "static/js/8940.a0d003b0.chunk.js",
+          "bytes": 9108,
+          "bytes_comprimidos": 3223,
+          "crc32": "68600f2b"
+        },
+        {
+          "caminho": "static/js/9005.3e961d2f.chunk.js",
+          "bytes": 1634,
+          "bytes_comprimidos": 634,
+          "crc32": "03508ed5"
+        },
+        {
+          "caminho": "static/js/9031.f30dc97f.chunk.js",
+          "bytes": 12691,
+          "bytes_comprimidos": 5091,
+          "crc32": "f715cc59"
+        },
+        {
+          "caminho": "static/js/9038.cd260ac2.chunk.js",
+          "bytes": 563471,
+          "bytes_comprimidos": 76329,
+          "crc32": "6a54a2c3"
+        },
+        {
+          "caminho": "static/js/9084.f5478d8f.chunk.js",
+          "bytes": 9128,
+          "bytes_comprimidos": 3224,
+          "crc32": "e591bfb3"
+        },
+        {
+          "caminho": "static/js/9091.efa3da28.chunk.js",
+          "bytes": 331,
+          "bytes_comprimidos": 247,
+          "crc32": "fbb33774"
+        },
+        {
+          "caminho": "static/js/9156.70808285.chunk.js",
+          "bytes": 8679,
+          "bytes_comprimidos": 3254,
+          "crc32": "42b94fda"
+        },
+        {
+          "caminho": "static/js/9162.1dbd8423.chunk.js",
+          "bytes": 892,
+          "bytes_comprimidos": 430,
+          "crc32": "2096b9ed"
+        },
+        {
+          "caminho": "static/js/9165.61b313c9.chunk.js",
+          "bytes": 333,
+          "bytes_comprimidos": 248,
+          "crc32": "226fb1f6"
+        },
+        {
+          "caminho": "static/js/9440.67841c83.chunk.js",
+          "bytes": 11768,
+          "bytes_comprimidos": 2635,
+          "crc32": "1e6240da"
+        },
+        {
+          "caminho": "static/js/9484.0daab2cf.chunk.js",
+          "bytes": 15384,
+          "bytes_comprimidos": 4656,
+          "crc32": "c18f83cf"
+        },
+        {
+          "caminho": "static/js/9583.ce22884c.chunk.js",
+          "bytes": 13011,
+          "bytes_comprimidos": 4145,
+          "crc32": "afe5a7b5"
+        },
+        {
+          "caminho": "static/js/9591.a63a53db.chunk.js",
+          "bytes": 9991,
+          "bytes_comprimidos": 3598,
+          "crc32": "fa2256eb"
+        },
+        {
+          "caminho": "static/js/9618.6b6cb247.chunk.js",
+          "bytes": 1428,
+          "bytes_comprimidos": 662,
+          "crc32": "f06378aa"
+        },
+        {
+          "caminho": "static/js/9691.0786d2e9.chunk.js",
+          "bytes": 37932,
+          "bytes_comprimidos": 10683,
+          "crc32": "b5a1bc8e"
+        },
+        {
+          "caminho": "static/js/9697.08d3805c.chunk.js",
+          "bytes": 127780,
+          "bytes_comprimidos": 20770,
+          "crc32": "e6976940"
+        },
+        {
+          "caminho": "static/js/9793.982ace45.chunk.js",
+          "bytes": 3431,
+          "bytes_comprimidos": 1478,
+          "crc32": "67e1911b"
+        },
+        {
+          "caminho": "static/js/9862.c82e35f2.chunk.js",
+          "bytes": 9126,
+          "bytes_comprimidos": 3223,
+          "crc32": "805c0d74"
+        },
+        {
+          "caminho": "static/js/9878.1ea7f478.chunk.js",
+          "bytes": 9128,
+          "bytes_comprimidos": 3224,
+          "crc32": "460aec9a"
+        },
+        {
+          "caminho": "static/js/9885.389c316b.chunk.js",
+          "bytes": 937619,
+          "bytes_comprimidos": 164931,
+          "crc32": "20b69052"
+        },
+        {
+          "caminho": "static/js/9954.f4417d2d.chunk.js",
+          "bytes": 331,
+          "bytes_comprimidos": 248,
+          "crc32": "a7fef8e7"
+        },
+        {
+          "caminho": "static/js/9974.c40c0132.chunk.js",
+          "bytes": 198172,
+          "bytes_comprimidos": 34165,
+          "crc32": "b3e0d089"
+        },
+        {
+          "caminho": "static/js/main.e9e83853.js",
+          "bytes": 13331190,
+          "bytes_comprimidos": 2842393,
+          "crc32": "0b79582b"
+        },
+        {
+          "caminho": "static/js/main.e9e83853.js.LICENSE.txt",
+          "bytes": 5119,
+          "bytes_comprimidos": 1333,
+          "crc32": "605e55cf"
+        },
+        {
+          "caminho": "static/media/AMBAControlCharts.4b40cd7913dcf3e606d4.bmp",
+          "bytes": 29548,
+          "bytes_comprimidos": 1786,
+          "crc32": "b724021a"
+        },
+        {
+          "caminho": "static/media/AMGAControlCharts.525c112fb6779f535ea4.bmp",
+          "bytes": 36488,
+          "bytes_comprimidos": 2255,
+          "crc32": "10c5ac07"
+        },
+        {
+          "caminho": "static/media/AMHist1.85a1bbaa23c9292effa9.bmp",
+          "bytes": 32814,
+          "bytes_comprimidos": 595,
+          "crc32": "882b8645"
+        },
+        {
+          "caminho": "static/media/AMHist2.2a3b0d4b0b624c8564ce.bmp",
+          "bytes": 32814,
+          "bytes_comprimidos": 994,
+          "crc32": "8878f411"
+        },
+        {
+          "caminho": "static/media/AMHist2_1.07351fce3106a2024cac.bmp",
+          "bytes": 32816,
+          "bytes_comprimidos": 2020,
+          "crc32": "73f2f1bd"
+        },
+        {
+          "caminho": "static/media/AMHist2_2.80796b8d850fb76ebd4f.bmp",
+          "bytes": 32816,
+          "bytes_comprimidos": 1952,
+          "crc32": "bccf611c"
+        },
+        {
+          "caminho": "static/media/AMMultiVari1.df149397867f3a78c1e0.bmp",
+          "bytes": 165942,
+          "bytes_comprimidos": 1136,
+          "crc32": "4b59c91a"
+        },
+        {
+          "caminho": "static/media/AMMultiVari2.5935279040913e099e7f.bmp",
+          "bytes": 165942,
+          "bytes_comprimidos": 1845,
+          "crc32": "71b89741"
+        },
+        {
+          "caminho": "static/media/AMMultiVari3.c73bca1aab0a66ea602a.bmp",
+          "bytes": 165942,
+          "bytes_comprimidos": 2570,
+          "crc32": "4904d2b0"
+        },
+        {
+          "caminho": "static/media/AMMultiVari4.d2e6b31f67a63a60ecf9.bmp",
+          "bytes": 165942,
+          "bytes_comprimidos": 3069,
+          "crc32": "138faa78"
+        },
+        {
+          "caminho": "static/media/IndividualValuePlot_Abstract.f17ec85a345ece06edcf.png",
+          "bytes": 11166,
+          "bytes_comprimidos": 10889,
+          "crc32": "33ae0801"
+        },
+        {
+          "caminho": "static/media/MinitabIcon.76405a9a58cbc38dec2b9eb449bf9adb.svg",
+          "bytes": 3088,
+          "bytes_comprimidos": 1145,
+          "crc32": "22c82ab7"
+        },
+        {
+          "caminho": "static/media/MinitabIcon.a1c16cdb3f3aeab96929917621adacf5.svg",
+          "bytes": 3007,
+          "bytes_comprimidos": 1095,
+          "crc32": "8a988b56"
+        },
+        {
+          "caminho": "static/media/NL1ParamSigmoidA.bd6bbbe061db49ab72d1.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 446,
+          "crc32": "2f7c0580"
+        },
+        {
+          "caminho": "static/media/NL1ParamSigmoidB.4cba5d71179e8e1fa0ef.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 364,
+          "crc32": "9cf4e80a"
+        },
+        {
+          "caminho": "static/media/NL2ParamSigmoid1A.ba63ac8628a6ca717831.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 486,
+          "crc32": "002f8e7c"
+        },
+        {
+          "caminho": "static/media/NL2ParamSigmoid1B.0158b2b3ccb5febb250f.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 346,
+          "crc32": "51961c35"
+        },
+        {
+          "caminho": "static/media/NL2ParamSigmoid2A.6c28d8d662ca779024f6.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 399,
+          "crc32": "3f207f0b"
+        },
+        {
+          "caminho": "static/media/NL2ParamSigmoid2B.ee968d5d2440735551b9.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 480,
+          "crc32": "3eb30612"
+        },
+        {
+          "caminho": "static/media/NLAsyRegrA.416f858d3e31b096c8a0.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 448,
+          "crc32": "b8c3cbbe"
+        },
+        {
+          "caminho": "static/media/NLAsyRegrB.55ed98e2bfc850fc6433.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 443,
+          "crc32": "c29f7561"
+        },
+        {
+          "caminho": "static/media/NLAsyRegrC.31770b39bf67c4b3eb5f.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 535,
+          "crc32": "c8f25a2c"
+        },
+        {
+          "caminho": "static/media/NLAsyRegrD.7606c5164f66f741847a.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 527,
+          "crc32": "e640d006"
+        },
+        {
+          "caminho": "static/media/NLBragg.19c7151b68169dec55f2.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 569,
+          "crc32": "58049e86"
+        },
+        {
+          "caminho": "static/media/NLConcave1.721c430a57df6862e11a.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 505,
+          "crc32": "e2b73a1b"
+        },
+        {
+          "caminho": "static/media/NLConvex1.e7a313c2079548410996.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 389,
+          "crc32": "9e3095aa"
+        },
+        {
+          "caminho": "static/media/NLConvex2A.13752ec414f6a712035e.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 444,
+          "crc32": "82a80263"
+        },
+        {
+          "caminho": "static/media/NLConvex2B.113c725ab309c26eff97.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 459,
+          "crc32": "0347cb7e"
+        },
+        {
+          "caminho": "static/media/NLConvexConcave1A.3e16458819ec7e2d06ec.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 525,
+          "crc32": "f9d38b47"
+        },
+        {
+          "caminho": "static/media/NLConvexConcave1B.eeca12e25eeff74d8386.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 458,
+          "crc32": "9270ee96"
+        },
+        {
+          "caminho": "static/media/NLConvexConcave1C.566e2753f705d8047d1f.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 495,
+          "crc32": "c6762c24"
+        },
+        {
+          "caminho": "static/media/NLExponentialA.df7e7749e2db5e6be164.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 463,
+          "crc32": "e6529123"
+        },
+        {
+          "caminho": "static/media/NLExponentialB.d2b9892fdc2aebc1b4a1.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 489,
+          "crc32": "a280b3f5"
+        },
+        {
+          "caminho": "static/media/NLFourier1.1e82c18937b6ec0be51f.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 480,
+          "crc32": "ea905971"
+        },
+        {
+          "caminho": "static/media/NLFourier2.40238652783ed7570cab.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 456,
+          "crc32": "4e4932da"
+        },
+        {
+          "caminho": "static/media/NLGLIMA.574a8d6145b7bcdcf7e3.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 409,
+          "crc32": "93f673a8"
+        },
+        {
+          "caminho": "static/media/NLGLIMB.a6e090343d314353405e.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 406,
+          "crc32": "ad16b20f"
+        },
+        {
+          "caminho": "static/media/NLGompertz.ff309fee40addc581e4a.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 562,
+          "crc32": "e1a3a21c"
+        },
+        {
+          "caminho": "static/media/NLHolliday.c8e74159d9aafc45d7b4.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 573,
+          "crc32": "22f872aa"
+        },
+        {
+          "caminho": "static/media/NLLogLogisticA.130d573a848215541452.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 540,
+          "crc32": "fa323eeb"
+        },
+        {
+          "caminho": "static/media/NLLogLogisticB.28aec01731528e32b38d.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 549,
+          "crc32": "e09d5e2a"
+        },
+        {
+          "caminho": "static/media/NLLogisticA.1f7f74defb02ba2455d2.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 548,
+          "crc32": "a9cff8b2"
+        },
+        {
+          "caminho": "static/media/NLLogisticB.920dc09ba89c03ced3d4.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 543,
+          "crc32": "75ff4f0e"
+        },
+        {
+          "caminho": "static/media/NLMichaelisMenten.246203962ab7208073e9.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 508,
+          "crc32": "7a15c76c"
+        },
+        {
+          "caminho": "static/media/NLPowerA.9ec7b6f89c988bf7c659.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 555,
+          "crc32": "990acbf6"
+        },
+        {
+          "caminho": "static/media/NLPowerB.169572c356360a5c723f.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 470,
+          "crc32": "41c59340"
+        },
+        {
+          "caminho": "static/media/NLPowerC.a9aa1798d23f9590c7cb.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 576,
+          "crc32": "555d3525"
+        },
+        {
+          "caminho": "static/media/NLRational1.375dfc72ee39b5efc07b.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 458,
+          "crc32": "fd5a6c2b"
+        },
+        {
+          "caminho": "static/media/NLRational2.48f28386b34812fb6e0d.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 514,
+          "crc32": "8268ab7b"
+        },
+        {
+          "caminho": "static/media/NLWeibullA.b56f2c2fb17ec8abe826.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 489,
+          "crc32": "808db8ea"
+        },
+        {
+          "caminho": "static/media/NLWeibullB.96b87ff3f3d73e8e3ea0.BMP",
+          "bytes": 4670,
+          "bytes_comprimidos": 489,
+          "crc32": "24a0c6fb"
+        },
+        {
+          "caminho": "static/media/OVAnnotationB.c4ef6e8c2e052254fae6.bmp",
+          "bytes": 156440,
+          "bytes_comprimidos": 8608,
+          "crc32": "f2403f2d"
+        },
+        {
+          "caminho": "static/media/OVConChartsQTools.f5a3132f9f3806acb9da.bmp",
+          "bytes": 178674,
+          "bytes_comprimidos": 6165,
+          "crc32": "a2122a57"
+        },
+        {
+          "caminho": "static/media/OVContourPlots.34cc57fb62a2c4e576ed.bmp",
+          "bytes": 232054,
+          "bytes_comprimidos": 3068,
+          "crc32": "f23f6d24"
+        },
+        {
+          "caminho": "static/media/OVControlCharts.ba1cef4be46beb2beaaf.bmp",
+          "bytes": 140664,
+          "bytes_comprimidos": 6069,
+          "crc32": "ac052973"
+        },
+        {
+          "caminho": "static/media/OVDataView.5f419491559607ffebdf.bmp",
+          "bytes": 220952,
+          "bytes_comprimidos": 4608,
+          "crc32": "9c365733"
+        },
+        {
+          "caminho": "static/media/OVDataViewGroups.71b2feab2d043eac036f.bmp",
+          "bytes": 270310,
+          "bytes_comprimidos": 8449,
+          "crc32": "1f1c9157"
+        },
+        {
+          "caminho": "static/media/OVDataWindow.4c345890d26b73cb55fd.bmp",
+          "bytes": 103674,
+          "bytes_comprimidos": 3372,
+          "crc32": "202da676"
+        },
+        {
+          "caminho": "static/media/OVDistPlots.387a34d79d7747684ced.bmp",
+          "bytes": 131626,
+          "bytes_comprimidos": 9668,
+          "crc32": "dfd15925"
+        },
+        {
+          "caminho": "static/media/OVFrame.82fb576776a217e030eb.bmp",
+          "bytes": 156438,
+          "bytes_comprimidos": 1999,
+          "crc32": "414bb276"
+        },
+        {
+          "caminho": "static/media/OVIndCommands.4ec996cfc237cf9a408c.bmp",
+          "bytes": 144286,
+          "bytes_comprimidos": 6208,
+          "crc32": "a64113a2"
+        },
+        {
+          "caminho": "static/media/OVIndGraphs.9fce795748ea9dffd67c.bmp",
+          "bytes": 221054,
+          "bytes_comprimidos": 1919,
+          "crc32": "41e9728f"
+        },
+        {
+          "caminho": "static/media/OVLinearModels.dd374e5fa22898fafee4.bmp",
+          "bytes": 259282,
+          "bytes_comprimidos": 12720,
+          "crc32": "5adbebbf"
+        },
+        {
+          "caminho": "static/media/OVOptiplot.5dcdf6d90f0b5aa77dc6.bmp",
+          "bytes": 197394,
+          "bytes_comprimidos": 3319,
+          "crc32": "c5ab3476"
+        },
+        {
+          "caminho": "static/media/OVPanels.4e25cf8675a3909b3a5b.bmp",
+          "bytes": 154710,
+          "bytes_comprimidos": 2512,
+          "crc32": "9d6a5f18"
+        },
+        {
+          "caminho": "static/media/OVPredictiveAnalytics.6e79e01c4bf15e99a4b9.bmp",
+          "bytes": 1296302,
+          "bytes_comprimidos": 32822,
+          "crc32": "78ee14a1"
+        },
+        {
+          "caminho": "static/media/OVPtile.c0d2f11e729887cf0f0c.bmp",
+          "bytes": 210446,
+          "bytes_comprimidos": 1963,
+          "crc32": "8742818d"
+        },
+        {
+          "caminho": "static/media/OVRegions.8afb6519f1c5c0ea85ed.bmp",
+          "bytes": 155574,
+          "bytes_comprimidos": 1589,
+          "crc32": "706b9d37"
+        },
+        {
+          "caminho": "static/media/ParallelCoordinatesPlot_Abstract.fba55d9183fd8250485a.png",
+          "bytes": 10783,
+          "bytes_comprimidos": 9499,
+          "crc32": "394fa2f3"
+        },
+        {
+          "caminho": "static/media/ProbabilityPlot_Abstract.04c38b5a3c4093aa9197.png",
+          "bytes": 10787,
+          "bytes_comprimidos": 9873,
+          "crc32": "6c226905"
+        },
+        {
+          "caminho": "static/media/Regression_BestFit.4dd23f9f8d68a4280a1e.bmp",
+          "bytes": 20792,
+          "bytes_comprimidos": 778,
+          "crc32": "951396fd"
+        },
+        {
+          "caminho": "static/media/Regression_BestFit_on.574c794a7f78181e38e4.bmp",
+          "bytes": 20792,
+          "bytes_comprimidos": 676,
+          "crc32": "c5da9818"
+        },
+        {
+          "caminho": "static/media/Regression_Linear.4be6f564bfda034be8fc.bmp",
+          "bytes": 15608,
+          "bytes_comprimidos": 619,
+          "crc32": "07095f08"
+        },
+        {
+          "caminho": "static/media/Regression_Linear_on.47052d9ec92109dfb9cb.bmp",
+          "bytes": 15608,
+          "bytes_comprimidos": 562,
+          "crc32": "29e3c9cf"
+        },
+        {
+          "caminho": "static/media/Regression_Quadratic.a956fbe8e23d5ad2abbc.bmp",
+          "bytes": 20792,
+          "bytes_comprimidos": 776,
+          "crc32": "c07e0ae3"
+        },
+        {
+          "caminho": "static/media/Regression_Quadratic_on.813e36d1655223530345.bmp",
+          "bytes": 20792,
+          "bytes_comprimidos": 690,
+          "crc32": "6a8c3a3b"
+        },
+        {
+          "caminho": "static/media/Shimmer_GIF_FasterWhite.c762370939c528632d28.gif",
+          "bytes": 171665,
+          "bytes_comprimidos": 170843,
+          "crc32": "a239d029"
+        },
+        {
+          "caminho": "static/media/TabulatedStatistics_GalleryStaticPreview.428bfac7d898c2b5931a.png",
+          "bytes": 10418,
+          "bytes_comprimidos": 9452,
+          "crc32": "af1a8a0c"
+        },
+        {
+          "caminho": "static/media/argr.c0d3f3236cee0fa4f241.bmp",
+          "bytes": 43254,
+          "bytes_comprimidos": 1096,
+          "crc32": "d3be097d"
+        },
+        {
+          "caminho": "static/media/argr_on.d25ade7ee5240f097183.bmp",
+          "bytes": 43254,
+          "bytes_comprimidos": 1094,
+          "crc32": "d8a19eb0"
+        },
+        {
+          "caminho": "static/media/boxp1.41b1a3840bb2edecc298.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 262,
+          "crc32": "5b683296"
+        },
+        {
+          "caminho": "static/media/boxp1_on.e4bfc65c316774b43e92.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 260,
+          "crc32": "20bb3e03"
+        },
+        {
+          "caminho": "static/media/boxp2.aae216dd40b1dbe10139.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 403,
+          "crc32": "187b0e01"
+        },
+        {
+          "caminho": "static/media/boxp2_on.6f0f163c272767fb5c67.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 401,
+          "crc32": "63a80294"
+        },
+        {
+          "caminho": "static/media/boxp3.29a7eeca6b83ecfc8894.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 354,
+          "crc32": "037d3c66"
+        },
+        {
+          "caminho": "static/media/boxp3_on.833f50d69717ac1256d8.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 351,
+          "crc32": "78ae30f3"
+        },
+        {
+          "caminho": "static/media/boxp4.0ba4a6e493bbcd59a068.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 442,
+          "crc32": "c51bf93c"
+        },
+        {
+          "caminho": "static/media/boxp4_on.9ddd0fc366b329ebfe42.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 440,
+          "crc32": "bec8f5a9"
+        },
+        {
+          "caminho": "static/media/bubble1.2834dd77b539a035ed97.bmp",
+          "bytes": 12344,
+          "bytes_comprimidos": 566,
+          "crc32": "5037fde3"
+        },
+        {
+          "caminho": "static/media/bubble1_on.7eeb7e44b9c84325106a.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 548,
+          "crc32": "69898d4a"
+        },
+        {
+          "caminho": "static/media/bubble2.18f94ce7cc4e0006ee66.bmp",
+          "bytes": 12344,
+          "bytes_comprimidos": 572,
+          "crc32": "4099f28a"
+        },
+        {
+          "caminho": "static/media/bubble2_on.e33e14f0955a9007cda0.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 553,
+          "crc32": "ad688dc9"
+        },
+        {
+          "caminho": "static/media/chart1a.826bfe522c1be71c9f12.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 248,
+          "crc32": "e62d69e5"
+        },
+        {
+          "caminho": "static/media/chart1a_on.1a2033cf5485e03785fa.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 244,
+          "crc32": "9dfe6570"
+        },
+        {
+          "caminho": "static/media/chart1b.81884ef5baea7c2cc455.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 352,
+          "crc32": "cbd1f156"
+        },
+        {
+          "caminho": "static/media/chart1b_on.707e81e9077f0c0ec843.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 349,
+          "crc32": "b002fdc3"
+        },
+        {
+          "caminho": "static/media/chart1c.dbbaaaf6cc7c5319e630.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 362,
+          "crc32": "7b8cdf74"
+        },
+        {
+          "caminho": "static/media/chart1c_on.4fb807e460758a2aaf22.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 359,
+          "crc32": "005fd3e1"
+        },
+        {
+          "caminho": "static/media/chart2a.383d330400e7a4a58699.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 368,
+          "crc32": "eae27ef7"
+        },
+        {
+          "caminho": "static/media/chart2a_on.c375b7e8ef101f6a95ab.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 366,
+          "crc32": "91317262"
+        },
+        {
+          "caminho": "static/media/chart2b.2b66d50e96f1c46d7b60.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 418,
+          "crc32": "95e4f957"
+        },
+        {
+          "caminho": "static/media/chart2b_on.b02644fd2d95fb47c239.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 413,
+          "crc32": "ee37f5c2"
+        },
+        {
+          "caminho": "static/media/chart2c.714f4f5457e4005e8166.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 395,
+          "crc32": "c3be8113"
+        },
+        {
+          "caminho": "static/media/chart2c_on.b313bb1342a2a4e4f2d4.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 395,
+          "crc32": "b86d8d86"
+        },
+        {
+          "caminho": "static/media/chart2d.d20bee69292409404b8d.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 389,
+          "crc32": "8d27aef5"
+        },
+        {
+          "caminho": "static/media/chart2d_on.13c7c2f89f00290cab28.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 385,
+          "crc32": "f6f4a260"
+        },
+        {
+          "caminho": "static/media/chart2e.fb54ad188c03fa35198c.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 374,
+          "crc32": "3d4ee336"
+        },
+        {
+          "caminho": "static/media/chart2e_on.edb47746b3f01966a0c5.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 370,
+          "crc32": "469defa3"
+        },
+        {
+          "caminho": "static/media/chart2f.22c707703196aa929271.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 431,
+          "crc32": "1ce40be3"
+        },
+        {
+          "caminho": "static/media/chart2f_on.76784648b65102aaa18e.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 428,
+          "crc32": "67370776"
+        },
+        {
+          "caminho": "static/media/chart3a.c5942ff6d2c1536b4f97.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 379,
+          "crc32": "ddca72c7"
+        },
+        {
+          "caminho": "static/media/chart3a_on.b19e4c35e2141df5bb83.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 378,
+          "crc32": "a6197e52"
+        },
+        {
+          "caminho": "static/media/chart3b.8845aa6f143c67d855fa.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 418,
+          "crc32": "507da349"
+        },
+        {
+          "caminho": "static/media/chart3b_on.0f56f75de1716c4ca3ba.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 414,
+          "crc32": "2baeafdc"
+        },
+        {
+          "caminho": "static/media/chart3c.fead709d7bdd0c93c6ac.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 400,
+          "crc32": "549aeccd"
+        },
+        {
+          "caminho": "static/media/chart3c_on.2ce1570ea61938a179ff.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 400,
+          "crc32": "2f49e058"
+        },
+        {
+          "caminho": "static/media/chart3d.b16c6573dfa5fc41fa22.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 383,
+          "crc32": "722fc13a"
+        },
+        {
+          "caminho": "static/media/chart3d_on.a332fbb2dc6be823b339.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 379,
+          "crc32": "09fccdaf"
+        },
+        {
+          "caminho": "static/media/chart3e.5c0484038564e7c58c01.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 445,
+          "crc32": "0bd9954a"
+        },
+        {
+          "caminho": "static/media/chart3e_on.293916f40685bf3dda99.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 441,
+          "crc32": "700a99df"
+        },
+        {
+          "caminho": "static/media/dist1.1740588e5af7969e6837.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 314,
+          "crc32": "daa74f9e"
+        },
+        {
+          "caminho": "static/media/dist1_on.021206b4dd32dd6a74e5.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 312,
+          "crc32": "a174430b"
+        },
+        {
+          "caminho": "static/media/dist2.c818c9257194296fbf50.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 450,
+          "crc32": "84553c7e"
+        },
+        {
+          "caminho": "static/media/dist2_on.3ceffc33c978ec0816c1.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 448,
+          "crc32": "ff8630eb"
+        },
+        {
+          "caminho": "static/media/dist3.da9df8819ed6ea03b7d2.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 312,
+          "crc32": "bc11d686"
+        },
+        {
+          "caminho": "static/media/dist3_on.8da12a2c0860e47f2829.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 309,
+          "crc32": "c7c2da13"
+        },
+        {
+          "caminho": "static/media/dist4.d7e7822a06165043fe12.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 385,
+          "crc32": "d7260874"
+        },
+        {
+          "caminho": "static/media/dist4_on.447475176523ad59dbcc.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 383,
+          "crc32": "acf504e1"
+        },
+        {
+          "caminho": "static/media/distprob4.6a02377d1d9fd388b20a.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 303,
+          "crc32": "9a2bbe2e"
+        },
+        {
+          "caminho": "static/media/distprob4_on.709f0ab000f3c5f5f68d.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 300,
+          "crc32": "e1f8b2bb"
+        },
+        {
+          "caminho": "static/media/distprob5.663791207278e07170d8.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 305,
+          "crc32": "6c8b2559"
+        },
+        {
+          "caminho": "static/media/distprob5_on.ba4790bd2efafd7e5712.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 302,
+          "crc32": "175829cc"
+        },
+        {
+          "caminho": "static/media/distx4.cc9810982c81001dedc1.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 306,
+          "crc32": "5d69747e"
+        },
+        {
+          "caminho": "static/media/distx4_on.dac03e16368f3de665f7.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 304,
+          "crc32": "26ba78eb"
+        },
+        {
+          "caminho": "static/media/distx5.10a72724ca5b2c7114d2.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 311,
+          "crc32": "d7ce309a"
+        },
+        {
+          "caminho": "static/media/distx5_on.498a0feab0079e023da8.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 309,
+          "crc32": "ac1d3c0f"
+        },
+        {
+          "caminho": "static/media/dotch1a.98c264185c0df9f38d60.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 231,
+          "crc32": "ea22e9ae"
+        },
+        {
+          "caminho": "static/media/dotch1a_on.1a5c564f9db089c675ea.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 228,
+          "crc32": "91f1e53b"
+        },
+        {
+          "caminho": "static/media/dotch1b.66a6a9756ec0f06f817d.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 305,
+          "crc32": "e3740640"
+        },
+        {
+          "caminho": "static/media/dotch1b_on.9343ca3448b8ffcb207d.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 303,
+          "crc32": "98a70ad5"
+        },
+        {
+          "caminho": "static/media/dotch1c.62afebd895baf4d2eb26.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 244,
+          "crc32": "9a5116cc"
+        },
+        {
+          "caminho": "static/media/dotch1c_on.3b1e9ae83ec779e94ab5.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 242,
+          "crc32": "e1821a59"
+        },
+        {
+          "caminho": "static/media/dotch2a.e44ba42d3c5ca854185e.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 227,
+          "crc32": "b806b042"
+        },
+        {
+          "caminho": "static/media/dotch2a_on.599a6827a73087dc3df4.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 224,
+          "crc32": "c3d5bcd7"
+        },
+        {
+          "caminho": "static/media/dotch2b.ff1acfcb6135e9cde325.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 297,
+          "crc32": "f3694897"
+        },
+        {
+          "caminho": "static/media/dotch2b_on.245d3d08dfe6d9da9a58.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 294,
+          "crc32": "88ba4402"
+        },
+        {
+          "caminho": "static/media/dotch2c.cb465995c6f231bae007.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 256,
+          "crc32": "5c63ff22"
+        },
+        {
+          "caminho": "static/media/dotch2c_on.905e2671abc38f32c7cf.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 254,
+          "crc32": "27b0f3b7"
+        },
+        {
+          "caminho": "static/media/dotch2d.6caf02b5f1ca67171624.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 238,
+          "crc32": "aa8c5812"
+        },
+        {
+          "caminho": "static/media/dotch2d_on.0cfaf37ca91d1bb416c9.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 236,
+          "crc32": "d15f5487"
+        },
+        {
+          "caminho": "static/media/dotch2e.b7a020f8e9760f6e7c02.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 316,
+          "crc32": "d51c021e"
+        },
+        {
+          "caminho": "static/media/dotch2e_on.dbe09138b4591c986298.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 314,
+          "crc32": "aecf0e8b"
+        },
+        {
+          "caminho": "static/media/dotch2f.96a80f4a864f789c2183.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 241,
+          "crc32": "e9449033"
+        },
+        {
+          "caminho": "static/media/dotch2f_on.09f84f7c4ea99fa4edf4.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 239,
+          "crc32": "92979ca6"
+        },
+        {
+          "caminho": "static/media/dotch3a.c496f3b60e00daec1e54.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 219,
+          "crc32": "40522be6"
+        },
+        {
+          "caminho": "static/media/dotch3a_on.cb665540c1fcbe80fa70.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 218,
+          "crc32": "3b812773"
+        },
+        {
+          "caminho": "static/media/dotch3b.be2203b65be684812a62.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 324,
+          "crc32": "f233a934"
+        },
+        {
+          "caminho": "static/media/dotch3b_on.d89e13d99dcafc171d60.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 321,
+          "crc32": "89e0a5a1"
+        },
+        {
+          "caminho": "static/media/dotch3c.06ab052132b2f432c064.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 251,
+          "crc32": "558ef3e6"
+        },
+        {
+          "caminho": "static/media/dotch3c_on.ee64e0c323a1d8df7a11.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 249,
+          "crc32": "2e5dff73"
+        },
+        {
+          "caminho": "static/media/dotch3d.55c8bd9f122d5f7b4c4b.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 321,
+          "crc32": "f712afec"
+        },
+        {
+          "caminho": "static/media/dotch3d_on.829205b65ef09407969d.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 319,
+          "crc32": "8cc1a379"
+        },
+        {
+          "caminho": "static/media/dotch3e.48888fc5e0dcae92ada3.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 257,
+          "crc32": "33717336"
+        },
+        {
+          "caminho": "static/media/dotch3e_on.493cea0274f991209cd3.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 255,
+          "crc32": "48a27fa3"
+        },
+        {
+          "caminho": "static/media/dotp1.faf58509214d63800040.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 162,
+          "crc32": "e6a76148"
+        },
+        {
+          "caminho": "static/media/dotp1_on.e7ac357e6f7adb253b8b.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 158,
+          "crc32": "9d746ddd"
+        },
+        {
+          "caminho": "static/media/dotp2.373bb9eec3caf8a1d246.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 216,
+          "crc32": "8963b5ed"
+        },
+        {
+          "caminho": "static/media/dotp2_on.42379093430a15837e51.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 212,
+          "crc32": "f2b0b978"
+        },
+        {
+          "caminho": "static/media/dotp3.c9382e7bdebde3b52aa4.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 173,
+          "crc32": "bb1b25cd"
+        },
+        {
+          "caminho": "static/media/dotp3_on.84b46f7ad8ac37c21f74.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 171,
+          "crc32": "c0c82958"
+        },
+        {
+          "caminho": "static/media/dotp4.09e9bba5eccec193942b.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 219,
+          "crc32": "272677e9"
+        },
+        {
+          "caminho": "static/media/dotp4_on.9d02c938e234e93d53b8.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 216,
+          "crc32": "5cf57b7c"
+        },
+        {
+          "caminho": "static/media/dotp5.c9382e7bdebde3b52aa4.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 173,
+          "crc32": "bb1b25cd"
+        },
+        {
+          "caminho": "static/media/dotp5_on.84b46f7ad8ac37c21f74.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 171,
+          "crc32": "c0c82958"
+        },
+        {
+          "caminho": "static/media/dotp6.79851c73b47bfb9a0f35.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 339,
+          "crc32": "2f43301f"
+        },
+        {
+          "caminho": "static/media/dotp6_on.512d3c9f308fa2ff24a5.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 337,
+          "crc32": "54903c8a"
+        },
+        {
+          "caminho": "static/media/dotp7.27d4c56918dbbc7bbcfe.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 232,
+          "crc32": "2fe67d2e"
+        },
+        {
+          "caminho": "static/media/dotp7_on.6ef8997a298b658744d6.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 229,
+          "crc32": "543571bb"
+        },
+        {
+          "caminho": "static/media/ecdf1.5a1c780c12066003bb28.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 349,
+          "crc32": "628d8b5a"
+        },
+        {
+          "caminho": "static/media/ecdf1_on.af6ad791032264e9254d.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 346,
+          "crc32": "195e87cf"
+        },
+        {
+          "caminho": "static/media/ecdf2.58755285f43cd3a22a4a.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 443,
+          "crc32": "c50a12a9"
+        },
+        {
+          "caminho": "static/media/ecdf2_on.9c8ecbe8c3c3bc750f73.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 442,
+          "crc32": "bed91e3c"
+        },
+        {
+          "caminho": "static/media/hist1.f6a8c375cc727fdb42e2.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 272,
+          "crc32": "565b0931"
+        },
+        {
+          "caminho": "static/media/hist1_on.bbf7fd9525b21ec5f631.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 263,
+          "crc32": "2d8805a4"
+        },
+        {
+          "caminho": "static/media/hist2.1daece96796947f9408f.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 396,
+          "crc32": "61752f33"
+        },
+        {
+          "caminho": "static/media/hist2_on.9fb8f164f1707d32cbc1.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 393,
+          "crc32": "1aa623a6"
+        },
+        {
+          "caminho": "static/media/hist3.017fecb9852022d12170.bmp",
+          "bytes": 12344,
+          "bytes_comprimidos": 300,
+          "crc32": "6568df15"
+        },
+        {
+          "caminho": "static/media/hist3_on.4e9866c67af849a6f967.bmp",
+          "bytes": 12344,
+          "bytes_comprimidos": 296,
+          "crc32": "f9f4acbb"
+        },
+        {
+          "caminho": "static/media/hist4.a7304ea367769bacc5e7.bmp",
+          "bytes": 12344,
+          "bytes_comprimidos": 1325,
+          "crc32": "73b8cef4"
+        },
+        {
+          "caminho": "static/media/hist4_on.7ca033294a35e68445a8.bmp",
+          "bytes": 12344,
+          "bytes_comprimidos": 1873,
+          "crc32": "deeb9572"
+        },
+        {
+          "caminho": "static/media/indiv1.f5fe49253cc03791453e.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 170,
+          "crc32": "27972de4"
+        },
+        {
+          "caminho": "static/media/indiv1_on.f218e1bad07b614336f1.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 168,
+          "crc32": "5c442171"
+        },
+        {
+          "caminho": "static/media/indiv2.c780429c2ddfb03ffb97.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 360,
+          "crc32": "03202094"
+        },
+        {
+          "caminho": "static/media/indiv2_on.b3426ab73457736c4c4b.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 358,
+          "crc32": "78f32c01"
+        },
+        {
+          "caminho": "static/media/indiv3.b8d75208049d10daae6a.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 287,
+          "crc32": "17b5659d"
+        },
+        {
+          "caminho": "static/media/indiv3_on.014c4f46c0177a48a4b4.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 285,
+          "crc32": "6c666908"
+        },
+        {
+          "caminho": "static/media/indiv4.c3a40afc155dea78a213.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 348,
+          "crc32": "df353a92"
+        },
+        {
+          "caminho": "static/media/indiv4_on.3916f070ef34f32b5b94.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 347,
+          "crc32": "a4e63607"
+        },
+        {
+          "caminho": "static/media/intp1.4d3a10d7867813fda38b.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 238,
+          "crc32": "db3adebc"
+        },
+        {
+          "caminho": "static/media/intp1_on.d0764d4121886eaf2188.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 237,
+          "crc32": "a0e9d229"
+        },
+        {
+          "caminho": "static/media/intp2.209cda40730623859d9b.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 377,
+          "crc32": "a9807c02"
+        },
+        {
+          "caminho": "static/media/intp2_on.a3283d5f8f196d2fd641.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 375,
+          "crc32": "d2537097"
+        },
+        {
+          "caminho": "static/media/intp3.bc4f55b9aa87fbfc0ab8.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 315,
+          "crc32": "35476427"
+        },
+        {
+          "caminho": "static/media/intp3_on.54477c15da77ab62421f.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 315,
+          "crc32": "4e9468b2"
+        },
+        {
+          "caminho": "static/media/intp4.d37df440413b93296b00.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 388,
+          "crc32": "ad813bb8"
+        },
+        {
+          "caminho": "static/media/intp4_on.7ea46db36aa70f4cda10.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 386,
+          "crc32": "d652372d"
+        },
+        {
+          "caminho": "static/media/marg1.909f9770a1794a9184a5.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 311,
+          "crc32": "1d4b783d"
+        },
+        {
+          "caminho": "static/media/marg1_on.8e41ffe56f08b3723b19.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 310,
+          "crc32": "669874a8"
+        },
+        {
+          "caminho": "static/media/marg2.529f6dc057802eb538a8.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 251,
+          "crc32": "3fd13e9d"
+        },
+        {
+          "caminho": "static/media/marg2_on.40db7c66c3e29d64155e.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 249,
+          "crc32": "44023208"
+        },
+        {
+          "caminho": "static/media/marg3.7deb4754906d247c4100.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 250,
+          "crc32": "48e878fb"
+        },
+        {
+          "caminho": "static/media/marg3_on.5a2c652988fee676dcce.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 247,
+          "crc32": "333b746e"
+        },
+        {
+          "caminho": "static/media/matr1.d6c226b6bb119fe6f5a0.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 334,
+          "crc32": "8042575f"
+        },
+        {
+          "caminho": "static/media/matr1_on.999c3aab776d92311b41.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 332,
+          "crc32": "fb915bca"
+        },
+        {
+          "caminho": "static/media/matr2.51bb20ad5c5be5020ddc.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 389,
+          "crc32": "225a8d82"
+        },
+        {
+          "caminho": "static/media/matr2_on.3b1debf1d36840027a5a.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 386,
+          "crc32": "59898117"
+        },
+        {
+          "caminho": "static/media/matr3.07de08f665af124d9bda.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 384,
+          "crc32": "820076e6"
+        },
+        {
+          "caminho": "static/media/matr3_on.a4b511d8049b7b64cbde.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 381,
+          "crc32": "f9d37a73"
+        },
+        {
+          "caminho": "static/media/matr4.f45a9ef5fc23d4a9d1e6.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 390,
+          "crc32": "caee122f"
+        },
+        {
+          "caminho": "static/media/matr4_on.27c946759e8936f5e0c5.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 388,
+          "crc32": "b13d1eba"
+        },
+        {
+          "caminho": "static/media/matr5.6d8054897a0226041c28.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 457,
+          "crc32": "1d54a8d3"
+        },
+        {
+          "caminho": "static/media/matr5_on.4f16d2b118c0306d0f9b.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 455,
+          "crc32": "6687a446"
+        },
+        {
+          "caminho": "static/media/matr6.2ace4d37f45c3a474d31.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 473,
+          "crc32": "1a1a9457"
+        },
+        {
+          "caminho": "static/media/matr6_on.db39063a76df9b7d7968.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 471,
+          "crc32": "61c998c2"
+        },
+        {
+          "caminho": "static/media/pie1.f3563a484616f62125d1.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 404,
+          "crc32": "347b727e"
+        },
+        {
+          "caminho": "static/media/pie1_on.6fa195e1443cf47f5fb2.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 402,
+          "crc32": "4fa87eeb"
+        },
+        {
+          "caminho": "static/media/pie2.7e87baf2b84f62a2575c.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 328,
+          "crc32": "8db9dfe0"
+        },
+        {
+          "caminho": "static/media/pie2_on.756a1cf4c28f971c5fd8.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 326,
+          "crc32": "f66ad375"
+        },
+        {
+          "caminho": "static/media/plot1.1c7641310b7a825a2b57.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 208,
+          "crc32": "a6fe54d3"
+        },
+        {
+          "caminho": "static/media/plot1_on.876722333dddc6681771.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 206,
+          "crc32": "dd2d5846"
+        },
+        {
+          "caminho": "static/media/plot2.a59661979650520cb6ac.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 225,
+          "crc32": "5db13c4a"
+        },
+        {
+          "caminho": "static/media/plot2_on.0e798dbe2c7eaf7e5a58.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 222,
+          "crc32": "266230df"
+        },
+        {
+          "caminho": "static/media/plot3.260b40d4cc27db275f76.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 294,
+          "crc32": "49da008d"
+        },
+        {
+          "caminho": "static/media/plot3_on.a39b96bfd30c0395057c.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 292,
+          "crc32": "32090c18"
+        },
+        {
+          "caminho": "static/media/plot4.44e5ecf6909d98ffb1ea.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 300,
+          "crc32": "9c962d4e"
+        },
+        {
+          "caminho": "static/media/plot4_on.76bd039004b4bc171f7e.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 297,
+          "crc32": "e74521db"
+        },
+        {
+          "caminho": "static/media/plot5.8979bc96b80bdb849cc3.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 282,
+          "crc32": "481dd327"
+        },
+        {
+          "caminho": "static/media/plot5_on.67db303bb5d041bdb5c9.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 280,
+          "crc32": "33cedfb2"
+        },
+        {
+          "caminho": "static/media/plot6.75bf48ed88724815f9f8.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 350,
+          "crc32": "a6797ee9"
+        },
+        {
+          "caminho": "static/media/plot6_on.26467e9fbc49b62ad2b9.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 347,
+          "crc32": "ddaa727c"
+        },
+        {
+          "caminho": "static/media/pltx1.8d475194ffac73a94b06.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 418,
+          "crc32": "377c736b"
+        },
+        {
+          "caminho": "static/media/pltx1_on.47fdcba79fdb253cde79.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 416,
+          "crc32": "4caf7ffe"
+        },
+        {
+          "caminho": "static/media/pltx2.fc2d77ebd4b9f5a028ae.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 423,
+          "crc32": "d3f1335d"
+        },
+        {
+          "caminho": "static/media/pltx2_on.9278aa80675d7f742ff4.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 420,
+          "crc32": "a8223fc8"
+        },
+        {
+          "caminho": "static/media/pplot1.a4e4be2df1e7a44fe6df.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 278,
+          "crc32": "d8e7fa32"
+        },
+        {
+          "caminho": "static/media/pplot1_on.ca8f478801403c0822d8.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 275,
+          "crc32": "a334f6a7"
+        },
+        {
+          "caminho": "static/media/pplot2.9ae40103d3b4d35f0511.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 334,
+          "crc32": "e39d761e"
+        },
+        {
+          "caminho": "static/media/pplot2_on.6ab03597142db86d44c8.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 332,
+          "crc32": "984e7a8b"
+        },
+        {
+          "caminho": "static/media/surf1.737548cd2b0b884d7dc8.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 742,
+          "crc32": "63eddf6c"
+        },
+        {
+          "caminho": "static/media/surf1_on.67dde1508f5e58cbd2e6.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 744,
+          "crc32": "183ed3f9"
+        },
+        {
+          "caminho": "static/media/surf2.0e7f9b7db97fec71a62f.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 563,
+          "crc32": "5c19df4b"
+        },
+        {
+          "caminho": "static/media/surf2_on.77ce90ede687d4faf1cc.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 560,
+          "crc32": "27cad3de"
+        },
+        {
+          "caminho": "static/media/tspl1.ebfe466404f08184ee0d.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 320,
+          "crc32": "49a56a10"
+        },
+        {
+          "caminho": "static/media/tspl1_on.13549e10eda1fd201dc9.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 318,
+          "crc32": "32766685"
+        },
+        {
+          "caminho": "static/media/tspl2.994b45cf99f4ee628704.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 346,
+          "crc32": "a9c5ff18"
+        },
+        {
+          "caminho": "static/media/tspl2_on.4eeab72b3deffc057dbd.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 346,
+          "crc32": "d216f38d"
+        },
+        {
+          "caminho": "static/media/tspl3.9590235d6873603886fd.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 394,
+          "crc32": "03e228b6"
+        },
+        {
+          "caminho": "static/media/tspl3_on.0d2f598f86244772b101.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 393,
+          "crc32": "78312423"
+        },
+        {
+          "caminho": "static/media/tspl4.d9b44300150176e65cea.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 421,
+          "crc32": "25e5bfaa"
+        },
+        {
+          "caminho": "static/media/tspl4_on.20ff6963eb0e85fe4cea.bmp",
+          "bytes": 12342,
+          "bytes_comprimidos": 418,
+          "crc32": "5e36b33f"
+        }
+      ]
+    },
+    {
+      "arquivo": "minitab-treeviewer.data",
+      "sha256": "110485199ee460273a7b561b18ff84384e8fcb60b8b436ec89f1f4021c0b2def",
+      "entradas": 10,
+      "arquivos": 6,
+      "bytes_descompactados": 2181222,
+      "extensoes": {
+        ".html": 1,
+        ".ico": 1,
+        ".js": 2,
+        ".svg": 1,
+        ".txt": 1
+      },
+      "membros": [
+        {
+          "caminho": "favicon.ico",
+          "bytes": 568,
+          "bytes_comprimidos": 444,
+          "crc32": "b36fba94"
+        },
+        {
+          "caminho": "index.html",
+          "bytes": 329,
+          "bytes_comprimidos": 224,
+          "crc32": "c17425db"
+        },
+        {
+          "caminho": "scripts/tree_viewer.js",
+          "bytes": 335,
+          "bytes_comprimidos": 190,
+          "crc32": "fa97ffdd"
+        },
+        {
+          "caminho": "static/js/main.09477858.js",
+          "bytes": 2175550,
+          "bytes_comprimidos": 458387,
+          "crc32": "acabb7a7"
+        },
+        {
+          "caminho": "static/js/main.09477858.js.LICENSE.txt",
+          "bytes": 1352,
+          "bytes_comprimidos": 300,
+          "crc32": "3e320813"
+        },
+        {
+          "caminho": "static/media/MinitabIcon.76405a9a58cbc38dec2b9eb449bf9adb.svg",
+          "bytes": 3088,
+          "bytes_comprimidos": 1163,
+          "crc32": "22c82ab7"
+        }
+      ]
+    },
+    {
+      "arquivo": "mss-graph-editing.data",
+      "sha256": "f15d9a91f876f4044f43346fd2cc7aed8d700bb5855abcfb8c7666b523200ea1",
+      "entradas": 7,
+      "arquivos": 4,
+      "bytes_descompactados": 1973229,
+      "extensoes": {
+        ".html": 1,
+        ".js": 2,
+        ".txt": 1
+      },
+      "membros": [
+        {
+          "caminho": "index.html",
+          "bytes": 287,
+          "bytes_comprimidos": 202,
+          "crc32": "5e0241a5"
+        },
+        {
+          "caminho": "scripts/mss_graph_editing.js",
+          "bytes": 344,
+          "bytes_comprimidos": 199,
+          "crc32": "8b10e87c"
+        },
+        {
+          "caminho": "static/js/main.77c35f31.js",
+          "bytes": 1968771,
+          "bytes_comprimidos": 538657,
+          "crc32": "77612bb6"
+        },
+        {
+          "caminho": "static/js/main.77c35f31.js.LICENSE.txt",
+          "bytes": 3827,
+          "bytes_comprimidos": 862,
+          "crc32": "4d2ebba8"
+        }
+      ]
+    },
+    {
+      "arquivo": "mss-graphs.data",
+      "sha256": "a0efdca20fb01f6e2dd078875fd89a6e0554eefe3f04b6f9672db71366012266",
+      "entradas": 218,
+      "arquivos": 204,
+      "bytes_descompactados": 3735271,
+      "extensoes": {
+        ".css": 1,
+        ".gif": 1,
+        ".html": 1,
+        ".ico": 1,
+        ".js": 2,
+        ".json": 193,
+        ".png": 4,
+        ".txt": 1
+      },
+      "membros": [
+        {
+          "caminho": "asset-manifest.json",
+          "bytes": 1063,
+          "bytes_comprimidos": 361,
+          "crc32": "0156ed37"
+        },
+        {
+          "caminho": "favicon.ico",
+          "bytes": 568,
+          "bytes_comprimidos": 444,
+          "crc32": "b36fba94"
+        },
+        {
+          "caminho": "index.html",
+          "bytes": 644,
+          "bytes_comprimidos": 331,
+          "crc32": "b2f9ec2e"
+        },
+        {
+          "caminho": "locales/de/area-graph.json",
+          "bytes": 26,
+          "bytes_comprimidos": 24,
+          "crc32": "6843e8c8"
+        },
+        {
+          "caminho": "locales/de/bar-chart.json",
+          "bytes": 122,
+          "bytes_comprimidos": 92,
+          "crc32": "74973a3a"
+        },
+        {
+          "caminho": "locales/de/binned-scatterplot.json",
+          "bytes": 40,
+          "bytes_comprimidos": 40,
+          "crc32": "5f4c3d3f"
+        },
+        {
+          "caminho": "locales/de/boxplot.json",
+          "bytes": 295,
+          "bytes_comprimidos": 160,
+          "crc32": "e350d88a"
+        },
+        {
+          "caminho": "locales/de/bubbleplot.json",
+          "bytes": 34,
+          "bytes_comprimidos": 34,
+          "crc32": "9e38eeab"
+        },
+        {
+          "caminho": "locales/de/capability.json",
+          "bytes": 701,
+          "bytes_comprimidos": 342,
+          "crc32": "55cc120f"
+        },
+        {
+          "caminho": "locales/de/control-chart.json",
+          "bytes": 294,
+          "bytes_comprimidos": 177,
+          "crc32": "03514698"
+        },
+        {
+          "caminho": "locales/de/graph-builder.json",
+          "bytes": 22471,
+          "bytes_comprimidos": 6276,
+          "crc32": "deae9a10"
+        },
+        {
+          "caminho": "locales/de/histogram.json",
+          "bytes": 61,
+          "bytes_comprimidos": 55,
+          "crc32": "da5c1e5f"
+        },
+        {
+          "caminho": "locales/de/individual-value-plot.json",
+          "bytes": 78,
+          "bytes_comprimidos": 67,
+          "crc32": "10ab3422"
+        },
+        {
+          "caminho": "locales/de/interval-plot.json",
+          "bytes": 178,
+          "bytes_comprimidos": 119,
+          "crc32": "e3b5aee0"
+        },
+        {
+          "caminho": "locales/de/itable.json",
+          "bytes": 247,
+          "bytes_comprimidos": 164,
+          "crc32": "74fdabbc"
+        },
+        {
+          "caminho": "locales/de/line-plot.json",
+          "bytes": 135,
+          "bytes_comprimidos": 98,
+          "crc32": "78e9ea8e"
+        },
+        {
+          "caminho": "locales/de/matrix-plot.json",
+          "bytes": 82,
+          "bytes_comprimidos": 70,
+          "crc32": "10d4431a"
+        },
+        {
+          "caminho": "locales/de/mssgraphs.json",
+          "bytes": 241,
+          "bytes_comprimidos": 150,
+          "crc32": "01129757"
+        },
+        {
+          "caminho": "locales/de/optiplot.json",
+          "bytes": 1635,
+          "bytes_comprimidos": 695,
+          "crc32": "708f21d8"
+        },
+        {
+          "caminho": "locales/de/parallel-coordinates-plot.json",
+          "bytes": 199,
+          "bytes_comprimidos": 115,
+          "crc32": "38adf761"
+        },
+        {
+          "caminho": "locales/de/pareto-chart.json",
+          "bytes": 268,
+          "bytes_comprimidos": 139,
+          "crc32": "c5913df6"
+        },
+        {
+          "caminho": "locales/de/pie-chart.json",
+          "bytes": 29,
+          "bytes_comprimidos": 29,
+          "crc32": "cb7c448c"
+        },
+        {
+          "caminho": "locales/de/probability-plot.json",
+          "bytes": 119,
+          "bytes_comprimidos": 94,
+          "crc32": "d337ad29"
+        },
+        {
+          "caminho": "locales/de/scatterplot.json",
+          "bytes": 57,
+          "bytes_comprimidos": 53,
+          "crc32": "51c826cb"
+        },
+        {
+          "caminho": "locales/de/time-series-plot.json",
+          "bytes": 26,
+          "bytes_comprimidos": 24,
+          "crc32": "6843e8c8"
+        },
+        {
+          "caminho": "locales/de/variability-chart.json",
+          "bytes": 516,
+          "bytes_comprimidos": 216,
+          "crc32": "d746fb5c"
+        },
+        {
+          "caminho": "locales/de/wafer-plot.json",
+          "bytes": 16,
+          "bytes_comprimidos": 16,
+          "crc32": "f106664a"
+        },
+        {
+          "caminho": "locales/en/area-graph.json",
+          "bytes": 23,
+          "bytes_comprimidos": 21,
+          "crc32": "e692e5d0"
+        },
+        {
+          "caminho": "locales/en/bar-chart.json",
+          "bytes": 108,
+          "bytes_comprimidos": 65,
+          "crc32": "7f0b10fb"
+        },
+        {
+          "caminho": "locales/en/binned-scatterplot.json",
+          "bytes": 31,
+          "bytes_comprimidos": 31,
+          "crc32": "63d6f405"
+        },
+        {
+          "caminho": "locales/en/boxplot.json",
+          "bytes": 272,
+          "bytes_comprimidos": 141,
+          "crc32": "22e93629"
+        },
+        {
+          "caminho": "locales/en/bubbleplot.json",
+          "bytes": 29,
+          "bytes_comprimidos": 29,
+          "crc32": "02e8b951"
+        },
+        {
+          "caminho": "locales/en/capability.json",
+          "bytes": 632,
+          "bytes_comprimidos": 272,
+          "crc32": "1b0d6fe3"
+        },
+        {
+          "caminho": "locales/en/control-chart.json",
+          "bytes": 279,
+          "bytes_comprimidos": 146,
+          "crc32": "b53ba677"
+        },
+        {
+          "caminho": "locales/en/graph-builder.json",
+          "bytes": 20460,
+          "bytes_comprimidos": 5400,
+          "crc32": "a16acc5f"
+        },
+        {
+          "caminho": "locales/en/histogram.json",
+          "bytes": 55,
+          "bytes_comprimidos": 40,
+          "crc32": "d4045b1e"
+        },
+        {
+          "caminho": "locales/en/individual-value-plot.json",
+          "bytes": 68,
+          "bytes_comprimidos": 55,
+          "crc32": "595ca4f4"
+        },
+        {
+          "caminho": "locales/en/interval-plot.json",
+          "bytes": 168,
+          "bytes_comprimidos": 107,
+          "crc32": "7a42847c"
+        },
+        {
+          "caminho": "locales/en/itable.json",
+          "bytes": 226,
+          "bytes_comprimidos": 147,
+          "crc32": "38ebb1ff"
+        },
+        {
+          "caminho": "locales/en/line-plot.json",
+          "bytes": 126,
+          "bytes_comprimidos": 83,
+          "crc32": "def8b332"
+        },
+        {
+          "caminho": "locales/en/matrix-plot.json",
+          "bytes": 74,
+          "bytes_comprimidos": 59,
+          "crc32": "2c42b069"
+        },
+        {
+          "caminho": "locales/en/mssgraphs.json",
+          "bytes": 223,
+          "bytes_comprimidos": 142,
+          "crc32": "32d4b4d3"
+        },
+        {
+          "caminho": "locales/en/optiplot.json",
+          "bytes": 1392,
+          "bytes_comprimidos": 521,
+          "crc32": "5e93f1b2"
+        },
+        {
+          "caminho": "locales/en/parallel-coordinates-plot.json",
+          "bytes": 168,
+          "bytes_comprimidos": 92,
+          "crc32": "766a00b4"
+        },
+        {
+          "caminho": "locales/en/pareto-chart.json",
+          "bytes": 254,
+          "bytes_comprimidos": 101,
+          "crc32": "ea4bc352"
+        },
+        {
+          "caminho": "locales/en/pie-chart.json",
+          "bytes": 23,
+          "bytes_comprimidos": 21,
+          "crc32": "abf7309e"
+        },
+        {
+          "caminho": "locales/en/probability-plot.json",
+          "bytes": 105,
+          "bytes_comprimidos": 72,
+          "crc32": "901a69c1"
+        },
+        {
+          "caminho": "locales/en/scatterplot.json",
+          "bytes": 51,
+          "bytes_comprimidos": 46,
+          "crc32": "9a0b0ea6"
+        },
+        {
+          "caminho": "locales/en/time-series-plot.json",
+          "bytes": 23,
+          "bytes_comprimidos": 21,
+          "crc32": "e692e5d0"
+        },
+        {
+          "caminho": "locales/en/variability-chart.json",
+          "bytes": 482,
+          "bytes_comprimidos": 191,
+          "crc32": "84d76925"
+        },
+        {
+          "caminho": "locales/en/wafer-plot.json",
+          "bytes": 18,
+          "bytes_comprimidos": 18,
+          "crc32": "46316a3f"
+        },
+        {
+          "caminho": "locales/es/area-graph.json",
+          "bytes": 28,
+          "bytes_comprimidos": 28,
+          "crc32": "2992cc4b"
+        },
+        {
+          "caminho": "locales/es/bar-chart.json",
+          "bytes": 117,
+          "bytes_comprimidos": 81,
+          "crc32": "7f526192"
+        },
+        {
+          "caminho": "locales/es/binned-scatterplot.json",
+          "bytes": 35,
+          "bytes_comprimidos": 35,
+          "crc32": "20789a8b"
+        },
+        {
+          "caminho": "locales/es/boxplot.json",
+          "bytes": 296,
+          "bytes_comprimidos": 165,
+          "crc32": "eeb0678f"
+        },
+        {
+          "caminho": "locales/es/bubbleplot.json",
+          "bytes": 33,
+          "bytes_comprimidos": 33,
+          "crc32": "099c9f7f"
+        },
+        {
+          "caminho": "locales/es/capability.json",
+          "bytes": 694,
+          "bytes_comprimidos": 327,
+          "crc32": "b339c030"
+        },
+        {
+          "caminho": "locales/es/control-chart.json",
+          "bytes": 303,
+          "bytes_comprimidos": 178,
+          "crc32": "fb937ad9"
+        },
+        {
+          "caminho": "locales/es/graph-builder.json",
+          "bytes": 22460,
+          "bytes_comprimidos": 6039,
+          "crc32": "2601b72d"
+        },
+        {
+          "caminho": "locales/es/histogram.json",
+          "bytes": 63,
+          "bytes_comprimidos": 54,
+          "crc32": "321c2eed"
+        },
+        {
+          "caminho": "locales/es/individual-value-plot.json",
+          "bytes": 75,
+          "bytes_comprimidos": 66,
+          "crc32": "fc8821aa"
+        },
+        {
+          "caminho": "locales/es/interval-plot.json",
+          "bytes": 182,
+          "bytes_comprimidos": 120,
+          "crc32": "1f2c1521"
+        },
+        {
+          "caminho": "locales/es/itable.json",
+          "bytes": 229,
+          "bytes_comprimidos": 152,
+          "crc32": "2bdd940c"
+        },
+        {
+          "caminho": "locales/es/line-plot.json",
+          "bytes": 143,
+          "bytes_comprimidos": 100,
+          "crc32": "57a2b0b6"
+        },
+        {
+          "caminho": "locales/es/matrix-plot.json",
+          "bytes": 86,
+          "bytes_comprimidos": 74,
+          "crc32": "fe39447e"
+        },
+        {
+          "caminho": "locales/es/mssgraphs.json",
+          "bytes": 240,
+          "bytes_comprimidos": 153,
+          "crc32": "ecfab718"
+        },
+        {
+          "caminho": "locales/es/optiplot.json",
+          "bytes": 1530,
+          "bytes_comprimidos": 595,
+          "crc32": "065ad390"
+        },
+        {
+          "caminho": "locales/es/parallel-coordinates-plot.json",
+          "bytes": 188,
+          "bytes_comprimidos": 110,
+          "crc32": "3f7d31b2"
+        },
+        {
+          "caminho": "locales/es/pareto-chart.json",
+          "bytes": 258,
+          "bytes_comprimidos": 118,
+          "crc32": "0587ebb6"
+        },
+        {
+          "caminho": "locales/es/pie-chart.json",
+          "bytes": 25,
+          "bytes_comprimidos": 25,
+          "crc32": "7b3e210a"
+        },
+        {
+          "caminho": "locales/es/probability-plot.json",
+          "bytes": 122,
+          "bytes_comprimidos": 92,
+          "crc32": "aef45ad7"
+        },
+        {
+          "caminho": "locales/es/scatterplot.json",
+          "bytes": 62,
+          "bytes_comprimidos": 58,
+          "crc32": "106884db"
+        },
+        {
+          "caminho": "locales/es/time-series-plot.json",
+          "bytes": 28,
+          "bytes_comprimidos": 28,
+          "crc32": "2992cc4b"
+        },
+        {
+          "caminho": "locales/es/variability-chart.json",
+          "bytes": 511,
+          "bytes_comprimidos": 224,
+          "crc32": "9997bdac"
+        },
+        {
+          "caminho": "locales/es/wafer-plot.json",
+          "bytes": 16,
+          "bytes_comprimidos": 16,
+          "crc32": "f106664a"
+        },
+        {
+          "caminho": "locales/fr/area-graph.json",
+          "bytes": 27,
+          "bytes_comprimidos": 27,
+          "crc32": "48cb9726"
+        },
+        {
+          "caminho": "locales/fr/bar-chart.json",
+          "bytes": 121,
+          "bytes_comprimidos": 89,
+          "crc32": "d1088160"
+        },
+        {
+          "caminho": "locales/fr/binned-scatterplot.json",
+          "bytes": 37,
+          "bytes_comprimidos": 37,
+          "crc32": "f0f3c4b7"
+        },
+        {
+          "caminho": "locales/fr/boxplot.json",
+          "bytes": 294,
+          "bytes_comprimidos": 169,
+          "crc32": "fa72801f"
+        },
+        {
+          "caminho": "locales/fr/bubbleplot.json",
+          "bytes": 34,
+          "bytes_comprimidos": 34,
+          "crc32": "617eb97f"
+        },
+        {
+          "caminho": "locales/fr/capability.json",
+          "bytes": 689,
+          "bytes_comprimidos": 319,
+          "crc32": "55445375"
+        },
+        {
+          "caminho": "locales/fr/control-chart.json",
+          "bytes": 308,
+          "bytes_comprimidos": 169,
+          "crc32": "9d3c2df3"
+        },
+        {
+          "caminho": "locales/fr/graph-builder.json",
+          "bytes": 23331,
+          "bytes_comprimidos": 6306,
+          "crc32": "2a9e7849"
+        },
+        {
+          "caminho": "locales/fr/histogram.json",
+          "bytes": 62,
+          "bytes_comprimidos": 55,
+          "crc32": "f855b6da"
+        },
+        {
+          "caminho": "locales/fr/individual-value-plot.json",
+          "bytes": 72,
+          "bytes_comprimidos": 69,
+          "crc32": "a01124c4"
+        },
+        {
+          "caminho": "locales/fr/interval-plot.json",
+          "bytes": 183,
+          "bytes_comprimidos": 125,
+          "crc32": "da55ac66"
+        },
+        {
+          "caminho": "locales/fr/itable.json",
+          "bytes": 247,
+          "bytes_comprimidos": 169,
+          "crc32": "07b751e2"
+        },
+        {
+          "caminho": "locales/fr/line-plot.json",
+          "bytes": 147,
+          "bytes_comprimidos": 101,
+          "crc32": "70133d2e"
+        },
+        {
+          "caminho": "locales/fr/matrix-plot.json",
+          "bytes": 86,
+          "bytes_comprimidos": 72,
+          "crc32": "30dc86c9"
+        },
+        {
+          "caminho": "locales/fr/mssgraphs.json",
+          "bytes": 242,
+          "bytes_comprimidos": 160,
+          "crc32": "8e495c26"
+        },
+        {
+          "caminho": "locales/fr/optiplot.json",
+          "bytes": 1606,
+          "bytes_comprimidos": 638,
+          "crc32": "c04eb709"
+        },
+        {
+          "caminho": "locales/fr/parallel-coordinates-plot.json",
+          "bytes": 196,
+          "bytes_comprimidos": 120,
+          "crc32": "220a6a55"
+        },
+        {
+          "caminho": "locales/fr/pareto-chart.json",
+          "bytes": 259,
+          "bytes_comprimidos": 123,
+          "crc32": "4042910c"
+        },
+        {
+          "caminho": "locales/fr/pie-chart.json",
+          "bytes": 26,
+          "bytes_comprimidos": 26,
+          "crc32": "d3478a52"
+        },
+        {
+          "caminho": "locales/fr/probability-plot.json",
+          "bytes": 118,
+          "bytes_comprimidos": 85,
+          "crc32": "1a9bba96"
+        },
+        {
+          "caminho": "locales/fr/scatterplot.json",
+          "bytes": 61,
+          "bytes_comprimidos": 57,
+          "crc32": "8f60cc16"
+        },
+        {
+          "caminho": "locales/fr/time-series-plot.json",
+          "bytes": 27,
+          "bytes_comprimidos": 27,
+          "crc32": "48cb9726"
+        },
+        {
+          "caminho": "locales/fr/variability-chart.json",
+          "bytes": 520,
+          "bytes_comprimidos": 222,
+          "crc32": "bbbd4672"
+        },
+        {
+          "caminho": "locales/fr/wafer-plot.json",
+          "bytes": 16,
+          "bytes_comprimidos": 16,
+          "crc32": "f106664a"
+        },
+        {
+          "caminho": "locales/ja/area-graph.json",
+          "bytes": 27,
+          "bytes_comprimidos": 27,
+          "crc32": "dcdbd409"
+        },
+        {
+          "caminho": "locales/ja/bar-chart.json",
+          "bytes": 126,
+          "bytes_comprimidos": 106,
+          "crc32": "4045f47f"
+        },
+        {
+          "caminho": "locales/ja/binned-scatterplot.json",
+          "bytes": 36,
+          "bytes_comprimidos": 36,
+          "crc32": "09a89d36"
+        },
+        {
+          "caminho": "locales/ja/boxplot.json",
+          "bytes": 310,
+          "bytes_comprimidos": 198,
+          "crc32": "c372af2c"
+        },
+        {
+          "caminho": "locales/ja/bubbleplot.json",
+          "bytes": 32,
+          "bytes_comprimidos": 32,
+          "crc32": "6c4ed776"
+        },
+        {
+          "caminho": "locales/ja/capability.json",
+          "bytes": 681,
+          "bytes_comprimidos": 397,
+          "crc32": "fdd60d05"
+        },
+        {
+          "caminho": "locales/ja/control-chart.json",
+          "bytes": 308,
+          "bytes_comprimidos": 205,
+          "crc32": "80f222fa"
+        },
+        {
+          "caminho": "locales/ja/graph-builder.json",
+          "bytes": 22994,
+          "bytes_comprimidos": 6678,
+          "crc32": "6f346e77"
+        },
+        {
+          "caminho": "locales/ja/histogram.json",
+          "bytes": 64,
+          "bytes_comprimidos": 62,
+          "crc32": "8d6cb6d7"
+        },
+        {
+          "caminho": "locales/ja/individual-value-plot.json",
+          "bytes": 69,
+          "bytes_comprimidos": 67,
+          "crc32": "7a934d74"
+        },
+        {
+          "caminho": "locales/ja/interval-plot.json",
+          "bytes": 155,
+          "bytes_comprimidos": 117,
+          "crc32": "18610f74"
+        },
+        {
+          "caminho": "locales/ja/itable.json",
+          "bytes": 288,
+          "bytes_comprimidos": 205,
+          "crc32": "2c1e415b"
+        },
+        {
+          "caminho": "locales/ja/line-plot.json",
+          "bytes": 140,
+          "bytes_comprimidos": 112,
+          "crc32": "a0bc7137"
+        },
+        {
+          "caminho": "locales/ja/matrix-plot.json",
+          "bytes": 88,
+          "bytes_comprimidos": 78,
+          "crc32": "34e85141"
+        },
+        {
+          "caminho": "locales/ja/mssgraphs.json",
+          "bytes": 250,
+          "bytes_comprimidos": 176,
+          "crc32": "2d14caba"
+        },
+        {
+          "caminho": "locales/ja/optiplot.json",
+          "bytes": 1516,
+          "bytes_comprimidos": 726,
+          "crc32": "8a252c09"
+        },
+        {
+          "caminho": "locales/ja/parallel-coordinates-plot.json",
+          "bytes": 215,
+          "bytes_comprimidos": 130,
+          "crc32": "66344cd5"
+        },
+        {
+          "caminho": "locales/ja/pareto-chart.json",
+          "bytes": 253,
+          "bytes_comprimidos": 131,
+          "crc32": "cedc72c4"
+        },
+        {
+          "caminho": "locales/ja/pie-chart.json",
+          "bytes": 30,
+          "bytes_comprimidos": 30,
+          "crc32": "088c861c"
+        },
+        {
+          "caminho": "locales/ja/probability-plot.json",
+          "bytes": 118,
+          "bytes_comprimidos": 101,
+          "crc32": "e2ac59a4"
+        },
+        {
+          "caminho": "locales/ja/scatterplot.json",
+          "bytes": 58,
+          "bytes_comprimidos": 54,
+          "crc32": "085559df"
+        },
+        {
+          "caminho": "locales/ja/time-series-plot.json",
+          "bytes": 27,
+          "bytes_comprimidos": 27,
+          "crc32": "dcdbd409"
+        },
+        {
+          "caminho": "locales/ja/variability-chart.json",
+          "bytes": 519,
+          "bytes_comprimidos": 232,
+          "crc32": "ad20d0ba"
+        },
+        {
+          "caminho": "locales/ja/wafer-plot.json",
+          "bytes": 16,
+          "bytes_comprimidos": 16,
+          "crc32": "f106664a"
+        },
+        {
+          "caminho": "locales/ko/area-graph.json",
+          "bytes": 30,
+          "bytes_comprimidos": 30,
+          "crc32": "47753a17"
+        },
+        {
+          "caminho": "locales/ko/bar-chart.json",
+          "bytes": 112,
+          "bytes_comprimidos": 91,
+          "crc32": "ed49505f"
+        },
+        {
+          "caminho": "locales/ko/binned-scatterplot.json",
+          "bytes": 36,
+          "bytes_comprimidos": 36,
+          "crc32": "35b87714"
+        },
+        {
+          "caminho": "locales/ko/boxplot.json",
+          "bytes": 297,
+          "bytes_comprimidos": 177,
+          "crc32": "ca50c682"
+        },
+        {
+          "caminho": "locales/ko/bubbleplot.json",
+          "bytes": 32,
+          "bytes_comprimidos": 32,
+          "crc32": "34a1580c"
+        },
+        {
+          "caminho": "locales/ko/capability.json",
+          "bytes": 666,
+          "bytes_comprimidos": 378,
+          "crc32": "6f02bdf1"
+        },
+        {
+          "caminho": "locales/ko/control-chart.json",
+          "bytes": 291,
+          "bytes_comprimidos": 205,
+          "crc32": "9b44ba48"
+        },
+        {
+          "caminho": "locales/ko/graph-builder.json",
+          "bytes": 21771,
+          "bytes_comprimidos": 6312,
+          "crc32": "fc3d6f3f"
+        },
+        {
+          "caminho": "locales/ko/histogram.json",
+          "bytes": 58,
+          "bytes_comprimidos": 55,
+          "crc32": "072872c3"
+        },
+        {
+          "caminho": "locales/ko/individual-value-plot.json",
+          "bytes": 69,
+          "bytes_comprimidos": 66,
+          "crc32": "4226cc9c"
+        },
+        {
+          "caminho": "locales/ko/interval-plot.json",
+          "bytes": 155,
+          "bytes_comprimidos": 118,
+          "crc32": "36fbbaa8"
+        },
+        {
+          "caminho": "locales/ko/itable.json",
+          "bytes": 262,
+          "bytes_comprimidos": 187,
+          "crc32": "16360e68"
+        },
+        {
+          "caminho": "locales/ko/line-plot.json",
+          "bytes": 136,
+          "bytes_comprimidos": 113,
+          "crc32": "0a03b422"
+        },
+        {
+          "caminho": "locales/ko/matrix-plot.json",
+          "bytes": 83,
+          "bytes_comprimidos": 73,
+          "crc32": "e83b330f"
+        },
+        {
+          "caminho": "locales/ko/mssgraphs.json",
+          "bytes": 252,
+          "bytes_comprimidos": 173,
+          "crc32": "ac566c70"
+        },
+        {
+          "caminho": "locales/ko/optiplot.json",
+          "bytes": 1452,
+          "bytes_comprimidos": 673,
+          "crc32": "c7eb990f"
+        },
+        {
+          "caminho": "locales/ko/parallel-coordinates-plot.json",
+          "bytes": 196,
+          "bytes_comprimidos": 119,
+          "crc32": "90623809"
+        },
+        {
+          "caminho": "locales/ko/pareto-chart.json",
+          "bytes": 247,
+          "bytes_comprimidos": 130,
+          "crc32": "a80efe60"
+        },
+        {
+          "caminho": "locales/ko/pie-chart.json",
+          "bytes": 27,
+          "bytes_comprimidos": 27,
+          "crc32": "8c49c074"
+        },
+        {
+          "caminho": "locales/ko/probability-plot.json",
+          "bytes": 109,
+          "bytes_comprimidos": 92,
+          "crc32": "e1e3715b"
+        },
+        {
+          "caminho": "locales/ko/scatterplot.json",
+          "bytes": 59,
+          "bytes_comprimidos": 55,
+          "crc32": "0a9d6f74"
+        },
+        {
+          "caminho": "locales/ko/time-series-plot.json",
+          "bytes": 30,
+          "bytes_comprimidos": 30,
+          "crc32": "47753a17"
+        },
+        {
+          "caminho": "locales/ko/variability-chart.json",
+          "bytes": 518,
+          "bytes_comprimidos": 237,
+          "crc32": "325181f2"
+        },
+        {
+          "caminho": "locales/ko/wafer-plot.json",
+          "bytes": 16,
+          "bytes_comprimidos": 16,
+          "crc32": "f106664a"
+        },
+        {
+          "caminho": "locales/pt-BR/area-graph.json",
+          "bytes": 28,
+          "bytes_comprimidos": 28,
+          "crc32": "2992cc4b"
+        },
+        {
+          "caminho": "locales/pt-BR/bar-chart.json",
+          "bytes": 119,
+          "bytes_comprimidos": 81,
+          "crc32": "c12233b9"
+        },
+        {
+          "caminho": "locales/pt-BR/binned-scatterplot.json",
+          "bytes": 36,
+          "bytes_comprimidos": 36,
+          "crc32": "66b4c7c6"
+        },
+        {
+          "caminho": "locales/pt-BR/boxplot.json",
+          "bytes": 294,
+          "bytes_comprimidos": 171,
+          "crc32": "2b65d647"
+        },
+        {
+          "caminho": "locales/pt-BR/bubbleplot.json",
+          "bytes": 34,
+          "bytes_comprimidos": 34,
+          "crc32": "c249bfe8"
+        },
+        {
+          "caminho": "locales/pt-BR/capability.json",
+          "bytes": 680,
+          "bytes_comprimidos": 326,
+          "crc32": "5c39cac4"
+        },
+        {
+          "caminho": "locales/pt-BR/control-chart.json",
+          "bytes": 312,
+          "bytes_comprimidos": 179,
+          "crc32": "12ecf82c"
+        },
+        {
+          "caminho": "locales/pt-BR/graph-builder.json",
+          "bytes": 22171,
+          "bytes_comprimidos": 5983,
+          "crc32": "3304ba91"
+        },
+        {
+          "caminho": "locales/pt-BR/histogram.json",
+          "bytes": 64,
+          "bytes_comprimidos": 54,
+          "crc32": "4257872c"
+        },
+        {
+          "caminho": "locales/pt-BR/individual-value-plot.json",
+          "bytes": 73,
+          "bytes_comprimidos": 69,
+          "crc32": "f79fe6d7"
+        },
+        {
+          "caminho": "locales/pt-BR/interval-plot.json",
+          "bytes": 178,
+          "bytes_comprimidos": 122,
+          "crc32": "19b9738b"
+        },
+        {
+          "caminho": "locales/pt-BR/itable.json",
+          "bytes": 239,
+          "bytes_comprimidos": 161,
+          "crc32": "41bc350a"
+        },
+        {
+          "caminho": "locales/pt-BR/line-plot.json",
+          "bytes": 144,
+          "bytes_comprimidos": 106,
+          "crc32": "bc47a2a9"
+        },
+        {
+          "caminho": "locales/pt-BR/matrix-plot.json",
+          "bytes": 84,
+          "bytes_comprimidos": 71,
+          "crc32": "ced71e0a"
+        },
+        {
+          "caminho": "locales/pt-BR/mssgraphs.json",
+          "bytes": 249,
+          "bytes_comprimidos": 166,
+          "crc32": "2f56500e"
+        },
+        {
+          "caminho": "locales/pt-BR/optiplot.json",
+          "bytes": 1514,
+          "bytes_comprimidos": 601,
+          "crc32": "d51dc952"
+        },
+        {
+          "caminho": "locales/pt-BR/parallel-coordinates-plot.json",
+          "bytes": 191,
+          "bytes_comprimidos": 115,
+          "crc32": "30a890bf"
+        },
+        {
+          "caminho": "locales/pt-BR/pareto-chart.json",
+          "bytes": 262,
+          "bytes_comprimidos": 120,
+          "crc32": "49730c43"
+        },
+        {
+          "caminho": "locales/pt-BR/pie-chart.json",
+          "bytes": 27,
+          "bytes_comprimidos": 27,
+          "crc32": "e3b05155"
+        },
+        {
+          "caminho": "locales/pt-BR/probability-plot.json",
+          "bytes": 119,
+          "bytes_comprimidos": 84,
+          "crc32": "92a512b9"
+        },
+        {
+          "caminho": "locales/pt-BR/scatterplot.json",
+          "bytes": 60,
+          "bytes_comprimidos": 54,
+          "crc32": "cfcc86b4"
+        },
+        {
+          "caminho": "locales/pt-BR/time-series-plot.json",
+          "bytes": 28,
+          "bytes_comprimidos": 28,
+          "crc32": "2992cc4b"
+        },
+        {
+          "caminho": "locales/pt-BR/variability-chart.json",
+          "bytes": 508,
+          "bytes_comprimidos": 220,
+          "crc32": "0fbc2a63"
+        },
+        {
+          "caminho": "locales/pt-BR/wafer-plot.json",
+          "bytes": 16,
+          "bytes_comprimidos": 16,
+          "crc32": "f106664a"
+        },
+        {
+          "caminho": "locales/zh-CN/area-graph.json",
+          "bytes": 27,
+          "bytes_comprimidos": 27,
+          "crc32": "9836eeea"
+        },
+        {
+          "caminho": "locales/zh-CN/bar-chart.json",
+          "bytes": 111,
+          "bytes_comprimidos": 90,
+          "crc32": "8d428133"
+        },
+        {
+          "caminho": "locales/zh-CN/binned-scatterplot.json",
+          "bytes": 36,
+          "bytes_comprimidos": 36,
+          "crc32": "693e804c"
+        },
+        {
+          "caminho": "locales/zh-CN/boxplot.json",
+          "bytes": 313,
+          "bytes_comprimidos": 193,
+          "crc32": "fc1d3bd4"
+        },
+        {
+          "caminho": "locales/zh-CN/bubbleplot.json",
+          "bytes": 32,
+          "bytes_comprimidos": 32,
+          "crc32": "6c4ed776"
+        },
+        {
+          "caminho": "locales/zh-CN/capability.json",
+          "bytes": 655,
+          "bytes_comprimidos": 368,
+          "crc32": "36a512f7"
+        },
+        {
+          "caminho": "locales/zh-CN/control-chart.json",
+          "bytes": 277,
+          "bytes_comprimidos": 187,
+          "crc32": "a1a65ae7"
+        },
+        {
+          "caminho": "locales/zh-CN/graph-builder.json",
+          "bytes": 18980,
+          "bytes_comprimidos": 6024,
+          "crc32": "215ef5f8"
+        },
+        {
+          "caminho": "locales/zh-CN/histogram.json",
+          "bytes": 58,
+          "bytes_comprimidos": 56,
+          "crc32": "66430eac"
+        },
+        {
+          "caminho": "locales/zh-CN/individual-value-plot.json",
+          "bytes": 69,
+          "bytes_comprimidos": 66,
+          "crc32": "91a74331"
+        },
+        {
+          "caminho": "locales/zh-CN/interval-plot.json",
+          "bytes": 155,
+          "bytes_comprimidos": 117,
+          "crc32": "d30d1cbd"
+        },
+        {
+          "caminho": "locales/zh-CN/itable.json",
+          "bytes": 226,
+          "bytes_comprimidos": 168,
+          "crc32": "a0826c01"
+        },
+        {
+          "caminho": "locales/zh-CN/line-plot.json",
+          "bytes": 131,
+          "bytes_comprimidos": 106,
+          "crc32": "e4fa94cd"
+        },
+        {
+          "caminho": "locales/zh-CN/matrix-plot.json",
+          "bytes": 76,
+          "bytes_comprimidos": 65,
+          "crc32": "bd48ab1f"
+        },
+        {
+          "caminho": "locales/zh-CN/mssgraphs.json",
+          "bytes": 223,
+          "bytes_comprimidos": 156,
+          "crc32": "3d2ab699"
+        },
+        {
+          "caminho": "locales/zh-CN/optiplot.json",
+          "bytes": 1278,
+          "bytes_comprimidos": 636,
+          "crc32": "a2515bad"
+        },
+        {
+          "caminho": "locales/zh-CN/parallel-coordinates-plot.json",
+          "bytes": 188,
+          "bytes_comprimidos": 115,
+          "crc32": "31de3269"
+        },
+        {
+          "caminho": "locales/zh-CN/pareto-chart.json",
+          "bytes": 241,
+          "bytes_comprimidos": 125,
+          "crc32": "b7f3c452"
+        },
+        {
+          "caminho": "locales/zh-CN/pie-chart.json",
+          "bytes": 27,
+          "bytes_comprimidos": 27,
+          "crc32": "eeb87e3e"
+        },
+        {
+          "caminho": "locales/zh-CN/probability-plot.json",
+          "bytes": 109,
+          "bytes_comprimidos": 91,
+          "crc32": "7730b3b0"
+        },
+        {
+          "caminho": "locales/zh-CN/scatterplot.json",
+          "bytes": 55,
+          "bytes_comprimidos": 51,
+          "crc32": "8dbfbf7b"
+        },
+        {
+          "caminho": "locales/zh-CN/time-series-plot.json",
+          "bytes": 27,
+          "bytes_comprimidos": 27,
+          "crc32": "9836eeea"
+        },
+        {
+          "caminho": "locales/zh-CN/variability-chart.json",
+          "bytes": 528,
+          "bytes_comprimidos": 244,
+          "crc32": "7a73ada1"
+        },
+        {
+          "caminho": "locales/zh-CN/wafer-plot.json",
+          "bytes": 16,
+          "bytes_comprimidos": 16,
+          "crc32": "f106664a"
+        },
+        {
+          "caminho": "scripts/mss_graphs.js",
+          "bytes": 370,
+          "bytes_comprimidos": 202,
+          "crc32": "b773b861"
+        },
+        {
+          "caminho": "static/css/main.83075ed2.css",
+          "bytes": 128494,
+          "bytes_comprimidos": 12797,
+          "crc32": "394163d8"
+        },
+        {
+          "caminho": "static/js/main.e5d58718.js",
+          "bytes": 3168560,
+          "bytes_comprimidos": 951936,
+          "crc32": "953d2ca3"
+        },
+        {
+          "caminho": "static/js/main.e5d58718.js.LICENSE.txt",
+          "bytes": 4668,
+          "bytes_comprimidos": 876,
+          "crc32": "6d59cacd"
+        },
+        {
+          "caminho": "static/media/IndividualValuePlot_Abstract.f17ec85a345ece06edcf.png",
+          "bytes": 11166,
+          "bytes_comprimidos": 10901,
+          "crc32": "33ae0801"
+        },
+        {
+          "caminho": "static/media/ParallelCoordinatesPlot_Abstract.fba55d9183fd8250485a.png",
+          "bytes": 10783,
+          "bytes_comprimidos": 9510,
+          "crc32": "394fa2f3"
+        },
+        {
+          "caminho": "static/media/ProbabilityPlot_Abstract.04c38b5a3c4093aa9197.png",
+          "bytes": 10787,
+          "bytes_comprimidos": 9888,
+          "crc32": "6c226905"
+        },
+        {
+          "caminho": "static/media/Shimmer_GIF_FasterWhite.c762370939c528632d28.gif",
+          "bytes": 171665,
+          "bytes_comprimidos": 170595,
+          "crc32": "a239d029"
+        },
+        {
+          "caminho": "static/media/TabulatedStatistics_GalleryStaticPreview.428bfac7d898c2b5931a.png",
+          "bytes": 10418,
+          "bytes_comprimidos": 9476,
+          "crc32": "af1a8a0c"
+        }
+      ]
+    }
+  ],
+  "dados_e_ajuda_locais": [],
+  "limites": [
+    "Não recupera o código-fonte completo ou os algoritmos dos binários.",
+    "Recursos presentes não provam que um comando está disponível na interface ou na licença.",
+    "Esta é a instalação 22; não valida presença, padrões ou resultados na versão 16.",
+    "A busca de arquivos de dados/ajuda abrange somente a raiz indicada."
+  ]
+}

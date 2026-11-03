@@ -1,0 +1,20 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": ["Medição A", "Medição B", "Resultado A", "Resultado B", "Medições empilhadas", "Grupo"],
+  "rows": [
+    ["1", "2", "Sim", "Sim", "1", "A"],
+    ["2", "4", "Sim", "Não", "2", "A"],
+    ["3", "6", "Não", "Não", "3", "A"],
+    ["4", "8", "Sim", "Sim", "4", "A"],
+    ["5", "10", "Sim", "Não", "5", "A"],
+    ["6", "12", "Não", "Não", "6", "A"],
+    ["", "", "", "", "2", "B"],
+    ["", "", "", "", "4", "B"],
+    ["", "", "", "", "6", "B"],
+    ["", "", "", "", "8", "B"],
+    ["", "", "", "", "10", "B"],
+    ["", "", "", "", "12", "B"]
+  ],
+  "output": "EXEMPLO SINTÉTICO — proporções e variâncias\n\nEstat > Estatísticas básicas > Teste de duas proporções: escolha Resultado A e Resultado B, evento Sim em ambas. Há 4 eventos em 6 ensaios na primeira e 2 em 6 na segunda. As seis linhas vazias de cada coluna são omitidas. Compare estimativas separadas/combinadas no teste Z; o IC Wald não muda com essa opção. Fisher é apresentado para diferença hipotética zero.\n\nTeste de uma variância: Medição A tem N=6 e variância amostral 3,5. Em Opções escolha desvio padrão ou variância; a hipótese deve usar a medida escolhida.\n\nTeste de duas variâncias: Medição A e Medição B têm variâncias 3,5 e 14. Razão de desvios A/B=0,5; razão de variâncias A/B=0,25. O teste F para razão hipotética 1 tem F=0,25 e GL=(5,5). Escolha também o formato empilhado com Medições empilhadas e Grupo para reproduzir os mesmos resultados.\n\nSão exemplos de uso e cálculo, sem comparação executada com Minitab 16. Os métodos qui-quadrado/F pressupõem populações normais; estas sequências didáticas não demonstram esse pressuposto.\n"
+}

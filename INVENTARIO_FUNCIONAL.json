@@ -1,0 +1,467 @@
+{
+  "alvo": "Minitab 16.2.4.0 para Windows",
+  "referencia_complementar_instalada": "Minitab 22.6.0.0",
+  "objetivo": "Cobertura funcional integral da versão alvo, incluindo opções, padrões, formatos, comandos e casos extremos",
+  "inventario_exaustivo_concluido": false,
+  "paridade_validada": false,
+  "referencias_historicas_16": {
+    "data_consulta": "2026-10-24",
+    "catalogo": "analise_instalacao/referencias_minitab16.json",
+    "observacao": "Manual Meet Minitab Release 16.1.0, novidades 16/16.2 e notas até 16.2.4/16.2.4.4 localizados. Presença documental e validação numérica são critérios distintos; catálogo e Help completos ainda não auditados."
+  },
+  "inspecao_estatica_instalacao": {
+    "versao": "22.6.0.0",
+    "data": "2026-11-03",
+    "inventario": "analise_instalacao/inventario_instalacao.json",
+    "dialogos": "analise_instalacao/dialogos_pt_br.json",
+    "dialogos_legados": "analise_instalacao/dialogos_legados_pt_br.json",
+    "graficos": "analise_instalacao/graficos_pt_br.json",
+    "lacunas": "analise_instalacao/lacunas_priorizadas.json",
+    "observacao": "612 recursos de tradução pt-BR catalogados; incluem partes compartilhadas e variantes. Presença em arquivo não prova disponibilidade, comportamento ou paridade com o 16."
+  },
+  "comparacoes_referencia": [
+    {
+      "funcao": "Welch bilateral, confiança 95%, duas colunas",
+      "versao": "22.6.0.0",
+      "fixture": "fixtures/welch_minitab_22_6/observed.json",
+      "precisao": "Somente valores arredondados exibidos na interface"
+    }
+  ],
+  "observacao": "Mapa inicial por famílias. Cada pendência ainda precisa ser decomposta e conferida no Minitab 16. Não permite calcular percentual de completude.",
+  "criterios_de_aceite_por_funcao": [
+    "Identificador e caminho de menu/comando da versão 16 confirmados",
+    "Entradas, opções, valores padrão, fórmulas e saída documentados com fonte",
+    "Tratamento de ausentes, constantes, empates e entradas inválidas definido",
+    "Implementação acessível e reproduzível pela interface",
+    "Testes analíticos e comparação diferencial com dados sintéticos na versão 16",
+    "Tolerâncias numéricas justificadas e metadados da referência preservados",
+    "Exportação, armazenamento e reabertura da saída verificados quando aplicáveis"
+  ],
+  "areas": [
+    {
+      "id": "ambiente",
+      "estado": "parcial",
+      "existente": [
+        "Sessão e planilha com divisórias",
+        "Menus e navegador simplificados",
+        "Atalhos básicos",
+        "Grade com cabeçalhos fixos em duas faixas e gerenciador recolhível",
+        "Ícones próprios nos comandos dos menus, barra de ferramentas e abas dos diálogos"
+      ],
+      "pendente": [
+        "Inventário integral dos menus do 16",
+        "Janelas internas e gerenciamento clássico",
+        "Preferências e acessibilidade",
+        "Histórico de análises e comandos",
+        "Múltiplas planilhas",
+        "Ajuda contextual por análise",
+        "Compatibilidade visual validada"
+      ]
+    },
+    {
+      "id": "planilha",
+      "estado": "parcial",
+      "existente": [
+        "Editar células",
+        "Adicionar e renomear colunas",
+        "Adicionar linhas",
+        "Colar blocos tabulados",
+        "Desfazer e refazer em memória",
+        "Seleção retangular por arraste e Shift, linhas/colunas pelos cabeçalhos e Ctrl+A",
+        "Copiar blocos TSV com aspas e limpar seleção com desfazer",
+        "Largura de colunas por arraste e ajuste ao conteúdo",
+        "Ordenação estável de todas as linhas por até três chaves, numéricas exatas ou texto, com direções independentes",
+        "Empilhar colunas em valores/origem, preservando fontes e oferecendo omissão de ausentes",
+        "Desempilhar por categoria em novas colunas, com opções separadas para valores e grupos ausentes",
+        "Transformações validadas antes da alteração, com desfazer/refazer em uma etapa e nota na sessão"
+      ],
+      "pendente": [
+        "Tipos numérico, texto e data/hora",
+        "Inserir/excluir/mover linhas e colunas",
+        "Filtros e demais opções de ordenação",
+        "Subconjuntos e divisão de planilhas",
+        "Demais formatos e opções de empilhamento/desempilhamento",
+        "Codificação e recodificação",
+        "Formatos e propriedades de coluna",
+        "Validação com planilhas grandes"
+      ]
+    },
+    {
+      "id": "arquivos",
+      "estado": "parcial",
+      "existente": [
+        "CSV UTF-8",
+        "Projeto próprio .statlab",
+        "Exportação de sessão em texto"
+      ],
+      "pendente": [
+        "Importação direta Excel",
+        "MTW e MPJ do 16",
+        "Demais formatos suportados na versão alvo",
+        "Precisão e metadados dos formatos",
+        "Persistência de gráficos e resultados estruturados",
+        "Recuperação e salvamento automático",
+        "Impressão"
+      ]
+    },
+    {
+      "id": "calculo",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Calculadora de colunas",
+        "Fórmulas e recálculo",
+        "Transformações matemáticas",
+        "Funções de texto e data",
+        "Matrizes e constantes",
+        "Geração de sequências",
+        "Geração aleatória e controle de semente"
+      ]
+    },
+    {
+      "id": "descritivas",
+      "estado": "parcial_sem_validacao_diferencial",
+      "existente": [
+        "N e ausentes",
+        "N total",
+        "Média e erro padrão",
+        "Variância e desvio amostrais",
+        "CV",
+        "Mínimo e máximo",
+        "Quartis e mediana",
+        "Amplitude e IQR",
+        "Soma e soma dos quadrados",
+        "Várias colunas e seleção de medidas",
+        "Média aparada de 5% por ponta",
+        "Todas as modas repetidas e frequência por moda",
+        "Assimetria ajustada e curtose de excesso corrigida",
+        "MSSD com fator 1/2 e sequência de valores válidos",
+        "Descritivas por uma ou mais variáveis de grupo",
+        "Exclusão independente por resposta, grupos ausentes opcionais e combinações vazias opcionais"
+      ],
+      "pendente": [
+        "Percentuais e contagens acumuladas",
+        "Armazenar estatísticas",
+        "Resumo gráfico",
+        "Convenções do 16 nos casos extremos",
+        "Comparação com o 16: arredondamento da poda, empates/ausência de moda, momentos em amostras pequenas e sequência com ausentes no MSSD",
+        "Tipos/ordenação dos níveis, padrões de grupos e convenções em grupos sem dados na versão 16"
+      ]
+    },
+    {
+      "id": "graficos",
+      "estado": "parcial_sem_validacao_diferencial",
+      "existente": [
+        "Histograma com regra própria",
+        "Boxplot simples por quartis",
+        "Boxplots comparativos em escala comum: colunas separadas ou resposta/fator",
+        "N por grupo e rolagem vertical em gráficos comparativos",
+        "Redimensionamento e escalas",
+        "Dispersão independente X/Y e séries na ordem original da planilha, com grupos opcionais",
+        "Conexões com política de lacunas, escalas logarítmicas e títulos personalizados em dispersão/séries",
+        "Exportação SVG e detalhes dos pontos em dispersão/séries"
+      ],
+      "pendente": [
+        "Matriz de dispersão, várias respostas e demais opções de dispersão",
+        "Gráficos de valores individuais",
+        "Probabilidade e distribuição",
+        "Séries com calendário, frequência, várias respostas e demais opções",
+        "Barras, setores e pontos",
+        "Demais gráficos com grupos e painéis",
+        "Contornos e superfícies",
+        "Edição de eixos, títulos e elementos",
+        "Exportação dos demais gráficos e formatos raster/PDF",
+        "Persistência e gerenciamento de gráficos",
+        "Padrões e algoritmos gráficos do 16"
+      ]
+    },
+    {
+      "id": "distribuicoes",
+      "estado": "parcial_sem_validacao_16",
+      "existente": [
+        "Distribuição t via SciPy usada internamente nos testes t: CDF, cauda e quantil",
+        "Calculador acessível em Calc > Distribuições de probabilidade",
+        "Normal, t, qui-quadrado, F, binomial, Poisson, exponencial, uniforme, Weibull, lognormal, gama e beta",
+        "PDF/PMF, CDF, cauda superior, intervalo inclusivo e quantis acumulados/cauda superior"
+      ],
+      "pendente": [
+        "Inventariar todas as distribuições e parametrizações do 16",
+        "Demais CDF e probabilidades de cauda",
+        "Demais quantis",
+        "Geração aleatória",
+        "Cálculo em lote por colunas, armazenamento, gráficos de distribuições e parâmetros de localização adicionais",
+        "Precisão nas caudas e limites e validação diferencial no 16"
+      ]
+    },
+    {
+      "id": "inferencia",
+      "estado": "parcial_sem_validacao_16",
+      "existente": [
+        "t de uma amostra com dados em coluna",
+        "t pareado com exclusão por par",
+        "t de duas amostras em colunas separadas: Welch e variâncias iguais",
+        "Alternativas bilateral e unilaterais",
+        "Intervalos e limites de confiança para médias e diferenças",
+        "Hipótese nula configurável",
+        "Welch com GL truncado (padrão de referência 16) ou fracionário",
+        "Um caso Welch conferido contra saída arredondada do Minitab 22.6",
+        "Correlação Pearson e Spearman, N e valores-p bilaterais por par",
+        "Correlação com exclusão por par ou linhas completas e IC de Fisher para Pearson",
+        "Z de uma amostra com sigma conhecido: coluna/resumo, ICs e alternativas",
+        "Uma proporção em coluna binária ou eventos/ensaios resumidos",
+        "Proporção: teste exato por caudas e IC Clopper-Pearson; teste score com IC Wilson ou Wald, sem correção de continuidade",
+        "Duas proporções: colunas/resumo/empilhadas, Z separado/combinado, IC Wald e Fisher condicional com limite operacional explícito",
+        "Uma variância: qui-quadrado normal, coluna/resumo, hipótese e IC em desvio ou variância",
+        "Duas variâncias: F normal, colunas/resumo/empilhadas, razão de desvios ou variâncias e alternativas",
+        "Normalidade Anderson-Darling com parâmetros estimados, correção de N e valor-p aproximado; ainda sem gráfico",
+        "Testes t de uma e duas amostras com N/média/desvio padrão resumidos",
+        "Teste t pareado por resumo das diferenças, sem reconstrução de observações",
+        "Duas amostras t em resposta/grupo, exclusão por grupo e ordem de primeira aparição explícitas"
+      ],
+      "pendente": [
+        "Testes t: entradas sumarizadas e amostras empilhadas",
+        "Armazenamento de estatísticas e gráficos anexos dos testes t",
+        "Casos de erro padrão zero conforme versão alvo",
+        "Z: várias amostras simultâneas, gráficos, armazenamento e validação dos padrões",
+        "Proporções: várias análises simultâneas, Blaker, correção de continuidade, outros ICs da diferença e demais opções",
+        "Taxas de Poisson",
+        "Variâncias: Bonett, Levene, mais de duas amostras, gráficos e comparação dos padrões na versão alvo",
+        "Demais intervalos de confiança",
+        "Normalidade: Ryan-Joiner, Kolmogorov-Smirnov, gráficos de probabilidade, outras opções e comparação na versão alvo; aderência",
+        "Correlação: IC de Spearman, matriz gráfica/armazenamento e validação de padrões do 16",
+        "Equivalência e outros testes existentes no 16 a confirmar",
+        "Validação diferencial integral com Minitab 16"
+      ]
+    },
+    {
+      "id": "anova",
+      "estado": "parcial_sem_validacao_16",
+      "existente": [
+        "Um fator clássico: GL/SQ/QM/F/p, S e R²",
+        "Um fator Welch com GL fracionário",
+        "Entradas em colunas separadas ou resposta/fator",
+        "Intervalos individuais das médias",
+        "Comparações Tukey-Kramer e Games-Howell com p ajustado e IC simultâneo",
+        "Boxplots comparativos anexos opcionais"
+      ],
+      "pendente": [
+        "Demais opções de um fator da versão 16",
+        "Dois fatores e modelos gerais",
+        "Efeitos fixos, aleatórios e aninhados",
+        "Fisher, Dunnett, Hsu e letras de agrupamento",
+        "Resíduos e diagnósticos",
+        "Armazenamento de resultados",
+        "GL/ajustes e balanceamento dos demais modelos",
+        "MANOVA e demais opções da versão alvo a conferir",
+        "Grupos de uma observação e casos de variância zero conforme versão alvo",
+        "Validação diferencial integral com Minitab 16"
+      ]
+    },
+    {
+      "id": "regressao",
+      "estado": "parcial_sem_validacao_16",
+      "existente": [
+        "Regressão linear simples e múltipla com intercepto e preditores numéricos",
+        "Coeficientes, erros padrão, ICs e testes t bilaterais",
+        "ANOVA global, S, R², R² ajustado e predito, PRESS e VIF",
+        "Ajustados, resíduos, resíduos padronizados, alavancagem e Cook",
+        "Gráficos de ajuste, resíduos por ajustado, Q-Q normal e resíduos por ordem",
+        "Exclusão por linha completa e numeração original das observações",
+        "Previsão em novos casos digitados ou colunas, EP da média e IC/IP individuais bilaterais ou unilaterais",
+        "Sinalização de valores fora da faixa do ajuste e invalidação do modelo ao alterar dados"
+      ],
+      "pendente": [
+        "Seleção de variáveis",
+        "Preditores categóricos, termos e interações",
+        "Modelos sem intercepto e transformações",
+        "Demais opções de predição, armazenamento, gráficos de intervalos e persistência do modelo",
+        "Falta de ajuste, SQ por termo e diagnósticos/influência adicionais",
+        "Armazenar coeficientes, ajustados e resíduos na planilha",
+        "Logística e demais modelos existentes no 16",
+        "Não linear e modelos com pesos a conferir",
+        "Validação diferencial no Minitab 16, inclusive ajuste perfeito e colinearidade"
+      ]
+    },
+    {
+      "id": "doe",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Criação e análise de fatoriais",
+        "Superfície de resposta",
+        "Misturas",
+        "Taguchi",
+        "Blocos, réplicas e pontos centrais",
+        "Alias e confundimento",
+        "Otimização de respostas",
+        "Demais famílias e opções da versão 16 a inventariar"
+      ]
+    },
+    {
+      "id": "controle_de_processo",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Cartas de variáveis",
+        "Cartas de atributos",
+        "Subgrupos e fases",
+        "Regras de causas especiais",
+        "Limites históricos e estimados",
+        "EWMA, CUSUM e demais cartas da versão alvo"
+      ]
+    },
+    {
+      "id": "capabilidade",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Capabilidade normal",
+        "Capabilidade não normal",
+        "Atributos",
+        "Transformações",
+        "Índices e intervalos",
+        "Relatórios e Sixpack"
+      ]
+    },
+    {
+      "id": "medicao",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Gage R&R cruzado e aninhado",
+        "Demais estudos R&R do 16",
+        "Viés e linearidade",
+        "Estabilidade e tipo 1",
+        "Concordância de atributos",
+        "Planejamento de estudos"
+      ]
+    },
+    {
+      "id": "confiabilidade",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Dados censurados e falhas",
+        "Distribuições e estimativas",
+        "Regressão de vida",
+        "Testes acelerados",
+        "Sistemas reparáveis",
+        "Garantia",
+        "Planejamento de testes"
+      ]
+    },
+    {
+      "id": "multivariada",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Componentes principais",
+        "Análise fatorial",
+        "Agrupamentos",
+        "Discriminante",
+        "Correspondência",
+        "Demais métodos da versão alvo"
+      ]
+    },
+    {
+      "id": "series_temporais",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Tendência e decomposição",
+        "Suavização",
+        "ARIMA",
+        "Autocorrelação e correlação cruzada",
+        "Diferenças e defasagens",
+        "Previsões e diagnósticos"
+      ]
+    },
+    {
+      "id": "nao_parametricos",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Sinais e Wilcoxon",
+        "Mann-Whitney",
+        "Kruskal-Wallis",
+        "Friedman",
+        "Corridas",
+        "Demais testes e métodos de postos",
+        "Empates, métodos exatos e aproximações"
+      ]
+    },
+    {
+      "id": "tabelas",
+      "estado": "parcial_sem_validacao_16",
+      "existente": [
+        "Contingência por categorias com frequência opcional ou matriz de contagens com rótulos",
+        "Pearson e razão de verossimilhanças, sem Yates; valores-p assintóticos omitidos quando alguma esperada é menor que 1",
+        "Esperadas, resíduos brutos/padronizados/ajustados, contribuições e percentuais",
+        "Fisher bilateral 2x2 por ordenação de probabilidade, até 1.000.000 observações; limites de dimensões e total explícitos"
+      ],
+      "pendente": [
+        "Tabulações gerais, tabelas estratificadas e demais formatos de entrada",
+        "Qui-quadrado de aderência, testes exatos RxC e métodos adicionais de associação",
+        "Gráficos, armazenamento e validação diferencial integral com Minitab 16",
+        "Demais métodos e estatísticas de atributos"
+      ]
+    },
+    {
+      "id": "poder_e_tamanho_amostral",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Testes de médias",
+        "Proporções e taxas",
+        "ANOVA e desenhos disponíveis no 16",
+        "Poder, diferença detectável e tamanho de amostra"
+      ]
+    },
+    {
+      "id": "comandos_e_macros",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Sintaxe dos comandos e subcomandos",
+        "Padrões e abreviações",
+        "Arquivos de execução",
+        "Macros locais e globais",
+        "Variáveis, fluxo e iteração",
+        "Interfaces de automação documentadas"
+      ]
+    },
+    {
+      "id": "assistente_e_relatorios",
+      "estado": "pendente",
+      "existente": [],
+      "pendente": [
+        "Fluxos do Assistente do 16",
+        "Interpretações e diagnósticos orientados",
+        "Gerenciamento de relatórios",
+        "Composição, exportação e impressão"
+      ]
+    },
+    {
+      "id": "entrega_e_validacao",
+      "estado": "parcial",
+      "existente": [
+        "Inicializador Python",
+        "Testes analíticos e de interface"
+      ],
+      "pendente": [
+        "Instalador independente",
+        "Migrações de projeto",
+        "Casos diferenciais contra Minitab 16",
+        "Precisão e desempenho",
+        "Teste de todos os caminhos de interface",
+        "Auditoria final de cobertura e lacunas desconhecidas"
+      ]
+    }
+  ],
+  "prioridade_alvo_16": {
+    "data": "2026-11-03",
+    "decisao": "Cobertura de todos os recursos do Minitab 16 tem prioridade sobre expansões exclusivas da versão 22.",
+    "fila": "analise_instalacao/cobertura_minitab16.json",
+    "exercicios": "Quando recebidos, associar cada questão aos métodos, menus e opções do 16 e à implementação disponível no MiniTaBom; não presumir o conteúdo da prova."
+  }
+}

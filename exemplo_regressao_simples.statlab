@@ -1,0 +1,7 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": ["Resposta", "X"],
+  "rows": [["1", "0"], ["2", "1"], ["1", "2"], ["3", "3"], ["5", "4"]],
+  "output": "Exemplo analítico de regressão linear simples.\n\nAbra Estat > Regressão > Ajustar modelo linear.\nResposta: C1 Resposta. Preditor: C2 X.\nNa aba Opções e resultados, mantenha os gráficos e, se desejar, marque a tabela de observações.\n\nResultados esperados:\nResposta = 0,6 + 0,9 X\nSQ Regressão = 8,1; SQ Erro = 3,1; SQ Total = 11,2.\nGL Regressão = 1; GL Erro = 3.\nS = raiz(31/30); F = 243/31.\nR² = 72,32142857%; R² ajustado = 63,09523810%.\nPRESS = 5 + 34/49 + 49/16 = 8,756377551.\n\nEm Estat > Estatísticas básicas > Correlação, selecione Resposta e X para examinar Pearson ou Spearman.\nOs dados e resultados são analíticos; não foram exportados nem validados no Minitab 16.\n"
+}

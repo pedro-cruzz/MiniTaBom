@@ -1,0 +1,7 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": ["Resposta", "X", "Novos X"],
+  "rows": [["1", "0", "2"], ["2", "1", "5"], ["1", "2", "*"], ["3", "3", ""], ["5", "4", ""]],
+  "output": "Exemplo analítico de previsão linear.\n\n1. Abra Estat > Regressão > Ajustar modelo linear.\nResposta: C1 Resposta. Preditor: C2 X. Ajuste o modelo.\n2. Abra Estat > Regressão > Prever novos casos.\nDigite 2 e 5, um caso por linha; ou use a aba Colunas da planilha e mapeie X para C3 Novos X.\n\nResultados esperados:\nModelo: Resposta = 0,6 + 0,9 X; S²=31/30; GL de erro=3.\nX=2: previsão=2,4; h=0,2; EP da média=raiz(31/150).\nX=5: previsão=5,1; h=1,1; EP da média=raiz(341/300).\nPara IC bilateral de 95%, use t(0,975;3) vezes o EP da média.\nPara IP de uma observação, use t(0,975;3) vezes raiz(S² + EP²).\nX=5 está fora da faixa original de X (0 a 4).\nNa entrada por colunas, as linhas 3, 4 e 5 são omitidas por ausentes em Novos X.\n\nO modelo ajustado fica somente na memória. Após abrir um projeto ou alterar os dados, ajuste a regressão novamente antes de prever.\nDados e resultados são analíticos, sem execução no Minitab 16.\n"
+}

@@ -1,0 +1,171 @@
+{
+  "formato": "statlab-lacunas-instalacao",
+  "versao": 1,
+  "data": "2026-10-23",
+  "ultima_revisao_statlab": "2026-11-03",
+  "referencia": "Minitab 22.6.0.0 instalado localmente",
+  "fontes": [
+    "inventario_instalacao.json",
+    "dialogos_pt_br.json",
+    "dialogos_legados_pt_br.json",
+    "graficos_pt_br.json",
+    "../app.py",
+    "../INVENTARIO_FUNCIONAL.json"
+  ],
+  "criterio_prioridade": "Todos os recursos do 16 têm prioridade sobre expansões exclusivas do 22. Dentro do 16, completar os fundamentos e fluxos iniciados primeiro; nenhuma área pendente está excluída. Consultar cobertura_minitab16.json.",
+  "limites": [
+    "Os 612 recursos pt-BR são módulos de tradução, incluindo elementos compartilhados, opções e versões antigas; não são 612 funções distintas.",
+    "Os 183 blocos de mtb.dlg são estruturas observadas desta instalação; podem conter vários subdiálogos.",
+    "A presença de nomes e campos não revela fórmulas, padrões efetivos, condições de habilitação ou resultados.",
+    "Recursos da versão 22 não estabelecem que a função e suas opções existiam no Minitab 16.",
+    "O inventário continua parcial; cada item requer definição do contrato e testes numéricos/diferenciais."
+  ],
+  "grupos": [
+    {
+      "prioridade": 1,
+      "area": "inferencia",
+      "item": "Teste Z de uma amostra, proporções e dados resumidos",
+      "estado_statlab": "Z e uma proporção por coluna/resumo; duas proporções por colunas/resumo/empilhadas com Z separado/combinado, IC Wald e Fisher limitado explicitamente; resumos t pendentes; testes t de uma/duas amostras por resumo, pareado por diferenças resumidas e duas amostras t empilhadas disponíveis",
+      "recursos": [
+        "oneSampleZForTheMean.json",
+        "oneSampleProportion.json",
+        "twoSampleProportion.json",
+        "oneSampleTForTheMean.json",
+        "twoSampleTForTheMean.json"
+      ],
+      "proximo_contrato": "Gráficos anexos, armazenamento e análises simultâneas dos testes t; comparação de padrões/ordem de grupos no 16. Blaker/correção de continuidade e demais intervalos de diferenças de proporções continuam pendentes."
+    },
+    {
+      "prioridade": 1,
+      "area": "inferencia",
+      "item": "Normalidade, variância e taxa de Poisson",
+      "estado_statlab": "Normalidade Anderson-Darling sem gráfico; uma variância qui-quadrado e duas variâncias F, colunas/resumos e empilhadas para duas. Bonett/Levene, Ryan-Joiner/KS e Poisson pendentes",
+      "recursos": [
+        "normalityTest.json",
+        "oneSampleVariance.json",
+        "twoSampleVariance.json",
+        "oneSamplePoissonRate.json",
+        "twoSamplePoissonRate.json",
+        "testForEqualVariances.json"
+      ],
+      "proximo_contrato": "Bonett/Levene e igualdade de mais variâncias; Ryan-Joiner/KS e gráfico de probabilidade; taxas Poisson e validação de padrões/comportamentos na versão 16. Métodos normais atuais recusam dispersão zero."
+    },
+    {
+      "prioridade": 1,
+      "area": "graficos",
+      "item": "Dispersão independente, pontos, barras, linhas, intervalos e probabilidade",
+      "estado_statlab": "Há histogramas, boxplots, diagnósticos de regressão e dispersão/séries independentes com grupos, log/títulos e SVG; demais famílias e opções pendentes",
+      "recursos": [
+        "graphChooser.json",
+        "shared_graph_histogram.json",
+        "shared_graph_dotplot.json",
+        "shared_graph_empiricalCDF.json",
+        "probabilityDistributionPlotGallery.json"
+      ],
+      "proximo_contrato": "Escolha de variáveis, várias séries, grupos/painéis, escalas, títulos, tipos de representação, exportação e persistência. Os ícones devem identificar comandos efetivamente implementados."
+    },
+    {
+      "prioridade": 1,
+      "area": "planilha",
+      "item": "Ordenação, subconjuntos, empilhamento e recodificação",
+      "estado_statlab": "Ordenação por até três chaves e empilhar/desempilhar em novas colunas disponíveis, com desfazer; subconjuntos, recodificação e demais opções pendentes",
+      "recursos": [
+        "sort.json",
+        "subsetWorksheet.json",
+        "stackColumns.json",
+        "stackRows.json",
+        "unstackColumns.json",
+        "shared_data_recode.json",
+        "splitWorksheet.json"
+      ],
+      "proximo_contrato": "Filtros/subconjuntos, recodificação, tipos data/hora, demais formatos/destinos e comparação dos padrões. A ordenação atual é estável e as transformações formam uma etapa no histórico."
+    },
+    {
+      "prioridade": 1,
+      "area": "descritivas",
+      "item": "Opções gráficas e armazenamento de descritivas",
+      "estado_statlab": "Medidas e grupos parcialmente implementados; armazenamento e resumo gráfico pendentes",
+      "recursos": [
+        "displayDescriptiveStatistics.json",
+        "storeDescriptiveStatistics.json",
+        "graphicalSummary.json"
+      ],
+      "proximo_contrato": "Conferir medidas restantes, saída em colunas, gráficos anexos, convenções de agrupamento e quartis."
+    },
+    {
+      "prioridade": 2,
+      "area": "regressao",
+      "item": "Termos, categorias, seleção de variáveis e armazenamento",
+      "estado_statlab": "Modelo linear numérico com intercepto e previsão individual implementado",
+      "recursos": [
+        "fitRegressionModel.json",
+        "bestSubsets.json",
+        "nonlinearRegression.json",
+        "orthogonalRegression.json"
+      ],
+      "proximo_contrato": "Matriz de desenho e contrastes, interações, pesos, transformação, seleção, falta de ajuste e persistência. O arquivo de tradução não contém a implementação numérica."
+    },
+    {
+      "prioridade": 2,
+      "area": "anova",
+      "item": "Dois fatores, modelos gerais, balanceados e aninhados",
+      "estado_statlab": "Somente um fator clássico/Welch e comparações Tukey/Games-Howell",
+      "recursos": [
+        "twoWayAnova.json",
+        "fitGeneralLinearModel.json",
+        "balancedAnalysisOfVariance.json",
+        "fullyNestedAnalysisOfVariance.json"
+      ],
+      "proximo_contrato": "SQ, efeitos fixos/aleatórios, tipos de termos, testes por efeito e múltiplas comparações."
+    },
+    {
+      "prioridade": 2,
+      "area": "calculo",
+      "item": "Calculadora de colunas e geração de dados",
+      "estado_statlab": "Calculador escalar de 12 distribuições disponível; calculadora de expressões e amostragem pendentes",
+      "recursos": [
+        "calculator.json",
+        "sampleFromColumns.json"
+      ],
+      "proximo_contrato": "Linguagem de expressões sem eval arbitrário, tipos, ausentes, funções, destino e sementes aleatórias."
+    },
+    {
+      "prioridade": 3,
+      "area": "qualidade_medicao",
+      "item": "Cartas, capacidade e estudos de medição",
+      "estado_statlab": "Pendente",
+      "recursos": [
+        "capabilityAnalysisNormal.json",
+        "capabilityAnalysisNonnormal.json",
+        "capabilitySixpackNormal.json",
+        "gageRRStudyCrossed.json",
+        "gageRRStudyNested.json",
+        "gageLinearityAndBiasStudy.json"
+      ],
+      "proximo_contrato": "Inventariar cada família com seus estimadores, subgrupos, constantes, regras de sinalização e limites."
+    },
+    {
+      "prioridade": 3,
+      "area": "doe_series_confiabilidade",
+      "item": "DOE, séries temporais e confiabilidade",
+      "estado_statlab": "Pendente",
+      "recursos": [
+        "createFactorialDesign.json",
+        "analyzeFactorialDesign.json",
+        "arima.json",
+        "parametricDistributionAnalysis.json",
+        "nonparametricDistributionAnalysis.json"
+      ],
+      "proximo_contrato": "Decompor por comando e opções, distinguir funções modernas exclusivas do 22 e validar o que pertence ao alvo 16."
+    }
+  ],
+  "integracao_encontrada": {
+    "arquivo": "Português/MyMenu/AddIn.cs",
+    "observacoes": [
+      "Exemplo de complemento C# com Mtb.Application e IMinitabAddin.",
+      "Demonstra ActiveProject, ActiveWorksheet, enumeração de Columns, GetData/SetData e ExecuteCommand.",
+      "A construção de DESCRIBE mostra subcomandos Mean, Variance, Sums, N, GHist e GBoxplot.",
+      "Os exemplos não constituem o código-fonte do aplicativo principal e não foram executados nesta inspeção."
+    ]
+  }
+}

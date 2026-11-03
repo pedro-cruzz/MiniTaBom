@@ -1,0 +1,12 @@
+{
+  "reference": "Minitab Statistical Software 22.6.0.0, Windows, português",
+  "date": "2026-10-22",
+  "source": "Execução pela interface: Estat > Estatísticas Básicas > Teste t para 2 Amostras; resultados lidos na árvore de acessibilidade do painel de saída",
+  "input": {"first": [2, 4, 5, 9, 15], "second": [1, 2, 4, 6, 7, 8]},
+  "worksheet": "Worksheet 2 criada separadamente para dados sintéticos; C1 contém um ausente na sexta linha",
+  "options": {"null": 0, "confidence": 95, "alternative": "two-sided", "equal_var": false, "legacy_df": false},
+  "displayed": {"estimate": 2.33, "low": -3.98, "high": 8.64, "t": 0.91, "df": 5.93, "p": 0.400},
+  "absolute_tolerances": {"estimate": 0.005, "low": 0.005, "high": 0.005, "t": 0.005, "df": 0.005, "p": 0.0005},
+  "tolerance_basis": "Metade da unidade do último decimal exibido, exclusivamente para conferir saída arredondada",
+  "limitations": ["Sem exportação em precisão completa", "Uma configuração e um caso", "Não valida compatibilidade com Minitab 16", "Não demonstra equivalência numérica integral"]
+}

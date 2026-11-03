@@ -1,0 +1,7722 @@
+{
+  "fonte": "C:\\Program Files\\Minitab\\Minitab 22\\Resources\\1046",
+  "sha256_dlg": "e2f290003e5b5e75ea28a641b25b1848e046f80d71ed1970ab282f8b492cd4fd",
+  "sha256_inx": "b56a14b99f8326bd6aecc0d2de456dadadfb6bdd4e26cec8e38c7210123ff639",
+  "entradas_indice": 502,
+  "blocos": 183,
+  "bytes_cobertos": 1126120,
+  "entradas_indice_nao_resolvidas": [
+    {
+      "slot_base_zero": 399,
+      "valor_bruto": 17801656
+    },
+    {
+      "slot_base_zero": 400,
+      "valor_bruto": 17808916
+    }
+  ],
+  "offsets_indice_sem_bloco": [],
+  "blocos_sem_entrada_direta": [],
+  "metodo": "Offsets int32 e comprimentos uint32 observados e cruzados nesta instalação",
+  "observacao": "Blocos podem incluir subdiálogos. Sequências UTF-16LE são heurísticas, não análise completa de campos, hierarquia, tipos ou padrões; amostras podem começar por valores padrão.",
+  "registros": [
+    {
+      "offset": 0,
+      "bytes": 2972,
+      "slots_indice_base_zero": [
+        172,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428,
+        429,
+        430,
+        431,
+        432,
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451,
+        452,
+        453,
+        454,
+        455,
+        456,
+        457,
+        458,
+        459,
+        460,
+        461,
+        462,
+        463,
+        464,
+        465,
+        466,
+        467,
+        468,
+        469,
+        470,
+        471,
+        472,
+        473,
+        474,
+        475,
+        476,
+        477,
+        478,
+        479,
+        480,
+        481,
+        482,
+        483,
+        484,
+        485,
+        486,
+        487,
+        488,
+        489,
+        490,
+        491,
+        492,
+        493,
+        494,
+        495,
+        496
+      ],
+      "numero_sequencias_textuais": 33,
+      "amostra": [
+        {
+          "offset": 1996,
+          "texto": "0,05"
+        },
+        {
+          "offset": 2008,
+          "texto": "Análise de Médias"
+        },
+        {
+          "offset": 2044,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 2056,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 2082,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 2104,
+          "texto": "&Resposta:"
+        },
+        {
+          "offset": 2126,
+          "texto": "ANOMeans "
+        },
+        {
+          "offset": 2148,
+          "texto": "variável resposta"
+        }
+      ]
+    },
+    {
+      "offset": 2972,
+      "bytes": 6100,
+      "slots_indice_base_zero": [
+        124
+      ],
+      "numero_sequencias_textuais": 64,
+      "amostra": [
+        {
+          "offset": 6568,
+          "texto": "Análise de Variância Balanceada"
+        },
+        {
+          "offset": 6632,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 6644,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 6670,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 6692,
+          "texto": "G&ráficos..."
+        },
+        {
+          "offset": 6718,
+          "texto": "&Armazenamento..."
+        },
+        {
+          "offset": 6754,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 6776,
+          "texto": "Res&ultados..."
+        }
+      ]
+    },
+    {
+      "offset": 9072,
+      "bytes": 1344,
+      "slots_indice_base_zero": [
+        197
+      ],
+      "numero_sequencias_textuais": 11,
+      "amostra": [
+        {
+          "offset": 9896,
+          "texto": "ANOVA Completamente Aninhada"
+        },
+        {
+          "offset": 9954,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 9966,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 9992,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 10014,
+          "texto": "&Respostas:"
+        },
+        {
+          "offset": 10038,
+          "texto": "Nested "
+        },
+        {
+          "offset": 10056,
+          "texto": "variáveis de resposta"
+        },
+        {
+          "offset": 10100,
+          "texto": "Use at least 1 and at most 50 distinct numeric columns of equal length."
+        }
+      ]
+    },
+    {
+      "offset": 10416,
+      "bytes": 2720,
+      "slots_indice_base_zero": [
+        231
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 12124,
+          "texto": "Gráfico de Efeitos Principais"
+        },
+        {
+          "offset": 12184,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 12196,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 12222,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 12244,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 12266,
+          "texto": "&Respostas:"
+        },
+        {
+          "offset": 12294,
+          "texto": "  Response "
+        },
+        {
+          "offset": 12320,
+          "texto": "resposta"
+        }
+      ]
+    },
+    {
+      "offset": 13136,
+      "bytes": 2872,
+      "slots_indice_base_zero": [
+        230
+      ],
+      "numero_sequencias_textuais": 29,
+      "amostra": [
+        {
+          "offset": 14904,
+          "texto": "Gráfico de Interação"
+        },
+        {
+          "offset": 14946,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 14958,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 14984,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 15006,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 15028,
+          "texto": "&Respostas:"
+        },
+        {
+          "offset": 15056,
+          "texto": "  Response "
+        },
+        {
+          "offset": 15082,
+          "texto": "resposta"
+        }
+      ]
+    },
+    {
+      "offset": 16008,
+      "bytes": 10392,
+      "slots_indice_base_zero": [
+        305
+      ],
+      "numero_sequencias_textuais": 114,
+      "amostra": [
+        {
+          "offset": 22130,
+          "texto": "Erro"
+        },
+        {
+          "offset": 22144,
+          "texto": "MANOVA Generalizada"
+        },
+        {
+          "offset": 22184,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 22196,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 22222,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 22244,
+          "texto": "Co&variáveis..."
+        },
+        {
+          "offset": 22276,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 22298,
+          "texto": "&Armazenamento..."
+        }
+      ]
+    },
+    {
+      "offset": 26400,
+      "bytes": 4772,
+      "slots_indice_base_zero": [
+        10
+      ],
+      "numero_sequencias_textuais": 51,
+      "amostra": [
+        {
+          "offset": 29128,
+          "texto": "Análise de Componentes Principais"
+        },
+        {
+          "offset": 29196,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 29208,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 29234,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 29256,
+          "texto": "G&ráficos..."
+        },
+        {
+          "offset": 29282,
+          "texto": "Armazenamen&to..."
+        },
+        {
+          "offset": 29318,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 29342,
+          "texto": "PCA "
+        }
+      ]
+    },
+    {
+      "offset": 31172,
+      "bytes": 12068,
+      "slots_indice_base_zero": [
+        175
+      ],
+      "numero_sequencias_textuais": 125,
+      "amostra": [
+        {
+          "offset": 37988,
+          "texto": "Análise Fatorial"
+        },
+        {
+          "offset": 38022,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 38034,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 38060,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 38082,
+          "texto": "&Gráficos..."
+        },
+        {
+          "offset": 38108,
+          "texto": "&Resultados..."
+        },
+        {
+          "offset": 38138,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 38168,
+          "texto": "variável(is)"
+        }
+      ]
+    },
+    {
+      "offset": 43240,
+      "bytes": 4812,
+      "slots_indice_base_zero": [
+        24
+      ],
+      "numero_sequencias_textuais": 50,
+      "amostra": [
+        {
+          "offset": 46024,
+          "texto": "Análise Discriminante"
+        },
+        {
+          "offset": 46068,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 46080,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 46106,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 46128,
+          "texto": "&Grupos:"
+        },
+        {
+          "offset": 46146,
+          "texto": "Discriminant "
+        },
+        {
+          "offset": 46176,
+          "texto": "variável de grupo"
+        },
+        {
+          "offset": 46212,
+          "texto": "Use a single column."
+        }
+      ]
+    },
+    {
+      "offset": 48052,
+      "bytes": 7368,
+      "slots_indice_base_zero": [
+        204
+      ],
+      "numero_sequencias_textuais": 89,
+      "amostra": [
+        {
+          "offset": 52080,
+          "texto": "Agrupamento de Observações"
+        },
+        {
+          "offset": 52134,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 52146,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 52172,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 52194,
+          "texto": "Matriz de distância ou &variáveis:"
+        },
+        {
+          "offset": 52264,
+          "texto": "Cluo "
+        },
+        {
+          "offset": 52278,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 52304,
+          "texto": "Use 1 or more distinct numeric columns of equal length or matrices containing data."
+        }
+      ]
+    },
+    {
+      "offset": 55420,
+      "bytes": 5692,
+      "slots_indice_base_zero": [
+        205
+      ],
+      "numero_sequencias_textuais": 66,
+      "amostra": [
+        {
+          "offset": 58684,
+          "texto": "Agrupamento de Variáveis"
+        },
+        {
+          "offset": 58734,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 58746,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 58772,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 58794,
+          "texto": "Matriz de distância ou &variáveis:"
+        },
+        {
+          "offset": 58864,
+          "texto": "Cluv "
+        },
+        {
+          "offset": 58878,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 58904,
+          "texto": "Use 1 or more distinct numeric columns of equal length or matrices containing data."
+        }
+      ]
+    },
+    {
+      "offset": 61112,
+      "bytes": 3372,
+      "slots_indice_base_zero": [
+        206
+      ],
+      "numero_sequencias_textuais": 33,
+      "amostra": [
+        {
+          "offset": 63072,
+          "texto": "Agrupamento de K-Médias"
+        },
+        {
+          "offset": 63120,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 63132,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 63158,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 63180,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 63204,
+          "texto": "KMean "
+        },
+        {
+          "offset": 63220,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 63246,
+          "texto": "Use 2 or more distinct numeric columns of equal length."
+        }
+      ]
+    },
+    {
+      "offset": 64484,
+      "bytes": 1608,
+      "slots_indice_base_zero": [
+        348
+      ],
+      "numero_sequencias_textuais": 17,
+      "amostra": [
+        {
+          "offset": 65484,
+          "texto": "95,0"
+        },
+        {
+          "offset": 65496,
+          "texto": "Sumário Gráfico"
+        },
+        {
+          "offset": 65528,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 65540,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 65566,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 65588,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 65612,
+          "texto": "GSummary "
+        },
+        {
+          "offset": 65634,
+          "texto": "variável(is)"
+        }
+      ]
+    },
+    {
+      "offset": 66092,
+      "bytes": 6724,
+      "slots_indice_base_zero": [
+        96
+      ],
+      "numero_sequencias_textuais": 95,
+      "amostra": [
+        {
+          "offset": 70012,
+          "texto": "Armazenamento de Estatísticas Descritivas"
+        },
+        {
+          "offset": 70096,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 70108,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 70134,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 70156,
+          "texto": "E&statísticas..."
+        },
+        {
+          "offset": 70190,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 70212,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 70236,
+          "texto": "Statistics "
+        }
+      ]
+    },
+    {
+      "offset": 72816,
+      "bytes": 1408,
+      "slots_indice_base_zero": [
+        2
+      ],
+      "numero_sequencias_textuais": 16,
+      "amostra": [
+        {
+          "offset": 73696,
+          "texto": "Correlação"
+        },
+        {
+          "offset": 73718,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 73730,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 73756,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 73778,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 73802,
+          "texto": "Correlation "
+        },
+        {
+          "offset": 73830,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 73856,
+          "texto": "Use 2 or more numeric columns of equal length."
+        }
+      ]
+    },
+    {
+      "offset": 74224,
+      "bytes": 1024,
+      "slots_indice_base_zero": [
+        5
+      ],
+      "numero_sequencias_textuais": 10,
+      "amostra": [
+        {
+          "offset": 74908,
+          "texto": "Covariância"
+        },
+        {
+          "offset": 74932,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 74944,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 74970,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 74992,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 75016,
+          "texto": "Covariance "
+        },
+        {
+          "offset": 75042,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 75068,
+          "texto": "Use 2 or more numeric columns of equal length."
+        }
+      ]
+    },
+    {
+      "offset": 75248,
+      "bytes": 11504,
+      "slots_indice_base_zero": [
+        326
+      ],
+      "numero_sequencias_textuais": 96,
+      "amostra": [
+        {
+          "offset": 82644,
+          "texto": "Tabela de Estatísticas Descritivas"
+        },
+        {
+          "offset": 82714,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 82726,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 82752,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 82774,
+          "texto": "Variáveis C&ategóricas..."
+        },
+        {
+          "offset": 82826,
+          "texto": "Variáveis A&ssociadas..."
+        },
+        {
+          "offset": 82876,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 82898,
+          "texto": "Variáveis categóricas:"
+        }
+      ]
+    },
+    {
+      "offset": 86752,
+      "bytes": 1392,
+      "slots_indice_base_zero": [
+        34
+      ],
+      "numero_sequencias_textuais": 17,
+      "amostra": [
+        {
+          "offset": 87632,
+          "texto": "Contagem Individual de Variáveis"
+        },
+        {
+          "offset": 87698,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 87710,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 87736,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 87758,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 87782,
+          "texto": "Tally "
+        },
+        {
+          "offset": 87798,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 87824,
+          "texto": "Use 1 or more columns."
+        }
+      ]
+    },
+    {
+      "offset": 88144,
+      "bytes": 11296,
+      "slots_indice_base_zero": [
+        190
+      ],
+      "numero_sequencias_textuais": 117,
+      "amostra": [
+        {
+          "offset": 94004,
+          "texto": "2 1 "
+        },
+        {
+          "offset": 94016,
+          "texto": "Análise de Correspondência Simples"
+        },
+        {
+          "offset": 94086,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 94098,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 94124,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 94146,
+          "texto": "Com&binar..."
+        },
+        {
+          "offset": 94172,
+          "texto": "Dados A&dic..."
+        },
+        {
+          "offset": 94202,
+          "texto": "&Resultados..."
+        }
+      ]
+    },
+    {
+      "offset": 99440,
+      "bytes": 6192,
+      "slots_indice_base_zero": [
+        191
+      ],
+      "numero_sequencias_textuais": 63,
+      "amostra": [
+        {
+          "offset": 102818,
+          "texto": "2 1 "
+        },
+        {
+          "offset": 102828,
+          "texto": "Análise de Correspondência Múltipla"
+        },
+        {
+          "offset": 102900,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 102912,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 102938,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 102960,
+          "texto": "Dados A&dic..."
+        },
+        {
+          "offset": 102990,
+          "texto": "&Resultados..."
+        },
+        {
+          "offset": 103020,
+          "texto": "&Gráficos..."
+        }
+      ]
+    },
+    {
+      "offset": 105632,
+      "bytes": 2016,
+      "slots_indice_base_zero": [
+        11
+      ],
+      "numero_sequencias_textuais": 22,
+      "amostra": [
+        {
+          "offset": 106870,
+          "texto": "95,0"
+        },
+        {
+          "offset": 106888,
+          "texto": "Teste do Sinal para 1 Amostra"
+        },
+        {
+          "offset": 106948,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 106960,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 106986,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 107008,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 107038,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 107064,
+          "texto": "Use 1 or more numeric columns."
+        }
+      ]
+    },
+    {
+      "offset": 107648,
+      "bytes": 2024,
+      "slots_indice_base_zero": [
+        12
+      ],
+      "numero_sequencias_textuais": 22,
+      "amostra": [
+        {
+          "offset": 108886,
+          "texto": "95,0"
+        },
+        {
+          "offset": 108904,
+          "texto": "Teste de Wilcoxon para 1 Amostra"
+        },
+        {
+          "offset": 108970,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 108982,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 109008,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 109030,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 109060,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 109086,
+          "texto": "Use 1 or more numeric columns."
+        }
+      ]
+    },
+    {
+      "offset": 109672,
+      "bytes": 1888,
+      "slots_indice_base_zero": [
+        13
+      ],
+      "numero_sequencias_textuais": 20,
+      "amostra": [
+        {
+          "offset": 110840,
+          "texto": "95,0"
+        },
+        {
+          "offset": 110852,
+          "texto": "Mann-Whitney"
+        },
+        {
+          "offset": 110878,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 110890,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 110916,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 110938,
+          "texto": "&Primeira Amostra:"
+        },
+        {
+          "offset": 110982,
+          "texto": "primeira amostra"
+        },
+        {
+          "offset": 111016,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 111560,
+      "bytes": 1120,
+      "slots_indice_base_zero": [
+        14
+      ],
+      "numero_sequencias_textuais": 11,
+      "amostra": [
+        {
+          "offset": 112364,
+          "texto": "Kruskal-Wallis"
+        },
+        {
+          "offset": 112394,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 112406,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 112432,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 112454,
+          "texto": "&Resposta:"
+        },
+        {
+          "offset": 112476,
+          "texto": "Kruskal-Wallis "
+        },
+        {
+          "offset": 112510,
+          "texto": "variável resposta"
+        },
+        {
+          "offset": 112546,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 112680,
+      "bytes": 1440,
+      "slots_indice_base_zero": [
+        15
+      ],
+      "numero_sequencias_textuais": 15,
+      "amostra": [
+        {
+          "offset": 113676,
+          "texto": "Teste de Mediana de Mood"
+        },
+        {
+          "offset": 113726,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 113738,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 113764,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 113786,
+          "texto": "&Resposta:"
+        },
+        {
+          "offset": 113808,
+          "texto": "Mood "
+        },
+        {
+          "offset": 113822,
+          "texto": "variável resposta"
+        },
+        {
+          "offset": 113858,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 114120,
+      "bytes": 1788,
+      "slots_indice_base_zero": [
+        16
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 115340,
+          "texto": "Friedman"
+        },
+        {
+          "offset": 115358,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 115370,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 115396,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 115418,
+          "texto": "&Resposta:"
+        },
+        {
+          "offset": 115440,
+          "texto": "Friedman "
+        },
+        {
+          "offset": 115462,
+          "texto": "variável resposta"
+        },
+        {
+          "offset": 115498,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 115908,
+      "bytes": 1320,
+      "slots_indice_base_zero": [
+        17
+      ],
+      "numero_sequencias_textuais": 13,
+      "amostra": [
+        {
+          "offset": 116808,
+          "texto": "Teste de Ensaios"
+        },
+        {
+          "offset": 116842,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 116854,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 116880,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 116902,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 116932,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 116958,
+          "texto": "Use 1 or more numeric columns."
+        },
+        {
+          "offset": 117020,
+          "texto": "&Acima e abaixo da média"
+        }
+      ]
+    },
+    {
+      "offset": 117228,
+      "bytes": 1752,
+      "slots_indice_base_zero": [
+        49
+      ],
+      "numero_sequencias_textuais": 16,
+      "amostra": [
+        {
+          "offset": 118352,
+          "texto": "Médias Pareadas"
+        },
+        {
+          "offset": 118384,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 118396,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 118422,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 118444,
+          "texto": "&Variável:"
+        },
+        {
+          "offset": 118466,
+          "texto": "Walsh "
+        },
+        {
+          "offset": 118482,
+          "texto": "variável"
+        },
+        {
+          "offset": 118500,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 118980,
+      "bytes": 2160,
+      "slots_indice_base_zero": [
+        50
+      ],
+      "numero_sequencias_textuais": 19,
+      "amostra": [
+        {
+          "offset": 120304,
+          "texto": "Diferenças Pareadas"
+        },
+        {
+          "offset": 120344,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 120356,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 120382,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 120404,
+          "texto": "&Primeira variável:"
+        },
+        {
+          "offset": 120444,
+          "texto": "WDifferences "
+        },
+        {
+          "offset": 120474,
+          "texto": "primeira variável"
+        },
+        {
+          "offset": 120510,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 121140,
+      "bytes": 2124,
+      "slots_indice_base_zero": [
+        51
+      ],
+      "numero_sequencias_textuais": 19,
+      "amostra": [
+        {
+          "offset": 122484,
+          "texto": "Inclinações Pareadas"
+        },
+        {
+          "offset": 122526,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 122538,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 122564,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 122586,
+          "texto": "Variável &Y:"
+        },
+        {
+          "offset": 122612,
+          "texto": "WSlopes "
+        },
+        {
+          "offset": 122632,
+          "texto": "variável y"
+        },
+        {
+          "offset": 122654,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 123264,
+      "bytes": 4572,
+      "slots_indice_base_zero": [
+        272
+      ],
+      "numero_sequencias_textuais": 48,
+      "amostra": [
+        {
+          "offset": 125788,
+          "texto": "0,05"
+        },
+        {
+          "offset": 125800,
+          "texto": "Poder e Tamanho de Amostra para Teste Z para 1 Amostra"
+        },
+        {
+          "offset": 125910,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 125922,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 125948,
+          "texto": "Especifique valores para um dos dois itens a seguir:"
+        },
+        {
+          "offset": 126054,
+          "texto": "Tamanho&s amostrais:"
+        },
+        {
+          "offset": 126100,
+          "texto": "    Sample "
+        },
+        {
+          "offset": 126126,
+          "texto": "tamanhos amostrais"
+        }
+      ]
+    },
+    {
+      "offset": 127836,
+      "bytes": 4576,
+      "slots_indice_base_zero": [
+        273
+      ],
+      "numero_sequencias_textuais": 48,
+      "amostra": [
+        {
+          "offset": 130360,
+          "texto": "0,05"
+        },
+        {
+          "offset": 130372,
+          "texto": "Poder e Tamanho de Amostra para Teste t para 1 Amostra"
+        },
+        {
+          "offset": 130482,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 130494,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 130520,
+          "texto": "Especifique valores para um dos dois itens a seguir:"
+        },
+        {
+          "offset": 130626,
+          "texto": "Tamanho&s amostrais:"
+        },
+        {
+          "offset": 130672,
+          "texto": "    Sample "
+        },
+        {
+          "offset": 130698,
+          "texto": "tamanhos amostrais"
+        }
+      ]
+    },
+    {
+      "offset": 132412,
+      "bytes": 4636,
+      "slots_indice_base_zero": [
+        349
+      ],
+      "numero_sequencias_textuais": 48,
+      "amostra": [
+        {
+          "offset": 134936,
+          "texto": "0,05"
+        },
+        {
+          "offset": 134948,
+          "texto": "Poder e Tamanho de Amostra para Teste t Pareado"
+        },
+        {
+          "offset": 135044,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 135056,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 135082,
+          "texto": "Especifique valores para um dos dois itens a seguir:"
+        },
+        {
+          "offset": 135188,
+          "texto": "Tamanho&s amostrais:"
+        },
+        {
+          "offset": 135234,
+          "texto": "    Sample "
+        },
+        {
+          "offset": 135260,
+          "texto": "tamanhos amostrais"
+        }
+      ]
+    },
+    {
+      "offset": 137048,
+      "bytes": 4580,
+      "slots_indice_base_zero": [
+        274
+      ],
+      "numero_sequencias_textuais": 48,
+      "amostra": [
+        {
+          "offset": 139572,
+          "texto": "0,05"
+        },
+        {
+          "offset": 139584,
+          "texto": "Poder e Tamanho de Amostra para Teste t para 2 Amostras"
+        },
+        {
+          "offset": 139696,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 139708,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 139734,
+          "texto": "Especifique valores para um dos dois itens a seguir:"
+        },
+        {
+          "offset": 139840,
+          "texto": "Tamanho&s amostrais:"
+        },
+        {
+          "offset": 139886,
+          "texto": "    Sample "
+        },
+        {
+          "offset": 139912,
+          "texto": "tamanhos amostrais"
+        }
+      ]
+    },
+    {
+      "offset": 141628,
+      "bytes": 4628,
+      "slots_indice_base_zero": [
+        275
+      ],
+      "numero_sequencias_textuais": 48,
+      "amostra": [
+        {
+          "offset": 144152,
+          "texto": "0,05"
+        },
+        {
+          "offset": 144164,
+          "texto": "Poder e Tamanho de Amostra para 1 proporção"
+        },
+        {
+          "offset": 144252,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 144264,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 144290,
+          "texto": "Especifique valores para um dos dois itens a seguir:"
+        },
+        {
+          "offset": 144396,
+          "texto": "Tamanho&s amostrais:"
+        },
+        {
+          "offset": 144442,
+          "texto": "    Sample "
+        },
+        {
+          "offset": 144468,
+          "texto": "tamanhos amostrais"
+        }
+      ]
+    },
+    {
+      "offset": 146256,
+      "bytes": 4728,
+      "slots_indice_base_zero": [
+        276
+      ],
+      "numero_sequencias_textuais": 49,
+      "amostra": [
+        {
+          "offset": 148780,
+          "texto": "0,05"
+        },
+        {
+          "offset": 148792,
+          "texto": "Poder e Tamanho de Amostra para 2 Proporções"
+        },
+        {
+          "offset": 148882,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 148894,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 148920,
+          "texto": "Especifique valores para um dos dois itens a seguir:"
+        },
+        {
+          "offset": 149026,
+          "texto": "Tamanho&s amostrais:"
+        },
+        {
+          "offset": 149072,
+          "texto": "    Sample "
+        },
+        {
+          "offset": 149098,
+          "texto": "tamanhos amostrais"
+        }
+      ]
+    },
+    {
+      "offset": 150984,
+      "bytes": 4552,
+      "slots_indice_base_zero": [
+        277
+      ],
+      "numero_sequencias_textuais": 45,
+      "amostra": [
+        {
+          "offset": 153382,
+          "texto": "0,05"
+        },
+        {
+          "offset": 153396,
+          "texto": "Poder e Tamanho de Amostra para Uma ANOVA com Um Fator"
+        },
+        {
+          "offset": 153506,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 153518,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 153544,
+          "texto": "&Número de níveis:"
+        },
+        {
+          "offset": 153582,
+          "texto": "Power;"
+        },
+        {
+          "offset": 153596,
+          "texto": "  OneWay "
+        },
+        {
+          "offset": 153618,
+          "texto": "número de níveis"
+        }
+      ]
+    },
+    {
+      "offset": 155536,
+      "bytes": 7324,
+      "slots_indice_base_zero": [
+        278
+      ],
+      "numero_sequencias_textuais": 72,
+      "amostra": [
+        {
+          "offset": 159312,
+          "texto": "0,05"
+        },
+        {
+          "offset": 159336,
+          "texto": "Poder e Tamanho de Amostra para um Experimento Fatorial com 2 Níveis"
+        },
+        {
+          "offset": 159474,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 159486,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 159512,
+          "texto": "Número de &fatores:"
+        },
+        {
+          "offset": 159552,
+          "texto": "Power;"
+        },
+        {
+          "offset": 159566,
+          "texto": "  FFDesign "
+        },
+        {
+          "offset": 159592,
+          "texto": "número de fatores"
+        }
+      ]
+    },
+    {
+      "offset": 162860,
+      "bytes": 6956,
+      "slots_indice_base_zero": [
+        279
+      ],
+      "numero_sequencias_textuais": 65,
+      "amostra": [
+        {
+          "offset": 166446,
+          "texto": "0,05"
+        },
+        {
+          "offset": 166464,
+          "texto": "Poder e Tamanho de Amostra para um Experimento Plackett-Burman"
+        },
+        {
+          "offset": 166590,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 166602,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 166628,
+          "texto": "Número de &fatores:"
+        },
+        {
+          "offset": 166668,
+          "texto": "Power;"
+        },
+        {
+          "offset": 166682,
+          "texto": "  PBDesign "
+        },
+        {
+          "offset": 166708,
+          "texto": "número de fatores"
+        }
+      ]
+    },
+    {
+      "offset": 169816,
+      "bytes": 2716,
+      "slots_indice_base_zero": [
+        169
+      ],
+      "numero_sequencias_textuais": 29,
+      "amostra": [
+        {
+          "offset": 171636,
+          "texto": "Teste de Normalidade"
+        },
+        {
+          "offset": 171678,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 171690,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 171716,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 171738,
+          "texto": "&Variável:"
+        },
+        {
+          "offset": 171760,
+          "texto": "NormTest "
+        },
+        {
+          "offset": 171782,
+          "texto": "variável"
+        },
+        {
+          "offset": 171800,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 172532,
+      "bytes": 2440,
+      "slots_indice_base_zero": [
+        38
+      ],
+      "numero_sequencias_textuais": 31,
+      "amostra": [
+        {
+          "offset": 174136,
+          "texto": "Estatísticas da Coluna"
+        },
+        {
+          "offset": 174182,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 174194,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 174220,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 174242,
+          "texto": "Estatística"
+        },
+        {
+          "offset": 174266,
+          "texto": "So&ma"
+        },
+        {
+          "offset": 174286,
+          "texto": "Mé&dia"
+        },
+        {
+          "offset": 174300,
+          "texto": "Mean"
+        }
+      ]
+    },
+    {
+      "offset": 174972,
+      "bytes": 2412,
+      "slots_indice_base_zero": [
+        46
+      ],
+      "numero_sequencias_textuais": 32,
+      "amostra": [
+        {
+          "offset": 176520,
+          "texto": "Estatísticas da Linha"
+        },
+        {
+          "offset": 176564,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 176576,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 176602,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 176624,
+          "texto": "Estatística"
+        },
+        {
+          "offset": 176648,
+          "texto": "&Soma"
+        },
+        {
+          "offset": 176660,
+          "texto": "RSum"
+        },
+        {
+          "offset": 176670,
+          "texto": "&Média"
+        }
+      ]
+    },
+    {
+      "offset": 177384,
+      "bytes": 2936,
+      "slots_indice_base_zero": [
+        194
+      ],
+      "numero_sequencias_textuais": 40,
+      "amostra": [
+        {
+          "offset": 179112,
+          "texto": "Extrair de Data/Hora para Numérico"
+        },
+        {
+          "offset": 179182,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 179194,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 179220,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 179242,
+          "texto": "&Extrair da coluna de data/hora:"
+        },
+        {
+          "offset": 179308,
+          "texto": "Numeric "
+        },
+        {
+          "offset": 179328,
+          "texto": "coluna de entrada"
+        },
+        {
+          "offset": 179364,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 180320,
+      "bytes": 2924,
+      "slots_indice_base_zero": [
+        195
+      ],
+      "numero_sequencias_textuais": 40,
+      "amostra": [
+        {
+          "offset": 182048,
+          "texto": "Extração de Data/Hora para Texto"
+        },
+        {
+          "offset": 182114,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 182126,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 182152,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 182174,
+          "texto": "&Extrair da coluna de data/hora:"
+        },
+        {
+          "offset": 182240,
+          "texto": "Text "
+        },
+        {
+          "offset": 182254,
+          "texto": "coluna de entrada"
+        },
+        {
+          "offset": 182290,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 183244,
+      "bytes": 2784,
+      "slots_indice_base_zero": [
+        128
+      ],
+      "numero_sequencias_textuais": 24,
+      "amostra": [
+        {
+          "offset": 184828,
+          "texto": "Conjunto Simples de Números"
+        },
+        {
+          "offset": 184884,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 184896,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 184922,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 184944,
+          "texto": "&Armazenar dados padronizados em:"
+        },
+        {
+          "offset": 185012,
+          "texto": "Set "
+        },
+        {
+          "offset": 185024,
+          "texto": "coluna de armazenamento"
+        },
+        {
+          "offset": 185072,
+          "texto": "Use a single column."
+        }
+      ]
+    },
+    {
+      "offset": 186028,
+      "bytes": 2168,
+      "slots_indice_base_zero": [
+        196
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 187212,
+          "texto": "Conjunto Arbitrário de Números"
+        },
+        {
+          "offset": 187274,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 187286,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 187312,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 187334,
+          "texto": "A&rmazenar dados padronizados em:"
+        },
+        {
+          "offset": 187402,
+          "texto": "Set "
+        },
+        {
+          "offset": 187414,
+          "texto": "coluna de armazenamento"
+        },
+        {
+          "offset": 187462,
+          "texto": "Use a single column."
+        }
+      ]
+    },
+    {
+      "offset": 188196,
+      "bytes": 2276,
+      "slots_indice_base_zero": [
+        198
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 189380,
+          "texto": "Valores de Texto"
+        },
+        {
+          "offset": 189414,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 189426,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 189452,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 189474,
+          "texto": "&Armazenar dados padronizados em:"
+        },
+        {
+          "offset": 189542,
+          "texto": "TSet "
+        },
+        {
+          "offset": 189556,
+          "texto": "coluna de armazenamento"
+        },
+        {
+          "offset": 189604,
+          "texto": "Use a single column."
+        }
+      ]
+    },
+    {
+      "offset": 190472,
+      "bytes": 3828,
+      "slots_indice_base_zero": [
+        189
+      ],
+      "numero_sequencias_textuais": 50,
+      "amostra": [
+        {
+          "offset": 192324,
+          "texto": "Conjunto Simples de Valores de Data/Hora"
+        },
+        {
+          "offset": 192406,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 192418,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 192444,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 192466,
+          "texto": "&Armazenar dados padronizados em:"
+        },
+        {
+          "offset": 192534,
+          "texto": "Dset "
+        },
+        {
+          "offset": 192548,
+          "texto": "coluna de armazenamento"
+        },
+        {
+          "offset": 192596,
+          "texto": "Use a single column."
+        }
+      ]
+    },
+    {
+      "offset": 194300,
+      "bytes": 2308,
+      "slots_indice_base_zero": [
+        199
+      ],
+      "numero_sequencias_textuais": 20,
+      "amostra": [
+        {
+          "offset": 195484,
+          "texto": "Conjunto Arbitrário de Valores de Data/Hora"
+        },
+        {
+          "offset": 195572,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 195584,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 195610,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 195632,
+          "texto": "&Armazenar dados padronizados em:"
+        },
+        {
+          "offset": 195700,
+          "texto": "DSet "
+        },
+        {
+          "offset": 195714,
+          "texto": "coluna de armazenamento"
+        },
+        {
+          "offset": 195762,
+          "texto": "Use a single column."
+        }
+      ]
+    },
+    {
+      "offset": 196608,
+      "bytes": 5644,
+      "slots_indice_base_zero": [
+        238
+      ],
+      "numero_sequencias_textuais": 67,
+      "amostra": [
+        {
+          "offset": 199726,
+          "texto": "-5,0"
+        },
+        {
+          "offset": 199752,
+          "texto": "-5,0"
+        },
+        {
+          "offset": 199784,
+          "texto": "Criação de Malha de Dados"
+        },
+        {
+          "offset": 199836,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 199848,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 199874,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 199896,
+          "texto": "Criação de Variáveis de Malha X e Y"
+        },
+        {
+          "offset": 199968,
+          "texto": "Armazenar em"
+        }
+      ]
+    },
+    {
+      "offset": 202252,
+      "bytes": 3412,
+      "slots_indice_base_zero": [
+        97
+      ],
+      "numero_sequencias_textuais": 34,
+      "amostra": [
+        {
+          "offset": 204216,
+          "texto": "-1,0"
+        },
+        {
+          "offset": 204236,
+          "texto": "Padronização"
+        },
+        {
+          "offset": 204262,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 204274,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 204300,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 204322,
+          "texto": "Co&luna(s) de entrada:"
+        },
+        {
+          "offset": 204368,
+          "texto": "Center "
+        },
+        {
+          "offset": 204386,
+          "texto": "coluna(s) de entrada"
+        }
+      ]
+    },
+    {
+      "offset": 205664,
+      "bytes": 1752,
+      "slots_indice_base_zero": [
+        130
+      ],
+      "numero_sequencias_textuais": 17,
+      "amostra": [
+        {
+          "offset": 206792,
+          "texto": "Importar matriz"
+        },
+        {
+          "offset": 206824,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 206836,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 206862,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 206884,
+          "texto": "Número de &linhas:"
+        },
+        {
+          "offset": 206928,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 206962,
+          "texto": "Use a single integer constant > 0."
+        },
+        {
+          "offset": 207032,
+          "texto": "&Número de colunas:"
+        }
+      ]
+    },
+    {
+      "offset": 207416,
+      "bytes": 1196,
+      "slots_indice_base_zero": [
+        131
+      ],
+      "numero_sequencias_textuais": 11,
+      "amostra": [
+        {
+          "offset": 208200,
+          "texto": "Transposição de Matrizes"
+        },
+        {
+          "offset": 208250,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 208262,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 208288,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 208310,
+          "texto": "&Transposição de:"
+        },
+        {
+          "offset": 208346,
+          "texto": "Transpose "
+        },
+        {
+          "offset": 208370,
+          "texto": "matriz de entrada"
+        },
+        {
+          "offset": 208406,
+          "texto": "Use a single Matrix containing data."
+        }
+      ]
+    },
+    {
+      "offset": 208612,
+      "bytes": 1168,
+      "slots_indice_base_zero": [
+        132
+      ],
+      "numero_sequencias_textuais": 11,
+      "amostra": [
+        {
+          "offset": 209396,
+          "texto": "Inversão de Matriz"
+        },
+        {
+          "offset": 209434,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 209446,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 209472,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 209494,
+          "texto": "&Inversão de:"
+        },
+        {
+          "offset": 209522,
+          "texto": "Invert "
+        },
+        {
+          "offset": 209540,
+          "texto": "matriz de entrada"
+        },
+        {
+          "offset": 209576,
+          "texto": "Use a single Matrix containing data."
+        }
+      ]
+    },
+    {
+      "offset": 209780,
+      "bytes": 2040,
+      "slots_indice_base_zero": [
+        133
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 211012,
+          "texto": "Definição de uma Matriz Constante"
+        },
+        {
+          "offset": 211080,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 211092,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 211118,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 211140,
+          "texto": "Armazenar o Mesmo Valor em Cada Célula"
+        },
+        {
+          "offset": 211218,
+          "texto": "&Valor:"
+        },
+        {
+          "offset": 211234,
+          "texto": "Define "
+        },
+        {
+          "offset": 211252,
+          "texto": "valor para incluir em cada célula"
+        }
+      ]
+    },
+    {
+      "offset": 211820,
+      "bytes": 2188,
+      "slots_indice_base_zero": [
+        134
+      ],
+      "numero_sequencias_textuais": 20,
+      "amostra": [
+        {
+          "offset": 213172,
+          "texto": "Matriz Diagonal"
+        },
+        {
+          "offset": 213204,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 213216,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 213242,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 213264,
+          "texto": "Criação de &matriz diagonal"
+        },
+        {
+          "offset": 213320,
+          "texto": "Diagonal"
+        },
+        {
+          "offset": 213338,
+          "texto": "&Copiar diagonal"
+        },
+        {
+          "offset": 213372,
+          "texto": "Diagonal"
+        }
+      ]
+    },
+    {
+      "offset": 214008,
+      "bytes": 1700,
+      "slots_indice_base_zero": [
+        136
+      ],
+      "numero_sequencias_textuais": 15,
+      "amostra": [
+        {
+          "offset": 215044,
+          "texto": "Análise de Autovalores e Autovetores"
+        },
+        {
+          "offset": 215118,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 215130,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 215156,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 215178,
+          "texto": "&Analisar matriz:"
+        },
+        {
+          "offset": 215214,
+          "texto": "Eigen "
+        },
+        {
+          "offset": 215230,
+          "texto": "matriz para analisar"
+        },
+        {
+          "offset": 215272,
+          "texto": "Use a single Matrix containing data."
+        }
+      ]
+    },
+    {
+      "offset": 215708,
+      "bytes": 3456,
+      "slots_indice_base_zero": [
+        137
+      ],
+      "numero_sequencias_textuais": 24,
+      "amostra": [
+        {
+          "offset": 217536,
+          "texto": "Matriz Aritmética"
+        },
+        {
+          "offset": 217572,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 217584,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 217610,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 217632,
+          "texto": "&Adicionar"
+        },
+        {
+          "offset": 217662,
+          "texto": "&Subtrair"
+        },
+        {
+          "offset": 217682,
+          "texto": "Subtract"
+        },
+        {
+          "offset": 217700,
+          "texto": "&Multiplicar"
+        }
+      ]
+    },
+    {
+      "offset": 219164,
+      "bytes": 756,
+      "slots_indice_base_zero": [
+        89
+      ],
+      "numero_sequencias_textuais": 7,
+      "amostra": [
+        {
+          "offset": 219656,
+          "texto": "Configurar Base"
+        },
+        {
+          "offset": 219688,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 219700,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 219726,
+          "texto": "&Configurar Base de gerador de dados aleatórios como:"
+        },
+        {
+          "offset": 219834,
+          "texto": "Base "
+        },
+        {
+          "offset": 219848,
+          "texto": "base"
+        },
+        {
+          "offset": 219858,
+          "texto": "Use a single integer constant."
+        }
+      ]
+    },
+    {
+      "offset": 219920,
+      "bytes": 1800,
+      "slots_indice_base_zero": [
+        54
+      ],
+      "numero_sequencias_textuais": 16,
+      "amostra": [
+        {
+          "offset": 220984,
+          "texto": "Amostra de Colunas"
+        },
+        {
+          "offset": 221022,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 221034,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 221060,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 221082,
+          "texto": "Número de linhas para amo&stra:"
+        },
+        {
+          "offset": 221146,
+          "texto": "Sample "
+        },
+        {
+          "offset": 221164,
+          "texto": "número de linhas para amostra"
+        },
+        {
+          "offset": 221224,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 221720,
+      "bytes": 1688,
+      "slots_indice_base_zero": [
+        55
+      ],
+      "numero_sequencias_textuais": 15,
+      "amostra": [
+        {
+          "offset": 222704,
+          "texto": "Distribuição Qui-Quadrado"
+        },
+        {
+          "offset": 222756,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 222768,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 222794,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 222816,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 222904,
+          "texto": "Random "
+        },
+        {
+          "offset": 222922,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 222956,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 223408,
+      "bytes": 1956,
+      "slots_indice_base_zero": [
+        56
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 224600,
+          "texto": "Distribuição Normal"
+        },
+        {
+          "offset": 224640,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 224652,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 224678,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 224700,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 224788,
+          "texto": "Random "
+        },
+        {
+          "offset": 224806,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 224840,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 225364,
+      "bytes": 2044,
+      "slots_indice_base_zero": [
+        329
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 226544,
+          "texto": "Distribuição Normal Multivariada"
+        },
+        {
+          "offset": 226610,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 226622,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 226648,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 226670,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 226758,
+          "texto": "Random "
+        },
+        {
+          "offset": 226776,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 226810,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 227408,
+      "bytes": 2116,
+      "slots_indice_base_zero": [
+        57
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 228588,
+          "texto": "Distribuição F"
+        },
+        {
+          "offset": 228618,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 228630,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 228656,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 228678,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 228766,
+          "texto": "Random "
+        },
+        {
+          "offset": 228784,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 228818,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 229524,
+      "bytes": 1652,
+      "slots_indice_base_zero": [
+        58
+      ],
+      "numero_sequencias_textuais": 15,
+      "amostra": [
+        {
+          "offset": 230508,
+          "texto": "Distribuição t"
+        },
+        {
+          "offset": 230538,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 230550,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 230576,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 230598,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 230686,
+          "texto": "Random "
+        },
+        {
+          "offset": 230704,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 230738,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 231176,
+      "bytes": 2096,
+      "slots_indice_base_zero": [
+        59
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 232408,
+          "texto": "Distribuição Uniforme"
+        },
+        {
+          "offset": 232452,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 232464,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 232490,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 232512,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 232600,
+          "texto": "Random "
+        },
+        {
+          "offset": 232618,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 232652,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 233272,
+      "bytes": 2432,
+      "slots_indice_base_zero": [
+        346
+      ],
+      "numero_sequencias_textuais": 21,
+      "amostra": [
+        {
+          "offset": 234736,
+          "texto": "Distribuição Triangular"
+        },
+        {
+          "offset": 234784,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 234796,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 234822,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 234844,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 234932,
+          "texto": "Random "
+        },
+        {
+          "offset": 234950,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 234984,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 235704,
+      "bytes": 3564,
+      "slots_indice_base_zero": [
+        347
+      ],
+      "numero_sequencias_textuais": 30,
+      "amostra": [
+        {
+          "offset": 237892,
+          "texto": "Distribuição Triangular"
+        },
+        {
+          "offset": 237940,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 237952,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 237978,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 238000,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 238064,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 238122,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 238188,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 239268,
+      "bytes": 1700,
+      "slots_indice_base_zero": [
+        129
+      ],
+      "numero_sequencias_textuais": 15,
+      "amostra": [
+        {
+          "offset": 240252,
+          "texto": "Distribuição Bernoulli"
+        },
+        {
+          "offset": 240298,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 240310,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 240336,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 240358,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 240446,
+          "texto": "Random "
+        },
+        {
+          "offset": 240464,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 240498,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 240968,
+      "bytes": 2044,
+      "slots_indice_base_zero": [
+        60
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 242148,
+          "texto": "Distribuição Binomial"
+        },
+        {
+          "offset": 242192,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 242204,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 242230,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 242252,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 242340,
+          "texto": "Random "
+        },
+        {
+          "offset": 242358,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 242392,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 243012,
+      "bytes": 2528,
+      "slots_indice_base_zero": [
+        310
+      ],
+      "numero_sequencias_textuais": 21,
+      "amostra": [
+        {
+          "offset": 244432,
+          "texto": "Distribuição Hipergeométrica"
+        },
+        {
+          "offset": 244490,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 244502,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 244528,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 244550,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 244638,
+          "texto": "Random "
+        },
+        {
+          "offset": 244656,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 244690,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 245540,
+      "bytes": 2000,
+      "slots_indice_base_zero": [
+        61
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 246720,
+          "texto": "Distribuição Discreta"
+        },
+        {
+          "offset": 246764,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 246776,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 246802,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 246824,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 246912,
+          "texto": "Random "
+        },
+        {
+          "offset": 246930,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 246964,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 247540,
+      "bytes": 1984,
+      "slots_indice_base_zero": [
+        62
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 248740,
+          "texto": "Distribuição Inteira"
+        },
+        {
+          "offset": 248782,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 248794,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 248820,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 248842,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 248930,
+          "texto": "Random "
+        },
+        {
+          "offset": 248948,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 248982,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 249524,
+      "bytes": 1668,
+      "slots_indice_base_zero": [
+        63
+      ],
+      "numero_sequencias_textuais": 16,
+      "amostra": [
+        {
+          "offset": 250508,
+          "texto": "Distribuição de Poisson"
+        },
+        {
+          "offset": 250556,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 250568,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 250594,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 250616,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 250704,
+          "texto": "Random "
+        },
+        {
+          "offset": 250722,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 250756,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 251192,
+      "bytes": 2084,
+      "slots_indice_base_zero": [
+        64
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 252372,
+          "texto": "Distribuição Beta"
+        },
+        {
+          "offset": 252408,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 252420,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 252446,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 252468,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 252556,
+          "texto": "Random "
+        },
+        {
+          "offset": 252574,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 252608,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 253276,
+      "bytes": 1972,
+      "slots_indice_base_zero": [
+        65
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 254512,
+          "texto": "Distribuição Cauchy"
+        },
+        {
+          "offset": 254552,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 254564,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 254590,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 254612,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 254700,
+          "texto": "Random "
+        },
+        {
+          "offset": 254718,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 254752,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 255248,
+      "bytes": 2128,
+      "slots_indice_base_zero": [
+        66
+      ],
+      "numero_sequencias_textuais": 19,
+      "amostra": [
+        {
+          "offset": 256536,
+          "texto": "Distribuição Exponencial"
+        },
+        {
+          "offset": 256586,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 256598,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 256624,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 256646,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 256734,
+          "texto": "Random "
+        },
+        {
+          "offset": 256752,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 256786,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 257376,
+      "bytes": 2376,
+      "slots_indice_base_zero": [
+        67
+      ],
+      "numero_sequencias_textuais": 21,
+      "amostra": [
+        {
+          "offset": 258760,
+          "texto": "Distribuição Gama"
+        },
+        {
+          "offset": 258796,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 258808,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 258834,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 258856,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 258944,
+          "texto": "Random "
+        },
+        {
+          "offset": 258962,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 258996,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 259752,
+      "bytes": 1984,
+      "slots_indice_base_zero": [
+        68
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 260988,
+          "texto": "Distribuição de Laplace"
+        },
+        {
+          "offset": 261036,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 261048,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 261074,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 261096,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 261184,
+          "texto": "Random "
+        },
+        {
+          "offset": 261202,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 261236,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 261736,
+      "bytes": 1984,
+      "slots_indice_base_zero": [
+        69
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 262972,
+          "texto": "Distribuição Logística"
+        },
+        {
+          "offset": 263018,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 263030,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 263056,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 263078,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 263166,
+          "texto": "Random "
+        },
+        {
+          "offset": 263184,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 263218,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 263720,
+      "bytes": 2320,
+      "slots_indice_base_zero": [
+        320
+      ],
+      "numero_sequencias_textuais": 21,
+      "amostra": [
+        {
+          "offset": 265160,
+          "texto": "Distribuição Loglogística"
+        },
+        {
+          "offset": 265212,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 265224,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 265250,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 265272,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 265360,
+          "texto": "Random "
+        },
+        {
+          "offset": 265378,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 265412,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 266040,
+      "bytes": 2312,
+      "slots_indice_base_zero": [
+        70
+      ],
+      "numero_sequencias_textuais": 21,
+      "amostra": [
+        {
+          "offset": 267480,
+          "texto": "Distribuição Lognormal"
+        },
+        {
+          "offset": 267526,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 267538,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 267564,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 267586,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 267674,
+          "texto": "Random "
+        },
+        {
+          "offset": 267692,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 267726,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 268352,
+      "bytes": 2388,
+      "slots_indice_base_zero": [
+        71
+      ],
+      "numero_sequencias_textuais": 21,
+      "amostra": [
+        {
+          "offset": 269736,
+          "texto": "Distribuição Weibull"
+        },
+        {
+          "offset": 269778,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 269790,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 269816,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 269838,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 269926,
+          "texto": "Random "
+        },
+        {
+          "offset": 269944,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 269978,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 270740,
+      "bytes": 2020,
+      "slots_indice_base_zero": [
+        330
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 271976,
+          "texto": "Distribuição de Menor Valor Extremo"
+        },
+        {
+          "offset": 272048,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 272060,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 272086,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 272108,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 272196,
+          "texto": "Random "
+        },
+        {
+          "offset": 272214,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 272248,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 272760,
+      "bytes": 2020,
+      "slots_indice_base_zero": [
+        331
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 273996,
+          "texto": "Distribuição de Maior Valor Extremo"
+        },
+        {
+          "offset": 274068,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 274080,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 274106,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 274128,
+          "texto": "Número de linhas de dados a serem &geradas:"
+        },
+        {
+          "offset": 274216,
+          "texto": "Random "
+        },
+        {
+          "offset": 274234,
+          "texto": "número de linhas"
+        },
+        {
+          "offset": 274268,
+          "texto": "Use a single integer constant > 0."
+        }
+      ]
+    },
+    {
+      "offset": 274780,
+      "bytes": 3572,
+      "slots_indice_base_zero": [
+        72
+      ],
+      "numero_sequencias_textuais": 30,
+      "amostra": [
+        {
+          "offset": 276852,
+          "texto": "Distribuição Qui-Quadrado"
+        },
+        {
+          "offset": 276904,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 276916,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 276942,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 276964,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 277028,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 277086,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 277152,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 278352,
+      "bytes": 3040,
+      "slots_indice_base_zero": [
+        73
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 280224,
+          "texto": "Distribuição Normal"
+        },
+        {
+          "offset": 280264,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 280276,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 280302,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 280324,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 280388,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 280446,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 280512,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 281392,
+      "bytes": 3940,
+      "slots_indice_base_zero": [
+        74
+      ],
+      "numero_sequencias_textuais": 33,
+      "amostra": [
+        {
+          "offset": 283660,
+          "texto": "Distribuição F"
+        },
+        {
+          "offset": 283690,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 283702,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 283728,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 283750,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 283814,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 283872,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 283938,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 285332,
+      "bytes": 3532,
+      "slots_indice_base_zero": [
+        75
+      ],
+      "numero_sequencias_textuais": 30,
+      "amostra": [
+        {
+          "offset": 287404,
+          "texto": "Distribuição t"
+        },
+        {
+          "offset": 287434,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 287446,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 287472,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 287494,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 287558,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 287616,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 287682,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 288864,
+      "bytes": 3228,
+      "slots_indice_base_zero": [
+        76
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 290820,
+          "texto": "Distribuição Uniforme"
+        },
+        {
+          "offset": 290864,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 290876,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 290902,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 290924,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 290988,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 291046,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 291112,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 292092,
+      "bytes": 3104,
+      "slots_indice_base_zero": [
+        77
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 293952,
+          "texto": "Distribuição Binomial"
+        },
+        {
+          "offset": 293996,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 294008,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 294034,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 294056,
+          "texto": "&Probabilidade"
+        },
+        {
+          "offset": 294094,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 294152,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 294218,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 295196,
+      "bytes": 3588,
+      "slots_indice_base_zero": [
+        309
+      ],
+      "numero_sequencias_textuais": 30,
+      "amostra": [
+        {
+          "offset": 297296,
+          "texto": "Distribuição Hipergeométrica"
+        },
+        {
+          "offset": 297354,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 297366,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 297392,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 297414,
+          "texto": "&Probabilidade"
+        },
+        {
+          "offset": 297452,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 297510,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 297576,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 298784,
+      "bytes": 3060,
+      "slots_indice_base_zero": [
+        78
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 300644,
+          "texto": "Distribuição Discreta"
+        },
+        {
+          "offset": 300688,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 300700,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 300726,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 300748,
+          "texto": "&Probabilidade"
+        },
+        {
+          "offset": 300786,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 300844,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 300910,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 301844,
+      "bytes": 3044,
+      "slots_indice_base_zero": [
+        79
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 303724,
+          "texto": "Distribuição Inteira"
+        },
+        {
+          "offset": 303766,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 303778,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 303804,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 303826,
+          "texto": "&Probabilidade"
+        },
+        {
+          "offset": 303864,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 303922,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 303988,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 304888,
+      "bytes": 2728,
+      "slots_indice_base_zero": [
+        80
+      ],
+      "numero_sequencias_textuais": 25,
+      "amostra": [
+        {
+          "offset": 306552,
+          "texto": "Distribuição de Poisson"
+        },
+        {
+          "offset": 306600,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 306612,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 306638,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 306660,
+          "texto": "&Probabilidade"
+        },
+        {
+          "offset": 306698,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 306756,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 306822,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 307616,
+      "bytes": 3136,
+      "slots_indice_base_zero": [
+        81
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 309476,
+          "texto": "Distribuição Beta"
+        },
+        {
+          "offset": 309512,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 309524,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 309550,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 309572,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 309636,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 309694,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 309760,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 310752,
+      "bytes": 3060,
+      "slots_indice_base_zero": [
+        82
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 312668,
+          "texto": "Distribuição Cauchy"
+        },
+        {
+          "offset": 312708,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 312720,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 312746,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 312768,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 312832,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 312890,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 312956,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 313812,
+      "bytes": 3216,
+      "slots_indice_base_zero": [
+        83
+      ],
+      "numero_sequencias_textuais": 28,
+      "amostra": [
+        {
+          "offset": 315780,
+          "texto": "Distribuição Exponencial"
+        },
+        {
+          "offset": 315830,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 315842,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 315868,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 315890,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 315954,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 316012,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 316078,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 317028,
+      "bytes": 3464,
+      "slots_indice_base_zero": [
+        84
+      ],
+      "numero_sequencias_textuais": 30,
+      "amostra": [
+        {
+          "offset": 319092,
+          "texto": "Distribuição Gama"
+        },
+        {
+          "offset": 319128,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 319140,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 319166,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 319188,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 319252,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 319310,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 319376,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 320492,
+      "bytes": 3068,
+      "slots_indice_base_zero": [
+        85
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 322408,
+          "texto": "Distribuição de Laplace"
+        },
+        {
+          "offset": 322456,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 322468,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 322494,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 322516,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 322580,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 322638,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 322704,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 323560,
+      "bytes": 3068,
+      "slots_indice_base_zero": [
+        86
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 325476,
+          "texto": "Distribuição Logística"
+        },
+        {
+          "offset": 325522,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 325534,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 325560,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 325582,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 325646,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 325704,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 325770,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 326628,
+      "bytes": 3408,
+      "slots_indice_base_zero": [
+        321
+      ],
+      "numero_sequencias_textuais": 30,
+      "amostra": [
+        {
+          "offset": 328748,
+          "texto": "Distribuição Loglogística"
+        },
+        {
+          "offset": 328800,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 328812,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 328838,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 328860,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 328924,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 328982,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 329048,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 330036,
+      "bytes": 3396,
+      "slots_indice_base_zero": [
+        87
+      ],
+      "numero_sequencias_textuais": 30,
+      "amostra": [
+        {
+          "offset": 332156,
+          "texto": "Distribuição Lognormal"
+        },
+        {
+          "offset": 332202,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 332214,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 332240,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 332262,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 332326,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 332384,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 332450,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 333432,
+      "bytes": 3472,
+      "slots_indice_base_zero": [
+        88
+      ],
+      "numero_sequencias_textuais": 30,
+      "amostra": [
+        {
+          "offset": 335496,
+          "texto": "Distribuição Weibull"
+        },
+        {
+          "offset": 335538,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 335550,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 335576,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 335598,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 335662,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 335720,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 335786,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 336904,
+      "bytes": 3104,
+      "slots_indice_base_zero": [
+        332
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 338820,
+          "texto": "Distribuição de Menor Valor Extremo"
+        },
+        {
+          "offset": 338892,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 338904,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 338930,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 338952,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 339016,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 339074,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 339140,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 340008,
+      "bytes": 3104,
+      "slots_indice_base_zero": [
+        333
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 341924,
+          "texto": "Distribuição de Maior Valor Extremo"
+        },
+        {
+          "offset": 341996,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 342008,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 342034,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 342056,
+          "texto": "Densidade de &probabilidade"
+        },
+        {
+          "offset": 342120,
+          "texto": "Probabilidade a&cumulada"
+        },
+        {
+          "offset": 342178,
+          "texto": "Probabilidade acumulada &inversa"
+        },
+        {
+          "offset": 342244,
+          "texto": "InvCDF"
+        }
+      ]
+    },
+    {
+      "offset": 343112,
+      "bytes": 320,
+      "slots_indice_base_zero": [
+        140
+      ],
+      "numero_sequencias_textuais": 4,
+      "amostra": [
+        {
+          "offset": 343348,
+          "texto": "Abrir Gráfico"
+        },
+        {
+          "offset": 343376,
+          "texto": "Abrir Gráfico"
+        },
+        {
+          "offset": 343404,
+          "texto": "*.MGF"
+        },
+        {
+          "offset": 343416,
+          "texto": "GView "
+        }
+      ]
+    },
+    {
+      "offset": 343432,
+      "bytes": 284,
+      "slots_indice_base_zero": [
+        148
+      ],
+      "numero_sequencias_textuais": 3,
+      "amostra": [
+        {
+          "offset": 343656,
+          "texto": "Reiniciar"
+        },
+        {
+          "offset": 343676,
+          "texto": "restarting"
+        },
+        {
+          "offset": 343698,
+          "texto": "Restart"
+        }
+      ]
+    },
+    {
+      "offset": 343716,
+      "bytes": 264,
+      "slots_indice_base_zero": [
+        145
+      ],
+      "numero_sequencias_textuais": 3,
+      "amostra": [
+        {
+          "offset": 343940,
+          "texto": "Fechar"
+        },
+        {
+          "offset": 343954,
+          "texto": "exiting"
+        },
+        {
+          "offset": 343970,
+          "texto": "Stop"
+        }
+      ]
+    },
+    {
+      "offset": 343980,
+      "bytes": 212,
+      "slots_indice_base_zero": [
+        146
+      ],
+      "numero_sequencias_textuais": 2,
+      "amostra": [
+        {
+          "offset": 344160,
+          "texto": "Fechar"
+        },
+        {
+          "offset": 344174,
+          "texto": "exiting"
+        }
+      ]
+    },
+    {
+      "offset": 344192,
+      "bytes": 964,
+      "slots_indice_base_zero": [
+        94
+      ],
+      "numero_sequencias_textuais": 10,
+      "amostra": [
+        {
+          "offset": 344784,
+          "texto": "Executar uma Exec"
+        },
+        {
+          "offset": 344820,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 344832,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 344850,
+          "texto": "&Selecionar Arquivo"
+        },
+        {
+          "offset": 344890,
+          "texto": "&Número de vezes para executar:"
+        },
+        {
+          "offset": 344960,
+          "texto": "número de vezes para executar"
+        },
+        {
+          "offset": 345020,
+          "texto": "Use a single integer constant "
+        },
+        {
+          "offset": 345090,
+          "texto": "Executar uma Exec"
+        }
+      ]
+    },
+    {
+      "offset": 345156,
+      "bytes": 1640,
+      "slots_indice_base_zero": [
+        28
+      ],
+      "numero_sequencias_textuais": 18,
+      "amostra": [
+        {
+          "offset": 346220,
+          "texto": "Ramo-e-Folhas"
+        },
+        {
+          "offset": 346248,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 346260,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 346286,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 346308,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 346332,
+          "texto": "Stem-and-Leaf "
+        },
+        {
+          "offset": 346364,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 346390,
+          "texto": "Use 1 or more numeric columns."
+        }
+      ]
+    },
+    {
+      "offset": 346796,
+      "bytes": 1160,
+      "slots_indice_base_zero": [
+        99
+      ],
+      "numero_sequencias_textuais": 11,
+      "amostra": [
+        {
+          "offset": 347580,
+          "texto": "Posto"
+        },
+        {
+          "offset": 347592,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 347604,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 347630,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 347652,
+          "texto": "At&ribuir postos a:"
+        },
+        {
+          "offset": 347692,
+          "texto": "Rank "
+        },
+        {
+          "offset": 347706,
+          "texto": "coluna de entrada"
+        },
+        {
+          "offset": 347742,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 347956,
+      "bytes": 1140,
+      "slots_indice_base_zero": [
+        101
+      ],
+      "numero_sequencias_textuais": 13,
+      "amostra": [
+        {
+          "offset": 348604,
+          "texto": "Dividir a Worksheet"
+        },
+        {
+          "offset": 348644,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 348656,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 348682,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 348704,
+          "texto": "&Variáveis de agrupamento:"
+        },
+        {
+          "offset": 348758,
+          "texto": "Split;"
+        },
+        {
+          "offset": 348772,
+          "texto": "  NoMatrices;"
+        },
+        {
+          "offset": 348800,
+          "texto": "  NoConstants;"
+        }
+      ]
+    },
+    {
+      "offset": 349096,
+      "bytes": 1248,
+      "slots_indice_base_zero": [
+        42
+      ],
+      "numero_sequencias_textuais": 11,
+      "amostra": [
+        {
+          "offset": 349880,
+          "texto": "Excluir Linhas"
+        },
+        {
+          "offset": 349910,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 349922,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 349948,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 349970,
+          "texto": "Linhas para &excluir (exemplo: 1:4  12):"
+        },
+        {
+          "offset": 350052,
+          "texto": "Delete "
+        },
+        {
+          "offset": 350070,
+          "texto": "linha(s) para excluir"
+        },
+        {
+          "offset": 350114,
+          "texto": "Use 1 or more integer constants > 0."
+        }
+      ]
+    },
+    {
+      "offset": 350344,
+      "bytes": 924,
+      "slots_indice_base_zero": [
+        43
+      ],
+      "numero_sequencias_textuais": 8,
+      "amostra": [
+        {
+          "offset": 350932,
+          "texto": "Apagar Variáveis"
+        },
+        {
+          "offset": 350966,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 350978,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 351004,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 351026,
+          "texto": "&Colunas, constantes e matrizes para apagar:"
+        },
+        {
+          "offset": 351116,
+          "texto": "Erase "
+        },
+        {
+          "offset": 351132,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 351158,
+          "texto": "Use 1 or more columns, stored constants, or matrices."
+        }
+      ]
+    },
+    {
+      "offset": 351268,
+      "bytes": 2172,
+      "slots_indice_base_zero": [
+        313
+      ],
+      "numero_sequencias_textuais": 21,
+      "amostra": [
+        {
+          "offset": 352600,
+          "texto": "Transposição de Colunas"
+        },
+        {
+          "offset": 352648,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 352660,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 352686,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 352708,
+          "texto": "&Transpor as seguintes colunas:"
+        },
+        {
+          "offset": 352772,
+          "texto": "Transpose "
+        },
+        {
+          "offset": 352796,
+          "texto": "coluna(s) de entrada"
+        },
+        {
+          "offset": 352838,
+          "texto": "Use 1 or more columns of equal length."
+        }
+      ]
+    },
+    {
+      "offset": 353440,
+      "bytes": 2524,
+      "slots_indice_base_zero": [
+        47
+      ],
+      "numero_sequencias_textuais": 24,
+      "amostra": [
+        {
+          "offset": 355000,
+          "texto": "Empilhado de Colunas"
+        },
+        {
+          "offset": 355042,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 355054,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 355080,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 355102,
+          "texto": "&Empilhar as seguintes colunas:"
+        },
+        {
+          "offset": 355166,
+          "texto": "Stack "
+        },
+        {
+          "offset": 355182,
+          "texto": "colunas a serem empilhadas"
+        },
+        {
+          "offset": 355236,
+          "texto": "Use 2 or more columns."
+        }
+      ]
+    },
+    {
+      "offset": 355964,
+      "bytes": 4648,
+      "slots_indice_base_zero": [
+        192
+      ],
+      "numero_sequencias_textuais": 39,
+      "amostra": [
+        {
+          "offset": 358660,
+          "texto": "Empilhado de Blocos de Colunas"
+        },
+        {
+          "offset": 358722,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 358734,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 358760,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 358782,
+          "texto": "Empilhar dois ou mais &blocos de colunas um em cima do outro:"
+        },
+        {
+          "offset": 358916,
+          "texto": "colunas no primeiro bloco"
+        },
+        {
+          "offset": 358968,
+          "texto": "Use columns of equal length."
+        },
+        {
+          "offset": 359036,
+          "texto": "colunas no segundo bloco"
+        }
+      ]
+    },
+    {
+      "offset": 360612,
+      "bytes": 2464,
+      "slots_indice_base_zero": [
+        193
+      ],
+      "numero_sequencias_textuais": 24,
+      "amostra": [
+        {
+          "offset": 362012,
+          "texto": "Desempilhamento de Colunas"
+        },
+        {
+          "offset": 362066,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 362078,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 362104,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 362126,
+          "texto": "&Desempilhar dados em:"
+        },
+        {
+          "offset": 362172,
+          "texto": "Unstack ("
+        },
+        {
+          "offset": 362196,
+          "texto": "coluna para desempilhar"
+        },
+        {
+          "offset": 362244,
+          "texto": "Use 1 or more columns of equal length."
+        }
+      ]
+    },
+    {
+      "offset": 363076,
+      "bytes": 3044,
+      "slots_indice_base_zero": [
+        200
+      ],
+      "numero_sequencias_textuais": 27,
+      "amostra": [
+        {
+          "offset": 364692,
+          "texto": "Empilhamento de Linhas"
+        },
+        {
+          "offset": 364738,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 364750,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 364776,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 364798,
+          "texto": "As &linhas para empilhar estão nas seguintes colunas:"
+        },
+        {
+          "offset": 364906,
+          "texto": "Rowtoc "
+        },
+        {
+          "offset": 364924,
+          "texto": "colunas que contêm linhas de dados de entrada"
+        },
+        {
+          "offset": 365016,
+          "texto": "Use 2 or more columns of equal length."
+        }
+      ]
+    },
+    {
+      "offset": 366120,
+      "bytes": 1220,
+      "slots_indice_base_zero": [
+        39
+      ],
+      "numero_sequencias_textuais": 11,
+      "amostra": [
+        {
+          "offset": 366904,
+          "texto": "Concatenar"
+        },
+        {
+          "offset": 366926,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 366938,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 366964,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 366986,
+          "texto": "&Concatenar colunas de texto:"
+        },
+        {
+          "offset": 367046,
+          "texto": "Concatenate "
+        },
+        {
+          "offset": 367074,
+          "texto": "coluna para concatenar"
+        },
+        {
+          "offset": 367120,
+          "texto": "Use 2 or more text columns of equal length."
+        }
+      ]
+    },
+    {
+      "offset": 367340,
+      "bytes": 936,
+      "slots_indice_base_zero": [
+        127
+      ],
+      "numero_sequencias_textuais": 8,
+      "amostra": [
+        {
+          "offset": 367928,
+          "texto": "Exibição de Dados"
+        },
+        {
+          "offset": 367964,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 367976,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 368002,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 368024,
+          "texto": "&Colunas, constantes e matrizes a serem exibidas:"
+        },
+        {
+          "offset": 368124,
+          "texto": "Print "
+        },
+        {
+          "offset": 368140,
+          "texto": "variável(is)"
+        },
+        {
+          "offset": 368166,
+          "texto": "Use 1 or more columns, stored constants, or matrices."
+        }
+      ]
+    },
+    {
+      "offset": 368276,
+      "bytes": 3100,
+      "slots_indice_base_zero": [
+        241
+      ],
+      "numero_sequencias_textuais": 28,
+      "amostra": [
+        {
+          "offset": 370188,
+          "texto": "Gráfico de Ensaios"
+        },
+        {
+          "offset": 370226,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 370238,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 370264,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 370286,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 370308,
+          "texto": "Dados organizados como"
+        },
+        {
+          "offset": 370354,
+          "texto": "&Coluna única:"
+        },
+        {
+          "offset": 370386,
+          "texto": "Su&bgrupos através de linhas:"
+        }
+      ]
+    },
+    {
+      "offset": 371376,
+      "bytes": 4448,
+      "slots_indice_base_zero": [
+        161
+      ],
+      "numero_sequencias_textuais": 44,
+      "amostra": [
+        {
+          "offset": 374008,
+          "texto": "Gráfico de Pareto"
+        },
+        {
+          "offset": 374044,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 374056,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 374082,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 374104,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 374126,
+          "texto": "&Defeitos ou dados de atributos:"
+        },
+        {
+          "offset": 374192,
+          "texto": "Pareto "
+        },
+        {
+          "offset": 374210,
+          "texto": "defeitos"
+        }
+      ]
+    },
+    {
+      "offset": 375824,
+      "bytes": 5068,
+      "slots_indice_base_zero": [
+        162
+      ],
+      "numero_sequencias_textuais": 54,
+      "amostra": [
+        {
+          "offset": 378992,
+          "texto": "Pessoal"
+        },
+        {
+          "offset": 379008,
+          "texto": "Máquinas"
+        },
+        {
+          "offset": 379026,
+          "texto": "Materiais"
+        },
+        {
+          "offset": 379046,
+          "texto": "Métodos"
+        },
+        {
+          "offset": 379062,
+          "texto": "Medições"
+        },
+        {
+          "offset": 379080,
+          "texto": "Ambiente"
+        },
+        {
+          "offset": 379104,
+          "texto": "Diagrama de Causa e Efeito"
+        },
+        {
+          "offset": 379158,
+          "texto": "Ajuda"
+        }
+      ]
+    },
+    {
+      "offset": 380892,
+      "bytes": 12640,
+      "slots_indice_base_zero": [
+        300
+      ],
+      "numero_sequencias_textuais": 158,
+      "amostra": [
+        {
+          "offset": 388180,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 388224,
+          "texto": "Análise de Capacidade (Distribuição Não-normal)"
+        },
+        {
+          "offset": 388320,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 388332,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 388358,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 388380,
+          "texto": "&Estimativa..."
+        },
+        {
+          "offset": 388410,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 388432,
+          "texto": "A&rmazenamento..."
+        }
+      ]
+    },
+    {
+      "offset": 393532,
+      "bytes": 16768,
+      "slots_indice_base_zero": [
+        168
+      ],
+      "numero_sequencias_textuais": 157,
+      "amostra": [
+        {
+          "offset": 402590,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 402634,
+          "texto": "0,10"
+        },
+        {
+          "offset": 402652,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 402696,
+          "texto": "Capability Sixpack (Distribuição Normal)"
+        },
+        {
+          "offset": 402778,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 402790,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 402816,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 402838,
+          "texto": "T&ransformar..."
+        }
+      ]
+    },
+    {
+      "offset": 410300,
+      "bytes": 15276,
+      "slots_indice_base_zero": [
+        319
+      ],
+      "numero_sequencias_textuais": 152,
+      "amostra": [
+        {
+          "offset": 418432,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 418478,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 418524,
+          "texto": "Capability Sixpack (Entre/Dentro)"
+        },
+        {
+          "offset": 418592,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 418604,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 418630,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 418652,
+          "texto": "Bo&x-Cox..."
+        },
+        {
+          "offset": 418676,
+          "texto": "&Testes..."
+        }
+      ]
+    },
+    {
+      "offset": 425576,
+      "bytes": 10580,
+      "slots_indice_base_zero": [
+        301
+      ],
+      "numero_sequencias_textuais": 123,
+      "amostra": [
+        {
+          "offset": 430836,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 430884,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 430928,
+          "texto": "Capability Sixpack (Distribuição Não-normal)"
+        },
+        {
+          "offset": 431018,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 431030,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 431056,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 431078,
+          "texto": "&Estimativa..."
+        },
+        {
+          "offset": 431108,
+          "texto": "O&pções..."
+        }
+      ]
+    },
+    {
+      "offset": 436156,
+      "bytes": 8540,
+      "slots_indice_base_zero": [
+        306
+      ],
+      "numero_sequencias_textuais": 96,
+      "amostra": [
+        {
+          "offset": 440984,
+          "texto": "Análise de Capacidade (Distribuição Binomial)"
+        },
+        {
+          "offset": 441076,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 441088,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 441114,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 441136,
+          "texto": "&Testes..."
+        },
+        {
+          "offset": 441158,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 441180,
+          "texto": "&Armazenamento..."
+        },
+        {
+          "offset": 441216,
+          "texto": "&Defeituosos:"
+        }
+      ]
+    },
+    {
+      "offset": 444696,
+      "bytes": 7680,
+      "slots_indice_base_zero": [
+        307
+      ],
+      "numero_sequencias_textuais": 81,
+      "amostra": [
+        {
+          "offset": 449120,
+          "texto": "Análise de Capacidade (Distribuição de Poisson)"
+        },
+        {
+          "offset": 449216,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 449228,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 449254,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 449276,
+          "texto": "&Testes..."
+        },
+        {
+          "offset": 449298,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 449320,
+          "texto": "&Armazenamento..."
+        },
+        {
+          "offset": 449356,
+          "texto": "&Defeitos:"
+        }
+      ]
+    },
+    {
+      "offset": 452376,
+      "bytes": 9528,
+      "slots_indice_base_zero": [
+        248
+      ],
+      "numero_sequencias_textuais": 96,
+      "amostra": [
+        {
+          "offset": 457868,
+          "texto": "Relatório do Processo Seis Sigma"
+        },
+        {
+          "offset": 457934,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 457946,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 457972,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 457994,
+          "texto": "&Relatórios"
+        },
+        {
+          "offset": 458018,
+          "texto": "Demográ&ficos"
+        },
+        {
+          "offset": 458046,
+          "texto": "Dados organizados como"
+        },
+        {
+          "offset": 458092,
+          "texto": "&Coluna única:"
+        }
+      ]
+    },
+    {
+      "offset": 461904,
+      "bytes": 2476,
+      "slots_indice_base_zero": [
+        249
+      ],
+      "numero_sequencias_textuais": 24,
+      "amostra": [
+        {
+          "offset": 463428,
+          "texto": "Relatório de Produto Seis Sigma"
+        },
+        {
+          "offset": 463492,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 463504,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 463530,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 463552,
+          "texto": "&Defeitos:"
+        },
+        {
+          "offset": 463574,
+          "texto": "%Rollup "
+        },
+        {
+          "offset": 463594,
+          "texto": "dados defeituosos"
+        },
+        {
+          "offset": 463630,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 464380,
+      "bytes": 1512,
+      "slots_indice_base_zero": [
+        303
+      ],
+      "numero_sequencias_textuais": 15,
+      "amostra": [
+        {
+          "offset": 465472,
+          "texto": "Gráfico de Simetria"
+        },
+        {
+          "offset": 465512,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 465524,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 465550,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 465572,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 465594,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 465618,
+          "texto": "Symplot "
+        },
+        {
+          "offset": 465638,
+          "texto": "variáveis"
+        }
+      ]
+    },
+    {
+      "offset": 465892,
+      "bytes": 3436,
+      "slots_indice_base_zero": [
+        302
+      ],
+      "numero_sequencias_textuais": 38,
+      "amostra": [
+        {
+          "offset": 468112,
+          "texto": "Carta Multi-Vari"
+        },
+        {
+          "offset": 468146,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 468158,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 468184,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 468206,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 468228,
+          "texto": "&Resposta:"
+        },
+        {
+          "offset": 468254,
+          "texto": "  Response "
+        },
+        {
+          "offset": 468280,
+          "texto": "variável resposta"
+        }
+      ]
+    },
+    {
+      "offset": 469328,
+      "bytes": 5376,
+      "slots_indice_base_zero": [
+        250
+      ],
+      "numero_sequencias_textuais": 58,
+      "amostra": [
+        {
+          "offset": 472620,
+          "texto": "Gráfico de Ensaios de Medição"
+        },
+        {
+          "offset": 472680,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 472692,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 472718,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 472740,
+          "texto": "&Informação do Estudo de Medição..."
+        },
+        {
+          "offset": 472812,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 472834,
+          "texto": "&Números de peça:"
+        },
+        {
+          "offset": 472874,
+          "texto": "  Parts "
+        }
+      ]
+    },
+    {
+      "offset": 474704,
+      "bytes": 5872,
+      "slots_indice_base_zero": [
+        251
+      ],
+      "numero_sequencias_textuais": 59,
+      "amostra": [
+        {
+          "offset": 478120,
+          "texto": "Estudo de Linearidade e Víes de Medição"
+        },
+        {
+          "offset": 478200,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 478212,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 478238,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 478260,
+          "texto": "&Informação do Estudo de Medição..."
+        },
+        {
+          "offset": 478332,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 478354,
+          "texto": "&Números de peça:"
+        },
+        {
+          "offset": 478394,
+          "texto": "  Part "
+        }
+      ]
+    },
+    {
+      "offset": 480576,
+      "bytes": 9468,
+      "slots_indice_base_zero": [
+        323
+      ],
+      "numero_sequencias_textuais": 97,
+      "amostra": [
+        {
+          "offset": 485708,
+          "texto": "95,0"
+        },
+        {
+          "offset": 485720,
+          "texto": "Análise de Concordância por Atributos"
+        },
+        {
+          "offset": 485796,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 485808,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 485834,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 485856,
+          "texto": "&Informações..."
+        },
+        {
+          "offset": 485888,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 485910,
+          "texto": "&Gráficos..."
+        }
+      ]
+    },
+    {
+      "offset": 490044,
+      "bytes": 8156,
+      "slots_indice_base_zero": [
+        336
+      ],
+      "numero_sequencias_textuais": 84,
+      "amostra": [
+        {
+          "offset": 494760,
+          "texto": "\"Aceitação\""
+        },
+        {
+          "offset": 494808,
+          "texto": "Estudo de Medição por Atributos (Método Analítico)"
+        },
+        {
+          "offset": 494910,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 494922,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 494948,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 494970,
+          "texto": "In&formação do Estudo de Medição..."
+        },
+        {
+          "offset": 495042,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 495064,
+          "texto": "Núme&ros de peça:"
+        }
+      ]
+    },
+    {
+      "offset": 498200,
+      "bytes": 3284,
+      "slots_indice_base_zero": [
+        338
+      ],
+      "numero_sequencias_textuais": 32,
+      "amostra": [
+        {
+          "offset": 500020,
+          "texto": "0,10"
+        },
+        {
+          "offset": 500032,
+          "texto": "Transformação de Johnson"
+        },
+        {
+          "offset": 500082,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 500094,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 500120,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 500142,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 500164,
+          "texto": "Dados organizados como"
+        },
+        {
+          "offset": 500210,
+          "texto": "&Coluna única:"
+        }
+      ]
+    },
+    {
+      "offset": 501484,
+      "bytes": 16184,
+      "slots_indice_base_zero": [
+        340
+      ],
+      "numero_sequencias_textuais": 188,
+      "amostra": [
+        {
+          "offset": 510408,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 510460,
+          "texto": "Análise de Capacidade para Múltiplas Variáveis (Distribuição Não-normal)"
+        },
+        {
+          "offset": 510606,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 510618,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 510644,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 510666,
+          "texto": "&Estimativa..."
+        },
+        {
+          "offset": 510696,
+          "texto": "&Gráficos..."
+        },
+        {
+          "offset": 510722,
+          "texto": "O&pções..."
+        }
+      ]
+    },
+    {
+      "offset": 517668,
+      "bytes": 18100,
+      "slots_indice_base_zero": [
+        337
+      ],
+      "numero_sequencias_textuais": 225,
+      "amostra": [
+        {
+          "offset": 526732,
+          "texto": "0,10"
+        },
+        {
+          "offset": 526746,
+          "texto": "95,0"
+        },
+        {
+          "offset": 526756,
+          "texto": "0,135 0,5 1 2 5"
+        },
+        {
+          "offset": 526788,
+          "texto": "Identificação de Distribuição Individual"
+        },
+        {
+          "offset": 526870,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 526882,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 526908,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 526930,
+          "texto": "Bo&x-Cox..."
+        }
+      ]
+    },
+    {
+      "offset": 535768,
+      "bytes": 22184,
+      "slots_indice_base_zero": [
+        498
+      ],
+      "numero_sequencias_textuais": 218,
+      "amostra": [
+        {
+          "offset": 548322,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 548374,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 548424,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 548478,
+          "texto": "95,0"
+        },
+        {
+          "offset": 548488,
+          "texto": "Estudo de Medição R&R (Cruzado)"
+        },
+        {
+          "offset": 548552,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 548564,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 548590,
+          "texto": "Selecionar"
+        }
+      ]
+    },
+    {
+      "offset": 557952,
+      "bytes": 13524,
+      "slots_indice_base_zero": [
+        499
+      ],
+      "numero_sequencias_textuais": 147,
+      "amostra": [
+        {
+          "offset": 565130,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 565192,
+          "texto": "95,0"
+        },
+        {
+          "offset": 565204,
+          "texto": "Estudo de Medição R&R (Aninhado)"
+        },
+        {
+          "offset": 565270,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 565282,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 565308,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 565330,
+          "texto": "&Informação do Estudo de Medição..."
+        },
+        {
+          "offset": 565402,
+          "texto": "O&pções..."
+        }
+      ]
+    },
+    {
+      "offset": 571476,
+      "bytes": 22032,
+      "slots_indice_base_zero": [
+        167
+      ],
+      "numero_sequencias_textuais": 283,
+      "amostra": [
+        {
+          "offset": 583730,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 583774,
+          "texto": "0,10"
+        },
+        {
+          "offset": 583786,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 583830,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 583872,
+          "texto": "Análise de Capacidade (Distribuição Normal)"
+        },
+        {
+          "offset": 583960,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 583972,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 583998,
+          "texto": "Selecionar"
+        }
+      ]
+    },
+    {
+      "offset": 593508,
+      "bytes": 20832,
+      "slots_indice_base_zero": [
+        318
+      ],
+      "numero_sequencias_textuais": 277,
+      "amostra": [
+        {
+          "offset": 605006,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 605050,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 605094,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 605136,
+          "texto": "Análise de Capacidade (Entre/Dentro)"
+        },
+        {
+          "offset": 605210,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 605222,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 605248,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 605270,
+          "texto": "Bo&x-Cox..."
+        }
+      ]
+    },
+    {
+      "offset": 614340,
+      "bytes": 46392,
+      "slots_indice_base_zero": [
+        339
+      ],
+      "numero_sequencias_textuais": 517,
+      "amostra": [
+        {
+          "offset": 642204,
+          "texto": "0,10"
+        },
+        {
+          "offset": 642214,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 642256,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 642300,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 642342,
+          "texto": "XXXXXXXXXXXXXXXXXXXX"
+        },
+        {
+          "offset": 642392,
+          "texto": "Análise de Capacidade para Múltiplas Variáveis (Distribuição Normal)"
+        },
+        {
+          "offset": 642530,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 642542,
+          "texto": "Cancelar"
+        }
+      ]
+    },
+    {
+      "offset": 660732,
+      "bytes": 4104,
+      "slots_indice_base_zero": [
+        7
+      ],
+      "numero_sequencias_textuais": 40,
+      "amostra": [
+        {
+          "offset": 663100,
+          "texto": "Regressão dos Melhores Subconjuntos"
+        },
+        {
+          "offset": 663172,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 663184,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 663210,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 663232,
+          "texto": "R&esposta:"
+        },
+        {
+          "offset": 663254,
+          "texto": "BReg "
+        },
+        {
+          "offset": 663268,
+          "texto": "variável resposta"
+        },
+        {
+          "offset": 663304,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 664836,
+      "bytes": 8204,
+      "slots_indice_base_zero": [
+        226
+      ],
+      "numero_sequencias_textuais": 99,
+      "amostra": [
+        {
+          "offset": 669834,
+          "texto": "95,0"
+        },
+        {
+          "offset": 669848,
+          "texto": "Gráfico de Linha Ajustada"
+        },
+        {
+          "offset": 669900,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 669912,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 669938,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 669960,
+          "texto": "&Gráficos..."
+        },
+        {
+          "offset": 669986,
+          "texto": "Opçõ&es..."
+        },
+        {
+          "offset": 670008,
+          "texto": "&Armazenamento..."
+        }
+      ]
+    },
+    {
+      "offset": 673040,
+      "bytes": 17008,
+      "slots_indice_base_zero": [
+        334
+      ],
+      "numero_sequencias_textuais": 210,
+      "amostra": [
+        {
+          "offset": 682092,
+          "texto": "Mínimos Quadrados Parciais"
+        },
+        {
+          "offset": 682146,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 682158,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 682184,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 682206,
+          "texto": "Opçõe&s..."
+        },
+        {
+          "offset": 682228,
+          "texto": "&Predição..."
+        },
+        {
+          "offset": 682254,
+          "texto": "&Gráficos..."
+        },
+        {
+          "offset": 682280,
+          "texto": "&Resultados..."
+        }
+      ]
+    },
+    {
+      "offset": 690048,
+      "bytes": 9936,
+      "slots_indice_base_zero": [
+        187
+      ],
+      "numero_sequencias_textuais": 101,
+      "amostra": [
+        {
+          "offset": 695116,
+          "texto": "Regressão Logística Ordinal"
+        },
+        {
+          "offset": 695172,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 695184,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 695210,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 695232,
+          "texto": "&Armazenamento..."
+        },
+        {
+          "offset": 695268,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 695290,
+          "texto": "&Resultados..."
+        },
+        {
+          "offset": 695320,
+          "texto": "R&esposta: "
+        }
+      ]
+    },
+    {
+      "offset": 699984,
+      "bytes": 9428,
+      "slots_indice_base_zero": [
+        188
+      ],
+      "numero_sequencias_textuais": 91,
+      "amostra": [
+        {
+          "offset": 704912,
+          "texto": "Regressão Logística Nominal"
+        },
+        {
+          "offset": 704968,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 704980,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 705006,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 705028,
+          "texto": "&Armazenamento..."
+        },
+        {
+          "offset": 705064,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 705086,
+          "texto": "&Resultados..."
+        },
+        {
+          "offset": 705116,
+          "texto": "R&esposta: "
+        }
+      ]
+    },
+    {
+      "offset": 709412,
+      "bytes": 11628,
+      "slots_indice_base_zero": [
+        221
+      ],
+      "numero_sequencias_textuais": 162,
+      "amostra": [
+        {
+          "offset": 715864,
+          "texto": "Análise de Tendência"
+        },
+        {
+          "offset": 715906,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 715918,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 715944,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 715966,
+          "texto": "&Variável:"
+        },
+        {
+          "offset": 715988,
+          "texto": "Trend "
+        },
+        {
+          "offset": 716004,
+          "texto": "variável"
+        },
+        {
+          "offset": 716022,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 721040,
+      "bytes": 12156,
+      "slots_indice_base_zero": [
+        225
+      ],
+      "numero_sequencias_textuais": 172,
+      "amostra": [
+        {
+          "offset": 727980,
+          "texto": "Decomposição"
+        },
+        {
+          "offset": 728006,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 728018,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 728044,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 728066,
+          "texto": "&Variável:"
+        },
+        {
+          "offset": 728088,
+          "texto": "Decomp "
+        },
+        {
+          "offset": 728106,
+          "texto": "variável"
+        },
+        {
+          "offset": 728124,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 733196,
+      "bytes": 11380,
+      "slots_indice_base_zero": [
+        229
+      ],
+      "numero_sequencias_textuais": 158,
+      "amostra": [
+        {
+          "offset": 739624,
+          "texto": "Média Móvel"
+        },
+        {
+          "offset": 739648,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 739660,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 739686,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 739708,
+          "texto": "&Variável:"
+        },
+        {
+          "offset": 739740,
+          "texto": "variável"
+        },
+        {
+          "offset": 739758,
+          "texto": "Use a single numeric column."
+        },
+        {
+          "offset": 739816,
+          "texto": "Comprimento de &MM:"
+        }
+      ]
+    },
+    {
+      "offset": 744576,
+      "bytes": 12296,
+      "slots_indice_base_zero": [
+        222
+      ],
+      "numero_sequencias_textuais": 166,
+      "amostra": [
+        {
+          "offset": 751360,
+          "texto": "Suavização Exponencial Simples"
+        },
+        {
+          "offset": 751422,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 751434,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 751460,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 751482,
+          "texto": "&Variável:"
+        },
+        {
+          "offset": 751504,
+          "texto": "SES "
+        },
+        {
+          "offset": 751516,
+          "texto": "variável"
+        },
+        {
+          "offset": 751534,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 756872,
+      "bytes": 12464,
+      "slots_indice_base_zero": [
+        223
+      ],
+      "numero_sequencias_textuais": 170,
+      "amostra": [
+        {
+          "offset": 763856,
+          "texto": "Suavização Exponencial Dupla"
+        },
+        {
+          "offset": 763914,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 763926,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 763952,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 763974,
+          "texto": "&Variável:"
+        },
+        {
+          "offset": 763996,
+          "texto": "DES "
+        },
+        {
+          "offset": 764008,
+          "texto": "variável"
+        },
+        {
+          "offset": 764026,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 769336,
+      "bytes": 13700,
+      "slots_indice_base_zero": [
+        224
+      ],
+      "numero_sequencias_textuais": 188,
+      "amostra": [
+        {
+          "offset": 777076,
+          "texto": "Método de Winters"
+        },
+        {
+          "offset": 777112,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 777124,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 777150,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 777172,
+          "texto": "&Variável:"
+        },
+        {
+          "offset": 777194,
+          "texto": "TSWint "
+        },
+        {
+          "offset": 777212,
+          "texto": "variável"
+        },
+        {
+          "offset": 777230,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 783036,
+      "bytes": 1508,
+      "slots_indice_base_zero": [
+        52
+      ],
+      "numero_sequencias_textuais": 14,
+      "amostra": [
+        {
+          "offset": 784064,
+          "texto": "Diferenças"
+        },
+        {
+          "offset": 784086,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 784098,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 784124,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 784146,
+          "texto": "&Séries:"
+        },
+        {
+          "offset": 784170,
+          "texto": "séries"
+        },
+        {
+          "offset": 784184,
+          "texto": "Use a single numeric column."
+        },
+        {
+          "offset": 784242,
+          "texto": "Armazenar diferenças &em:"
+        }
+      ]
+    },
+    {
+      "offset": 784544,
+      "bytes": 1480,
+      "slots_indice_base_zero": [
+        53
+      ],
+      "numero_sequencias_textuais": 12,
+      "amostra": [
+        {
+          "offset": 785580,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 785592,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 785618,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 785640,
+          "texto": "&Séries:"
+        },
+        {
+          "offset": 785664,
+          "texto": "séries"
+        },
+        {
+          "offset": 785678,
+          "texto": "Use a single numeric column."
+        },
+        {
+          "offset": 785736,
+          "texto": "Armazenar defasagens &em:"
+        },
+        {
+          "offset": 785794,
+          "texto": "coluna de saída"
+        }
+      ]
+    },
+    {
+      "offset": 786024,
+      "bytes": 2152,
+      "slots_indice_base_zero": [
+        20
+      ],
+      "numero_sequencias_textuais": 23,
+      "amostra": [
+        {
+          "offset": 787404,
+          "texto": "Função de Autocorrelação"
+        },
+        {
+          "offset": 787454,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 787466,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 787492,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 787514,
+          "texto": "&Séries:"
+        },
+        {
+          "offset": 787532,
+          "texto": "ACF "
+        },
+        {
+          "offset": 787544,
+          "texto": "séries"
+        },
+        {
+          "offset": 787558,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 788176,
+      "bytes": 1968,
+      "slots_indice_base_zero": [
+        21
+      ],
+      "numero_sequencias_textuais": 22,
+      "amostra": [
+        {
+          "offset": 789460,
+          "texto": "Função de Autocorrelação Parcial"
+        },
+        {
+          "offset": 789526,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 789538,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 789564,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 789586,
+          "texto": "&Séries:"
+        },
+        {
+          "offset": 789604,
+          "texto": "PACF "
+        },
+        {
+          "offset": 789618,
+          "texto": "séries"
+        },
+        {
+          "offset": 789632,
+          "texto": "Use a single numeric column."
+        }
+      ]
+    },
+    {
+      "offset": 790144,
+      "bytes": 2136,
+      "slots_indice_base_zero": [
+        22
+      ],
+      "numero_sequencias_textuais": 19,
+      "amostra": [
+        {
+          "offset": 791556,
+          "texto": "Função de Correlação Cruzada"
+        },
+        {
+          "offset": 791614,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 791626,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 791652,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 791674,
+          "texto": "&Primeira série:"
+        },
+        {
+          "offset": 791714,
+          "texto": "primeira série"
+        },
+        {
+          "offset": 791744,
+          "texto": "Use a single numeric column."
+        },
+        {
+          "offset": 791802,
+          "texto": "&Segunda série:"
+        }
+      ]
+    },
+    {
+      "offset": 792280,
+      "bytes": 11276,
+      "slots_indice_base_zero": [
+        23
+      ],
+      "numero_sequencias_textuais": 113,
+      "amostra": [
+        {
+          "offset": 798800,
+          "texto": "ARIMA"
+        },
+        {
+          "offset": 798812,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 798824,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 798850,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 798872,
+          "texto": "Arma&zenamento..."
+        },
+        {
+          "offset": 798908,
+          "texto": "&Gráficos..."
+        },
+        {
+          "offset": 798934,
+          "texto": "&Resultados..."
+        },
+        {
+          "offset": 798964,
+          "texto": "Pr&evisões..."
+        }
+      ]
+    },
+    {
+      "offset": 803556,
+      "bytes": 11860,
+      "slots_indice_base_zero": [
+        314
+      ],
+      "numero_sequencias_textuais": 171,
+      "amostra": [
+        {
+          "offset": 808998,
+          "texto": "1 5 10 50"
+        },
+        {
+          "offset": 809032,
+          "texto": "Gráfico de Identificação de Distribuição - Censura à Direita"
+        },
+        {
+          "offset": 809154,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 809166,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 809192,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 809214,
+          "texto": "&Censura..."
+        },
+        {
+          "offset": 809238,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 809260,
+          "texto": "&Variáveis:"
+        }
+      ]
+    },
+    {
+      "offset": 815416,
+      "bytes": 12252,
+      "slots_indice_base_zero": [
+        315
+      ],
+      "numero_sequencias_textuais": 130,
+      "amostra": [
+        {
+          "offset": 822360,
+          "texto": "Gráfico de Visão Geral de Distribuição - Censura à Direita"
+        },
+        {
+          "offset": 822478,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 822490,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 822516,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 822538,
+          "texto": "&Censura..."
+        },
+        {
+          "offset": 822562,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 822584,
+          "texto": "&Variáveis:"
+        },
+        {
+          "offset": 822608,
+          "texto": "RDOview "
+        }
+      ]
+    },
+    {
+      "offset": 827668,
+      "bytes": 17136,
+      "slots_indice_base_zero": [
+        265
+      ],
+      "numero_sequencias_textuais": 173,
+      "amostra": [
+        {
+          "offset": 836510,
+          "texto": "95,0"
+        },
+        {
+          "offset": 836536,
+          "texto": "Análise de Distribuição Não-paramétrica - Censura à Direita"
+        },
+        {
+          "offset": 836656,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 836668,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 836694,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 836716,
+          "texto": "&Censura..."
+        },
+        {
+          "offset": 836740,
+          "texto": "&Modo de Falha..."
+        },
+        {
+          "offset": 836776,
+          "texto": "&Estimativa..."
+        }
+      ]
+    },
+    {
+      "offset": 844804,
+      "bytes": 9508,
+      "slots_indice_base_zero": [
+        316
+      ],
+      "numero_sequencias_textuais": 145,
+      "amostra": [
+        {
+          "offset": 848920,
+          "texto": "1 5 10 50"
+        },
+        {
+          "offset": 848948,
+          "texto": "Gráfico de Identificação de Distribuição - Censura Arbitrária"
+        },
+        {
+          "offset": 849072,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 849084,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 849110,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 849132,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 849154,
+          "texto": "Variávei&s iniciais:"
+        },
+        {
+          "offset": 849196,
+          "texto": "IDIdentification "
+        }
+      ]
+    },
+    {
+      "offset": 854312,
+      "bytes": 9012,
+      "slots_indice_base_zero": [
+        317
+      ],
+      "numero_sequencias_textuais": 98,
+      "amostra": [
+        {
+          "offset": 859328,
+          "texto": "Gráfico de Visão Geral de Distribuição - Censura Arbitrária"
+        },
+        {
+          "offset": 859448,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 859460,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 859486,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 859508,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 859530,
+          "texto": "Va&riáveis iniciais:"
+        },
+        {
+          "offset": 859572,
+          "texto": "IDOview "
+        },
+        {
+          "offset": 859592,
+          "texto": "variáveis iniciais"
+        }
+      ]
+    },
+    {
+      "offset": 863324,
+      "bytes": 30464,
+      "slots_indice_base_zero": [
+        266
+      ],
+      "numero_sequencias_textuais": 378,
+      "amostra": [
+        {
+          "offset": 877406,
+          "texto": "95,0"
+        },
+        {
+          "offset": 877440,
+          "texto": "Análise de Distribuição Paramétrica - Censura Arbitrária"
+        },
+        {
+          "offset": 877554,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 877566,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 877592,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 877614,
+          "texto": "&Modo de Falha..."
+        },
+        {
+          "offset": 877650,
+          "texto": "&Estimativa..."
+        },
+        {
+          "offset": 877680,
+          "texto": "&Teste..."
+        }
+      ]
+    },
+    {
+      "offset": 893788,
+      "bytes": 14228,
+      "slots_indice_base_zero": [
+        267
+      ],
+      "numero_sequencias_textuais": 147,
+      "amostra": [
+        {
+          "offset": 901006,
+          "texto": "95,0"
+        },
+        {
+          "offset": 901024,
+          "texto": "Análise de Distribuição Não-Paramétrica - Censura Arbitrária"
+        },
+        {
+          "offset": 901146,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 901158,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 901184,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 901206,
+          "texto": "&Modo de Falha..."
+        },
+        {
+          "offset": 901242,
+          "texto": "&Estimativa..."
+        },
+        {
+          "offset": 901272,
+          "texto": "&Gráficos..."
+        }
+      ]
+    },
+    {
+      "offset": 908016,
+      "bytes": 22740,
+      "slots_indice_base_zero": [
+        322
+      ],
+      "numero_sequencias_textuais": 236,
+      "amostra": [
+        {
+          "offset": 919826,
+          "texto": "10 50 90"
+        },
+        {
+          "offset": 919854,
+          "texto": "95,0"
+        },
+        {
+          "offset": 919868,
+          "texto": "Teste de Vida Acelerado"
+        },
+        {
+          "offset": 919916,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 919928,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 919954,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 919976,
+          "texto": "&Censura..."
+        },
+        {
+          "offset": 920000,
+          "texto": "Es&timativa..."
+        }
+      ]
+    },
+    {
+      "offset": 930756,
+      "bytes": 18112,
+      "slots_indice_base_zero": [
+        269
+      ],
+      "numero_sequencias_textuais": 190,
+      "amostra": [
+        {
+          "offset": 940198,
+          "texto": "95,0"
+        },
+        {
+          "offset": 940212,
+          "texto": "Regressão com Dados de Vida"
+        },
+        {
+          "offset": 940268,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 940280,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 940306,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 940328,
+          "texto": "&Censura..."
+        },
+        {
+          "offset": 940352,
+          "texto": "&Estimativa..."
+        },
+        {
+          "offset": 940382,
+          "texto": "&Gráficos..."
+        }
+      ]
+    },
+    {
+      "offset": 948868,
+      "bytes": 19284,
+      "slots_indice_base_zero": [
+        270
+      ],
+      "numero_sequencias_textuais": 215,
+      "amostra": [
+        {
+          "offset": 958684,
+          "texto": "95,0"
+        },
+        {
+          "offset": 958696,
+          "texto": "Análise por Probito"
+        },
+        {
+          "offset": 958736,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 958748,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 958774,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 958796,
+          "texto": "&Estimativa..."
+        },
+        {
+          "offset": 958826,
+          "texto": "&Gráficos..."
+        },
+        {
+          "offset": 958852,
+          "texto": "O&pções..."
+        }
+      ]
+    },
+    {
+      "offset": 968152,
+      "bytes": 7804,
+      "slots_indice_base_zero": [
+        324
+      ],
+      "numero_sequencias_textuais": 86,
+      "amostra": [
+        {
+          "offset": 972184,
+          "texto": "95,0"
+        },
+        {
+          "offset": 972196,
+          "texto": "Planos de Teste de Demonstração"
+        },
+        {
+          "offset": 972260,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 972272,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 972298,
+          "texto": "&Gráficos..."
+        },
+        {
+          "offset": 972324,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 972346,
+          "texto": "Valor Mínimo a ser demonstrado"
+        },
+        {
+          "offset": 972408,
+          "texto": "E&scala (Weibull ou expo.) ou local (outras distr.):"
+        }
+      ]
+    },
+    {
+      "offset": 975956,
+      "bytes": 11984,
+      "slots_indice_base_zero": [
+        325
+      ],
+      "numero_sequencias_textuais": 120,
+      "amostra": [
+        {
+          "offset": 982250,
+          "texto": "95,0"
+        },
+        {
+          "offset": 982260,
+          "texto": "Planos de Teste de Estimação"
+        },
+        {
+          "offset": 982318,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 982330,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 982356,
+          "texto": "Cen&s. à Direita..."
+        },
+        {
+          "offset": 982396,
+          "texto": "Cens. Inter&valar..."
+        },
+        {
+          "offset": 982438,
+          "texto": "O&pções..."
+        },
+        {
+          "offset": 982460,
+          "texto": "Parâmetro a ser Estimado"
+        }
+      ]
+    },
+    {
+      "offset": 987940,
+      "bytes": 16124,
+      "slots_indice_base_zero": [
+        335
+      ],
+      "numero_sequencias_textuais": 163,
+      "amostra": [
+        {
+          "offset": 996072,
+          "texto": "0,05"
+        },
+        {
+          "offset": 996102,
+          "texto": "95,0"
+        },
+        {
+          "offset": 996112,
+          "texto": "Planos de Testes de Vida Acelerados"
+        },
+        {
+          "offset": 996184,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 996196,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 996222,
+          "texto": "Es&tresses..."
+        },
+        {
+          "offset": 996250,
+          "texto": "C&ens. à Direita..."
+        },
+        {
+          "offset": 996290,
+          "texto": "Cens. Inter&valar..."
+        }
+      ]
+    },
+    {
+      "offset": 1004064,
+      "bytes": 12668,
+      "slots_indice_base_zero": [
+        328
+      ],
+      "numero_sequencias_textuais": 133,
+      "amostra": [
+        {
+          "offset": 1010888,
+          "texto": "95,0"
+        },
+        {
+          "offset": 1010904,
+          "texto": "Curvas de Crescimento Não-Paramétricas"
+        },
+        {
+          "offset": 1010982,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 1010994,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 1011020,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 1011042,
+          "texto": "&Retirada..."
+        },
+        {
+          "offset": 1011068,
+          "texto": "Cus&t-Freq..."
+        },
+        {
+          "offset": 1011096,
+          "texto": "&Gráficos..."
+        }
+      ]
+    },
+    {
+      "offset": 1016732,
+      "bytes": 15148,
+      "slots_indice_base_zero": [
+        327
+      ],
+      "numero_sequencias_textuais": 158,
+      "amostra": [
+        {
+          "offset": 1024764,
+          "texto": "95,0"
+        },
+        {
+          "offset": 1024792,
+          "texto": "Curva de Crescimento Paramétrica"
+        },
+        {
+          "offset": 1024858,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 1024870,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 1024896,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 1024918,
+          "texto": "Re&tirada..."
+        },
+        {
+          "offset": 1024944,
+          "texto": "&Estimativa..."
+        },
+        {
+          "offset": 1024974,
+          "texto": "&Gráficos..."
+        }
+      ]
+    },
+    {
+      "offset": 1031880,
+      "bytes": 31680,
+      "slots_indice_base_zero": [
+        497
+      ],
+      "numero_sequencias_textuais": 399,
+      "amostra": [
+        {
+          "offset": 1046408,
+          "texto": "95,0"
+        },
+        {
+          "offset": 1046448,
+          "texto": "Análise de Distribuição Paramétrica - Censura à Direita"
+        },
+        {
+          "offset": 1046560,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 1046572,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 1046598,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 1046620,
+          "texto": "&Censura..."
+        },
+        {
+          "offset": 1046644,
+          "texto": "&Modo de Falha..."
+        },
+        {
+          "offset": 1046680,
+          "texto": "&Estimativa..."
+        }
+      ]
+    },
+    {
+      "offset": 1063560,
+      "bytes": 30672,
+      "slots_indice_base_zero": [
+        501
+      ],
+      "numero_sequencias_textuais": 378,
+      "amostra": [
+        {
+          "offset": 1077850,
+          "texto": "95,0"
+        },
+        {
+          "offset": 1077884,
+          "texto": "Análise de Distribuição Paramétrica - Censura Arbitrária"
+        },
+        {
+          "offset": 1077998,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 1078010,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 1078036,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 1078058,
+          "texto": "&Modo de Falha..."
+        },
+        {
+          "offset": 1078094,
+          "texto": "&Estimativa..."
+        },
+        {
+          "offset": 1078124,
+          "texto": "&Teste..."
+        }
+      ]
+    },
+    {
+      "offset": 1094232,
+      "bytes": 31888,
+      "slots_indice_base_zero": [
+        500
+      ],
+      "numero_sequencias_textuais": 399,
+      "amostra": [
+        {
+          "offset": 1108968,
+          "texto": "95,0"
+        },
+        {
+          "offset": 1109008,
+          "texto": "Análise de Distribuição Paramétrica - Censura à Direita"
+        },
+        {
+          "offset": 1109120,
+          "texto": "Ajuda"
+        },
+        {
+          "offset": 1109132,
+          "texto": "Cancelar"
+        },
+        {
+          "offset": 1109158,
+          "texto": "Selecionar"
+        },
+        {
+          "offset": 1109180,
+          "texto": "&Censura..."
+        },
+        {
+          "offset": 1109204,
+          "texto": "&Modo de Falha..."
+        },
+        {
+          "offset": 1109240,
+          "texto": "&Estimativa..."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": ["Medição", "Resposta 2", "Processo", "Turno"],
+  "rows": [
+    ["1", "10", "A", "Dia"],
+    ["3", "*", "A", "Dia"],
+    ["5", "30", "B", "Noite"],
+    ["*", "40", "B", "Noite"],
+    ["7", "50", "*", "Dia"],
+    ["9", "60", "A", "Noite"]
+  ],
+  "output": "Exemplo sintético de descritivas por grupo.\n\nAbra Descritivas. Em Variáveis numéricas, selecione Medição e Resposta 2 usando Ctrl. Em Por variáveis, selecione Processo. Na aba Estatísticas, escolha N, Ausentes, N total e Média.\n\nResultados esperados, excluindo o processo ausente:\nMedição: A tem N=3, média=13/3; B tem N=1, um ausente e média=5.\nResposta 2: A tem N=2, um ausente e média=35; B tem N=2 e média=35.\nUma linha é excluída pelo processo ausente.\n\nPara cruzar os grupos, selecione Processo e Turno em Por variáveis. Marque Incluir combinações sem observações para mostrar B/Dia com N=0. O grupo A/Dia tem média da Medição=2; A/Noite=9; B/Noite=5.\nMarque Incluir valores de grupo ausentes para também resumir a quinta linha.\n\nEsses resultados são analíticos; não foram exportados nem validados no Minitab 16.\n"
+}

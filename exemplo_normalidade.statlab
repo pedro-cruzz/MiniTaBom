@@ -1,0 +1,14 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": ["Sequência simétrica", "Sequência assimétrica"],
+  "rows": [
+    ["-2,05", "0,1"], ["-1,55", "0,2"], ["-1,25", "0,3"], ["-1,03", "0,4"],
+    ["-0,84", "0,5"], ["-0,68", "0,6"], ["-0,53", "0,7"], ["-0,39", "0,8"],
+    ["-0,26", "0,9"], ["-0,13", "1"], ["0", "1,1"], ["0,13", "1,2"],
+    ["0,26", "1,3"], ["0,39", "1,4"], ["0,53", "1,5"], ["0,68", "1,6"],
+    ["0,84", "1,7"], ["1,03", "1,8"], ["1,25", "1,9"], ["1,55", "2"],
+    ["2,05", "15"], ["*", ""], ["", "*"]
+  ],
+  "output": "EXEMPLO SINTÉTICO — normalidade Anderson–Darling\n\nEstat > Estatísticas básicas > Teste de normalidade. Execute para cada coluna e compare A² e o valor-p aproximado. Cada coluna tem 21 números válidos e dois ausentes.\n\nA primeira sequência foi construída de forma simétrica; a segunda contém uma observação distante das demais. Nenhuma coluna é uma amostra aleatória de uma população real. Um valor-p alto não comprova normalidade.\n\nO método atual estima média e desvio amostral, usa caudas logarítmicas para calcular A² e corrige a estatística para aproximar o valor-p. Ryan–Joiner, Kolmogorov–Smirnov e gráfico de probabilidade continuam pendentes. Não houve comparação executada deste bloco com o Minitab 16.\n"
+}

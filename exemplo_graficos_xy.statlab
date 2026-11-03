@@ -1,0 +1,52 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": [
+    "Tempo",
+    "Medição",
+    "Grupo"
+  ],
+  "rows": [
+    [
+      "2",
+      "10",
+      "A"
+    ],
+    [
+      "4",
+      "12",
+      "B"
+    ],
+    [
+      "8",
+      "*",
+      "A"
+    ],
+    [
+      "16",
+      "14",
+      "B"
+    ],
+    [
+      "32",
+      "13",
+      "A"
+    ],
+    [
+      "64",
+      "15",
+      "B"
+    ],
+    [
+      "128",
+      "16",
+      ""
+    ],
+    [
+      "256",
+      "18",
+      "B"
+    ]
+  ],
+  "output": "Exemplo fictício de gráficos XY.\n\nGráfico > Gráfico de dispersão: Y=Medição, X=Tempo, grupo=Grupo.\nAtive a escala logarítmica de X: os tempos dobram em cada linha.\nA linha 3 tem Y ausente e a linha 7 tem grupo ausente; com grupos, entram 6 pontos.\n\nGráfico > Gráfico de séries temporais: Y=Medição; grupo opcional.\nO eixo X usa as linhas 1 a 8, não a coluna Tempo.\nSem grupo entram 7 pontos; com Grupo entram 6.\nLinhas são interrompidas nos ausentes por padrão.\nUse Exportar SVG na janela do gráfico.\n\nOs dados são sintéticos e não validam paridade com o Minitab.\n"
+}

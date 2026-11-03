@@ -1,0 +1,27 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": [
+    "A",
+    "B",
+    "Lote"
+  ],
+  "rows": [
+    [
+      "1,5",
+      "4",
+      "B"
+    ],
+    [
+      "2",
+      "*",
+      "A"
+    ],
+    [
+      "*",
+      "6",
+      "B"
+    ]
+  ],
+  "output": "Exemplo fictício de operações de dados.\n\n1. Dados > Ordenar linhas. Primeira chave: Lote, texto crescente; segunda: A, numérico decrescente.\nAs colunas se movem juntas e Ctrl+Z desfaz a ordenação.\n\n2. Dados > Empilhar colunas: selecione A e B com Ctrl.\nSerão adicionadas Valor e Origem, com seis valores se os ausentes forem mantidos.\nAs fontes ficam preservadas nas três primeiras colunas.\n\n3. Dados > Desempilhar por grupo: valores=Valor; grupo=Origem.\nAs novas colunas recuperam A e B, inclusive textos de vírgula decimal e *.\nCada operação pode ser desfeita separadamente; as notas ficam na sessão.\n\nAs convenções são as documentadas no README, sem comparação executada no Minitab 16.\n"
+}

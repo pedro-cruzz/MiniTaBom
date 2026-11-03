@@ -1,0 +1,7 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": ["Amostra 1", "Amostra 2"],
+  "rows": [["2", "1"], ["4", "2"], ["5", "4"], ["9", "6"], ["15", "7"], ["*", "8"]],
+  "output": "Exemplo sintético para estudos de testes t.\n\nAbra Estat > Estatísticas básicas > Teste t de duas amostras.\nEm Dados, escolha as duas colunas.\nEm Opções, mantenha confiança de 95% e alternativa diferente.\n\nCom Welch fracionário (desmarque truncar GL), o Minitab 22.6 exibiu:\nDiferença = 2,33; IC95% = (−3,98; 8,64); T = 0,91; GL = 5,93; valor-p = 0,400.\nEssa conferência é limitada à precisão exibida.\n\nCom truncar GL marcado, o StatLab usa GL = 5 para seguir a regra documentada das versões anteriores à 22.6.\nAs mesmas colunas também podem ilustrar o teste pareado: serão usados cinco pares, pois falta um valor na sexta linha.\n"
+}

@@ -1,0 +1,7 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": ["Processo A", "Processo B", "Processo C"],
+  "rows": [["1", "4", "7"], ["2", "5", "8"], ["3", "6", "9"]],
+  "output": "Exemplo didático sintético de ANOVA — não exportado do Minitab.\n\nAbra Estat > ANOVA > Um fator.\nSelecione as três colunas (Selecionar todas).\nEm Opções e comparações, mantenha variâncias iguais e confiança de 95%.\nOpcionalmente, marque comparações múltiplas e boxplots na mesma escala.\n\nResultados analíticos conhecidos:\nN total = 9; média geral = 5; SQ Fator = 54; SQ Erro = 6; SQ Total = 60.\nGL Fator = 2; GL Erro = 6; F = 27; p = 0,001; S = 1; R² = 90%.\n\nOs intervalos individuais das médias não são intervalos simultâneos.\nUse as comparações de Tukey para diferenças com ajuste familiar.\nCompatibilidade integral com Minitab 16 ainda não demonstrada.\n"
+}

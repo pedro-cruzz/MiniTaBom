@@ -1,0 +1,49 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": [
+    "Amostra A",
+    "Amostra B",
+    "Resposta",
+    "Grupo"
+  ],
+  "rows": [
+    [
+      "0",
+      "1",
+      "0",
+      "A"
+    ],
+    [
+      "2",
+      "3",
+      "1",
+      "B"
+    ],
+    [
+      "4",
+      "5",
+      "2",
+      "A"
+    ],
+    [
+      "",
+      "",
+      "3",
+      "B"
+    ],
+    [
+      "",
+      "",
+      "4",
+      "A"
+    ],
+    [
+      "",
+      "",
+      "5",
+      "B"
+    ]
+  ],
+  "output": "EXEMPLO SINTÉTICO — formatos de entrada dos testes t\n\nA: N=3, média=2, desvio padrão amostral=2.\nB: N=3, média=3, desvio padrão amostral=2.\nDiferença das médias A−B = −1.\nPara duas amostras independentes, colunas A/B, resumos e Resposta/Grupo representam os mesmos dados.\n\nAs diferenças pareadas A−B seriam todas −1 e têm desvio zero: o teste t pareado é recusado nesta implementação. Não usar os desvios individuais para resumir diferenças.\nPara estudar um pareado com variação por resumo, use N=3, média das diferenças=2 e desvio das diferenças=1: T=2√3, GL=2.\n\nExemplo construído analiticamente; não é saída exportada do Minitab 16.\n"
+}

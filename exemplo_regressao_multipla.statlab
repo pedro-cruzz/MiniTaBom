@@ -1,0 +1,7 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": ["Resposta", "X1", "X2"],
+  "rows": [["1,5", "-1", "-1"], ["-3,5", "-1", "1"], ["6,5", "1", "-1"], ["3,5", "1", "1"]],
+  "output": "Exemplo analítico de regressão linear múltipla com dois preditores ortogonais.\n\nAbra Estat > Regressão > Ajustar modelo linear.\nResposta: C1 Resposta. Preditores: C2 X1 e C3 X2 (use Ctrl).\n\nResultados esperados:\nResposta = 2 + 3 X1 - 2 X2\nSQ Regressão = 52; SQ Erro = 1; SQ Total = 53.\nGL Regressão = 2; GL Erro = 1.\nS = 1; F = 26.\nEP de cada coeficiente = 0,5. VIF de cada preditor = 1.\nAlavancagem de cada linha = 0,75; Cook de cada linha = 1.\nPRESS = 16.\n\nA amostra tem apenas um grau de liberdade para erro; os intervalos dos coeficientes serão amplos.\nOs dados são sintéticos e os resultados são analíticos, sem validação no Minitab 16.\n"
+}

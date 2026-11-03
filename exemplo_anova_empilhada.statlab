@@ -1,0 +1,7 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": ["Medição", "Processo"],
+  "rows": [["1", "A"], ["2", "A"], ["3", "A"], ["4", "B"], ["5", "B"], ["6", "B"], ["7", "C"], ["8", "C"], ["9", "C"]],
+  "output": "Mesmo exemplo da ANOVA, organizado em resposta e fator.\n\nAbra Estat > ANOVA > Um fator.\nEscolha Resposta em uma coluna e fator em outra.\nResposta: C1 Medição. Fator: C2 Processo.\n\nResultados esperados, com variâncias iguais: F = 27; p = 0,001; GL = 2 e 6.\nA análise deve coincidir com exemplo_anova.statlab.\nOs nomes dos fatores são tratados como texto, na ordem de primeira aparição.\n"
+}

@@ -1,0 +1,12 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": ["Grupo", "Resultado", "Frequência", "Sim", "Não", "Rótulo"],
+  "rows": [
+    ["A", "Sim", "30", "30", "10", "A"],
+    ["A", "Não", "10", "10", "30", "B"],
+    ["B", "Sim", "10", "", "", ""],
+    ["B", "Não", "30", "", "", ""]
+  ],
+  "output": "EXEMPLO SINTÉTICO — tabela de contingência\n\nEstat > Tabelas > Qui-quadrado de associação.\n\nFormato Dados categóricos: variável de linha Grupo, variável de coluna Resultado, Frequências = Frequência. A tabela resultante é [[30,10],[10,30]], N=80, esperadas=20 em cada célula, Pearson=20 e GL=1. Sem a coluna de frequências, cada linha valeria uma observação e o resultado seria diferente.\n\nFormato Tabela de contagens: selecione apenas Sim e Não; use Rótulo para identificar as linhas. As duas linhas finais, com todas as contagens ausentes, são omitidas. Produz a mesma tabela e os mesmos testes. Não selecione totais marginais nem a coluna de rótulos entre as contagens.\n\nNa aba Exibição, ative resíduos, contribuições e percentuais para detalhar as células. São cálculos sintéticos, sem comparação executada com Minitab 16.\n"
+}

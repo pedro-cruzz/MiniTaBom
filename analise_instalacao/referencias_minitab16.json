@@ -1,0 +1,134 @@
+{
+  "data_consulta": "2026-10-24",
+  "alvo_projeto": "Minitab 16.2.4.0 para Windows",
+  "finalidade": "Confirmar presença histórica de funcionalidades e orientar comparação de interface, opções e resultados",
+  "inventario_exaustivo": false,
+  "validacao_numerica_executada_no_16": false,
+  "fontes": [
+    {
+      "id": "M16-MEET",
+      "titulo": "Meet Minitab 16",
+      "autor_documento": "Minitab, Inc.",
+      "identificacao_verificada": "Copyright 2010; Release 16.1.0 na transcrição do documento",
+      "url_consultada": "https://manualzz.com/doc/11354467/minitab-minitab-16-statistical-software-user-guide",
+      "espelho_alternativo": "https://pdf.directindustry.com/pdf/minitab-ltd/meet-minitab/13108-155215.html",
+      "natureza": "Documento do fabricante hospedado/transcrito por terceiros; não usar resumos automáticos do portal como conteúdo original",
+      "verificacao": "Identificação e seções pertinentes conferidas no texto; PDF completo não baixado e páginas não verificadas visualmente",
+      "localizadores": [
+        "Identificação: página ii",
+        "Gráficos: capítulo 2",
+        "Análise: capítulo 3",
+        "Qualidade: capítulo 4",
+        "DOE: capítulo 5",
+        "Comandos: capítulo 6",
+        "Relatórios: capítulo 7",
+        "Planilha: capítulo 8",
+        "Ajuda e referências: capítulos 10 e 11"
+      ],
+      "uso": "Menus, sequência de diálogos, organização das janelas, exemplos e fluxos de trabalho",
+      "limite": "Guia introdutório com uma seleção de recursos; não é catálogo exaustivo de comandos/fórmulas nem descreve todas as alterações 16.2"
+    },
+    {
+      "id": "M16-WHATSNEW-CATALOG",
+      "titulo": "Minitab16 WhatsNew",
+      "autor_catalogo": "MINITAB Ltd / Minitab",
+      "url_consultada": "https://pdf.directindustry.com/pdf/minitab-ltd/minitab16-whatsnew/13108-469601.html",
+      "natureza": "Catálogo do fabricante hospedado no DirectIndustry",
+      "localizadores": [
+        "Catálogo de 12 páginas",
+        "Índice de novidades na página 2",
+        "Novidades nas páginas 7 a 10",
+        "Minitab 16 Features List na página 11"
+      ],
+      "verificacao": "Trechos do documento e índice disponíveis no HTML; visualizador e imagens não acessíveis nesta consulta",
+      "uso": "Lista inicial de famílias funcionais e novidades da versão 16",
+      "limite": "A seção de funcionalidades foi localizada, mas o conteúdo integral de todas as páginas não foi conferido; não transformar o resumo do portal em inventário completo"
+    },
+    {
+      "id": "M16-NEW-ADDITIVE",
+      "titulo": "What's New in Minitab 16 / New in Minitab 16",
+      "autor_pagina": "ADDITIVE",
+      "url_consultada": "https://www.additive-net.de/en/software/produkte/minitab/minitab/versionshistorie/neu-in-minitab-16",
+      "natureza": "Histórico técnico publicado pelo distribuidor; inclui seções distintas 16 e 16.2",
+      "verificacao": "Seções históricas lidas; ignorar a navegação lateral de produtos modernos",
+      "uso": "Conferir recursos e opções introduzidos na família 16",
+      "evidencias": [
+        "Uma/duas variâncias com hipóteses em variância ou desvio e opções de razão",
+        "Regressão geral com preditores categóricos e interações",
+        "Cartas Laney P'/U' e G/T na seção 16.2"
+      ],
+      "limite": "Lista de novidades, não de todas as funções preexistentes. Fórmulas e valores padrão requerem outras fontes"
+    },
+    {
+      "id": "M16-NEW-PDF-DE",
+      "titulo": "Neuerungen in Minitab 16",
+      "autor_documento": "Minitab, Inc.; apresentação distribuída pela ADDITIVE",
+      "url_consultada": "https://www.additive-net.de/images/software/minitab/downloads/MTB16_Whatsnew_DE.pdf",
+      "identificacao_verificada": "Copyright 2010 Minitab, Inc.; 31 páginas; alemão",
+      "localizadores": [
+        "Página 20: novidades de descritivas e variâncias",
+        "Páginas 21 a 24: regressão, ANOVA e DOE",
+        "Páginas 25 a 29: qualidade, tabelas, poder/amostragem e ajuda"
+      ],
+      "verificacao": "PDF aberto e texto extraído pela ferramenta web; captura visual falhou por cache miss",
+      "evidencias": [
+        "A página 20 menciona explicitamente o método Bonett para uma variância (grafado Bonnett no documento)"
+      ],
+      "uso": "Corroboração de opções históricas, especialmente lacunas das funções já iniciadas",
+      "limite": "Novidades de lançamento, não descrição exaustiva; não inferir comportamento numérico a partir dos slides"
+    },
+    {
+      "id": "M16-README",
+      "titulo": "Minitab 16 Statistical Software — ReadMe / notas de atualização",
+      "autor_documento": "Minitab (conteúdo atribuído no documento); espelho de terceiro",
+      "url_consultada": "https://fliphtml5.com/ejsz/mric/Minitab_16_Statistical_Software/",
+      "natureza": "Reprodução textual de notas históricas; hospedagem não oficial e procedência do arquivo ainda sem confirmação por hash/original",
+      "localizadores": [
+        "Parte 2, página 2: novidades 16.2",
+        "Parte 7, páginas 8/9: correções 16.2.3",
+        "Parte 8, páginas 9/10: correções 16.2.4",
+        "Parte 9, página 10: 16.2.4.4",
+        "Parte 10: problemas conhecidos"
+      ],
+      "verificacao": "Texto das seções lido; não é ensaio executado nem confirmação do binário 16.2.4.0",
+      "uso": "Separar versões menores e levantar casos de regressão para validação futura",
+      "evidencias": [
+        "16.2 inclui G/T, Laney P'/U' e estimador Nelson",
+        "16.2.3 menciona correção de variâncias em dados empilhados com ausentes, item 168013",
+        "16.2.4 lista correções adicionais em DOE, GLM e arquivos; 16.2.4.4 é tratada separadamente"
+      ],
+      "limite": "Usar como evidência documental a corroborar; descrição de correção não fornece dados suficientes para reproduzir o erro"
+    },
+    {
+      "id": "M16-MEET-PDF-UPC",
+      "titulo": "Meet Minitab — Release 16.1.0",
+      "autor_documento": "Minitab, Inc.",
+      "url_consultada": "https://eio.upc.edu/ca/qui-som/laboratori-de-calcul/manuals-del-sistema/EN16_MeetMinitab.pdf",
+      "natureza": "PDF do fabricante hospedado pela Universitat Politècnica de Catalunya",
+      "identificacao_verificada": "122 páginas; copyright 2010 e Release 16.1.0 na página ii (índice PDF 1)",
+      "verificacao": "PDF acessível pela ferramenta web; identificação e sumário extraídos como texto. Não foi auditada integralmente cada página.",
+      "uso": "Referência primária de fluxos e organização da versão 16.1; complementa os espelhos textuais anteriores.",
+      "limite": "Não é inventário completo de comandos/opções e não comprova alterações 16.2.4 nem equivalência numérica do MiniTaBom."
+    }
+  ],
+  "acessos_nao_concluidos": [
+    {
+      "url": "https://www.minitab.com/uploadedFiles/Shared_Resources/Documents/MeetMinitab/EN16_MeetMinitab.pdf",
+      "resultado": "404 na consulta web"
+    },
+    {
+      "url": "https://faculty.ksu.edu.sa/sites/default/files/book_for_minitab_.pdf",
+      "resultado": "Localizado em busca, abertura com timeout; não usado como conteúdo verificado"
+    }
+  ],
+  "regras_de_uso": [
+    "Registrar presença documentada no 16 separadamente de implementação e validação numérica",
+    "Combinar manual 16.1 com notas 16.2/16.2.4; não confundir 16.2.4.4 com o alvo 16.2.4.0",
+    "Não usar data de publicação do espelho ou data de indexação como data de lançamento do software",
+    "Priorizar o corpo do documento do fabricante, distinguindo-o de resumos automáticos e navegação de produtos atuais",
+    "Complementar com Minitab Help, StatGuide, Session Command Help e Methods and Formulas da versão 16 para opções e algoritmos detalhados",
+    "Documentação atual e instalação 22.6 continuam referências complementares, sem comprovar por si sós a presença de uma função no 16",
+    "Permanecem pendentes inventário comando a comando e comparação executada dos resultados no Minitab 16"
+  ],
+  "ultima_revisao": "2026-11-03"
+}

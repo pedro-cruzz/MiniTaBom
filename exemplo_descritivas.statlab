@@ -1,0 +1,12 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": ["Exemplo 1 a 10", "Dobro", "Grupo"],
+  "rows": [
+    ["1", "2", "A"], ["2", "4", "A"], ["3", "6", "A"],
+    ["4", "8", "A"], ["5", "10", "A"], ["6", "12", "B"],
+    ["7", "14", "B"], ["8", "16", "B"], ["9", "18", "B"],
+    ["10", "20", "B"]
+  ],
+  "output": "Exemplo didático sintético — não exportado do Minitab.\n\nAbra Estat > Estatísticas básicas > Exibir estatísticas descritivas.\nSelecione as duas primeiras colunas. A coluna Grupo é textual e não deve ser selecionada como variável numérica.\n\nResultados analíticos esperados para a primeira coluna:\nN = 10; média = 5,5; mediana = 5,5; Q1 = 2,75; Q3 = 8,25; amplitude = 9; soma = 55; soma dos quadrados = 385.\nOs valores da segunda coluna são o dobro dos da primeira; sua soma dos quadrados é quatro vezes maior.\n\nEquivalência com Minitab 16 ainda não validada.\n"
+}
