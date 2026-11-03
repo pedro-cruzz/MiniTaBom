@@ -80,6 +80,9 @@ class InferenceDialog(tk.Toplevel):
         self.alternative.grid(row=1, column=1, sticky='w')
         self.equal_var = tk.BooleanVar(self, value=False)
         self.legacy_df = tk.BooleanVar(self, value=True)
+        self.store = tk.BooleanVar(self,value=False)
+        if mode=='paired':
+            ttk.Checkbutton(options,text='Armazenar diferenças na planilha (dados em colunas)',variable=self.store).grid(row=3,column=0,columnspan=2,sticky='w',pady=10)
         if mode == 'two':
             ttk.Separator(options).grid(row=2, column=0, columnspan=2, sticky='ew', pady=12)
             ttk.Checkbutton(options, text='Assumir variâncias iguais', variable=self.equal_var).grid(row=3, column=0, columnspan=2, sticky='w', pady=4)
@@ -97,6 +100,8 @@ class InferenceDialog(tk.Toplevel):
 
     def toggle_source(self):
         summary = self.source.current() == 1
+        if summary and hasattr(self,'store'):
+            self.store.set(False)
         self.column_frame.grid_remove() if summary else self.column_frame.grid()
         self.summary_frame.grid() if summary else self.summary_frame.grid_remove()
         if self.mode == 'two':
@@ -135,5 +140,5 @@ class InferenceDialog(tk.Toplevel):
                 null=null, confidence=confidence,
                 alternative=('two-sided', 'less', 'greater')[self.alternative.current()],
                 equal_var=self.equal_var.get(), legacy_df=self.legacy_df.get(),
-                perform_test=self.perform_test.get()):
+                perform_test=self.perform_test.get(),store=self.store.get()):
             self.destroy()

@@ -49,11 +49,13 @@ def prepare_groups(headers, rows, columns=None, response=None, factor=None):
     return groups, excluded
 
 
-def one_way(groups, equal_var=True, confidence=95, comparisons=False):
+def one_way(groups, equal_var=True, confidence=95, comparisons=False, comparison_method='tukey'):
     if not math.isfinite(confidence) or not 0 < confidence < 100:
         raise ValueError('O nível de confiança deve estar entre 0 e 100, sem os extremos.')
     if len(groups) < 2:
         raise ValueError('São necessários pelo menos dois grupos.')
+    if comparison_method not in ('tukey','lsd') or (comparisons and comparison_method=='lsd' and not equal_var):
+        raise ValueError('Fisher LSD requer o modelo com variâncias iguais.')
     try:
         summaries = [dict(summarize(g['values']), label=g['label']) for g in groups]
         k = len(groups)
@@ -98,7 +100,16 @@ def one_way(groups, equal_var=True, confidence=95, comparisons=False):
             if not all(math.isfinite(group[key]) for key in ('low', 'high')):
                 raise ValueError('Não foi possível calcular os intervalos com este nível de confiança.')
         pairs = []
-        if comparisons:
+        if comparisons and comparison_method=='lsd':
+            critical=float(stats.t.isf((1-confidence/100)/2,df_error))
+            for i in range(k):
+                for j in range(i+1,k):
+                    difference=summaries[i]['mean']-summaries[j]['mean']
+                    se=math.sqrt(mse*(1/summaries[i]['n']+1/summaries[j]['n']))
+                    pairs.append(dict(first=groups[i]['label'],second=groups[j]['label'],difference=difference,
+                                      p=float(2*stats.t.sf(abs(difference/se),df_error)),
+                                      low=difference-critical*se,high=difference+critical*se))
+        elif comparisons:
             comparison = stats.tukey_hsd(*(g['values'] for g in groups), equal_var=equal_var)
             intervals = comparison.confidence_interval(confidence / 100)
             for i in range(k):
@@ -117,7 +128,7 @@ def one_way(groups, equal_var=True, confidence=95, comparisons=False):
                 s=math.sqrt(mse) if equal_var else None,
                 r_squared=(between / total) * 100 if equal_var else None,
                 confidence=confidence, comparisons=pairs,
-                comparison_method='Tukey-Kramer' if equal_var else 'Games-Howell')
+                comparison_method='Fisher LSD (individual, sem ajuste)' if comparison_method=='lsd' and equal_var else 'Tukey-Kramer' if equal_var else 'Games-Howell')
 
 
 def format_anova_report(result, excluded=0):
@@ -144,9 +155,11 @@ def format_anova_report(result, excluded=0):
     lines += ['', 'Grupos: ' + ' | '.join(g['label'] for g in result['groups']),
               'Os intervalos das médias são individuais, não simultâneos.']
     if result['comparisons']:
+        lsd=result['comparison_method'].startswith('Fisher')
         lines += ['', f"Comparações múltiplas: {result['comparison_method']}",
-                  f"Confiança familiar: {result['confidence']:g}%. Diferença = primeiro grupo − segundo grupo."]
+                  f"Confiança {'individual' if lsd else 'familiar'}: {result['confidence']:g}%. Diferença = primeiro grupo − segundo grupo."]
+        if lsd:lines.append('Fisher LSD: não controla a taxa de erro familiar; intervalos e valores-p sem ajuste.')
         for pair in result['comparisons']:
             lines += [f"{pair['first']} − {pair['second']}: diferença = {number(pair['difference'])}; "
-                      f"IC = ({number(pair['low'])}; {number(pair['high'])}); p ajustado {probability(pair['p'])}"]
+                      f"IC = ({number(pair['low'])}; {number(pair['high'])}); p {'sem ajuste' if lsd else 'ajustado'} {probability(pair['p'])}"]
     return '\n'.join(lines) + '\n'

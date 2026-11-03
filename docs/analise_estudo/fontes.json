@@ -1,0 +1,46 @@
+{
+  "xlsx": {
+    "path": "C:\\Users\\pedro\\Downloads\\exercícios sistemas 2b.xlsx",
+    "sheets": [
+      {
+        "sheet": "Plan1",
+        "rows": 96,
+        "columns": 15,
+        "populated": 380
+      }
+    ],
+    "media": []
+  },
+  "pdf": {
+    "path": "C:\\Users\\pedro\\Downloads\\material de estatística 1 (1).pdf",
+    "pages": 22,
+    "characters": [
+      2086,
+      202,
+      1792,
+      1552,
+      1050,
+      905,
+      946,
+      1272,
+      1321,
+      1382,
+      764,
+      1244,
+      1552,
+      647,
+      1635,
+      1446,
+      1760,
+      662,
+      235,
+      1108,
+      1890,
+      401
+    ]
+  },
+  "sha256": {
+    "C:\\Users\\pedro\\Downloads\\exercícios sistemas 2b.xlsx": "ca935cf9533d8814839e1609b3c7ef28501c604322ea5057590a56608bdb6ad9",
+    "C:\\Users\\pedro\\Downloads\\material de estatística 1 (1).pdf": "b5ca36913cd87be4b273a41516d89cf68f5221768491cc946e59a948876fc292"
+  }
+}

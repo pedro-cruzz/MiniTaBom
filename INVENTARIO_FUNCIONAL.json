@@ -92,10 +92,11 @@
       "existente": [
         "CSV UTF-8",
         "Projeto próprio .statlab",
-        "Exportação de sessão em texto"
+        "Exportação de sessão em texto",
+        "Importação .xlsx por aba e intervalo, cabeçalhos opcionais e prévia; valores/caches de fórmulas, sem executar macros ou links"
       ],
       "pendente": [
-        "Importação direta Excel",
+        "Demais formatos/opções Excel, formatos de células, datas e metadados completos",
         "MTW e MPJ do 16",
         "Demais formatos suportados na versão alvo",
         "Precisão e metadados dos formatos",
@@ -106,10 +107,12 @@
     },
     {
       "id": "calculo",
-      "estado": "pendente",
-      "existente": [],
+      "estado": "parcial_sem_validacao_16",
+      "existente": [
+        "Calculadora de colunas com C1/C2, aritmética e abs/sqrt/log/log10/exp/round por AST permitido; ausentes e desfazer"
+      ],
       "pendente": [
-        "Calculadora de colunas",
+        "Demais funções e opções da calculadora do 16",
         "Fórmulas e recálculo",
         "Transformações matemáticas",
         "Funções de texto e data",
@@ -137,7 +140,10 @@
         "Assimetria ajustada e curtose de excesso corrigida",
         "MSSD com fator 1/2 e sequência de valores válidos",
         "Descritivas por uma ou mais variáveis de grupo",
-        "Exclusão independente por resposta, grupos ausentes opcionais e combinações vazias opcionais"
+        "Exclusão independente por resposta, grupos ausentes opcionais e combinações vazias opcionais",
+        "Desvio e variância populacionais",
+        "Percentis e decis de observações: exclusivo, inclusivo e extremos limitados",
+        "Tabela separada com frequências absolutas/relativas/acumuladas por classes ou categorias e contagens opcionais"
       ],
       "pendente": [
         "Percentuais e contagens acumuladas",
@@ -159,14 +165,18 @@
         "Redimensionamento e escalas",
         "Dispersão independente X/Y e séries na ordem original da planilha, com grupos opcionais",
         "Conexões com política de lacunas, escalas logarítmicas e títulos personalizados em dispersão/séries",
-        "Exportação SVG e detalhes dos pontos em dispersão/séries"
+        "Exportação SVG e detalhes dos pontos em dispersão/séries",
+        "Histograma por classes com regra de precisão do material",
+        "Barras, Pareto com percentual acumulado e setores; contagens opcionais",
+        "Gráfico de probabilidade normal com resultado do método escolhido",
+        "Boxplots distinguem outliers suaves (1,5 IQR) e extremos (3 IQR)"
       ],
       "pendente": [
         "Matriz de dispersão, várias respostas e demais opções de dispersão",
         "Gráficos de valores individuais",
-        "Probabilidade e distribuição",
+        "Demais distribuições e opções dos gráficos de probabilidade",
         "Séries com calendário, frequência, várias respostas e demais opções",
-        "Barras, setores e pontos",
+        "Gráficos de pontos e demais opções de barras/setores",
         "Demais gráficos com grupos e painéis",
         "Contornos e superfícies",
         "Edição de eixos, títulos e elementos",
@@ -216,7 +226,11 @@
         "Normalidade Anderson-Darling com parâmetros estimados, correção de N e valor-p aproximado; ainda sem gráfico",
         "Testes t de uma e duas amostras com N/média/desvio padrão resumidos",
         "Teste t pareado por resumo das diferenças, sem reconstrução de observações",
-        "Duas amostras t em resposta/grupo, exclusão por grupo e ordem de primeira aparição explícitas"
+        "Duas amostras t em resposta/grupo, exclusão por grupo e ordem de primeira aparição explícitas",
+        "Normalidade: Anderson–Darling, Ryan–Joiner, KS normal estimada, Shapiro–Wilk e D’Agostino–Pearson, com limites explícitos",
+        "Igualdade de variâncias de vários grupos: Levene mediana/média e Bartlett",
+        "Armazenar diferenças do t pareado preservando linhas ausentes",
+        "Diagnóstico bivariado complementar de Mardia com correção de assimetria para N<20; sem equivalência de comando do 16 presumida"
       ],
       "pendente": [
         "Testes t: entradas sumarizadas e amostras empilhadas",
@@ -242,13 +256,14 @@
         "Entradas em colunas separadas ou resposta/fator",
         "Intervalos individuais das médias",
         "Comparações Tukey-Kramer e Games-Howell com p ajustado e IC simultâneo",
-        "Boxplots comparativos anexos opcionais"
+        "Boxplots comparativos anexos opcionais",
+        "Fisher LSD com IC individual e valores-p sem ajuste, no modelo de variâncias iguais"
       ],
       "pendente": [
         "Demais opções de um fator da versão 16",
         "Dois fatores e modelos gerais",
         "Efeitos fixos, aleatórios e aninhados",
-        "Fisher, Dunnett, Hsu e letras de agrupamento",
+        "Dunnett, Hsu e letras de agrupamento",
         "Resíduos e diagnósticos",
         "Armazenamento de resultados",
         "GL/ajustes e balanceamento dos demais modelos",
@@ -268,7 +283,8 @@
         "Gráficos de ajuste, resíduos por ajustado, Q-Q normal e resíduos por ordem",
         "Exclusão por linha completa e numeração original das observações",
         "Previsão em novos casos digitados ou colunas, EP da média e IC/IP individuais bilaterais ou unilaterais",
-        "Sinalização de valores fora da faixa do ajuste e invalidação do modelo ao alterar dados"
+        "Sinalização de valores fora da faixa do ajuste e invalidação do modelo ao alterar dados",
+        "Armazenar ajustados, resíduos, resíduos padronizados, alavancagem e Cook em novas colunas, preservando as linhas originais"
       ],
       "pendente": [
         "Seleção de variáveis",
@@ -378,12 +394,17 @@
     },
     {
       "id": "nao_parametricos",
-      "estado": "pendente",
-      "existente": [],
+      "estado": "parcial_sem_validacao_16",
+      "existente": [
+        "Mann–Whitney independente, grupos em colunas ou empilhados, alternativas bilateral/unilaterais",
+        "Wilcoxon pareado com exclusão por par, zeros Wilcox/Pratt/zsplit e diferenças decimais",
+        "Kruskal–Wallis com correção de empates e aproximação qui-quadrado",
+        "Probabilidades exatas sem empates em casos limitados ou aproximação explícita com correção opcional"
+      ],
       "pendente": [
-        "Sinais e Wilcoxon",
-        "Mann-Whitney",
-        "Kruskal-Wallis",
+        "Sinais e demais opções/intervalos de Wilcoxon",
+        "Demais opções e intervalos de Mann–Whitney conforme o 16",
+        "Demais opções e pós-testes de Kruskal–Wallis conforme o 16",
         "Friedman",
         "Corridas",
         "Demais testes e métodos de postos",
@@ -397,7 +418,8 @@
         "Contingência por categorias com frequência opcional ou matriz de contagens com rótulos",
         "Pearson e razão de verossimilhanças, sem Yates; valores-p assintóticos omitidos quando alguma esperada é menor que 1",
         "Esperadas, resíduos brutos/padronizados/ajustados, contribuições e percentuais",
-        "Fisher bilateral 2x2 por ordenação de probabilidade, até 1.000.000 observações; limites de dimensões e total explícitos"
+        "Fisher bilateral 2x2 por ordenação de probabilidade, até 1.000.000 observações; limites de dimensões e total explícitos",
+        "Frequências por classes/categorias com Fr, %, Fa e Fa%, contagens opcionais e ordenação"
       ],
       "pendente": [
         "Tabulações gerais, tabelas estratificadas e demais formatos de entrada",
@@ -446,7 +468,10 @@
       "estado": "parcial",
       "existente": [
         "Inicializador Python",
-        "Testes analíticos e de interface"
+        "Testes analíticos e de interface",
+        "Pacote portátil Windows x64 com exemplos, licenças e verificação do executável",
+        "Verificação manual de Releases do GitHub, versão e repositório configurados",
+        "Fluxos da lista Excel executados na interface Tk oculta nos nove conjuntos"
       ],
       "pendente": [
         "Instalador independente",
@@ -462,6 +487,13 @@
     "data": "2026-11-03",
     "decisao": "Cobertura de todos os recursos do Minitab 16 tem prioridade sobre expansões exclusivas da versão 22.",
     "fila": "docs/analise_instalacao/cobertura_minitab16.json",
-    "exercicios": "Quando recebidos, associar cada questão aos métodos, menus e opções do 16 e à implementação disponível no MiniTaBom; não presumir o conteúdo da prova."
+    "exercicios": "Quando recebidos, associar cada questão aos métodos, menus e opções do 16 e à implementação disponível no MiniTaBom; não presumir o conteúdo da prova.",
+    "ordem": [
+      "Concluir e verificar os procedimentos dos materiais da faculdade",
+      "Funções, opções e usabilidade do Minitab 16.2.4.0",
+      "Recursos exclusivos do Minitab 22 no futuro"
+    ],
+    "materiais": "docs/analise_estudo/verificacao_novos_fluxos.json",
+    "continuacao": "Usuário autorizou continuidade sem novo pedido por bloco. A tentativa de agendamento foi bloqueada pela política de aprovação da ferramenta nesta sessão."
   }
 }

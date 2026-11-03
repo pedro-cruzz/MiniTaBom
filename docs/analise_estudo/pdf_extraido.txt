@@ -1,0 +1,871 @@
+=== PÁGINA 1 ===
+Conceitos Básicos 
+População: É o conjunto de todos os objetos ou  pessoas que possuem uma 
+mesma característica. 
+Amostra: É uma parte da população que mantém sua característica. Ex: Em um estudo sobre o 
+infarto pelo menos 80% da amostra deve ser acima de 40 anos de idade. 
+Parâmetro: São dados obtidos da população, tendo 100% de confiança. 
+Estatística: São dados obtidos de uma amostra,  trabalhando normalmente com 95% ou 99% 
+de confiança. 
+Natureza Básica: O estudo é utilizado para obtenção de um conceito sobre o tema. 
+Natureza Aplicada: O estudo utiliza os resultados para uma aplicação prática. 
+Dados primários: dados obtidos direto da fonte 
+Dados secundários: dados obtidos de forma indireta. 
+ 
+Tipos de dados 
+Quantitativa: Os dados obtidos são de forma numérica. Podendo ser contínua ou discreta. 
+Ex (contínua): Peso, Altura, Creatinina 
+Ex (discreta): Qtd de pessoas, Idade 
+ 
+Qualitativa: Os dados obtidos são de forma não numérica. Podendo ser nominal ou ordinal. 
+Ex (Nominal): Tipo de doença, atividade física, etc 
+Ex (Ordinal): Estágio da doença, Classificação e questionário (ruim, regular, bom, ótimo) 
+ 
+Tipo de Abordagem 
+Quantitativa: É trabalhado um teste estatístico,  pode ser em variáveis qualitativas 
+ou quantitativas.  
+Qualitativa: Normalmente é expresso um parecer, uma opinião ou discussão sobre o assunto. 
+ 
+Tipos de Estudo 
+OBSERVACIONAL: Apenas anota -se o s dados, sem que haja uma influência direta sobre o 
+mesmo. 
+Ex. Estudo sobre a altura, Idade 
+ 
+EXPERIMENTO: É aplicado um tratamento sobre o paciente e depois analisado o efeito.  
+Ex: Aferir a pressão sistólica depois de uma caminhada. 
+ 
+Tipo de estudo em relação ao tempo 
+Restrospectivo: Dados são coletados do passado. 
+Ex: Estudo da evolução do sedentarismo nos últimos 10 anos. 
+Trasversal: São os dados obtidos no presente. 
+Ex: Estudo de um novo tratamento na pesquisa. 
+Prospectivo: Avaliação de um evento futuro (desfecho). Ou projeção futura. 
+Ex: Acompanhamento do resultado de uma nova vacina depois de 5 anos. 
+Longitudinal: Análise dos dados ao longo do tempo 
+ 
+ 
+
+=== PÁGINA 2 ===
+Tipos de amostras 
+ 
+ 
+A amostra estratificada pode ser mostrada  de forma proporcional a população com intuito de 
+caracterizá-la ou não quando o objetivo for apenas comparativo entre grupos. 
+ 
+ 
+ 
+ 
+
+
+=== PÁGINA 3 ===
+ 
+A amostra sistemática possui vantagens em linha de produção por exemplo, onde pretende -se 
+verificar a qualidade de um lote de produtos como um todo. 
+ 
+Amostra de conveniência:  Utilizada como pré -teste, não há sorteio,  pega-se o que está mais 
+fácil. Serve para verificar se um questionário  está claro por exemplo, ou se o mesmo dará um 
+retorno esperado. 
+ 
+Amostragem por quotas: É utilizada utilizando critérios para separação, como faixa etária, sexo, 
+faixa salarial, não havendo a necessidade de sorteio, onde o intuito é caracterizar a população. 
+ 
+Amostragem por Julgamento:  Não existe sorteio, é escolhido aquele  que parece ser melhor 
+para a pesquisa. Por exemplo: quando um policial escolhe qual carro parar visando verificação 
+de documentos de forma não aleatória. 
+ 
+Tabela de Frequência 
+A tabela de frequência é utilizada para mostrar um resumo de dados de forma a poder se 
+desenvolver uma análise de forma mais clara. 
+Segue alguns exemplos de tabela de dados quantitativos, onde cada intervalo é denominado 
+classe de frequência. 
+Idade (anos) Frequência 
+20 – 39 200 
+40 – 49 350 
+50 – 59 400 
+60 – 69 250 
+Neste padrão de tabela simplificada mostrada acima lê-se por exemplo: possui 200 pessoas com 
+idades de 20 a 39 anos. 
+Ainda existe a possibilidade de outros formatos de tabela, onde são inseridos símbolos como |– 
+ou –|, ou |–| ou – adotados em alguns casos como mostrado nas tabelas abaixo.   
+Idade (anos) Frequência 
+20 |– 40 200 
+40 |– 50 350 
+50 |– 60 400 
+60 |– 70 250 
+  
+Onde para este tipo de situação adotada em alguns livros considera de maneira diferente, onde 
+com “tracinho” entra o valor e em não entra, lendo-se na primeira tabela a esquerda da forma, 
+Idade (anos) Frequência 
+20 |–| 39 200 
+40 |–| 49 350 
+50 |–| 59 400 
+60 |–| 69 250 
+
+=== PÁGINA 4 ===
+200 pessoas possuem idades de 20 até abaixo de 40 anos, podendo ser usado este formato em 
+dados contínuos. 
+E para tabelas de dados qualitativos têm -se de forma mais simplificada as classes (nomes) e 
+frequências, preferencialmente colocando a maior frequência primeiro. Segue o exemplo a 
+seguir: 
+Estados Frequência 
+São Paulo 1800 
+Minas Gerais 1500 
+Rio de Janeiro 1100 
+Santa Catarina 850 
+ 
+Montagem da Tabela de Frequência 
+Obtêm primeiramente o passo da tabela obtido pela fórmula: 
+𝑃𝑎𝑠𝑠𝑜 = 𝑀𝑎𝑖𝑜𝑟 𝑣𝑎𝑙𝑜𝑟− 𝑀𝑒𝑛𝑜𝑟 𝑉𝑎𝑙𝑜𝑟
+𝑞𝑡𝑑 𝑑𝑒 𝑐𝑙𝑎𝑠𝑠𝑒𝑠 𝑒𝑠𝑝𝑒𝑟𝑎𝑑𝑎  
+Depois de obtido o passo, analisa da seguinte maneira: 
+• Passo exato: acrescenta uma classe (Passo exato significa que se os números analisados 
+são inteiros, o passo é exato se ele for inteiro, e se os números analisados possuem uma 
+casa decimal, o passo exato possui uma casa decimal) 
+• Passo não exato: deve arredondar para cimas baseado na quantidade de casas decimais 
+dos números originais.  
+Por exemplo: 
+Altura (m): 1,55; 1,56; 1,58; 1,59; 1,60; 1,61; 1,62; 1,64; 1,67; 1,68; 1,71; 1,74; 1,78; 1,80; 
+1,82; 1,83; 1,84  
+Considerando 4 classes temos: 
+Passo = (1,84 – 1,55)/4 = 0,0725 arredondando deve considerar 0,08 (altura possui duas classes 
+decimais), e não se acrescenta mais nenhuma classe.  Na montagem pega o menor valor e soma-
+se 0,08 em 0,08 para cada começo de classe, e na frequência basta cont ar a quantidade de 
+pessoas ou objetos que está em cada intervalo, ficando da forma: 
+Altura (m) Frequência 
+1,55 – 1,62 7 
+1,63 – 1,70 3 
+1,71 – 1,78 3 
+1,79 – 1,86 4 
+ 
+ 
+ 
+ 
+ 
+
+=== PÁGINA 5 ===
+Frequência relativa (Fr) 
+É utilizada para verificar o peso de cada classe em relação ao total de dados obtidos. Pode ser 
+trabalhada também na forma percentual de dados. Para obtenção da frequência relativa deve 
+ser feito: 
+𝐹𝑟 = 𝐹𝑟𝑒𝑞𝑢ê𝑛𝑐𝑖𝑎 𝑑𝑎 𝑐𝑙𝑎𝑠𝑠𝑒
+𝑆𝑜𝑚𝑎 𝑑𝑎𝑠 𝐹𝑟𝑒𝑞𝑢ê𝑛𝑐𝑖𝑎𝑠 
+Ou  
+𝐹𝑟 = 𝐹𝑟𝑒𝑞𝑢ê𝑛𝑐𝑖𝑎 𝑑𝑎 𝑐𝑙𝑎𝑠𝑠𝑒
+𝑆𝑜𝑚𝑎 𝑑𝑎𝑠 𝐹𝑟𝑒𝑞𝑢ê𝑛𝑐𝑖𝑎𝑠∗ 100 (%) 
+ 
+Exemplo: 
+Idade (anos) Frequência Fr Fr (%) 
+20 – 39 200 0,167 16,7% 
+40 – 49 350 0,292 29,2% 
+50 – 59 400 0,333 33,3% 
+60 – 69 250 0,208 20,8% 
+Total 1200 1 100% 
+ 
+Frequência Acumulada (Fa) 
+É utilizada para se analizar a frequência acumulada, considerando a classe atual com a 
+frequência acumulada das classes anteriores.  Pode-se caso queira trabalhar também o 
+percentual acumulado, considerando a análise em cima da porcentagem e não na frequência. 
+Exemplo: 
+Idade (anos) Frequência Fa 
+20 – 39 200 200 
+40 – 49 350 550 
+50 – 59 400 950 
+60 – 69 250 1200 
+Total 1200  
+ 
+Por Exemplo se considerarmos a terceira classe, pode -se dizer “950 pessoas possuem idade 
+entre 20 e 59 anos de idade”. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PÁGINA 6 ===
+Gráficos 
+Histograma 
+Utilizado para mostrar a distribuição dos dados amostrais. A forma de  “sino” representa uma 
+distribuição normal. 
+ 
+ 
+Para cálculo do eixo y utiliza-se a fórmula para o passo: 
+𝑃𝑎𝑠𝑠𝑜 =
+𝑀𝑎𝑖𝑜𝑟 𝐹𝑟𝑒𝑞𝑢ê𝑛𝑐𝑖𝑎
+𝐿   onde  L = 3*nc/4 tal que nc é o número de classes. 
+ 
+Diagrama de Pareto 
+Utilizado para mostrar priorização de dados qualitativos. Pode ser feito o comparativo por pares. 
+O cálculo do eixo y é idêntico ao histograma . É um gráfico em forma de colunas de forma 
+obrigatoriamente decrescente na sua representação como mostrado no exemplo a seguir. 
+ 
+Gráfico de setores 
+Utilizado para desenvolver o comparativo de cada classe em relação ao todo. Também chamado 
+de gráfico de pizza. Deve ser utilizado em ordem decrescente. 
+0
+10
+20
+30
+40
+10 - 19 20 - 29 30 - 39 40 - 49 50 - 59
+Idade
+0
+88
+176
+264
+352
+Febre sudorese Tosse seca dor muscular Sonolência
+Sintomas de uma doença
+
+=== PÁGINA 7 ===
+ 
+ 
+Medidas de Tendência Central 
+São medidas utilizadas para referenciar um conjunto de dados a partir de um valor pontual. 
+Média Aritmética 
+É dada pela soma de todos valores dividido pela quantidade, onde possui como vantagem a 
+utilização de todos como referência e desvantagem ser sensível a valores extremos. 
+Fórmula 
+𝑥̅ =
+∑ 𝑥
+𝑛  
+𝑥̅ = média 
+∑ 𝑥 = somatório dos valores. 
+n – Quantidade de valores. 
+Exemplo: Desenvolva o cálculo da média aritmética dos dados 
+a) 10, 12, 15, 16, 25, 26, 32 
+Média = (10 + 12 + 15 + 16 + 25 + 26 + 32)/7 = 19,43 
+ 
+b) 10, 12, 15, 16, 25, 26, 82 
+Média = (10 + 12 + 15 + 16 + 25 + 26 + 82)/7 = 26,57 
+ 
+OBS: Verifique que a mudança de um único número faz com que a média seja elevada 
+de forma muito grande, principalmente quando possui poucos números, sendo que este 
+efeito em vários números é bastante reduzido. 
+ 
+Mediana 
+Sonolência
+10%
+dor muscular
+12%
+Tosse seca
+19%
+sudorese
+22%
+Febre
+37%
+Sintomas
+
+=== PÁGINA 8 ===
+É o valor que se encontra exatamente no centro do conjunto de dados. Vantagem: não é sensível 
+a valores extremos, e desvantagem: usa como referência um único número. OBS: De forma 
+manual é necessário colocar os valores em ordem crescente. 
+Fórmula Auxiliar. 
+𝑉𝑐 = 𝑛 + 1
+2  
+Onde: 
+Vc = Posição da mediana. 
+OBS: Se a posição for valor inteiro, apenas “pega -se” o número da posição específica. E se a 
+posição Vc for valor “quebrado” pega-se os dois valores mais próximos e tira a média. 
+ 
+ 
+ 
+Exemplo 
+a) 12, 15, 17, 19, 21, 25, 38 
+Vc= (7+1)/2 = 4º número, ou seja, a mediana vale 19. 
+ 
+b) 23, 25, 38, 56, 58, 67 
+Vc = (6+1)/2 = 3,5 sendo assim a mediana vale Me = (38+56)/2 = 46 
+ 
+Moda 
+É utilizada para determinação de padrões biológicos principalmente. Sendo obtida pelo valor de 
+maior frequência no conjunto de dados, podendo ser: amodal (sem moda), modal (uma única 
+moda), Bimodal (duas modas) ou polimodal (3 ou mais modas). 
+A moda pode ser classificada como amodal (sem moda), modal (1 moda), bimodal (2 modas) ou 
+polimodal (3 ou mais modas). 
+Exemplo: 12, 16, 18, 19, 25, 26, 24, 28, 39 
+Mo =  não existe 
+Exemplo 2: 9, 10, 11, 12, 12, 12, 13, 14, 14, 17 
+Mo = 12 
+ Exemplo 3: 23, 25, 26, 26, 27, 28, 28, 29, 30, 32 
+Mo = 26 e 28 
+ 
+MEDIDAS DE VARIAÇÃO 
+
+=== PÁGINA 9 ===
+Desvio Padrão 
+É utilizado para verificar a variação média dos valores em relação a sua medida de tendência 
+central, que neste caso, utilizando a média aritmética. 
+Fórmula: 
+𝑠 = √∑(𝑥−𝑥̅)2
+𝑛−1   (desvio padrão amostral) 
+𝑠 = √
+𝑛.∑ 𝑥2−(∑ 𝑥)2
+𝑛.(𝑛−1)   (desvio padrão amostral simplificado) 
+𝜎 = √∑(𝑥−𝜇)2
+𝑛   (desvio padrão populacional) 
+ 
+ 
+ 
+Variância 
+É o quadrado do desvio padrão indicado por 2 ou s2. 
+Coeficiente de Variação (C.V.) 
+É a relação entre o desvio padrão e a média aritmética, dado por: 
+𝐶. 𝑉. = 𝑠
+𝑥̅ ∗ 100 (%) 
+Quartil, Decil e Percentil 
+São valores utilizados para separar um grupo de dados em partes iguais, onde: 
+Quartil: divide um grupo de dados em 4 partes iguais, tendo Q1(25%), Q2(50%) e Q3(75%). 
+Decil: divide um grupo em 10 partes iguais, tendo D1(10%), D2(20%),...,D9(90%). 
+Percentil: divide um grupo em 100 partes iguais, tendo P1(1%), P2(2%),...,P99(99%). 
+Fórmula: 
+L = Xi + y.(Xi+1 – Xi) 
+z=(n+1).k/100 (exclusive) 
+Onde: n = Qtd de valores. K = porcentagem. i = parte inteira de z, e y = é a parte decimal de z. Xi 
+é a posição do valor dos dados em ordem crescente. 
+Diagrama de Caixa 
+É um gráfico que serve para mostrar a simetria dos dados, assim como valores de possíveis 
+outliers (suaves e extremos) no conjunto de dados. 
+Fórmulas. 
+D = Q3 – Q1 (intervalo interquartílico) 
+
+=== PÁGINA 10 ===
+ 
+Q1 – 3.D                  Q1 – 1,5.D                                                  Q3 + 1,5D         Q3 + 3.D 
+out    out suave                                       int. comum                          out. Suave    out. Extremo 
+ext 
+ 
+                                                             Q1          Q2           Q3 
+ 
+Correlação (Pearson) e Regressão 
+ 
+É um teste utilizado para verificar se duas variáveis independentes possuem 
+relação significativa entre si. Sendo um teste paramétrico que utiliza dos 
+seguintes pré-requisitos. 
+1) Amostra aleatória simples. 
+2) Dados pareados (x, y) 
+3) Normalidade bivariada 
+4) Os valores outliers. 
+5) Verificação de homogeneidade dos dados. 
+ 
+Análise 
+Pode ser feita de duas maneiras: por tabela ou por valor p. 
+Tabela 
+rcalculado < rtabela (α = 0,05) = não possui correlação significativa entre as variáveis. 
+rcalculado ≥ rtabela (α = 0,05) = possui correlação significativa entre as variáveis com 
+95% de confiabilidade. 
+rcalculado ≥ rtabela (α = 0,01) = possui correlação significativa entre as variáveis com 
+99% de confiabilidade. 
+Valor p 
+p > 0,05 = não possui correlação significativa entre as variáveis. 
+p ≤ 0,05 = possui correlação significativa entre as variáveis com 95% de 
+confiabilidade. 
+p ≤ 0,01 = possui correlação significativa entre as variáveis com 99% de 
+confiabilidade. 
+Fórmula de correlação 
+
+=== PÁGINA 11 ===
+𝑟 = 𝑛. ∑ 𝑥. 𝑦 − ∑ 𝑥 . ∑ 𝑦
+√𝑛. ∑ 𝑥 − (∑ 𝑥)2. √𝑛. ∑ 𝑦 − (∑ 𝑦)2
+ 
+Onde 
+n é a quantidade amostral 
+∑ 𝑥 é a somatório dos valores da variável independente. 
+∑ 𝑦 é a somatório dos valores da variável dependente. 
+∑ 𝑥. 𝑦 é a somatória do produto entre as variáveis x e y. 
+ 
+Regressão 
+É a função de reta e observa os pontos médios traçando um valor estimado de 
+resposta. 
+A equação é dada por: 
+Y = ax + b 
+𝑎 =  
+𝑛.∑ 𝑥.𝑦−∑ 𝑥.∑ 𝑦
+𝑛.∑ 𝑥−(∑ 𝑥)2   
+𝑏 =
+∑ 𝑦
+𝑛 − 𝑎.
+∑ 𝑥
+𝑛   
+ 
+Graficamente e Análise 
+Graficamente teremos as seguintes situações. 
+ 
+Neste caso existe uma correlação positiva perfeita. Valor r = 1 e p < 0,0001 
+Em análise ficaria : Existe uma correlação significativa entre a variável 
+independente e a variável dependente com 99% de confiabilidade, onde a 
+
+
+=== PÁGINA 12 ===
+medida que aumenta os valores da variável independente, aumenta a medida da 
+variável dependente. Outros fatores não influenciam a variável dependente. 
+Pode-se afirmar também que a variação da variável independente explica em 
+100% a variação da variável dependente. 
+Análise de regressão : A cada unidade que aumenta na variável independente, 
+espera-se um aumento de uma unidade na variável dependente. E se a variável 
+independente fosse zero, estima-se um valor de 2 para variável dependente. 
+  
+Neste caso existe uma correlação positiva. Valor r = 0,964 Valor p ≤ 0,01   
+Em análise ficaria: Existe uma correlação significativa entre a variável 
+independente e a variável dependente com 99% de confiabilidade, onde a  
+medida que aumenta os valores da variável independente, aumenta a medida da 
+variável dependente. Outros fatores influenciam a variável dependente. Pode-se 
+afirmar também que a variação da variável independente explica em 93,01% a 
+variação da variável dependente. 
+Análise de regressão : A cada unidade que aumenta na variável independente, 
+espera-se um aumento de 0,9371 unidades na variável dependente. E se a 
+variável independente fosse zero, estima -se um valor de 2,4091 para variável 
+dependente. 
+ 
+ 
+ 
+ 
+ 
+
+
+=== PÁGINA 13 ===
+ 
+Neste caso existe uma correlação negativa perfeita. Valor r = -1 Valor p ≤ 0,0001   
+Em análise ficaria: Existe uma correlação significativa entre a variável 
+independente e a variável dependente com 99% de confiabilidade, onde a 
+medida que aumenta os valores da variável independente, diminui a medida da 
+variável dependente. Outros fatores não influenciam a variável dependente. 
+Pode-se afirmar também que a variação da variável independente explica em 
+100% a variação da variável dependente. 
+Análise de regressão : A cada unidade que aumenta na variável independente, 
+espera-se uma redução de 1 unidade na variável dependente. E se a variável 
+independente fosse zero, estima-se um valor de 15 para variável dependente. 
+ 
+Teste de Normalidade 
+É um teste utilizado para verificar se uma amostra dada prov ém de uma população com 
+distribuição normal. Onde para esta verificação pode ser aplicado vários testes, onde podemos 
+destacar dois tipos. 
+- Teste de Anderson Darlin: Usado para amostras com 10 ou mais valores. 
+-Teste de Ryan Joiner (equivalente ao Shapiro Wilk): Usado para amostras com 4 < n < 51. 
+- Teste de D’Agostino – pode ser usado para amostras com mais de 10 valores.  
+Precisão de teste 
+Ryan Joiner ou Shapiro Wilk – é melhor em amostras pequenas (5 a 50) 
+D’Agostino Pearson – é melhor para amostras grandes (em torno de 100) 
+Anderson Darlin – tem uma boa confiança em torno de 50. 
+ 
+ 
+y = -x + 15
+R² = 1
+0
+2
+4
+6
+8
+10
+12
+14
+16
+0 2 4 6 8 10 12 14
+Variável Dependente
+Variável independente
+Correlação negativa perfeita
+
+=== PÁGINA 14 ===
+A análise é da forma: 
+p > 0,05 – A amostra provêm de uma população com distribuição normal. 
+p ≤ 0,05 – A amostra não provêm de uma população com distribuição normal. 
+ 
+3530252015
+99
+95
+90
+80
+70
+60
+50
+40
+30
+20
+10
+5
+1
+Idade
+Percent
+Mean 24,71
+StDev 4,152
+N 7
+RJ 0,973
+P-Value >0,100
+Probability Plot of Idade
+Normal 
+ 
+A amostra de Idade provém de uma população com distribuição normal. 
+ 
+ 
+Possui possível outlier 
+Teste de Variância 
+É um teste utilizado para verificar se duas amostras possuem variâncias iguais. Para isso é 
+utilizado o teste F, que considera o erro amostral para verificar se as variâncias podem ser 
+consideradas iguais. 
+
+
+=== PÁGINA 15 ===
+Análise 
+p > 0,05 – possuem variâncias iguais (homocedasticidade) 
+p ≤ 0,05 – possuem variâncias diferentes (heterocedasticidade). 
+Ratio variances – razão entre as variâncias, ou seja, quanto uma é maior do que outra. 
+Test and CI for Two Variances: Grupo 2; Grupo 1  
+ 
+Method 
+ 
+Null hypothesis         Sigma(Grupo 2) / Sigma(Grupo 1) = 1 
+Alternative hypothesis  Sigma(Grupo 2) / Sigma(Grupo 1) not = 1 
+Significance level      Alpha = 0,05 
+ 
+ 
+Statistics 
+ 
+Variable  N   StDev  Variance 
+Grupo 2   8  12,011   144,268 
+Grupo 1   8   1,996     3,982 
+ 
+Ratio of standard deviations = 6,019 
+Ratio of variances = 36,229 
+ 
+ 
+95% Confidence Intervals 
+ 
+Distribution    CI for StDev     CI for Variance 
+of Data            Ratio              Ratio 
+Normal        (2,693; 13,452)  ( 7,253;  180,959) 
+Continuous    (3,562; 45,079)  (12,686; 2032,081) 
+ 
+ 
+Tests 
+ 
+                                               Test 
+Method                          DF1  DF2  Statistic  P-Value 
+F Test (normal)                   7    7      36,23    0,000 
+ 
+Variâncias significativamente diferentes (heterocedásticas) 
+ 
+Test and CI for Two Variances: Grupo 2; Grupo 1  
+ 
+Method 
+ 
+Null hypothesis         Sigma(Grupo 2) / Sigma(Grupo 1) = 1 
+Alternative hypothesis  Sigma(Grupo 2) / Sigma(Grupo 1) not = 1 
+Significance level      Alpha = 0,05 
+ 
+ 
+Statistics 
+ 
+Variable  N  StDev  Variance 
+Grupo 2   8  3,770    14,214 
+Grupo 1   8  1,996     3,982 
+ 
+Ratio of standard deviations = 1,889 
+Ratio of variances = 3,570 
+ 
+ 
+95% Confidence Intervals 
+ 
+Distribution    CI for StDev        CI for 
+of Data            Ratio        Variance Ratio 
+
+=== PÁGINA 16 ===
+Normal        (0,845;  4,222)  (0,715;  17,829) 
+Continuous    (0,865; 13,199)  (0,749; 174,222) 
+ 
+ 
+Tests 
+ 
+                                               Test 
+Method                          DF1  DF2  Statistic  P-Value 
+F Test (normal)                   7    7       3,57    0,115 
+ 
+ 
+Variâncias iguais (homocedásticas) 
+ 
+Teste t de Student 
+É um teste paramétrico utilizado para comparar a média entre duas 
+populações a partir de suas amostras, considerando o erro amostral gerado 
+por cada amostra. 
+Pré-requisitos. 
+1) Amostra deve ser aleatória. 
+2) Possui normalidade ou n ≥ 30. 
+3) Possui variâncias iguais (para teste t independente) 
+4) Valores de outliers extremos devem ser excluídos e outliers suaves 
+deve-se usar o bom senso. 
+Definições básicas: 
+Amostras independentes: os grupos não possuem relação entre si. 
+Amostras pareadas: os dados devem ser escritos em forma de pares, ou 
+seja, são grupos relacionados entre si. 
+Teste unilateral: quando pretende-se analisar apenas melhora ou piora. 
+Teste bilateral : quando pretende -se verificar se existe diferença entre 
+grupos, como por exemplo, verificar se duas amostras fazem parte de uma 
+mesma população. 
+Análise: 
+p>0,05 – Não possui diferença significativa entre as médias. 
+p≤0,05 – Possui diferença significativa entre as médias com 95% de 
+confiabilidade. 
+p≤0,01 – Possui diferença significativa entre as médias com 99% de 
+confiabilidade. 
+Exemplo de análise: 
+
+=== PÁGINA 17 ===
+Two-Sample T-Test and CI: Sono G1; Sono G2  
+ 
+Two-sample T for Sono G1 vs Sono G2 
+ 
+         N   Mean  StDev  SE Mean 
+Sono G1  6  5,500  0,837     0,34 
+Sono G2  6   7,33   1,21     0,49 
+ 
+ 
+Difference = mu (Sono G1) - mu (Sono G2) 
+Estimate for difference:  -1,833 
+95% CI for difference:  (-3,172; -0,494) 
+T-Test of difference = 0 (vs not =): T -Value = -3,05  P-Value = 0,012/2=0,006  
+DF = 10 
+Both use Pooled StDev = 1,0408 
+ 
+O Grupo 2 possui uma média de sono significativamente maior do que o grupo 
+1 com 99% de confiabilidade.  Onde é esperado uma diferença mínima de 0,5h 
+de sono e máxima de 3,2h de sono entre os grupos com 95% de confiança. 
+ 
+ 
+Teste não paramétrico 
+ 
+É um teste utilizado quando não se verifica os pré -requisitos necessários para 
+os testes a ser utilizado. Como no caso do teste T de Student  quando não é 
+verificado a normalidade dos dados, é necessário aplicar o teste equivalente e 
+não paramétrico como se segue. 
+ 
+Teste t de Student independente  – utiliza o teste de Mann -Whitney para 
+equivalência. 
+ 
+Teste t de Student pareado – utiliza o teste de Wilcoxon para equivalência. 
+ 
+ 
+ 
+ 
+Teste ANOVA (análise de variância) 
+ 
+É um teste paramétrico utilizado para comparar as médias de três grupos ou 
+mais, tendo como pré-requisitos: 
+ 
+1) Amostra aleatória 
+2) Possui normalidade ou n ≥ 30 
+3) Possui variâncias iguais (onde uma variância pode ser até 9 vezes maior 
+do que a outra). 
+4) Se existir outlier extremo, o valor deve ser excluído, o suave usa -se o 
+“bom senso”. 
+ 
+Análise. 
+No caso do ANOVA, utiliza -se o valor p similar ao teste t de Student, onde em 
+alguns casos (ou programas). Usa -se o teste auxiliar  (post hoc ) de Tukey ou 
+teste t (LSD). 
+Considerando o p-value da seguinte forma. 
+ 
+
+=== PÁGINA 18 ===
+p > 0,05 – não possui diferença significativa entre as médias populacionais. 
+p ≤ 0,05 – possui diferença significativa entre as médias populacionais com 95% 
+de confiabilidade. 
+p ≤ 0,01 – possui diferença significativa entre as médias populacionais com 99% 
+de confiabilidade. 
+ 
+Exemplo de teste ANOVA 
+ 
+Planta c/estercoPlanta c/aduboControle
+50
+45
+40
+35
+30
+25
+20
+Data
+Boxplot of Controle; Planta c/adubo; Planta c/esterco
+ 
+Não possui valores fora do padrão 
+3432302826242220
+99
+95
+90
+80
+70
+60
+50
+40
+30
+20
+10
+5
+1
+Controle
+Percent
+Mean 26,42
+StDev 2,712
+N 12
+AD 0,461
+P-Value 0,212
+Probability Plot of Controle
+Normal 
+ 
+Possui normalidade no grupo controle 
+
+=== PÁGINA 19 ===
+ 
+ 
+ 
+ 
+ 
+555045403530
+99
+95
+90
+80
+70
+60
+50
+40
+30
+20
+10
+5
+1
+Planta c/adubo
+Percent
+Mean 42,75
+StDev 5,446
+N 12
+AD 0,353
+P-Value 0,402
+Probability Plot of Planta c/adubo
+Normal 
+ 
+A planta com adubo também possui distribuição normal. 
+ 
+
+=== PÁGINA 20 ===
+55504540353025
+99
+95
+90
+80
+70
+60
+50
+40
+30
+20
+10
+5
+1
+Planta c/esterco
+Percent
+Mean 38
+StDev 5,737
+N 12
+AD 0,531
+P-Value 0,137
+Probability Plot of Planta c/esterco
+Normal 
+ 
+Possui distribuição normal. 
+ 
+ 
+Test and CI for Two Variances: Planta c/esterco; Controle  
+ 
+Method 
+ 
+Null hypothesis         Sigma(Planta c/esterco) / Sigma(Controle) = 1 
+Alternative hypothesis  Sigma(Planta c/esterco) / Sigma(Controle) not = 1 
+Significance level      Alpha = 0,05 
+ 
+ 
+Statistics 
+ 
+Variable           N  StDev  Variance 
+Planta c/esterco  12  5,737    32,909 
+Controle          12  2,712     7,356 
+ 
+Ratio of standard deviations = 2,115 
+Ratio of variances = 4,474 
+ 
+ 
+95% Confidence Intervals 
+ 
+                                   CI for 
+Distribution   CI for StDev       Variance 
+of Data            Ratio           Ratio 
+Normal        (1,135; 3,942)  (1,288; 15,540) 
+Continuous    (0,820; 5,820)  (0,672; 33,873) 
+ 
+ 
+Tests 
+ 
+                                               Test 
+Method                          DF1  DF2  Statistic  P-Value 
+F Test (normal)                  11   11       4,47    0,020 
+
+=== PÁGINA 21 ===
+Levene's Test (any continuous)    1   22       3,04    0,095 
+ 
+Segundo o teste F, temos que as vari âncias são diferentes. Mas como uma variância é 
+aproximadamente 4,5 vezes maior do que outra, posso realizar o teste. 
+ 
+One-way ANOVA: Controle; Planta c/adubo; Planta c/esterco  
+ 
+Source  DF      SS     MS      F      P 
+Factor   2  1694,1  847,0  36,34  0,000 
+Error   33   769,2   23,3 
+Total   35  2463,2 
+ 
+S = 4,828   R-Sq = 68,77%   R-Sq(adj) = 66,88% 
+ 
+ 
+ 
+Level              N    Mean  StDev 
+Controle          12  26,417  2,712 
+Planta c/adubo    12  42,750  5,446 
+Planta c/esterco  12  38,000  5,737 
+ 
+                  Individual 95% CIs For Mean Based on Pooled StDev 
+Level               -+---------+---------+---------+-------- 
+Controle            (----*----) 
+Planta c/adubo                                  (---*----) 
+Planta c/esterco                        (---*----) 
+                    -+---------+---------+---------+-------- 
+                  24,0      30,0      36,0      42,0 
+ 
+Pooled StDev = 4,828 
+Segundo o teste ANOVA verifica-se que o grupo controle obteve um crescimento 
+significativamente menor do que o grupo com adubo, ou grupo com esterco com 
+95% de confiabilidade. E não houve diferença significativa entre o grupo esterco 
+e o grupo adubo, mostrando igual eficiência no crescimento da planta. 
+ 
+ 
+Teste não paramétrico equivalente : Caso não verifique normalidade ou 
+variâncias iguais (considerando mais do que 9 vezes), deve -se realizar o teste 
+de Kruskal-Wallis para o comparativo. 
+ 
+Para o Minitab, é necessário fazer o stack dos dados para realizar o teste 
+Kruskal-Wallis. 
+ 
+Teste Binomial 
+ 
+É um teste paramétrico utilizado para comparar proporções das variáveis 
+qualitativas dicotômicas e independentes, onde o pré-requisito é dado da forma. 
+n.p.q ≥ 5  
+onde  
+n –quantidade amostral 
+p – percentual de sucesso (em decimal) 
+
+=== PÁGINA 22 ===
+q – percentual de fracasso (q = 1 – p) (em decimal) 
+ 
+p > 0,05 – não possui diferença significativa entre as proporções populacionais. 
+p ≤ 0,05 – possui diferença significativa entre as proporções populacionais com 
+95% de confiabilidade. 
+p ≤ 0,01 – possui diferença significativa entre as proporções populacionais com 
+99% de confiabilidade. 
+ 
+Teste não paramétrico equivalente: Teste de Fisher. 

@@ -110,6 +110,8 @@ def _describe(values, missing=0):
             'Média aparada (5% por ponta)': statistics.mean(ordered[trim:n - trim]),
             'Moda': modes if frequency > 1 else None,
             'Frequência da moda': frequency if frequency > 1 else None,
+            'Desvio padrão populacional': statistics.pstdev(values),
+            'Variância populacional': statistics.pvariance(values),
             'Assimetria': skewness, 'Curtose (excesso)': kurtosis, 'MSSD': mssd}
 
 
@@ -120,6 +122,7 @@ DESCRIPTIVE_STATISTICS = (
     'Intervalo interquartil', 'Soma', 'Soma dos quadrados',
     'Média aparada (5% por ponta)', 'Moda', 'Frequência da moda',
     'Assimetria', 'Curtose (excesso)', 'MSSD',
+    'Desvio padrão populacional', 'Variância populacional',
 )
 
 
@@ -242,4 +245,6 @@ def boxplot(values):
     adjacent = [v for v in ordered if lower <= v <= upper]
     return dict(q1=q1, median=statistics.median(values), q3=q3,
                 low=adjacent[0], high=adjacent[-1],
+                extreme_outliers=[v for v in ordered if v < q1-3*iqr or v > q3+3*iqr],
+                mild_outliers=[v for v in ordered if (v < lower or v > upper) and q1-3*iqr <= v <= q3+3*iqr],
                 outliers=[v for v in ordered if v < lower or v > upper])

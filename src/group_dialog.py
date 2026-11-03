@@ -91,6 +91,9 @@ class AnovaDialog(tk.Toplevel):
         self.confidence.insert(0, '95')
         self.confidence.pack(side='left')
         ttk.Checkbutton(options, text='Comparar todos os pares de médias', variable=self.comparisons).pack(anchor='w', pady=6)
+        self.comparison_method=ttk.Combobox(options,state='readonly',values=['Tukey-Kramer (simultâneo)','Fisher LSD (individual, sem ajuste)'],width=43)
+        self.comparison_method.current(0);self.comparison_method.pack(anchor='w',pady=5)
+        self.comparison_method.bind('<<ComboboxSelected>>',lambda e:self.update_method())
         self.method_label = ttk.Label(options, foreground='#62758a', wraplength=440)
         self.method_label.pack(anchor='w', pady=6)
         ttk.Checkbutton(options, text='Abrir boxplots dos grupos na mesma escala', variable=self.show_graph).pack(anchor='w', pady=12)
@@ -105,7 +108,8 @@ class AnovaDialog(tk.Toplevel):
         self.grab_set()
 
     def update_method(self):
-        self.method_label.configure(text=('Tukey-Kramer: intervalos simultâneos e valores-p ajustados.'
+        self.comparison_method.configure(state='readonly' if self.equal_var.get() else 'disabled')
+        self.method_label.configure(text=('Fisher LSD: intervalos individuais e valores-p sem ajuste.' if self.equal_var.get() and self.comparison_method.current()==1 else 'Tukey-Kramer: intervalos simultâneos e valores-p ajustados.'
                                           if self.equal_var.get() else
                                           'Games-Howell: comparações sem assumir variâncias iguais.'))
 
@@ -118,7 +122,8 @@ class AnovaDialog(tk.Toplevel):
             messagebox.showerror('Opções inválidas', 'Informe um nível de confiança numérico entre 0 e 100.', parent=self)
             return
         if self.parent.run_anova(**self.selector.selection(), equal_var=self.equal_var.get(),
-                confidence=confidence, comparisons=self.comparisons.get(), show_graph=self.show_graph.get()):
+                confidence=confidence, comparisons=self.comparisons.get(), show_graph=self.show_graph.get(),
+                comparison_method='lsd' if self.equal_var.get() and self.comparison_method.current()==1 else 'tukey'):
             self.destroy()
 
 

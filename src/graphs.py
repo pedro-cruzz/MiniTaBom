@@ -25,9 +25,15 @@ class GroupGraphWindow(tk.Toplevel):
         self.canvas.configure(yscrollcommand=sy.set)
         sy.pack(side='right', fill='y')
         self.canvas.pack(fill='both', expand=True)
-        ttk.Label(self, text='Caixa: Q1–Q3 · linha: mediana · pontos vermelhos: observações além de 1,5 IQR', padding=(10, 8)).pack(fill='x')
+        ttk.Label(self, text='Caixa: Q1–Q3 · ponto: outlier suave (>1,5 IQR) · ×: extremo (>3 IQR)', padding=(10, 8)).pack(fill='x')
         self.canvas.bind('<Configure>', self.draw)
         self.canvas.bind('<MouseWheel>', lambda event: self.canvas.yview_scroll(-int(event.delta / 120), 'units'))
+
+    def outlier(self,canvas,x,y,extreme):
+        if extreme:
+            canvas.create_line(x-5,y-5,x+5,y+5,fill='#b54b45',width=2)
+            canvas.create_line(x-5,y+5,x+5,y-5,fill='#b54b45',width=2)
+        else:canvas.create_oval(x-4,y-4,x+4,y+4,fill='#b54b45',outline='')
 
     def draw(self, event=None):
         c = self.canvas
@@ -65,7 +71,7 @@ class GroupGraphWindow(tk.Toplevel):
                                fill=palette[index % len(palette)], outline='#365777', width=2)
             c.create_line(x(data['median']), y - 20, x(data['median']), y + 20, fill='#254463', width=3)
             for value in data['outliers']:
-                c.create_oval(x(value) - 4, y - 4, x(value) + 4, y + 4, fill='#b54b45', outline='')
+                self.outlier(c,x(value),y,value in data['extreme_outliers'])
 
 
 class GraphWindow(tk.Toplevel):
@@ -85,7 +91,7 @@ class GraphWindow(tk.Toplevel):
         self.canvas = tk.Canvas(self, background='white', highlightthickness=0)
         self.canvas.pack(fill='both', expand=True)
         caption = ('Sturges · máximo de 30 classes' if kind == 'Histograma'
-                   else 'Caixa: Q1–Q3 · linha: mediana · pontos vermelhos: valores além de 1,5 IQR')
+                   else 'Caixa: Q1–Q3 · ponto: outlier suave (>1,5 IQR) · ×: extremo (>3 IQR)')
         ttk.Label(self, text=caption, padding=(10, 8)).pack(fill='x')
         self.canvas.bind('<Configure>', self.draw)
 
@@ -142,7 +148,7 @@ class GraphWindow(tk.Toplevel):
                                fill='#d8e9f7', outline='#365777', width=2)
             c.create_line(x(data['median']), y - 38, x(data['median']), y + 38, fill='#254463', width=3)
             for value in data['outliers']:
-                c.create_oval(x(value) - 4, y - 4, x(value) + 4, y + 4, fill='#b54b45', outline='')
+                GroupGraphWindow.outlier(self,c,x(value),y,value in data['extreme_outliers'])
             c.create_text((left + right) / 2, top + 5,
                 text=f"Q1 = {data['q1']:.6g}    Mediana = {data['median']:.6g}    Q3 = {data['q3']:.6g}",
                 fill='#536477', font=('Segoe UI', 10))

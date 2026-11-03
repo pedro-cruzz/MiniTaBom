@@ -25,6 +25,8 @@ class LinearDialog(tk.Toplevel):
         self.method, self.missing = tk.StringVar(value='pearson'), tk.StringVar(value='pairwise')
         self.show_graph = tk.BooleanVar(value=mode == 'regression')
         self.observations = tk.BooleanVar(value=False)
+        self.store = tk.BooleanVar(value=False)
+        self.check_bivariate = tk.BooleanVar(value=False)
         if mode == 'regression':
             self.variables.selection_clear(0, 'end')
             self.variables.selection_set(1 if len(parent.headers) > 1 else 0)
@@ -39,6 +41,7 @@ class LinearDialog(tk.Toplevel):
                       wraplength=245, justify='left').pack(anchor='w', pady=18)
             ttk.Checkbutton(options, text='Mostrar gráficos de ajuste e resíduos', variable=self.show_graph).grid(row=1, column=0, columnspan=2, sticky='w', pady=8)
             ttk.Checkbutton(options, text='Mostrar tabela de observações e diagnósticos', variable=self.observations).grid(row=2, column=0, columnspan=2, sticky='w', pady=8)
+            ttk.Checkbutton(options, text='Armazenar ajustados, resíduos e diagnósticos na planilha', variable=self.store).grid(row=3,column=0,columnspan=2,sticky='w',pady=8)
         else:
             ttk.Label(data, text='Use Ctrl ou Shift para selecionar duas ou mais colunas.').grid(row=1, column=0, sticky='w', pady=(10, 0))
             for row, (label, value) in enumerate([('Pearson — relação linear', 'pearson'), ('Spearman — postos médios nos empates', 'spearman')], 1):
@@ -48,6 +51,7 @@ class LinearDialog(tk.Toplevel):
             ttk.Radiobutton(options, text='Excluir ausentes por par de variáveis', variable=self.missing, value='pairwise').grid(row=4, column=0, columnspan=2, sticky='w', pady=5)
             ttk.Radiobutton(options, text='Usar somente linhas completas nas variáveis selecionadas', variable=self.missing, value='listwise').grid(row=5, column=0, columnspan=2, sticky='w', pady=5)
             ttk.Label(options, text='IC de Fisher para Pearson com N > 3. IC de Spearman ainda indisponível.', wraplength=480).grid(row=6, column=0, columnspan=2, sticky='w', pady=12)
+            ttk.Checkbutton(options,text='Diagnóstico bivariado de Mardia (selecionar duas variáveis)',variable=self.check_bivariate).grid(row=7,column=0,columnspan=2,sticky='w',pady=8)
         ttk.Label(options, text='Nível de confiança (%):').grid(row=0, column=0, sticky='w', pady=(0, 12), padx=(0, 12))
         self.confidence = ttk.Entry(options, width=10)
         self.confidence.insert(0, '95')
@@ -75,9 +79,9 @@ class LinearDialog(tk.Toplevel):
             return
         columns = list(self.variables.curselection())
         if self.mode == 'correlation':
-            done = self.app.run_correlation(columns, method=self.method.get(), missing=self.missing.get(), confidence=confidence)
+            done = self.app.run_correlation(columns, method=self.method.get(), missing=self.missing.get(), confidence=confidence,check_bivariate=self.check_bivariate.get())
         else:
             done = self.app.run_regression(self.response.current(), columns, confidence=confidence,
-                                          show_graph=self.show_graph.get(), observations=self.observations.get())
+                                          show_graph=self.show_graph.get(), observations=self.observations.get(),store=self.store.get())
         if done:
             self.destroy()

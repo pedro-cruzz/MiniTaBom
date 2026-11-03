@@ -1,0 +1,2192 @@
+[
+  {
+    "id": "1/2a",
+    "name": "Tempo",
+    "source_range": "A4:B20",
+    "headers": [
+      "a) Tempo grupo 1",
+      "Tempo grupo 2"
+    ],
+    "n": [
+      16,
+      15
+    ],
+    "normality": [
+      {
+        "n": 16,
+        "mean": 29.625,
+        "sd": 5.044799302251775,
+        "statistic": 0.4932465246717719,
+        "adjusted": 0.5207026300490092,
+        "p": 0.1855283367359225,
+        "p_upper": null,
+        "repeated": 4,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 15,
+        "mean": 42.13333333333333,
+        "sd": 11.475854569278843,
+        "statistic": 1.634783198835585,
+        "adjusted": 1.7328701907657202,
+        "p": 0.00019482611564455033,
+        "p_upper": null,
+        "repeated": 4,
+        "missing": 0,
+        "source": "Amostra"
+      }
+    ],
+    "boxplots": [
+      {
+        "q1": 25.25,
+        "median": 28.5,
+        "q3": 34.25,
+        "low": 22.0,
+        "high": 39.0,
+        "outliers": []
+      },
+      {
+        "q1": 36.0,
+        "median": 41.0,
+        "q3": 42.0,
+        "low": 31.0,
+        "high": 48.0,
+        "outliers": [
+          80.0
+        ]
+      }
+    ],
+    "severe_outliers": [
+      [],
+      [
+        80.0
+      ]
+    ],
+    "variances": {
+      "mode": "two_variances",
+      "samples": [
+        {
+          "n": 16,
+          "variance": 25.45,
+          "sd": 5.044799302251775,
+          "missing": 0,
+          "name": "a) Tempo grupo 1"
+        },
+        {
+          "n": 15,
+          "variance": 131.6952380952381,
+          "sd": 11.475854569278843,
+          "missing": 1,
+          "name": "Tempo grupo 2"
+        }
+      ],
+      "measure": "variance",
+      "estimate": 0.19324920451258315,
+      "statistic": 0.19324920451258315,
+      "df": [
+        15,
+        14
+      ],
+      "p": 0.0031117594185283196,
+      "low": 0.06552328341731144,
+      "high": 0.5587759510582954,
+      "null": 1,
+      "confidence": 95,
+      "alternative": "two-sided",
+      "source": "Colunas separadas",
+      "excluded_groups": 0
+    },
+    "student": {
+      "estimate": -12.508333333333333,
+      "se": 3.148389100350061,
+      "df": 29,
+      "t": -3.972931214868761,
+      "p": 0.0004305573671882276,
+      "low": -18.947512046336794,
+      "high": -6.069154620329872,
+      "null": 0,
+      "confidence": 95,
+      "alternative": "two-sided",
+      "samples": [
+        {
+          "n": 16,
+          "mean": 29.625,
+          "sd": 5.044799302251775,
+          "se": 1.2611998255629437
+        },
+        {
+          "n": 15,
+          "mean": 42.13333333333333,
+          "sd": 11.475854569278843,
+          "se": 2.963052908687683
+        }
+      ],
+      "mode": "two",
+      "method": "t de duas amostras · variâncias iguais (combinadas)",
+      "df_raw": 29,
+      "missing": [
+        0,
+        1
+      ],
+      "labels": [
+        "a) Tempo grupo 1",
+        "Tempo grupo 2"
+      ]
+    },
+    "welch": {
+      "estimate": -12.508333333333333,
+      "se": 3.2202961881917846,
+      "df": 18,
+      "t": -3.8842182837712316,
+      "p": 0.0010869802694134303,
+      "low": -19.273924571209655,
+      "high": -5.74274209545701,
+      "null": 0,
+      "confidence": 95,
+      "alternative": "two-sided",
+      "samples": [
+        {
+          "n": 16,
+          "mean": 29.625,
+          "sd": 5.044799302251775,
+          "se": 1.2611998255629437
+        },
+        {
+          "n": 15,
+          "mean": 42.13333333333333,
+          "sd": 11.475854569278843,
+          "se": 2.963052908687683
+        }
+      ],
+      "mode": "two",
+      "method": "t de Welch · GL inteiro (referência 16)",
+      "df_raw": 18.951731204255488,
+      "missing": [
+        0,
+        1
+      ],
+      "labels": [
+        "a) Tempo grupo 1",
+        "Tempo grupo 2"
+      ]
+    }
+  },
+  {
+    "id": "1/2b",
+    "name": "Produtividade",
+    "source_range": "D4:E19",
+    "headers": [
+      "b) Produtividade G1",
+      "Produtividade G2"
+    ],
+    "n": [
+      15,
+      15
+    ],
+    "normality": [
+      {
+        "n": 15,
+        "mean": 137.06666666666666,
+        "sd": 8.180697373929043,
+        "statistic": 0.3364288492866514,
+        "adjusted": 0.3566145802438505,
+        "p": 0.45668844870743913,
+        "p_upper": null,
+        "repeated": 3,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 15,
+        "mean": 144.93333333333334,
+        "sd": 8.075241408745859,
+        "statistic": 0.8235653553322511,
+        "adjusted": 0.8729792766521862,
+        "p": 0.025324986447200538,
+        "p_upper": null,
+        "repeated": 5,
+        "missing": 0,
+        "source": "Amostra"
+      }
+    ],
+    "boxplots": [
+      {
+        "q1": 128.0,
+        "median": 138.0,
+        "q3": 145.0,
+        "low": 124.0,
+        "high": 149.0,
+        "outliers": []
+      },
+      {
+        "q1": 142.0,
+        "median": 146.0,
+        "q3": 148.0,
+        "low": 135.0,
+        "high": 149.0,
+        "outliers": [
+          128.0,
+          165.0
+        ]
+      }
+    ],
+    "severe_outliers": [
+      [],
+      []
+    ],
+    "variances": {
+      "mode": "two_variances",
+      "samples": [
+        {
+          "n": 15,
+          "variance": 66.92380952380952,
+          "sd": 8.180697373929043,
+          "missing": 0,
+          "name": "b) Produtividade G1"
+        },
+        {
+          "n": 15,
+          "variance": 65.20952380952382,
+          "sd": 8.07524140874586,
+          "missing": 0,
+          "name": "Produtividade G2"
+        }
+      ],
+      "measure": "variance",
+      "estimate": 1.0262888856433474,
+      "statistic": 1.0262888856433474,
+      "df": [
+        14,
+        14
+      ],
+      "p": 0.9619652995770371,
+      "low": 0.34455555773967045,
+      "high": 3.056891270901695,
+      "null": 1,
+      "confidence": 95,
+      "alternative": "two-sided",
+      "source": "Colunas separadas",
+      "excluded_groups": 0
+    },
+    "student": {
+      "estimate": -7.866666666666674,
+      "se": 2.9679772386069425,
+      "df": 28,
+      "t": -2.65051448654606,
+      "p": 0.013071822692123989,
+      "low": -13.946292438914867,
+      "high": -1.7870408944184817,
+      "null": 0,
+      "confidence": 95,
+      "alternative": "two-sided",
+      "samples": [
+        {
+          "n": 15,
+          "mean": 137.06666666666666,
+          "sd": 8.180697373929043,
+          "se": 2.1122469793059953
+        },
+        {
+          "n": 15,
+          "mean": 144.93333333333334,
+          "sd": 8.075241408745859,
+          "se": 2.085018366178482
+        }
+      ],
+      "mode": "two",
+      "method": "t de duas amostras · variâncias iguais (combinadas)",
+      "df_raw": 28,
+      "missing": [
+        0,
+        0
+      ],
+      "labels": [
+        "b) Produtividade G1",
+        "Produtividade G2"
+      ]
+    },
+    "welch": {
+      "estimate": -7.866666666666674,
+      "se": 2.967977238606942,
+      "df": 27,
+      "t": -2.6505144865460606,
+      "p": 0.013276810658427712,
+      "low": -13.956452937059286,
+      "high": -1.7768803962740636,
+      "null": 0,
+      "confidence": 95,
+      "alternative": "two-sided",
+      "samples": [
+        {
+          "n": 15,
+          "mean": 137.06666666666666,
+          "sd": 8.180697373929043,
+          "se": 2.1122469793059953
+        },
+        {
+          "n": 15,
+          "mean": 144.93333333333334,
+          "sd": 8.075241408745859,
+          "se": 2.085018366178482
+        }
+      ],
+      "mode": "two",
+      "method": "t de Welch · GL inteiro (referência 16)",
+      "df_raw": 27.995287769065964,
+      "missing": [
+        0,
+        0
+      ],
+      "labels": [
+        "b) Produtividade G1",
+        "Produtividade G2"
+      ]
+    }
+  },
+  {
+    "id": "3a",
+    "name": "Custo antes/depois",
+    "source_range": "A23:B42",
+    "headers": [
+      "a) Custo empresa Antes",
+      "Custo empresa depois"
+    ],
+    "n": [
+      19,
+      19
+    ],
+    "normality": [
+      {
+        "n": 19,
+        "mean": 1287.2631578947369,
+        "sd": 52.37561148437862,
+        "statistic": 0.3004827663570886,
+        "adjusted": 0.314216743212745,
+        "p": 0.5455141806286683,
+        "p_upper": null,
+        "repeated": 1,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 19,
+        "mean": 1683.6842105263158,
+        "sd": 123.7645850581655,
+        "statistic": 0.34500115363649897,
+        "adjusted": 0.3607699044259789,
+        "p": 0.4467982108876038,
+        "p_upper": null,
+        "repeated": 1,
+        "missing": 0,
+        "source": "Amostra"
+      }
+    ],
+    "boxplots": [
+      {
+        "q1": 1239.0,
+        "median": 1293.0,
+        "q3": 1331.0,
+        "low": 1206.0,
+        "high": 1371.0,
+        "outliers": []
+      },
+      {
+        "q1": 1579.0,
+        "median": 1703.0,
+        "q3": 1799.0,
+        "low": 1510.0,
+        "high": 1896.0,
+        "outliers": []
+      }
+    ],
+    "severe_outliers": [
+      [],
+      []
+    ],
+    "differences_normality": {
+      "n": 19,
+      "mean": -396.42105263157896,
+      "sd": 148.19705942107163,
+      "statistic": 0.28078398379851066,
+      "adjusted": 0.29361760078653126,
+      "p": 0.6013509351854895,
+      "p_upper": null,
+      "repeated": 0,
+      "missing": 0,
+      "source": "Amostra"
+    },
+    "differences_boxplot": {
+      "q1": -540.0,
+      "median": -380.0,
+      "q3": -286.0,
+      "low": -675.0,
+      "high": -166.0,
+      "outliers": []
+    },
+    "paired": {
+      "estimate": -396.42105263157896,
+      "se": 33.99873714454439,
+      "df": 18,
+      "t": -11.659875804980912,
+      "p": 8.005855010985874e-10,
+      "low": -467.8497488389139,
+      "high": -324.992356424244,
+      "null": 0,
+      "confidence": 95,
+      "alternative": "two-sided",
+      "samples": [
+        {
+          "n": 19,
+          "mean": 1287.2631578947369,
+          "sd": 52.37561148437862,
+          "se": 12.015789345608143
+        },
+        {
+          "n": 19,
+          "mean": 1683.6842105263158,
+          "sd": 123.7645850581655,
+          "se": 28.3935431083046
+        },
+        {
+          "n": 19,
+          "mean": -396.42105263157896,
+          "sd": 148.19705942107163,
+          "se": 33.99873714454439
+        }
+      ],
+      "mode": "paired",
+      "method": "t pareado · diferença = primeira − segunda",
+      "missing": [
+        0
+      ],
+      "labels": [
+        "a) Custo empresa Antes",
+        "Custo empresa depois",
+        "Diferença"
+      ]
+    }
+  },
+  {
+    "id": "3b",
+    "name": "Colesterol antes/depois",
+    "source_range": "D23:E35",
+    "headers": [
+      "b) Colesterol Antes",
+      "Colesterol Depois"
+    ],
+    "n": [
+      12,
+      12
+    ],
+    "normality": [
+      {
+        "n": 12,
+        "mean": 290.3333333333333,
+        "sd": 36.86420617577024,
+        "statistic": 0.3820220941017656,
+        "adjusted": 0.411867570203466,
+        "p": 0.34001093894142315,
+        "p_upper": null,
+        "repeated": 0,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 12,
+        "mean": 181.5,
+        "sd": 28.08590717456322,
+        "statistic": 0.3099763643072535,
+        "adjusted": 0.3341932677687577,
+        "p": 0.5083798173910685,
+        "p_upper": null,
+        "repeated": 1,
+        "missing": 0,
+        "source": "Amostra"
+      }
+    ],
+    "boxplots": [
+      {
+        "q1": 254.75,
+        "median": 300.0,
+        "q3": 314.75,
+        "low": 231.0,
+        "high": 347.0,
+        "outliers": []
+      },
+      {
+        "q1": 152.5,
+        "median": 177.0,
+        "q3": 204.75,
+        "low": 143.0,
+        "high": 230.0,
+        "outliers": []
+      }
+    ],
+    "severe_outliers": [
+      [],
+      []
+    ],
+    "differences_normality": {
+      "n": 12,
+      "mean": 108.83333333333333,
+      "sd": 54.9939390599849,
+      "statistic": 0.5364876091188684,
+      "adjusted": 0.5784007035812799,
+      "p": 0.13279456265899717,
+      "p_upper": null,
+      "repeated": 1,
+      "missing": 0,
+      "source": "Amostra"
+    },
+    "differences_boxplot": {
+      "q1": 50.75,
+      "median": 122.0,
+      "q3": 151.0,
+      "low": 16.0,
+      "high": 183.0,
+      "outliers": []
+    },
+    "paired": {
+      "estimate": 108.83333333333333,
+      "se": 15.87538276004008,
+      "df": 11,
+      "t": 6.855477753095672,
+      "p": 2.744215963932777e-05,
+      "low": 73.89185146771047,
+      "high": 143.7748151989562,
+      "null": 0,
+      "confidence": 95,
+      "alternative": "two-sided",
+      "samples": [
+        {
+          "n": 12,
+          "mean": 290.3333333333333,
+          "sd": 36.86420617577024,
+          "se": 10.641779679521408
+        },
+        {
+          "n": 12,
+          "mean": 181.5,
+          "sd": 28.08590717456322,
+          "se": 8.10770303383446
+        },
+        {
+          "n": 12,
+          "mean": 108.83333333333333,
+          "sd": 54.9939390599849,
+          "se": 15.87538276004008
+        }
+      ],
+      "mode": "paired",
+      "method": "t pareado · diferença = primeira − segunda",
+      "missing": [
+        0
+      ],
+      "labels": [
+        "b) Colesterol Antes",
+        "Colesterol Depois",
+        "Diferença"
+      ]
+    }
+  },
+  {
+    "id": "4a",
+    "name": "Provedores",
+    "source_range": "A47:C62",
+    "headers": [
+      "Provedor 1",
+      "Provedor 2",
+      "Provedor 3"
+    ],
+    "n": [
+      15,
+      15,
+      15
+    ],
+    "normality": [
+      {
+        "n": 15,
+        "mean": 4.486666666666666,
+        "sd": 0.27740292167239505,
+        "statistic": 0.3710293797058828,
+        "adjusted": 0.39329114248823577,
+        "p": 0.37581873781274705,
+        "p_upper": null,
+        "repeated": 7,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 15,
+        "mean": 5.846666666666667,
+        "sd": 0.7089898917944223,
+        "statistic": 0.8036212401775913,
+        "adjusted": 0.8518385145882468,
+        "p": 0.02855425311898621,
+        "p_upper": null,
+        "repeated": 4,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 15,
+        "mean": 4.6066666666666665,
+        "sd": 0.19073791542572857,
+        "statistic": 0.39372483683727744,
+        "adjusted": 0.4173483270475141,
+        "p": 0.3300532164874939,
+        "p_upper": null,
+        "repeated": 8,
+        "missing": 0,
+        "source": "Amostra"
+      }
+    ],
+    "boxplots": [
+      {
+        "q1": 4.2,
+        "median": 4.5,
+        "q3": 4.8,
+        "low": 4.0,
+        "high": 4.9,
+        "outliers": []
+      },
+      {
+        "q1": 5.6,
+        "median": 5.9,
+        "q3": 6.2,
+        "low": 5.4,
+        "high": 6.8,
+        "outliers": [
+          3.8
+        ]
+      },
+      {
+        "q1": 4.5,
+        "median": 4.6,
+        "q3": 4.8,
+        "low": 4.2,
+        "high": 4.9,
+        "outliers": []
+      }
+    ],
+    "severe_outliers": [
+      [],
+      [],
+      []
+    ],
+    "anova": {
+      "groups": [
+        {
+          "n": 15,
+          "mean": 4.486666666666666,
+          "sd": 0.27740292167239505,
+          "se": 0.0716251263884311,
+          "label": "Provedor 1",
+          "low": 4.250552065692273,
+          "high": 4.72278126764106
+        },
+        {
+          "n": 15,
+          "mean": 5.846666666666667,
+          "sd": 0.7089898917944223,
+          "se": 0.18306040290327974,
+          "label": "Provedor 2",
+          "low": 5.610552065692273,
+          "high": 6.08278126764106
+        },
+        {
+          "n": 15,
+          "mean": 4.6066666666666665,
+          "sd": 0.19073791542572857,
+          "se": 0.04924831799561103,
+          "label": "Provedor 3",
+          "low": 4.370552065692273,
+          "high": 4.84278126764106
+        }
+      ],
+      "n": 45,
+      "overall": 4.98,
+      "equal_var": true,
+      "ss_between": 17.008000000000006,
+      "ss_within": 8.623999999999999,
+      "ss_total": 25.632000000000005,
+      "mse": 0.2053333333333333,
+      "df1": 2,
+      "df2": 42,
+      "df_error": 42,
+      "f": 41.41558441558443,
+      "p": 1.1626562276601374e-10,
+      "s": 0.4531372124791047,
+      "r_squared": 66.35455680399501,
+      "confidence": 95,
+      "comparisons": [
+        {
+          "first": "Provedor 1",
+          "second": "Provedor 2",
+          "difference": -1.3599999999999994,
+          "p": 8.273234319844391e-10,
+          "low": -1.7619896619709707,
+          "high": -0.9580103380290282
+        },
+        {
+          "first": "Provedor 1",
+          "second": "Provedor 3",
+          "difference": -0.1200000000000001,
+          "p": 0.7500056680889642,
+          "low": -0.5219896619709713,
+          "high": 0.2819896619709711
+        },
+        {
+          "first": "Provedor 2",
+          "second": "Provedor 3",
+          "difference": 1.2399999999999993,
+          "p": 8.58807214232371e-09,
+          "low": 0.8380103380290281,
+          "high": 1.6419896619709706
+        }
+      ],
+      "comparison_method": "Tukey-Kramer"
+    },
+    "welch_anova": {
+      "groups": [
+        {
+          "n": 15,
+          "mean": 4.486666666666666,
+          "sd": 0.27740292167239505,
+          "se": 0.0716251263884311,
+          "label": "Provedor 1",
+          "low": 4.333046049068329,
+          "high": 4.640287284265003
+        },
+        {
+          "n": 15,
+          "mean": 5.846666666666667,
+          "sd": 0.7089898917944223,
+          "se": 0.18306040290327974,
+          "label": "Provedor 2",
+          "low": 5.454041151434843,
+          "high": 6.239292181898491
+        },
+        {
+          "n": 15,
+          "mean": 4.6066666666666665,
+          "sd": 0.19073791542572857,
+          "se": 0.04924831799561103,
+          "label": "Provedor 3",
+          "low": 4.501039529827337,
+          "high": 4.712293803505996
+        }
+      ],
+      "n": 45,
+      "overall": 4.98,
+      "equal_var": false,
+      "ss_between": 17.008000000000006,
+      "ss_within": 8.623999999999999,
+      "ss_total": 25.632000000000005,
+      "mse": 0.2053333333333333,
+      "df1": 2,
+      "df2": 24.64792797013123,
+      "df_error": 42,
+      "f": 23.56239285343495,
+      "p": 1.9031601176159629e-06,
+      "s": null,
+      "r_squared": null,
+      "confidence": 95,
+      "comparisons": [
+        {
+          "first": "Provedor 1",
+          "second": "Provedor 2",
+          "difference": -1.3599999999999994,
+          "p": 4.936211133621526e-06,
+          "low": -1.8612342057447313,
+          "high": -0.8587657942552676
+        },
+        {
+          "first": "Provedor 1",
+          "second": "Provedor 3",
+          "difference": -0.1200000000000001,
+          "p": 0.36609800990949903,
+          "low": -0.33660755023799965,
+          "high": 0.09660755023799944
+        },
+        {
+          "first": "Provedor 2",
+          "second": "Provedor 3",
+          "difference": 1.2399999999999993,
+          "p": 1.9191913425142815e-05,
+          "low": 0.7508968811213083,
+          "high": 1.7291031188786903
+        }
+      ],
+      "comparison_method": "Games-Howell"
+    },
+    "variance_ratio_max_min": 13.81675392670157,
+    "variance_pairs": [
+      {
+        "pair": [
+          0,
+          1
+        ],
+        "result": {
+          "mode": "two_variances",
+          "samples": [
+            {
+              "n": 15,
+              "variance": 0.07695238095238095,
+              "sd": 0.27740292167239505,
+              "missing": 0,
+              "name": "Provedor 1"
+            },
+            {
+              "n": 15,
+              "variance": 0.5026666666666667,
+              "sd": 0.7089898917944224,
+              "missing": 0,
+              "name": "Provedor 2"
+            }
+          ],
+          "measure": "variance",
+          "estimate": 0.1530882910193255,
+          "statistic": 0.1530882910193255,
+          "df": [
+            14,
+            14
+          ],
+          "p": 0.0011944263417044884,
+          "low": 0.05139627080976428,
+          "high": 0.4559868737162407,
+          "null": 1,
+          "confidence": 95,
+          "alternative": "two-sided",
+          "source": "Colunas separadas",
+          "excluded_groups": 0
+        }
+      },
+      {
+        "pair": [
+          0,
+          2
+        ],
+        "result": {
+          "mode": "two_variances",
+          "samples": [
+            {
+              "n": 15,
+              "variance": 0.07695238095238095,
+              "sd": 0.27740292167239505,
+              "missing": 0,
+              "name": "Provedor 1"
+            },
+            {
+              "n": 15,
+              "variance": 0.03638095238095238,
+              "sd": 0.19073791542572857,
+              "missing": 0,
+              "name": "Provedor 3"
+            }
+          ],
+          "measure": "variance",
+          "estimate": 2.115183246073298,
+          "statistic": 2.115183246073298,
+          "df": [
+            14,
+            14
+          ],
+          "p": 0.17338393677123012,
+          "low": 0.7101296265286278,
+          "high": 6.300258427943241,
+          "null": 1,
+          "confidence": 95,
+          "alternative": "two-sided",
+          "source": "Colunas separadas",
+          "excluded_groups": 0
+        }
+      },
+      {
+        "pair": [
+          1,
+          2
+        ],
+        "result": {
+          "mode": "two_variances",
+          "samples": [
+            {
+              "n": 15,
+              "variance": 0.5026666666666667,
+              "sd": 0.7089898917944224,
+              "missing": 0,
+              "name": "Provedor 2"
+            },
+            {
+              "n": 15,
+              "variance": 0.03638095238095238,
+              "sd": 0.19073791542572857,
+              "missing": 0,
+              "name": "Provedor 3"
+            }
+          ],
+          "measure": "variance",
+          "estimate": 13.81675392670157,
+          "statistic": 13.81675392670157,
+          "df": [
+            14,
+            14
+          ],
+          "p": 1.5208099545524687e-05,
+          "low": 4.63869327824022,
+          "high": 41.15441086965895,
+          "null": 1,
+          "confidence": 95,
+          "alternative": "two-sided",
+          "source": "Colunas separadas",
+          "excluded_groups": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "4b",
+    "name": "Lotes",
+    "source_range": "E47:G82",
+    "headers": [
+      "Lote 1",
+      "Lote 2",
+      "Lote 3"
+    ],
+    "n": [
+      35,
+      35,
+      35
+    ],
+    "normality": [
+      {
+        "n": 35,
+        "mean": 29.542857142857144,
+        "sd": 3.704868475420965,
+        "statistic": 0.9309841707067719,
+        "adjusted": 0.9526438024334191,
+        "p": 0.016114055005571278,
+        "p_upper": null,
+        "repeated": 25,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 35,
+        "mean": 14.82857142857143,
+        "sd": 1.9324734879197192,
+        "statistic": 0.8267300467234335,
+        "adjusted": 0.8459641743410806,
+        "p": 0.029522627340353037,
+        "p_upper": null,
+        "repeated": 28,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 35,
+        "mean": 9.628571428571428,
+        "sd": 2.5098126750547634,
+        "statistic": 0.7257286641315304,
+        "adjusted": 0.7426129636643862,
+        "p": 0.053097788846864426,
+        "p_upper": null,
+        "repeated": 26,
+        "missing": 0,
+        "source": "Amostra"
+      }
+    ],
+    "boxplots": [
+      {
+        "q1": 27.0,
+        "median": 29.0,
+        "q3": 33.0,
+        "low": 24.0,
+        "high": 36.0,
+        "outliers": []
+      },
+      {
+        "q1": 13.0,
+        "median": 15.0,
+        "q3": 16.0,
+        "low": 12.0,
+        "high": 18.0,
+        "outliers": []
+      },
+      {
+        "q1": 7.0,
+        "median": 9.0,
+        "q3": 12.0,
+        "low": 6.0,
+        "high": 14.0,
+        "outliers": []
+      }
+    ],
+    "severe_outliers": [
+      [],
+      [],
+      []
+    ],
+    "anova": {
+      "groups": [
+        {
+          "n": 35,
+          "mean": 29.542857142857144,
+          "sd": 3.704868475420965,
+          "se": 0.6262370710423162,
+          "label": "Lote 1",
+          "low": 28.599325079082767,
+          "high": 30.48638920663152
+        },
+        {
+          "n": 35,
+          "mean": 14.82857142857143,
+          "sd": 1.9324734879197192,
+          "se": 0.32664763809308145,
+          "label": "Lote 2",
+          "low": 13.885039364797054,
+          "high": 15.772103492345805
+        },
+        {
+          "n": 35,
+          "mean": 9.628571428571428,
+          "sd": 2.5098126750547634,
+          "se": 0.4242357721788186,
+          "label": "Lote 3",
+          "low": 8.685039364797053,
+          "high": 10.572103492345803
+        }
+      ],
+      "n": 105,
+      "overall": 18.0,
+      "equal_var": true,
+      "ss_between": 7468.171428571431,
+      "ss_within": 807.8285714285714,
+      "ss_total": 8276.000000000002,
+      "mse": 7.919887955182073,
+      "df1": 2,
+      "df2": 102,
+      "df_error": 102,
+      "f": 471.4821390676948,
+      "p": 2.913634649838053e-52,
+      "s": 2.8142295491274467,
+      "r_squared": 90.2389007802251,
+      "confidence": 95,
+      "comparisons": [
+        {
+          "first": "Lote 1",
+          "second": "Lote 2",
+          "difference": 14.714285714285715,
+          "p": 2.4868995751603507e-14,
+          "low": 13.114259817280084,
+          "high": 16.314311611291345
+        },
+        {
+          "first": "Lote 1",
+          "second": "Lote 3",
+          "difference": 19.914285714285718,
+          "p": 2.4868995751603507e-14,
+          "low": 18.31425981728009,
+          "high": 21.514311611291348
+        },
+        {
+          "first": "Lote 2",
+          "second": "Lote 3",
+          "difference": 5.200000000000001,
+          "p": 2.350319938670964e-11,
+          "low": 3.5999741029943704,
+          "high": 6.800025897005632
+        }
+      ],
+      "comparison_method": "Tukey-Kramer"
+    },
+    "welch_anova": {
+      "groups": [
+        {
+          "n": 35,
+          "mean": 29.542857142857144,
+          "sd": 3.704868475420965,
+          "se": 0.6262370710423162,
+          "label": "Lote 1",
+          "low": 28.27019029370019,
+          "high": 30.8155239920141
+        },
+        {
+          "n": 35,
+          "mean": 14.82857142857143,
+          "sd": 1.9324734879197192,
+          "se": 0.32664763809308145,
+          "label": "Lote 2",
+          "low": 14.164743559575163,
+          "high": 15.492399297567696
+        },
+        {
+          "n": 35,
+          "mean": 9.628571428571428,
+          "sd": 2.5098126750547634,
+          "se": 0.4242357721788186,
+          "label": "Lote 3",
+          "low": 8.766420609904861,
+          "high": 10.490722247237995
+        }
+      ],
+      "n": 105,
+      "overall": 18.0,
+      "equal_var": false,
+      "ss_between": 7468.171428571431,
+      "ss_within": 807.8285714285714,
+      "ss_total": 8276.000000000002,
+      "mse": 7.919887955182073,
+      "df1": 2,
+      "df2": 64.30859422777361,
+      "df_error": 102,
+      "f": 345.45006525262335,
+      "p": 3.993905810131286e-35,
+      "s": null,
+      "r_squared": null,
+      "confidence": 95,
+      "comparisons": [
+        {
+          "first": "Lote 1",
+          "second": "Lote 2",
+          "difference": 14.714285714285715,
+          "p": 1.2434497875801753e-14,
+          "low": 13.009495827540203,
+          "high": 16.419075601031228
+        },
+        {
+          "first": "Lote 1",
+          "second": "Lote 3",
+          "difference": 19.914285714285718,
+          "p": 1.7763568394002505e-14,
+          "low": 18.09630925507819,
+          "high": 21.732262173493247
+        },
+        {
+          "first": "Lote 2",
+          "second": "Lote 3",
+          "difference": 5.200000000000001,
+          "p": 1.170175067954915e-13,
+          "low": 3.9152192352788653,
+          "high": 6.484780764721137
+        }
+      ],
+      "comparison_method": "Games-Howell"
+    },
+    "variance_ratio_max_min": 3.675517551755175,
+    "variance_pairs": [
+      {
+        "pair": [
+          0,
+          1
+        ],
+        "result": {
+          "mode": "two_variances",
+          "samples": [
+            {
+              "n": 35,
+              "variance": 13.726050420168066,
+              "sd": 3.704868475420965,
+              "missing": 0,
+              "name": "Lote 1"
+            },
+            {
+              "n": 35,
+              "variance": 3.734453781512605,
+              "sd": 1.9324734879197192,
+              "missing": 0,
+              "name": "Lote 2"
+            }
+          ],
+          "measure": "variance",
+          "estimate": 3.675517551755175,
+          "statistic": 3.675517551755175,
+          "df": [
+            34,
+            34
+          ],
+          "p": 0.000265805185956999,
+          "low": 1.8552732282877245,
+          "high": 7.281638665011367,
+          "null": 1,
+          "confidence": 95,
+          "alternative": "two-sided",
+          "source": "Colunas separadas",
+          "excluded_groups": 0
+        }
+      },
+      {
+        "pair": [
+          0,
+          2
+        ],
+        "result": {
+          "mode": "two_variances",
+          "samples": [
+            {
+              "n": 35,
+              "variance": 13.726050420168066,
+              "sd": 3.704868475420965,
+              "missing": 0,
+              "name": "Lote 1"
+            },
+            {
+              "n": 35,
+              "variance": 6.299159663865546,
+              "sd": 2.5098126750547634,
+              "missing": 0,
+              "name": "Lote 3"
+            }
+          ],
+          "measure": "variance",
+          "estimate": 2.1790288153681963,
+          "statistic": 2.1790288153681963,
+          "df": [
+            34,
+            34
+          ],
+          "p": 0.025959392916420954,
+          "low": 1.0998978423840247,
+          "high": 4.316915985500336,
+          "null": 1,
+          "confidence": 95,
+          "alternative": "two-sided",
+          "source": "Colunas separadas",
+          "excluded_groups": 0
+        }
+      },
+      {
+        "pair": [
+          1,
+          2
+        ],
+        "result": {
+          "mode": "two_variances",
+          "samples": [
+            {
+              "n": 35,
+              "variance": 3.734453781512605,
+              "sd": 1.9324734879197192,
+              "missing": 0,
+              "name": "Lote 2"
+            },
+            {
+              "n": 35,
+              "variance": 6.299159663865546,
+              "sd": 2.5098126750547634,
+              "missing": 0,
+              "name": "Lote 3"
+            }
+          ],
+          "measure": "variance",
+          "estimate": 0.5928495197438635,
+          "statistic": 0.5928495197438635,
+          "df": [
+            34,
+            34
+          ],
+          "p": 0.13241009383110747,
+          "low": 0.2992497864304277,
+          "high": 1.1745056103565261,
+          "null": 1,
+          "confidence": 95,
+          "alternative": "two-sided",
+          "source": "Colunas separadas",
+          "excluded_groups": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "4c",
+    "name": "Qualidade de vida",
+    "source_range": "I47:K61",
+    "headers": [
+      "Engenharia",
+      "Fisioterapia",
+      "Professor"
+    ],
+    "n": [
+      14,
+      14,
+      14
+    ],
+    "normality": [
+      {
+        "n": 14,
+        "mean": 84.5,
+        "sd": 12.106895682912407,
+        "statistic": 0.5285879357970718,
+        "adjusted": 0.562973120396116,
+        "p": 0.14534610706809542,
+        "p_upper": null,
+        "repeated": 2,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 14,
+        "mean": 55.57142857142857,
+        "sd": 9.500722933742267,
+        "statistic": 0.29319038056080515,
+        "adjusted": 0.31226271399014327,
+        "p": 0.5501493088995089,
+        "p_upper": null,
+        "repeated": 3,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 14,
+        "mean": 44.92857142857143,
+        "sd": 10.80928579234814,
+        "statistic": 0.845226019975879,
+        "adjusted": 0.9002088350508406,
+        "p": 0.021698345909784818,
+        "p_upper": null,
+        "repeated": 5,
+        "missing": 0,
+        "source": "Amostra"
+      }
+    ],
+    "boxplots": [
+      {
+        "q1": 72.0,
+        "median": 86.5,
+        "q3": 95.75,
+        "low": 66.0,
+        "high": 100.0,
+        "outliers": []
+      },
+      {
+        "q1": 49.0,
+        "median": 54.5,
+        "q3": 65.0,
+        "low": 40.0,
+        "high": 70.0,
+        "outliers": []
+      },
+      {
+        "q1": 32.25,
+        "median": 46.5,
+        "q3": 55.0,
+        "low": 30.0,
+        "high": 57.0,
+        "outliers": []
+      }
+    ],
+    "severe_outliers": [
+      [],
+      [],
+      []
+    ],
+    "anova": {
+      "groups": [
+        {
+          "n": 14,
+          "mean": 84.5,
+          "sd": 12.106895682912407,
+          "se": 3.2357039759193396,
+          "label": "Engenharia",
+          "low": 78.63036710102682,
+          "high": 90.36963289897318
+        },
+        {
+          "n": 14,
+          "mean": 55.57142857142857,
+          "sd": 9.500722933742267,
+          "se": 2.5391750103378103,
+          "label": "Fisioterapia",
+          "low": 49.70179567245539,
+          "high": 61.44106147040175
+        },
+        {
+          "n": 14,
+          "mean": 44.92857142857143,
+          "sd": 10.80928579234814,
+          "se": 2.888903145049288,
+          "label": "Professor",
+          "low": 39.05893852959825,
+          "high": 50.79820432754461
+        }
+      ],
+      "n": 42,
+      "overall": 61.666666666666664,
+      "equal_var": true,
+      "ss_between": 11741.476190476189,
+      "ss_within": 4597.857142857143,
+      "ss_total": 16339.333333333332,
+      "mse": 117.8937728937729,
+      "df1": 2,
+      "df2": 39,
+      "df_error": 39,
+      "f": 49.79684635699859,
+      "p": 1.8270996879389663e-11,
+      "s": 10.857889891400305,
+      "r_squared": 71.86019129998891,
+      "confidence": 95,
+      "comparisons": [
+        {
+          "first": "Engenharia",
+          "second": "Fisioterapia",
+          "difference": 28.92857142857143,
+          "p": 5.461203778089896e-08,
+          "low": 18.930216290387037,
+          "high": 38.926926566755824
+        },
+        {
+          "first": "Engenharia",
+          "second": "Professor",
+          "difference": 39.57142857142857,
+          "p": 2.123967668410387e-11,
+          "low": 29.573073433244176,
+          "high": 49.56978370961296
+        },
+        {
+          "first": "Fisioterapia",
+          "second": "Professor",
+          "difference": 10.642857142857139,
+          "p": 0.034788652336313675,
+          "low": 0.644502004672745,
+          "high": 20.641212281041533
+        }
+      ],
+      "comparison_method": "Tukey-Kramer"
+    },
+    "welch_anova": {
+      "groups": [
+        {
+          "n": 14,
+          "mean": 84.5,
+          "sd": 12.106895682912407,
+          "se": 3.2357039759193396,
+          "label": "Engenharia",
+          "low": 77.50968654883182,
+          "high": 91.49031345116818
+        },
+        {
+          "n": 14,
+          "mean": 55.57142857142857,
+          "sd": 9.500722933742267,
+          "se": 2.5391750103378103,
+          "label": "Fisioterapia",
+          "low": 50.08587446582118,
+          "high": 61.05698267703596
+        },
+        {
+          "n": 14,
+          "mean": 44.92857142857143,
+          "sd": 10.80928579234814,
+          "se": 2.888903145049288,
+          "label": "Professor",
+          "low": 38.687475622450165,
+          "high": 51.169667234692696
+        }
+      ],
+      "n": 42,
+      "overall": 61.666666666666664,
+      "equal_var": false,
+      "ss_between": 11741.476190476189,
+      "ss_within": 4597.857142857143,
+      "ss_total": 16339.333333333332,
+      "mse": 117.8937728937729,
+      "df1": 2,
+      "df2": 25.74733948634735,
+      "df_error": 39,
+      "f": 42.65932796128421,
+      "p": 6.716867875008911e-09,
+      "s": null,
+      "r_squared": null,
+      "confidence": 95,
+      "comparisons": [
+        {
+          "first": "Engenharia",
+          "second": "Fisioterapia",
+          "difference": 28.92857142857143,
+          "p": 7.249830079603115e-07,
+          "low": 18.67353968922091,
+          "high": 39.18360316792195
+        },
+        {
+          "first": "Engenharia",
+          "second": "Professor",
+          "difference": 39.57142857142857,
+          "p": 4.595483660274624e-09,
+          "low": 28.784540569292915,
+          "high": 50.358316573564224
+        },
+        {
+          "first": "Fisioterapia",
+          "second": "Professor",
+          "difference": 10.642857142857139,
+          "p": 0.02705916046025525,
+          "low": 1.0760963945443525,
+          "high": 20.209617891169927
+        }
+      ],
+      "comparison_method": "Games-Howell"
+    },
+    "variance_ratio_max_min": 1.6238738738738738,
+    "variance_pairs": [
+      {
+        "pair": [
+          0,
+          1
+        ],
+        "result": {
+          "mode": "two_variances",
+          "samples": [
+            {
+              "n": 14,
+              "variance": 146.57692307692307,
+              "sd": 12.106895682912407,
+              "missing": 0,
+              "name": "Engenharia"
+            },
+            {
+              "n": 14,
+              "variance": 90.26373626373626,
+              "sd": 9.500722933742267,
+              "missing": 0,
+              "name": "Fisioterapia"
+            }
+          ],
+          "measure": "variance",
+          "estimate": 1.6238738738738738,
+          "statistic": 1.6238738738738738,
+          "df": [
+            13,
+            13
+          ],
+          "p": 0.39348222120530063,
+          "low": 0.5213018513408497,
+          "high": 5.0584250784215605,
+          "null": 1,
+          "confidence": 95,
+          "alternative": "two-sided",
+          "source": "Colunas separadas",
+          "excluded_groups": 0
+        }
+      },
+      {
+        "pair": [
+          0,
+          2
+        ],
+        "result": {
+          "mode": "two_variances",
+          "samples": [
+            {
+              "n": 14,
+              "variance": 146.57692307692307,
+              "sd": 12.106895682912407,
+              "missing": 0,
+              "name": "Engenharia"
+            },
+            {
+              "n": 14,
+              "variance": 116.84065934065934,
+              "sd": 10.80928579234814,
+              "missing": 0,
+              "name": "Professor"
+            }
+          ],
+          "measure": "variance",
+          "estimate": 1.2545027039736656,
+          "statistic": 1.2545027039736656,
+          "df": [
+            13,
+            13
+          ],
+          "p": 0.688742508829387,
+          "low": 0.4027249853669165,
+          "high": 3.9078207001321132,
+          "null": 1,
+          "confidence": 95,
+          "alternative": "two-sided",
+          "source": "Colunas separadas",
+          "excluded_groups": 0
+        }
+      },
+      {
+        "pair": [
+          1,
+          2
+        ],
+        "result": {
+          "mode": "two_variances",
+          "samples": [
+            {
+              "n": 14,
+              "variance": 90.26373626373626,
+              "sd": 9.500722933742267,
+              "missing": 0,
+              "name": "Fisioterapia"
+            },
+            {
+              "n": 14,
+              "variance": 116.84065934065934,
+              "sd": 10.80928579234814,
+              "missing": 0,
+              "name": "Professor"
+            }
+          ],
+          "measure": "variance",
+          "estimate": 0.7725370326828122,
+          "statistic": 0.7725370326828122,
+          "df": [
+            13,
+            13
+          ],
+          "p": 0.6485478315902182,
+          "low": 0.24800262621762956,
+          "high": 2.406480431149318,
+          "null": 1,
+          "confidence": 95,
+          "alternative": "two-sided",
+          "source": "Colunas separadas",
+          "excluded_groups": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "5a",
+    "name": "Prints e tempo",
+    "source_range": "A87:B96",
+    "headers": [
+      "Quantidade de prints",
+      "Tempo de execução (s)"
+    ],
+    "n": [
+      9,
+      9
+    ],
+    "normality": [
+      {
+        "n": 9,
+        "mean": 17.333333333333332,
+        "sd": 9.848857801796104,
+        "statistic": 0.2963305965051468,
+        "adjusted": 0.32925621833905194,
+        "p": 0.5156797512510944,
+        "p_upper": null,
+        "repeated": 0,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 9,
+        "mean": 6.433333333333334,
+        "sd": 3.195700236254959,
+        "statistic": 0.24490080200173914,
+        "adjusted": 0.27211200222415455,
+        "p": 0.6707047359890973,
+        "p_upper": null,
+        "repeated": 0,
+        "missing": 0,
+        "source": "Amostra"
+      }
+    ],
+    "boxplots": [
+      {
+        "q1": 8.5,
+        "median": 15.0,
+        "q3": 27.5,
+        "low": 5.0,
+        "high": 32.0,
+        "outliers": []
+      },
+      {
+        "q1": 3.2,
+        "median": 6.5,
+        "q3": 9.4,
+        "low": 2.3,
+        "high": 11.1,
+        "outliers": []
+      }
+    ],
+    "severe_outliers": [
+      [],
+      []
+    ],
+    "correlation": {
+      "labels": [
+        "Quantidade de prints",
+        "Tempo de execução (s)"
+      ],
+      "method": "pearson",
+      "missing": "pairwise",
+      "confidence": 95,
+      "pairs": [
+        {
+          "first": 0,
+          "second": 1,
+          "n": 9,
+          "excluded": 0,
+          "r": 0.9905001833067801,
+          "p": 2.725978172966684e-07,
+          "ci": [
+            0.9538005941382587,
+            0.9980753059395383
+          ],
+          "reason": ""
+        }
+      ]
+    },
+    "regression": {
+      "response": "Tempo de execução (s)",
+      "predictors": [
+        "Quantidade de prints"
+      ],
+      "n": 9,
+      "excluded": 0,
+      "row_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "terms": [
+        {
+          "label": "Constante",
+          "coefficient": 0.862542955326461,
+          "se": 0.33161810901102917,
+          "t": 2.6010128273717825,
+          "p": 0.03537297217591663,
+          "low": 0.07839073249164186,
+          "high": 1.6466951781612802,
+          "vif": null
+        },
+        {
+          "label": "Quantidade de prints",
+          "coefficient": 0.3213917525773196,
+          "se": 0.01686436026450947,
+          "t": 19.05745296806062,
+          "p": 2.7259781729666685e-07,
+          "low": 0.2815138773082628,
+          "high": 0.3612696278463764,
+          "vif": 1.0
+        }
+      ],
+      "confidence": 95,
+      "df_model": 1,
+      "df_error": 7,
+      "df_total": 8,
+      "ss_model": 80.15510309278349,
+      "ss_error": 1.544896907216494,
+      "ss_total": 81.69999999999999,
+      "ms_error": 0.22069955817378487,
+      "f": 363.1865136298423,
+      "p": 2.7259781729666753e-07,
+      "s": 0.46978671562080687,
+      "r2": 98.10906131307651,
+      "adjusted": 97.83892721494458,
+      "press": 2.2406563634990255,
+      "predicted": 97.25745855140879,
+      "fitted": [
+        2.4695017182130576,
+        3.433676975945017,
+        3.7550687285223363,
+        4.719243986254296,
+        5.683419243986254,
+        7.290378006872853,
+        9.21872852233677,
+        10.18290378006873,
+        11.147079037800689
+      ],
+      "residuals": [
+        -0.1695017182130578,
+        -0.43367697594501714,
+        -0.3550687285223365,
+        0.28075601374570447,
+        0.8165807560137455,
+        0.5096219931271472,
+        -0.21872852233676998,
+        -0.38290378006872866,
+        -0.047079037800689186
+      ],
+      "observed": [
+        2.3,
+        3.0,
+        3.4,
+        5.0,
+        6.5,
+        7.8,
+        9.0,
+        9.8,
+        11.1
+      ],
+      "x": [
+        [
+          5.0
+        ],
+        [
+          8.0
+        ],
+        [
+          9.0
+        ],
+        [
+          12.0
+        ],
+        [
+          15.0
+        ],
+        [
+          20.0
+        ],
+        [
+          26.0
+        ],
+        [
+          29.0
+        ],
+        [
+          32.0
+        ]
+      ],
+      "leverage": [
+        0.3071305841924399,
+        0.22336769759450165,
+        0.20060137457044674,
+        0.14776632302405499,
+        0.11812714776632302,
+        0.12027491408934707,
+        0.20790378006872856,
+        0.2865120274914089,
+        0.38831615120274926
+      ],
+      "standardized": [
+        -0.43345865330621786,
+        -1.047509352014264,
+        -0.8453372263138804,
+        0.6473646636155875,
+        1.850953132881416,
+        1.1565753767138742,
+        -0.5231373363557691,
+        -0.9649295216271867,
+        -0.1281336919127599
+      ],
+      "cooks": [
+        0.04164252292316137,
+        0.1577940924031577,
+        0.08966036465117809,
+        0.036331619618990486,
+        0.22945873417778137,
+        0.09144205287251836,
+        0.03591582797767734,
+        0.18694652341933074,
+        0.00521140859371048
+      ],
+      "perfect": false,
+      "condition": 3.0,
+      "prediction_state": {
+        "x_mean": [
+          17.333333333333332
+        ],
+        "x_scale": [
+          27.85677655436824
+        ],
+        "y_mean": 6.433333333333334,
+        "y_scale": 4.666666666666666,
+        "coefficients": [
+          -5.551115123125783e-17,
+          1.918486765277828
+        ],
+        "inverse_factor": [
+          [
+            -0.3333333333333333,
+            0.0
+          ],
+          [
+            -0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    "residual_normality": {
+      "n": 9,
+      "mean": -2.3900634557902674e-16,
+      "sd": 0.4394452336777152,
+      "statistic": 0.4712076609874458,
+      "adjusted": 0.5235640677638286,
+      "p": 0.18251638565570943,
+      "p_upper": null,
+      "repeated": 0,
+      "missing": 0,
+      "source": "Amostra"
+    }
+  },
+  {
+    "id": "5b",
+    "name": "Pessoas e prazo",
+    "source_range": "E87:F95",
+    "headers": [
+      "qtd de pessoas",
+      "Tempo (dias)"
+    ],
+    "n": [
+      8,
+      8
+    ],
+    "normality": [
+      {
+        "n": 8,
+        "mean": 7.75,
+        "sd": 4.367084676466506,
+        "statistic": 0.16726055872983459,
+        "adjusted": 0.18882149012860233,
+        "p": 0.9012697977267576,
+        "p_upper": null,
+        "repeated": 0,
+        "missing": 0,
+        "source": "Amostra"
+      },
+      {
+        "n": 8,
+        "mean": 50.125,
+        "sd": 24.20411712321451,
+        "statistic": 0.3205057056356555,
+        "adjusted": 0.3618208942527517,
+        "p": 0.4443274792044127,
+        "p_upper": null,
+        "repeated": 0,
+        "missing": 0,
+        "source": "Amostra"
+      }
+    ],
+    "boxplots": [
+      {
+        "q1": 4.25,
+        "median": 7.0,
+        "q3": 11.5,
+        "low": 2.0,
+        "high": 15.0,
+        "outliers": []
+      },
+      {
+        "q1": 25.5,
+        "median": 52.5,
+        "q3": 73.0,
+        "low": 18.0,
+        "high": 80.0,
+        "outliers": []
+      }
+    ],
+    "severe_outliers": [
+      [],
+      []
+    ],
+    "correlation": {
+      "labels": [
+        "qtd de pessoas",
+        "Tempo (dias)"
+      ],
+      "method": "pearson",
+      "missing": "pairwise",
+      "confidence": 95,
+      "pairs": [
+        {
+          "first": 0,
+          "second": 1,
+          "n": 8,
+          "excluded": 0,
+          "r": -0.9781595019551088,
+          "p": 2.5620429033824647e-05,
+          "ci": [
+            -0.9961817574917257,
+            -0.8801776268043482
+          ],
+          "reason": ""
+        }
+      ]
+    },
+    "regression": {
+      "response": "Tempo (dias)",
+      "predictors": [
+        "qtd de pessoas"
+      ],
+      "n": 8,
+      "excluded": 0,
+      "row_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "terms": [
+        {
+          "label": "Constante",
+          "coefficient": 92.14044943820227,
+          "se": 4.120245767525418,
+          "t": 22.362852760975223,
+          "p": 5.230489075113175e-07,
+          "low": 82.05857124001439,
+          "high": 102.22232763639015,
+          "vif": null
+        },
+        {
+          "label": "qtd de pessoas",
+          "coefficient": -5.421348314606743,
+          "se": 0.47030969330823796,
+          "t": -11.527188131020779,
+          "p": 2.5620429033824786e-05,
+          "low": -6.5721546768710315,
+          "high": -4.270541952342455,
+          "vif": 1.0000000000000002
+        }
+      ],
+      "confidence": 95,
+      "df_model": 1,
+      "df_error": 6,
+      "df_total": 7,
+      "ss_model": 3923.700842696629,
+      "ss_error": 177.17415730337078,
+      "ss_total": 4100.875,
+      "ms_error": 29.529026217228463,
+      "f": 132.87606620794622,
+      "p": 2.5620429033824847e-05,
+      "s": 5.434061668515408,
+      "r2": 95.67960112650664,
+      "adjusted": 94.95953464759108,
+      "press": 410.72706407915155,
+      "predicted": 89.98440420448924,
+      "fitted": [
+        81.29775280898878,
+        70.45505617977528,
+        65.03370786516854,
+        59.6123595505618,
+        48.76966292134831,
+        37.92696629213483,
+        27.084269662921347,
+        10.820224719101116
+      ],
+      "residuals": [
+        -1.2977528089887713,
+        3.5449438202247148,
+        4.966292134831459,
+        0.38764044943820036,
+        -3.769662921348314,
+        -7.9269662921348285,
+        -3.0842696629213457,
+        7.179775280898883
+      ],
+      "observed": [
+        80.0,
+        74.0,
+        70.0,
+        60.0,
+        45.0,
+        30.0,
+        24.0,
+        18.0
+      ],
+      "x": [
+        [
+          2.0
+        ],
+        [
+          4.0
+        ],
+        [
+          5.0
+        ],
+        [
+          6.0
+        ],
+        [
+          8.0
+        ],
+        [
+          10.0
+        ],
+        [
+          12.0
+        ],
+        [
+          15.0
+        ]
+      ],
+      "leverage": [
+        0.3726591760299625,
+        0.2303370786516855,
+        0.18164794007490634,
+        0.14794007490636701,
+        0.12546816479400746,
+        0.16292134831460675,
+        0.2602996254681648,
+        0.5187265917602999
+      ],
+      "standardized": [
+        -0.3015196635761526,
+        0.7435916628296795,
+        1.0102703564603384,
+        0.07728041683451876,
+        -0.741805661195218,
+        -1.5944074526205612,
+        -0.6599330217331607,
+        1.904541128427376
+      ],
+      "cooks": [
+        0.0270028468613316,
+        0.08273748540956981,
+        0.1132753784151286,
+        0.0005184711684211436,
+        0.039473734273817326,
+        0.24738898867177056,
+        0.0766279891786919,
+        1.9547776343081427
+      ],
+      "perfect": false,
+      "condition": 2.8284271247461907,
+      "prediction_state": {
+        "x_mean": [
+          7.75
+        ],
+        "x_scale": [
+          11.554220008291344
+        ],
+        "y_mean": 50.125,
+        "y_scale": 32.125,
+        "coefficients": [
+          0.0,
+          -1.9498661842348881
+        ],
+        "inverse_factor": [
+          [
+            -0.35355339059327373,
+            0.0
+          ],
+          [
+            -0.0,
+            1.0000000000000002
+          ]
+        ]
+      }
+    },
+    "residual_normality": {
+      "n": 8,
+      "mean": -2.8449465006019636e-16,
+      "sd": 5.030963516115133,
+      "statistic": 0.15456159176314088,
+      "adjusted": 0.17448554695135826,
+      "p": 0.925729224888534,
+      "p_upper": null,
+      "repeated": 0,
+      "missing": 0,
+      "source": "Amostra"
+    }
+  }
+]

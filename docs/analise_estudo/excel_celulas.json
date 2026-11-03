@@ -1,0 +1,1910 @@
+[
+  {
+    "sheet": "Plan1",
+    "rows": 96,
+    "columns": 15,
+    "state": "visible",
+    "cells": [
+      {
+        "cell": "A1",
+        "value": "1) Desenvolva o diagrama de caixa,  teste de normalidade dos dados a seguir e verifique se os grupos possuem variânciais iguais ou não entre si.",
+        "type": "s"
+      },
+      {
+        "cell": "A2",
+        "value": "2) Desenvolva o teste t de Student independente entre os grupos com as análises.",
+        "type": "s"
+      },
+      {
+        "cell": "A4",
+        "value": "a) Tempo grupo 1",
+        "type": "s"
+      },
+      {
+        "cell": "B4",
+        "value": "Tempo grupo 2",
+        "type": "s"
+      },
+      {
+        "cell": "D4",
+        "value": "b) Produtividade G1",
+        "type": "s"
+      },
+      {
+        "cell": "E4",
+        "value": "Produtividade G2",
+        "type": "s"
+      },
+      {
+        "cell": "A5",
+        "value": 25,
+        "type": "n"
+      },
+      {
+        "cell": "B5",
+        "value": 31,
+        "type": "n"
+      },
+      {
+        "cell": "D5",
+        "value": 125,
+        "type": "n"
+      },
+      {
+        "cell": "E5",
+        "value": 128,
+        "type": "n"
+      },
+      {
+        "cell": "A6",
+        "value": 28,
+        "type": "n"
+      },
+      {
+        "cell": "B6",
+        "value": 32,
+        "type": "n"
+      },
+      {
+        "cell": "D6",
+        "value": 124,
+        "type": "n"
+      },
+      {
+        "cell": "E6",
+        "value": 145,
+        "type": "n"
+      },
+      {
+        "cell": "A7",
+        "value": 26,
+        "type": "n"
+      },
+      {
+        "cell": "B7",
+        "value": 38,
+        "type": "n"
+      },
+      {
+        "cell": "D7",
+        "value": 128,
+        "type": "n"
+      },
+      {
+        "cell": "E7",
+        "value": 165,
+        "type": "n"
+      },
+      {
+        "cell": "A8",
+        "value": 29,
+        "type": "n"
+      },
+      {
+        "cell": "B8",
+        "value": 36,
+        "type": "n"
+      },
+      {
+        "cell": "D8",
+        "value": 135,
+        "type": "n"
+      },
+      {
+        "cell": "E8",
+        "value": 145,
+        "type": "n"
+      },
+      {
+        "cell": "A9",
+        "value": 30,
+        "type": "n"
+      },
+      {
+        "cell": "B9",
+        "value": 39,
+        "type": "n"
+      },
+      {
+        "cell": "D9",
+        "value": 139,
+        "type": "n"
+      },
+      {
+        "cell": "E9",
+        "value": 142,
+        "type": "n"
+      },
+      {
+        "cell": "A10",
+        "value": 32,
+        "type": "n"
+      },
+      {
+        "cell": "B10",
+        "value": 35,
+        "type": "n"
+      },
+      {
+        "cell": "D10",
+        "value": 141,
+        "type": "n"
+      },
+      {
+        "cell": "E10",
+        "value": 148,
+        "type": "n"
+      },
+      {
+        "cell": "A11",
+        "value": 35,
+        "type": "n"
+      },
+      {
+        "cell": "B11",
+        "value": 38,
+        "type": "n"
+      },
+      {
+        "cell": "D11",
+        "value": 146,
+        "type": "n"
+      },
+      {
+        "cell": "E11",
+        "value": 147,
+        "type": "n"
+      },
+      {
+        "cell": "A12",
+        "value": 38,
+        "type": "n"
+      },
+      {
+        "cell": "B12",
+        "value": 41,
+        "type": "n"
+      },
+      {
+        "cell": "D12",
+        "value": 128,
+        "type": "n"
+      },
+      {
+        "cell": "E12",
+        "value": 142,
+        "type": "n"
+      },
+      {
+        "cell": "A13",
+        "value": 36,
+        "type": "n"
+      },
+      {
+        "cell": "B13",
+        "value": 42,
+        "type": "n"
+      },
+      {
+        "cell": "D13",
+        "value": 134,
+        "type": "n"
+      },
+      {
+        "cell": "E13",
+        "value": 138,
+        "type": "n"
+      },
+      {
+        "cell": "A14",
+        "value": 39,
+        "type": "n"
+      },
+      {
+        "cell": "B14",
+        "value": 42,
+        "type": "n"
+      },
+      {
+        "cell": "D14",
+        "value": 138,
+        "type": "n"
+      },
+      {
+        "cell": "E14",
+        "value": 148,
+        "type": "n"
+      },
+      {
+        "cell": "A15",
+        "value": 27,
+        "type": "n"
+      },
+      {
+        "cell": "B15",
+        "value": 46,
+        "type": "n"
+      },
+      {
+        "cell": "D15",
+        "value": 134,
+        "type": "n"
+      },
+      {
+        "cell": "E15",
+        "value": 149,
+        "type": "n"
+      },
+      {
+        "cell": "A16",
+        "value": 28,
+        "type": "n"
+      },
+      {
+        "cell": "B16",
+        "value": 48,
+        "type": "n"
+      },
+      {
+        "cell": "D16",
+        "value": 145,
+        "type": "n"
+      },
+      {
+        "cell": "E16",
+        "value": 146,
+        "type": "n"
+      },
+      {
+        "cell": "A17",
+        "value": 22,
+        "type": "n"
+      },
+      {
+        "cell": "B17",
+        "value": 42,
+        "type": "n"
+      },
+      {
+        "cell": "D17",
+        "value": 149,
+        "type": "n"
+      },
+      {
+        "cell": "E17",
+        "value": 148,
+        "type": "n"
+      },
+      {
+        "cell": "A18",
+        "value": 25,
+        "type": "n"
+      },
+      {
+        "cell": "B18",
+        "value": 80,
+        "type": "n"
+      },
+      {
+        "cell": "D18",
+        "value": 144,
+        "type": "n"
+      },
+      {
+        "cell": "E18",
+        "value": 135,
+        "type": "n"
+      },
+      {
+        "cell": "A19",
+        "value": 29,
+        "type": "n"
+      },
+      {
+        "cell": "B19",
+        "value": 42,
+        "type": "n"
+      },
+      {
+        "cell": "D19",
+        "value": 146,
+        "type": "n"
+      },
+      {
+        "cell": "E19",
+        "value": 148,
+        "type": "n"
+      },
+      {
+        "cell": "A20",
+        "value": 25,
+        "type": "n"
+      },
+      {
+        "cell": "A22",
+        "value": "3) Desenvolva os pré requisitos (diagrama de caixa, teste de normalidade) e o teste pareado dos grupos a seguir. E desenvolva as análises",
+        "type": "s"
+      },
+      {
+        "cell": "A23",
+        "value": "a) Custo empresa Antes",
+        "type": "s"
+      },
+      {
+        "cell": "B23",
+        "value": "Custo empresa depois",
+        "type": "s"
+      },
+      {
+        "cell": "D23",
+        "value": "b) Colesterol Antes",
+        "type": "s"
+      },
+      {
+        "cell": "E23",
+        "value": "Colesterol Depois",
+        "type": "s"
+      },
+      {
+        "cell": "A24",
+        "value": 1249,
+        "type": "n"
+      },
+      {
+        "cell": "B24",
+        "value": 1579,
+        "type": "n"
+      },
+      {
+        "cell": "D24",
+        "value": 308,
+        "type": "n"
+      },
+      {
+        "cell": "E24",
+        "value": 210,
+        "type": "n"
+      },
+      {
+        "cell": "A25",
+        "value": 1293,
+        "type": "n"
+      },
+      {
+        "cell": "B25",
+        "value": 1833,
+        "type": "n"
+      },
+      {
+        "cell": "D25",
+        "value": 304,
+        "type": "n"
+      },
+      {
+        "cell": "E25",
+        "value": 169,
+        "type": "n"
+      },
+      {
+        "cell": "A26",
+        "value": 1357,
+        "type": "n"
+      },
+      {
+        "cell": "B26",
+        "value": 1529,
+        "type": "n"
+      },
+      {
+        "cell": "D26",
+        "value": 286,
+        "type": "n"
+      },
+      {
+        "cell": "E26",
+        "value": 177,
+        "type": "n"
+      },
+      {
+        "cell": "A27",
+        "value": 1293,
+        "type": "n"
+      },
+      {
+        "cell": "B27",
+        "value": 1896,
+        "type": "n"
+      },
+      {
+        "cell": "D27",
+        "value": 299,
+        "type": "n"
+      },
+      {
+        "cell": "E27",
+        "value": 145,
+        "type": "n"
+      },
+      {
+        "cell": "A28",
+        "value": 1348,
+        "type": "n"
+      },
+      {
+        "cell": "B28",
+        "value": 1722,
+        "type": "n"
+      },
+      {
+        "cell": "D28",
+        "value": 330,
+        "type": "n"
+      },
+      {
+        "cell": "E28",
+        "value": 147,
+        "type": "n"
+      },
+      {
+        "cell": "A29",
+        "value": 1297,
+        "type": "n"
+      },
+      {
+        "cell": "B29",
+        "value": 1532,
+        "type": "n"
+      },
+      {
+        "cell": "D29",
+        "value": 317,
+        "type": "n"
+      },
+      {
+        "cell": "E29",
+        "value": 175,
+        "type": "n"
+      },
+      {
+        "cell": "A30",
+        "value": 1239,
+        "type": "n"
+      },
+      {
+        "cell": "B30",
+        "value": 1828,
+        "type": "n"
+      },
+      {
+        "cell": "D30",
+        "value": 234,
+        "type": "n"
+      },
+      {
+        "cell": "E30",
+        "value": 204,
+        "type": "n"
+      },
+      {
+        "cell": "A31",
+        "value": 1331,
+        "type": "n"
+      },
+      {
+        "cell": "B31",
+        "value": 1729,
+        "type": "n"
+      },
+      {
+        "cell": "D31",
+        "value": 231,
+        "type": "n"
+      },
+      {
+        "cell": "E31",
+        "value": 196,
+        "type": "n"
+      },
+      {
+        "cell": "A32",
+        "value": 1206,
+        "type": "n"
+      },
+      {
+        "cell": "B32",
+        "value": 1881,
+        "type": "n"
+      },
+      {
+        "cell": "D32",
+        "value": 301,
+        "type": "n"
+      },
+      {
+        "cell": "E32",
+        "value": 143,
+        "type": "n"
+      },
+      {
+        "cell": "A33",
+        "value": 1371,
+        "type": "n"
+      },
+      {
+        "cell": "B33",
+        "value": 1703,
+        "type": "n"
+      },
+      {
+        "cell": "D33",
+        "value": 347,
+        "type": "n"
+      },
+      {
+        "cell": "E33",
+        "value": 205,
+        "type": "n"
+      },
+      {
+        "cell": "A34",
+        "value": 1216,
+        "type": "n"
+      },
+      {
+        "cell": "B34",
+        "value": 1674,
+        "type": "n"
+      },
+      {
+        "cell": "D34",
+        "value": 281,
+        "type": "n"
+      },
+      {
+        "cell": "E34",
+        "value": 177,
+        "type": "n"
+      },
+      {
+        "cell": "A35",
+        "value": 1287,
+        "type": "n"
+      },
+      {
+        "cell": "B35",
+        "value": 1703,
+        "type": "n"
+      },
+      {
+        "cell": "D35",
+        "value": 246,
+        "type": "n"
+      },
+      {
+        "cell": "E35",
+        "value": 230,
+        "type": "n"
+      },
+      {
+        "cell": "A36",
+        "value": 1214,
+        "type": "n"
+      },
+      {
+        "cell": "B36",
+        "value": 1799,
+        "type": "n"
+      },
+      {
+        "cell": "A37",
+        "value": 1358,
+        "type": "n"
+      },
+      {
+        "cell": "B37",
+        "value": 1524,
+        "type": "n"
+      },
+      {
+        "cell": "A38",
+        "value": 1314,
+        "type": "n"
+      },
+      {
+        "cell": "B38",
+        "value": 1607,
+        "type": "n"
+      },
+      {
+        "cell": "A39",
+        "value": 1313,
+        "type": "n"
+      },
+      {
+        "cell": "B39",
+        "value": 1587,
+        "type": "n"
+      },
+      {
+        "cell": "A40",
+        "value": 1283,
+        "type": "n"
+      },
+      {
+        "cell": "B40",
+        "value": 1709,
+        "type": "n"
+      },
+      {
+        "cell": "A41",
+        "value": 1224,
+        "type": "n"
+      },
+      {
+        "cell": "B41",
+        "value": 1510,
+        "type": "n"
+      },
+      {
+        "cell": "A42",
+        "value": 1265,
+        "type": "n"
+      },
+      {
+        "cell": "B42",
+        "value": 1645,
+        "type": "n"
+      },
+      {
+        "cell": "A44",
+        "value": "4) Desenvova a análise dos pré-requisitos (diagrama de caixa, teste de normalidade e teste de variância) e do ANOVA para cada situação.",
+        "type": "s"
+      },
+      {
+        "cell": "A46",
+        "value": "a) tempo de execução em diferentes provedores",
+        "type": "s"
+      },
+      {
+        "cell": "E46",
+        "value": "b) Resistência em diferentes lotes",
+        "type": "s"
+      },
+      {
+        "cell": "I46",
+        "value": "c) Qualidade vida em diferentes empregos",
+        "type": "s"
+      },
+      {
+        "cell": "A47",
+        "value": "Provedor 1",
+        "type": "s"
+      },
+      {
+        "cell": "B47",
+        "value": "Provedor 2",
+        "type": "s"
+      },
+      {
+        "cell": "C47",
+        "value": "Provedor 3",
+        "type": "s"
+      },
+      {
+        "cell": "E47",
+        "value": "Lote 1",
+        "type": "s"
+      },
+      {
+        "cell": "F47",
+        "value": "Lote 2",
+        "type": "s"
+      },
+      {
+        "cell": "G47",
+        "value": "Lote 3",
+        "type": "s"
+      },
+      {
+        "cell": "I47",
+        "value": "Engenharia",
+        "type": "s"
+      },
+      {
+        "cell": "J47",
+        "value": "Fisioterapia",
+        "type": "s"
+      },
+      {
+        "cell": "K47",
+        "value": "Professor",
+        "type": "s"
+      },
+      {
+        "cell": "A48",
+        "value": 4.2,
+        "type": "n"
+      },
+      {
+        "cell": "B48",
+        "value": 5.6,
+        "type": "n"
+      },
+      {
+        "cell": "C48",
+        "value": 4.2,
+        "type": "n"
+      },
+      {
+        "cell": "E48",
+        "value": 33,
+        "type": "n"
+      },
+      {
+        "cell": "F48",
+        "value": 13,
+        "type": "n"
+      },
+      {
+        "cell": "G48",
+        "value": 9,
+        "type": "n"
+      },
+      {
+        "cell": "I48",
+        "value": 66,
+        "type": "n"
+      },
+      {
+        "cell": "J48",
+        "value": 40,
+        "type": "n"
+      },
+      {
+        "cell": "K48",
+        "value": 30,
+        "type": "n"
+      },
+      {
+        "cell": "A49",
+        "value": 4.5,
+        "type": "n"
+      },
+      {
+        "cell": "B49",
+        "value": 5.5,
+        "type": "n"
+      },
+      {
+        "cell": "C49",
+        "value": 4.5,
+        "type": "n"
+      },
+      {
+        "cell": "E49",
+        "value": 28,
+        "type": "n"
+      },
+      {
+        "cell": "F49",
+        "value": 16,
+        "type": "n"
+      },
+      {
+        "cell": "G49",
+        "value": 7,
+        "type": "n"
+      },
+      {
+        "cell": "I49",
+        "value": 72,
+        "type": "n"
+      },
+      {
+        "cell": "J49",
+        "value": 52,
+        "type": "n"
+      },
+      {
+        "cell": "K49",
+        "value": 45,
+        "type": "n"
+      },
+      {
+        "cell": "A50",
+        "value": 4.3,
+        "type": "n"
+      },
+      {
+        "cell": "B50",
+        "value": 5.9,
+        "type": "n"
+      },
+      {
+        "cell": "C50",
+        "value": 4.8,
+        "type": "n"
+      },
+      {
+        "cell": "E50",
+        "value": 29,
+        "type": "n"
+      },
+      {
+        "cell": "F50",
+        "value": 15,
+        "type": "n"
+      },
+      {
+        "cell": "G50",
+        "value": 7,
+        "type": "n"
+      },
+      {
+        "cell": "I50",
+        "value": 100,
+        "type": "n"
+      },
+      {
+        "cell": "J50",
+        "value": 52,
+        "type": "n"
+      },
+      {
+        "cell": "K50",
+        "value": 55,
+        "type": "n"
+      },
+      {
+        "cell": "A51",
+        "value": 4.6,
+        "type": "n"
+      },
+      {
+        "cell": "B51",
+        "value": 6.5,
+        "type": "n"
+      },
+      {
+        "cell": "C51",
+        "value": 4.6,
+        "type": "n"
+      },
+      {
+        "cell": "E51",
+        "value": 24,
+        "type": "n"
+      },
+      {
+        "cell": "F51",
+        "value": 17,
+        "type": "n"
+      },
+      {
+        "cell": "G51",
+        "value": 14,
+        "type": "n"
+      },
+      {
+        "cell": "I51",
+        "value": 68,
+        "type": "n"
+      },
+      {
+        "cell": "J51",
+        "value": 66,
+        "type": "n"
+      },
+      {
+        "cell": "K51",
+        "value": 37,
+        "type": "n"
+      },
+      {
+        "cell": "A52",
+        "value": 4.8,
+        "type": "n"
+      },
+      {
+        "cell": "B52",
+        "value": 5.7,
+        "type": "n"
+      },
+      {
+        "cell": "C52",
+        "value": 4.5,
+        "type": "n"
+      },
+      {
+        "cell": "E52",
+        "value": 35,
+        "type": "n"
+      },
+      {
+        "cell": "F52",
+        "value": 13,
+        "type": "n"
+      },
+      {
+        "cell": "G52",
+        "value": 6,
+        "type": "n"
+      },
+      {
+        "cell": "I52",
+        "value": 82,
+        "type": "n"
+      },
+      {
+        "cell": "J52",
+        "value": 50,
+        "type": "n"
+      },
+      {
+        "cell": "K52",
+        "value": 55,
+        "type": "n"
+      },
+      {
+        "cell": "A53",
+        "value": 4.5,
+        "type": "n"
+      },
+      {
+        "cell": "B53",
+        "value": 5.8,
+        "type": "n"
+      },
+      {
+        "cell": "C53",
+        "value": 4.3,
+        "type": "n"
+      },
+      {
+        "cell": "E53",
+        "value": 27,
+        "type": "n"
+      },
+      {
+        "cell": "F53",
+        "value": 12,
+        "type": "n"
+      },
+      {
+        "cell": "G53",
+        "value": 13,
+        "type": "n"
+      },
+      {
+        "cell": "I53",
+        "value": 98,
+        "type": "n"
+      },
+      {
+        "cell": "J53",
+        "value": 60,
+        "type": "n"
+      },
+      {
+        "cell": "K53",
+        "value": 54,
+        "type": "n"
+      },
+      {
+        "cell": "A54",
+        "value": 4.5,
+        "type": "n"
+      },
+      {
+        "cell": "B54",
+        "value": 5.4,
+        "type": "n"
+      },
+      {
+        "cell": "C54",
+        "value": 4.7,
+        "type": "n"
+      },
+      {
+        "cell": "E54",
+        "value": 28,
+        "type": "n"
+      },
+      {
+        "cell": "F54",
+        "value": 17,
+        "type": "n"
+      },
+      {
+        "cell": "G54",
+        "value": 7,
+        "type": "n"
+      },
+      {
+        "cell": "I54",
+        "value": 92,
+        "type": "n"
+      },
+      {
+        "cell": "J54",
+        "value": 65,
+        "type": "n"
+      },
+      {
+        "cell": "K54",
+        "value": 30,
+        "type": "n"
+      },
+      {
+        "cell": "A55",
+        "value": 4.9,
+        "type": "n"
+      },
+      {
+        "cell": "B55",
+        "value": 5.8,
+        "type": "n"
+      },
+      {
+        "cell": "C55",
+        "value": 4.6,
+        "type": "n"
+      },
+      {
+        "cell": "E55",
+        "value": 36,
+        "type": "n"
+      },
+      {
+        "cell": "F55",
+        "value": 16,
+        "type": "n"
+      },
+      {
+        "cell": "G55",
+        "value": 12,
+        "type": "n"
+      },
+      {
+        "cell": "I55",
+        "value": 72,
+        "type": "n"
+      },
+      {
+        "cell": "J55",
+        "value": 57,
+        "type": "n"
+      },
+      {
+        "cell": "K55",
+        "value": 33,
+        "type": "n"
+      },
+      {
+        "cell": "A56",
+        "value": 4.2,
+        "type": "n"
+      },
+      {
+        "cell": "B56",
+        "value": 5.9,
+        "type": "n"
+      },
+      {
+        "cell": "C56",
+        "value": 4.5,
+        "type": "n"
+      },
+      {
+        "cell": "E56",
+        "value": 33,
+        "type": "n"
+      },
+      {
+        "cell": "F56",
+        "value": 16,
+        "type": "n"
+      },
+      {
+        "cell": "G56",
+        "value": 10,
+        "type": "n"
+      },
+      {
+        "cell": "I56",
+        "value": 79,
+        "type": "n"
+      },
+      {
+        "cell": "J56",
+        "value": 70,
+        "type": "n"
+      },
+      {
+        "cell": "K56",
+        "value": 54,
+        "type": "n"
+      },
+      {
+        "cell": "A57",
+        "value": 4,
+        "type": "n"
+      },
+      {
+        "cell": "B57",
+        "value": 3.8,
+        "type": "n"
+      },
+      {
+        "cell": "C57",
+        "value": 4.6,
+        "type": "n"
+      },
+      {
+        "cell": "E57",
+        "value": 31,
+        "type": "n"
+      },
+      {
+        "cell": "F57",
+        "value": 17,
+        "type": "n"
+      },
+      {
+        "cell": "G57",
+        "value": 12,
+        "type": "n"
+      },
+      {
+        "cell": "I57",
+        "value": 91,
+        "type": "n"
+      },
+      {
+        "cell": "J57",
+        "value": 62,
+        "type": "n"
+      },
+      {
+        "cell": "K57",
+        "value": 48,
+        "type": "n"
+      },
+      {
+        "cell": "A58",
+        "value": 4.9,
+        "type": "n"
+      },
+      {
+        "cell": "B58",
+        "value": 5.9,
+        "type": "n"
+      },
+      {
+        "cell": "C58",
+        "value": 4.8,
+        "type": "n"
+      },
+      {
+        "cell": "E58",
+        "value": 34,
+        "type": "n"
+      },
+      {
+        "cell": "F58",
+        "value": 14,
+        "type": "n"
+      },
+      {
+        "cell": "G58",
+        "value": 12,
+        "type": "n"
+      },
+      {
+        "cell": "I58",
+        "value": 95,
+        "type": "n"
+      },
+      {
+        "cell": "J58",
+        "value": 52,
+        "type": "n"
+      },
+      {
+        "cell": "K58",
+        "value": 57,
+        "type": "n"
+      },
+      {
+        "cell": "A59",
+        "value": 4.8,
+        "type": "n"
+      },
+      {
+        "cell": "B59",
+        "value": 6.1,
+        "type": "n"
+      },
+      {
+        "cell": "C59",
+        "value": 4.9,
+        "type": "n"
+      },
+      {
+        "cell": "E59",
+        "value": 25,
+        "type": "n"
+      },
+      {
+        "cell": "F59",
+        "value": 14,
+        "type": "n"
+      },
+      {
+        "cell": "G59",
+        "value": 12,
+        "type": "n"
+      },
+      {
+        "cell": "I59",
+        "value": 93,
+        "type": "n"
+      },
+      {
+        "cell": "J59",
+        "value": 65,
+        "type": "n"
+      },
+      {
+        "cell": "K59",
+        "value": 30,
+        "type": "n"
+      },
+      {
+        "cell": "A60",
+        "value": 4.2,
+        "type": "n"
+      },
+      {
+        "cell": "B60",
+        "value": 6.2,
+        "type": "n"
+      },
+      {
+        "cell": "C60",
+        "value": 4.7,
+        "type": "n"
+      },
+      {
+        "cell": "E60",
+        "value": 34,
+        "type": "n"
+      },
+      {
+        "cell": "F60",
+        "value": 13,
+        "type": "n"
+      },
+      {
+        "cell": "G60",
+        "value": 13,
+        "type": "n"
+      },
+      {
+        "cell": "I60",
+        "value": 77,
+        "type": "n"
+      },
+      {
+        "cell": "J60",
+        "value": 46,
+        "type": "n"
+      },
+      {
+        "cell": "K60",
+        "value": 56,
+        "type": "n"
+      },
+      {
+        "cell": "A61",
+        "value": 4.5,
+        "type": "n"
+      },
+      {
+        "cell": "B61",
+        "value": 6.8,
+        "type": "n"
+      },
+      {
+        "cell": "C61",
+        "value": 4.8,
+        "type": "n"
+      },
+      {
+        "cell": "E61",
+        "value": 33,
+        "type": "n"
+      },
+      {
+        "cell": "F61",
+        "value": 14,
+        "type": "n"
+      },
+      {
+        "cell": "G61",
+        "value": 9,
+        "type": "n"
+      },
+      {
+        "cell": "I61",
+        "value": 98,
+        "type": "n"
+      },
+      {
+        "cell": "J61",
+        "value": 41,
+        "type": "n"
+      },
+      {
+        "cell": "K61",
+        "value": 45,
+        "type": "n"
+      },
+      {
+        "cell": "A62",
+        "value": 4.4,
+        "type": "n"
+      },
+      {
+        "cell": "B62",
+        "value": 6.8,
+        "type": "n"
+      },
+      {
+        "cell": "C62",
+        "value": 4.6,
+        "type": "n"
+      },
+      {
+        "cell": "E62",
+        "value": 29,
+        "type": "n"
+      },
+      {
+        "cell": "F62",
+        "value": 13,
+        "type": "n"
+      },
+      {
+        "cell": "G62",
+        "value": 6,
+        "type": "n"
+      },
+      {
+        "cell": "E63",
+        "value": 29,
+        "type": "n"
+      },
+      {
+        "cell": "F63",
+        "value": 14,
+        "type": "n"
+      },
+      {
+        "cell": "G63",
+        "value": 12,
+        "type": "n"
+      },
+      {
+        "cell": "E64",
+        "value": 28,
+        "type": "n"
+      },
+      {
+        "cell": "F64",
+        "value": 13,
+        "type": "n"
+      },
+      {
+        "cell": "G64",
+        "value": 14,
+        "type": "n"
+      },
+      {
+        "cell": "E65",
+        "value": 29,
+        "type": "n"
+      },
+      {
+        "cell": "F65",
+        "value": 18,
+        "type": "n"
+      },
+      {
+        "cell": "G65",
+        "value": 7,
+        "type": "n"
+      },
+      {
+        "cell": "E66",
+        "value": 31,
+        "type": "n"
+      },
+      {
+        "cell": "F66",
+        "value": 16,
+        "type": "n"
+      },
+      {
+        "cell": "G66",
+        "value": 11,
+        "type": "n"
+      },
+      {
+        "cell": "E67",
+        "value": 25,
+        "type": "n"
+      },
+      {
+        "cell": "F67",
+        "value": 14,
+        "type": "n"
+      },
+      {
+        "cell": "G67",
+        "value": 10,
+        "type": "n"
+      },
+      {
+        "cell": "E68",
+        "value": 33,
+        "type": "n"
+      },
+      {
+        "cell": "F68",
+        "value": 14,
+        "type": "n"
+      },
+      {
+        "cell": "G68",
+        "value": 9,
+        "type": "n"
+      },
+      {
+        "cell": "E69",
+        "value": 33,
+        "type": "n"
+      },
+      {
+        "cell": "F69",
+        "value": 12,
+        "type": "n"
+      },
+      {
+        "cell": "G69",
+        "value": 10,
+        "type": "n"
+      },
+      {
+        "cell": "E70",
+        "value": 29,
+        "type": "n"
+      },
+      {
+        "cell": "F70",
+        "value": 15,
+        "type": "n"
+      },
+      {
+        "cell": "G70",
+        "value": 9,
+        "type": "n"
+      },
+      {
+        "cell": "E71",
+        "value": 24,
+        "type": "n"
+      },
+      {
+        "cell": "F71",
+        "value": 16,
+        "type": "n"
+      },
+      {
+        "cell": "G71",
+        "value": 8,
+        "type": "n"
+      },
+      {
+        "cell": "E72",
+        "value": 25,
+        "type": "n"
+      },
+      {
+        "cell": "F72",
+        "value": 16,
+        "type": "n"
+      },
+      {
+        "cell": "G72",
+        "value": 11,
+        "type": "n"
+      },
+      {
+        "cell": "E73",
+        "value": 28,
+        "type": "n"
+      },
+      {
+        "cell": "F73",
+        "value": 18,
+        "type": "n"
+      },
+      {
+        "cell": "G73",
+        "value": 7,
+        "type": "n"
+      },
+      {
+        "cell": "E74",
+        "value": 27,
+        "type": "n"
+      },
+      {
+        "cell": "F74",
+        "value": 18,
+        "type": "n"
+      },
+      {
+        "cell": "G74",
+        "value": 9,
+        "type": "n"
+      },
+      {
+        "cell": "E75",
+        "value": 28,
+        "type": "n"
+      },
+      {
+        "cell": "F75",
+        "value": 12,
+        "type": "n"
+      },
+      {
+        "cell": "G75",
+        "value": 7,
+        "type": "n"
+      },
+      {
+        "cell": "E76",
+        "value": 24,
+        "type": "n"
+      },
+      {
+        "cell": "F76",
+        "value": 12,
+        "type": "n"
+      },
+      {
+        "cell": "G76",
+        "value": 9,
+        "type": "n"
+      },
+      {
+        "cell": "E77",
+        "value": 35,
+        "type": "n"
+      },
+      {
+        "cell": "F77",
+        "value": 13,
+        "type": "n"
+      },
+      {
+        "cell": "G77",
+        "value": 6,
+        "type": "n"
+      },
+      {
+        "cell": "E78",
+        "value": 25,
+        "type": "n"
+      },
+      {
+        "cell": "F78",
+        "value": 15,
+        "type": "n"
+      },
+      {
+        "cell": "G78",
+        "value": 14,
+        "type": "n"
+      },
+      {
+        "cell": "E79",
+        "value": 34,
+        "type": "n"
+      },
+      {
+        "cell": "F79",
+        "value": 18,
+        "type": "n"
+      },
+      {
+        "cell": "G79",
+        "value": 9,
+        "type": "n"
+      },
+      {
+        "cell": "E80",
+        "value": 34,
+        "type": "n"
+      },
+      {
+        "cell": "F80",
+        "value": 15,
+        "type": "n"
+      },
+      {
+        "cell": "G80",
+        "value": 9,
+        "type": "n"
+      },
+      {
+        "cell": "E81",
+        "value": 25,
+        "type": "n"
+      },
+      {
+        "cell": "F81",
+        "value": 17,
+        "type": "n"
+      },
+      {
+        "cell": "G81",
+        "value": 11,
+        "type": "n"
+      },
+      {
+        "cell": "E82",
+        "value": 29,
+        "type": "n"
+      },
+      {
+        "cell": "F82",
+        "value": 13,
+        "type": "n"
+      },
+      {
+        "cell": "G82",
+        "value": 6,
+        "type": "n"
+      },
+      {
+        "cell": "A84",
+        "value": "5) Desenvolva o teste de correlação e regressão e seus pré-requisitos, assim como as análises. ",
+        "type": "s"
+      },
+      {
+        "cell": "A86",
+        "value": "a) quantidade de linhas de prints x tempo de execução",
+        "type": "s"
+      },
+      {
+        "cell": "E86",
+        "value": "b) Quantidade de pessoas no projeto x tempo de finalização",
+        "type": "s"
+      },
+      {
+        "cell": "A87",
+        "value": "Quantidade de prints",
+        "type": "s"
+      },
+      {
+        "cell": "B87",
+        "value": "Tempo de execução (s)",
+        "type": "s"
+      },
+      {
+        "cell": "E87",
+        "value": "qtd de pessoas",
+        "type": "s"
+      },
+      {
+        "cell": "F87",
+        "value": "Tempo (dias)",
+        "type": "s"
+      },
+      {
+        "cell": "A88",
+        "value": 5,
+        "type": "n"
+      },
+      {
+        "cell": "B88",
+        "value": 2.3,
+        "type": "n"
+      },
+      {
+        "cell": "E88",
+        "value": 2,
+        "type": "n"
+      },
+      {
+        "cell": "F88",
+        "value": 80,
+        "type": "n"
+      },
+      {
+        "cell": "A89",
+        "value": 8,
+        "type": "n"
+      },
+      {
+        "cell": "B89",
+        "value": 3,
+        "type": "n"
+      },
+      {
+        "cell": "E89",
+        "value": 4,
+        "type": "n"
+      },
+      {
+        "cell": "F89",
+        "value": 74,
+        "type": "n"
+      },
+      {
+        "cell": "A90",
+        "value": 9,
+        "type": "n"
+      },
+      {
+        "cell": "B90",
+        "value": 3.4,
+        "type": "n"
+      },
+      {
+        "cell": "E90",
+        "value": 5,
+        "type": "n"
+      },
+      {
+        "cell": "F90",
+        "value": 70,
+        "type": "n"
+      },
+      {
+        "cell": "A91",
+        "value": 12,
+        "type": "n"
+      },
+      {
+        "cell": "B91",
+        "value": 5,
+        "type": "n"
+      },
+      {
+        "cell": "E91",
+        "value": 6,
+        "type": "n"
+      },
+      {
+        "cell": "F91",
+        "value": 60,
+        "type": "n"
+      },
+      {
+        "cell": "A92",
+        "value": 15,
+        "type": "n"
+      },
+      {
+        "cell": "B92",
+        "value": 6.5,
+        "type": "n"
+      },
+      {
+        "cell": "E92",
+        "value": 8,
+        "type": "n"
+      },
+      {
+        "cell": "F92",
+        "value": 45,
+        "type": "n"
+      },
+      {
+        "cell": "A93",
+        "value": 20,
+        "type": "n"
+      },
+      {
+        "cell": "B93",
+        "value": 7.8,
+        "type": "n"
+      },
+      {
+        "cell": "E93",
+        "value": 10,
+        "type": "n"
+      },
+      {
+        "cell": "F93",
+        "value": 30,
+        "type": "n"
+      },
+      {
+        "cell": "A94",
+        "value": 26,
+        "type": "n"
+      },
+      {
+        "cell": "B94",
+        "value": 9,
+        "type": "n"
+      },
+      {
+        "cell": "E94",
+        "value": 12,
+        "type": "n"
+      },
+      {
+        "cell": "F94",
+        "value": 24,
+        "type": "n"
+      },
+      {
+        "cell": "A95",
+        "value": 29,
+        "type": "n"
+      },
+      {
+        "cell": "B95",
+        "value": 9.8,
+        "type": "n"
+      },
+      {
+        "cell": "E95",
+        "value": 15,
+        "type": "n"
+      },
+      {
+        "cell": "F95",
+        "value": 18,
+        "type": "n"
+      },
+      {
+        "cell": "A96",
+        "value": 32,
+        "type": "n"
+      },
+      {
+        "cell": "B96",
+        "value": 11.1,
+        "type": "n"
+      }
+    ]
+  }
+]

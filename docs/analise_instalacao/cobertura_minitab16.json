@@ -30,7 +30,7 @@
     },
     {
       "id": "calculo",
-      "estado": "pendente"
+      "estado": "parcial_sem_validacao_16"
     },
     {
       "id": "descritivas",
@@ -86,7 +86,7 @@
     },
     {
       "id": "nao_parametricos",
-      "estado": "pendente"
+      "estado": "parcial_sem_validacao_16"
     },
     {
       "id": "tabelas",
@@ -636,9 +636,24 @@
       ]
     },
     {
-      "id": "M16-90a1713173fb",
+      "id": "M16-1dfc96f80e00",
       "area": "arquivos",
-      "requisito": "Importação direta Excel",
+      "requisito": "Importação .xlsx por aba e intervalo, cabeçalhos opcionais e prévia; valores/caches de fórmulas, sem executar macros ou links",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[arquivos].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-479f2f098290",
+      "area": "arquivos",
+      "requisito": "Demais formatos/opções Excel, formatos de células, datas e metadados completos",
       "prioridade": 1,
       "implementacao": "pendente",
       "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
@@ -741,9 +756,24 @@
       ]
     },
     {
-      "id": "M16-1d20b06cb90c",
+      "id": "M16-e30efa32bb29",
       "area": "calculo",
-      "requisito": "Calculadora de colunas",
+      "requisito": "Calculadora de colunas com C1/C2, aritmética e abs/sqrt/log/log10/exp/round por AST permitido; ausentes e desfazer",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[calculo].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-d2cb692b54d2",
+      "area": "calculo",
+      "requisito": "Demais funções e opções da calculadora do 16",
       "prioridade": 1,
       "implementacao": "pendente",
       "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
@@ -1086,6 +1116,51 @@
       ]
     },
     {
+      "id": "M16-7a097861cdc0",
+      "area": "descritivas",
+      "requisito": "Desvio e variância populacionais",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[descritivas].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-78d8fd736263",
+      "area": "descritivas",
+      "requisito": "Percentis e decis de observações: exclusivo, inclusivo e extremos limitados",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[descritivas].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-7006d2055ca1",
+      "area": "descritivas",
+      "requisito": "Tabela separada com frequências absolutas/relativas/acumuladas por classes ou categorias e contagens opcionais",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[descritivas].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
       "id": "M16-ca6eb2a8fdcf",
       "area": "descritivas",
       "requisito": "Percentuais e contagens acumuladas",
@@ -1296,6 +1371,66 @@
       ]
     },
     {
+      "id": "M16-c1119fafa80a",
+      "area": "graficos",
+      "requisito": "Histograma por classes com regra de precisão do material",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[graficos].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-5eb9fb241d46",
+      "area": "graficos",
+      "requisito": "Barras, Pareto com percentual acumulado e setores; contagens opcionais",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[graficos].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-60be6461324e",
+      "area": "graficos",
+      "requisito": "Gráfico de probabilidade normal com resultado do método escolhido",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[graficos].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-5ed2802db545",
+      "area": "graficos",
+      "requisito": "Boxplots distinguem outliers suaves (1,5 IQR) e extremos (3 IQR)",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[graficos].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
       "id": "M16-6cdb79838383",
       "area": "graficos",
       "requisito": "Matriz de dispersão, várias respostas e demais opções de dispersão",
@@ -1326,9 +1461,9 @@
       ]
     },
     {
-      "id": "M16-fd02dbf052c0",
+      "id": "M16-bf2225db973e",
       "area": "graficos",
-      "requisito": "Probabilidade e distribuição",
+      "requisito": "Demais distribuições e opções dos gráficos de probabilidade",
       "prioridade": 1,
       "implementacao": "pendente",
       "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
@@ -1356,9 +1491,9 @@
       ]
     },
     {
-      "id": "M16-24bc901e281f",
+      "id": "M16-83f9cb5beb5f",
       "area": "graficos",
-      "requisito": "Barras, setores e pontos",
+      "requisito": "Gráficos de pontos e demais opções de barras/setores",
       "prioridade": 1,
       "implementacao": "pendente",
       "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
@@ -1911,6 +2046,66 @@
       ]
     },
     {
+      "id": "M16-21fcd0a5ddb1",
+      "area": "inferencia",
+      "requisito": "Normalidade: Anderson–Darling, Ryan–Joiner, KS normal estimada, Shapiro–Wilk e D’Agostino–Pearson, com limites explícitos",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[inferencia].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-ec57f0f8f34e",
+      "area": "inferencia",
+      "requisito": "Igualdade de variâncias de vários grupos: Levene mediana/média e Bartlett",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[inferencia].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-60d4d533d259",
+      "area": "inferencia",
+      "requisito": "Armazenar diferenças do t pareado preservando linhas ausentes",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[inferencia].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-ac51039fb077",
+      "area": "inferencia",
+      "requisito": "Diagnóstico bivariado complementar de Mardia com correção de assimetria para N<20; sem equivalência de comando do 16 presumida",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[inferencia].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
       "id": "M16-f6c70ce67bca",
       "area": "inferencia",
       "requisito": "Testes t: entradas sumarizadas e amostras empilhadas",
@@ -2181,6 +2376,21 @@
       ]
     },
     {
+      "id": "M16-89ef4a51c264",
+      "area": "anova",
+      "requisito": "Fisher LSD com IC individual e valores-p sem ajuste, no modelo de variâncias iguais",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[anova].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
       "id": "M16-4c4f19c431f6",
       "area": "anova",
       "requisito": "Demais opções de um fator da versão 16",
@@ -2226,9 +2436,9 @@
       ]
     },
     {
-      "id": "M16-e0ac3eac70e2",
+      "id": "M16-538f94773b16",
       "area": "anova",
-      "requisito": "Fisher, Dunnett, Hsu e letras de agrupamento",
+      "requisito": "Dunnett, Hsu e letras de agrupamento",
       "prioridade": 1,
       "implementacao": "pendente",
       "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
@@ -2439,6 +2649,21 @@
       "id": "M16-54dd2e32e140",
       "area": "regressao",
       "requisito": "Sinalização de valores fora da faixa do ajuste e invalidação do modelo ao alterar dados",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[regressao].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-3a2724241f54",
+      "area": "regressao",
+      "requisito": "Armazenar ajustados, resíduos, resíduos padronizados, alavancagem e Cook em novas colunas, preservando as linhas originais",
       "prioridade": 1,
       "implementacao": "implementacao_parcial_a_auditar",
       "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
@@ -3261,9 +3486,69 @@
       ]
     },
     {
-      "id": "M16-e057712599f4",
+      "id": "M16-704494491d65",
       "area": "nao_parametricos",
-      "requisito": "Sinais e Wilcoxon",
+      "requisito": "Mann–Whitney independente, grupos em colunas ou empilhados, alternativas bilateral/unilaterais",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[nao_parametricos].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-e4ea7c98116f",
+      "area": "nao_parametricos",
+      "requisito": "Wilcoxon pareado com exclusão por par, zeros Wilcox/Pratt/zsplit e diferenças decimais",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[nao_parametricos].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-c2f40bc53154",
+      "area": "nao_parametricos",
+      "requisito": "Kruskal–Wallis com correção de empates e aproximação qui-quadrado",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[nao_parametricos].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-60258eff3318",
+      "area": "nao_parametricos",
+      "requisito": "Probabilidades exatas sem empates em casos limitados ou aproximação explícita com correção opcional",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[nao_parametricos].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-e059fd8c7d8f",
+      "area": "nao_parametricos",
+      "requisito": "Sinais e demais opções/intervalos de Wilcoxon",
       "prioridade": 1,
       "implementacao": "pendente",
       "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
@@ -3276,9 +3561,9 @@
       ]
     },
     {
-      "id": "M16-033a8060e84d",
+      "id": "M16-7328dceab7dc",
       "area": "nao_parametricos",
-      "requisito": "Mann-Whitney",
+      "requisito": "Demais opções e intervalos de Mann–Whitney conforme o 16",
       "prioridade": 1,
       "implementacao": "pendente",
       "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
@@ -3291,9 +3576,9 @@
       ]
     },
     {
-      "id": "M16-9ba1d2f84467",
+      "id": "M16-5d496fc48ec9",
       "area": "nao_parametricos",
-      "requisito": "Kruskal-Wallis",
+      "requisito": "Demais opções e pós-testes de Kruskal–Wallis conforme o 16",
       "prioridade": 1,
       "implementacao": "pendente",
       "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
@@ -3414,6 +3699,21 @@
       "id": "M16-a9c32b39b172",
       "area": "tabelas",
       "requisito": "Fisher bilateral 2x2 por ordenação de probabilidade, até 1.000.000 observações; limites de dimensões e total explícitos",
+      "prioridade": 1,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[tabelas].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-f1c2e1775d14",
+      "area": "tabelas",
+      "requisito": "Frequências por classes/categorias com Fr, %, Fa e Fa%, contagens opcionais e ordenação",
       "prioridade": 1,
       "implementacao": "implementacao_parcial_a_auditar",
       "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
@@ -3714,6 +4014,51 @@
       "id": "M16-68eb5ab67231",
       "area": "entrega_e_validacao",
       "requisito": "Testes analíticos e de interface",
+      "prioridade": 2,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[entrega_e_validacao].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-a0808beaebad",
+      "area": "entrega_e_validacao",
+      "requisito": "Pacote portátil Windows x64 com exemplos, licenças e verificação do executável",
+      "prioridade": 2,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[entrega_e_validacao].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-6d5f7b74d962",
+      "area": "entrega_e_validacao",
+      "requisito": "Verificação manual de Releases do GitHub, versão e repositório configurados",
+      "prioridade": 2,
+      "implementacao": "implementacao_parcial_a_auditar",
+      "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
+      "validacao_numerica_16": "pendente",
+      "origem": "INVENTARIO_FUNCIONAL.json:areas[entrega_e_validacao].existente",
+      "falta_conferir": [
+        "menu/comando e opções do 16.2.4.0",
+        "padrões, entradas, ausentes e casos extremos",
+        "comparação executada e tolerâncias específicas"
+      ]
+    },
+    {
+      "id": "M16-b7103c679828",
+      "area": "entrega_e_validacao",
+      "requisito": "Fluxos da lista Excel executados na interface Tk oculta nos nove conjuntos",
       "prioridade": 2,
       "implementacao": "implementacao_parcial_a_auditar",
       "presenca_no_16": "a_confirmar_por_funcao_e_opcao",
@@ -11469,9 +11814,9 @@
   ],
   "contagens": {
     "areas": 23,
-    "requisitos_de_trabalho": 247,
+    "requisitos_de_trabalho": 270,
     "por_estado": {
-      "implementacao_parcial_a_auditar": 88,
+      "implementacao_parcial_a_auditar": 111,
       "pendente": 159
     },
     "recursos_22_para_triagem": 612

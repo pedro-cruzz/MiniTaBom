@@ -43,6 +43,22 @@ def run(app_class, report_path):
         if not math.isclose(model['terms'][1]['coefficient'], 1.1, abs_tol=1e-12):
             raise RuntimeError('Regressão NumPy/SciPy inconsistente.')
         report['checks'].append('regressão NumPy/SciPy')
+        from study_tests import analyze_study
+        rank=analyze_study(['A','B'],[['1','4'],['2','5'],['3','6']],'mannwhitney',columns=[0,1],method='exact')
+        if not math.isclose(rank['p'],.1,abs_tol=1e-12):raise RuntimeError('Mann–Whitney indisponível no pacote.')
+        from normality import normality_test
+        if normality_test([1,2,3,4,5,7,9,11],'rj')['method_key']!='rj':raise RuntimeError('Ryan–Joiner indisponível.')
+        from study_descriptives import frequency_table
+        if frequency_table(['X'],[['A'],['B'],['B']],0)['n']!=3:raise RuntimeError('Tabela de frequências indisponível.')
+        from column_calculator import calculate_column
+        if calculate_column(['A','B'],[['0.3','0.2']],'C1-C2')[1][0][-1]!='0.1':raise RuntimeError('Calculadora indisponível.')
+        from probability_graph import ProbabilityGraph
+        from frequency_graph import FrequencyGraph
+        probability=ProbabilityGraph(app,[1,2,3,4,5,7,9,11],dict(normality_test([1,2,3,4,5,7,9,11],'rj'),source='Teste'))
+        probability.withdraw();probability.draw();probability.destroy()
+        chart=FrequencyGraph(app,frequency_table(['X'],[['A'],['B'],['B']],0),'pareto')
+        chart.withdraw();chart.draw();chart.destroy()
+        report['checks'].append('postos, Ryan–Joiner, frequências, calculadora e novos gráficos')
         report['ok'] = True
     except Exception:
         report['error'] = traceback.format_exc()

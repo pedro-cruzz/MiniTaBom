@@ -1,3 +1,5 @@
+> Atualização 0.2.0: os recursos de estudo acrescentados estão descritos no README da raiz e em METODOS_ESTUDO.md. As seções antigas deste manual preservam o histórico; pendências citadas antes dessa atualização podem já ter implementação parcial.
+
 # Manual técnico do MiniTaBom
 
 Este manual preserva o detalhamento e o histórico do projeto. Execute os comandos a partir da raiz do repositório. O código está em `src/`, os testes em `tests/`, os exemplos em `exemplos/` e a documentação em `docs/`. Para abrir o programa pronto, use `Aplicativo/MiniTaBom.exe` ou `MiniTaBom.bat` na raiz. Consulte o README da raiz para o início rápido.

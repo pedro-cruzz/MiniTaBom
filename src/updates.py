@@ -84,6 +84,7 @@ def check_latest(repository, current_version):
             raise ValueError('A resposta do GitHub excedeu o tamanho esperado.')
         release = json.loads(raw)
     except HTTPError as error:
+        error.close()
         if error.code == 404:
             raise ValueError('Repositório não encontrado ou ainda sem uma Release estável pública. Confira o endereço.') from error
         if error.code in (403, 429):

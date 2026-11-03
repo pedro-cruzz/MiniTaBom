@@ -1,0 +1,37 @@
+{
+  "format": "statlab",
+  "version": 1,
+  "headers": [
+    "Grupo A",
+    "Grupo B",
+    "Grupo C"
+  ],
+  "rows": [
+    [
+      "1",
+      "2",
+      "12"
+    ],
+    [
+      "2",
+      "4",
+      "11"
+    ],
+    [
+      "3",
+      "6",
+      "14"
+    ],
+    [
+      "4",
+      "8",
+      "16"
+    ],
+    [
+      "5",
+      "10",
+      "19"
+    ]
+  ],
+  "output": "EXEMPLO SINTÉTICO — postos e variâncias\n\nEstat > Não paramétricos: use A/C para Mann–Whitney e A/B para Wilcoxon pareado.\nMann–Whitney A/C sem empates: U=0; p bilateral exato=2/252.\nWilcoxon A−B: diferenças −1 a −5, p bilateral exato=0,0625.\nUse os três grupos em Kruskal–Wallis e Igualdade de variâncias.\nDados sintéticos para estudo, não uma exportação do Minitab.\n"
+}

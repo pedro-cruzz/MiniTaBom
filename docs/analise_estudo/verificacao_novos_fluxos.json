@@ -1,0 +1,74 @@
+[
+  {
+    "exercise": "1/2a",
+    "range": "A4:B20",
+    "rows": 16,
+    "columns": 2,
+    "results": 14,
+    "ok": true
+  },
+  {
+    "exercise": "1/2b",
+    "range": "D4:E19",
+    "rows": 15,
+    "columns": 2,
+    "results": 14,
+    "ok": true
+  },
+  {
+    "exercise": "3a",
+    "range": "A23:B42",
+    "rows": 19,
+    "columns": 2,
+    "results": 13,
+    "ok": true
+  },
+  {
+    "exercise": "3b",
+    "range": "D23:E35",
+    "rows": 12,
+    "columns": 2,
+    "results": 13,
+    "ok": true
+  },
+  {
+    "exercise": "4a",
+    "range": "A47:C62",
+    "rows": 15,
+    "columns": 3,
+    "results": 20,
+    "ok": true
+  },
+  {
+    "exercise": "4b",
+    "range": "E47:G82",
+    "rows": 35,
+    "columns": 3,
+    "results": 20,
+    "ok": true
+  },
+  {
+    "exercise": "4c",
+    "range": "I47:K61",
+    "rows": 14,
+    "columns": 3,
+    "results": 20,
+    "ok": true
+  },
+  {
+    "exercise": "5a",
+    "range": "A87:B96",
+    "rows": 9,
+    "columns": 2,
+    "results": 13,
+    "ok": true
+  },
+  {
+    "exercise": "5b",
+    "range": "E87:F95",
+    "rows": 8,
+    "columns": 2,
+    "results": 13,
+    "ok": true
+  }
+]

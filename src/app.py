@@ -15,6 +15,8 @@ from basic_inference import analyze_basic, z_mean, one_proportion, format_basic
 from basic_inference_dialog import BasicInferenceDialog, BASIC_TITLES
 from extended_inference import analyze_extended, two_proportions, one_variance, two_variances, format_extended, EXTENDED_TITLES
 from extended_inference_dialog import ExtendedInferenceDialog
+from poisson_inference import one_poisson, analyze_poisson, format_poisson, TITLE as POISSON_TITLE
+from poisson_dialog import PoissonDialog
 from contingency import categorical_table, matrix_table, format_contingency
 from contingency_dialog import ContingencyDialog
 from normality import analyze_normality, format_normality
@@ -37,6 +39,18 @@ from data_operation_dialog import DataOperationDialog, DATA_TITLES
 from ui_geometry import centered_position, monitor_work_area
 from update_dialog import UpdateDialog
 from app_resources import resource_path
+from study_tests import analyze_study, format_study
+from study_test_dialog import StudyTestDialog
+from probability_graph import ProbabilityGraph
+from column_calculator import calculate_column, append_generated, regression_columns
+from study_tests import paired_values
+from calculator_dialog import CalculatorDialog
+from study_descriptives import frequency_table,format_frequency,sample_percentiles
+from frequency_dialog import FrequencyDialog
+from frequency_graph import FrequencyGraph
+from percentile_dialog import PercentileDialog
+from excel_dialog import ExcelDialog
+from bivariate_normality import bivariate_normality,format_bivariate
 
 class MiniTaBom(tk.Tk):
     def __init__(self):
@@ -102,6 +116,7 @@ class MiniTaBom(tk.Tk):
         file_menu.add_command(label='Salvar projeto como…', command=lambda: self.save_project(save_as=True))
         file_menu.add_separator()
         file_menu.add_command(label='Abrir CSV…', command=self.open_csv)
+        file_menu.add_command(label='Importar Excel…',command=self.open_excel)
         file_menu.add_command(label='Exportar CSV…', command=self.save_csv)
         file_menu.add_command(label='Exportar sessão…', command=self.export)
         file_menu.add_separator()
@@ -124,11 +139,13 @@ class MiniTaBom(tk.Tk):
             data_menu.add_command(label=title + '…', command=lambda operation=operation: self.data_operation_dialog(operation))
         menu.add_cascade(label='Dados', menu=data_menu)
         calc_menu = tk.Menu(menu, tearoff=False)
+        calc_menu.add_command(label='Calculadora…', command=self.calculator_dialog)
         calc_menu.add_command(label='Distribuições de probabilidade…', command=self.distribution_dialog)
         menu.add_cascade(label='Calc', menu=calc_menu)
         stat_menu = tk.Menu(menu, tearoff=False)
         basic_menu = tk.Menu(stat_menu, tearoff=False)
         basic_menu.add_command(label='Exibir estatísticas descritivas…', command=self.summary_dialog)
+        basic_menu.add_command(label='Percentis e decis…', command=self.percentile_dialog)
         basic_menu.add_separator()
         basic_menu.add_command(label=BASIC_TITLES['z'] + '…', command=lambda: self.basic_test_dialog('z'))
         for mode, title in TITLES.items():
@@ -137,9 +154,15 @@ class MiniTaBom(tk.Tk):
         basic_menu.add_command(label=BASIC_TITLES['proportion'] + '…', command=lambda: self.basic_test_dialog('proportion'))
         for mode, title in EXTENDED_TITLES.items():
             basic_menu.add_command(label=title + '…', command=lambda mode=mode: self.extended_test_dialog(mode))
+        basic_menu.add_command(label=POISSON_TITLE + '…', command=self.poisson_dialog)
         basic_menu.add_command(label='Correlação…', command=lambda: self.linear_dialog('correlation'))
         basic_menu.add_command(label='Teste de normalidade…', command=self.normality_dialog)
+        basic_menu.add_command(label='Igualdade de variâncias…', command=lambda: self.study_dialog('variances'))
         stat_menu.add_cascade(label='Estatísticas básicas', menu=basic_menu)
+        rank_menu = tk.Menu(stat_menu, tearoff=False)
+        for key, label in [('mannwhitney','Mann–Whitney…'),('wilcoxon','Wilcoxon pareado…'),('kruskal','Kruskal–Wallis…')]:
+            rank_menu.add_command(label=label, command=lambda mode=key: self.study_dialog(mode))
+        stat_menu.add_cascade(label='Não paramétricos', menu=rank_menu)
         anova_menu = tk.Menu(stat_menu, tearoff=False)
         anova_menu.add_command(label='Um fator…', command=self.anova_dialog)
         stat_menu.add_cascade(label='ANOVA', menu=anova_menu)
@@ -148,6 +171,7 @@ class MiniTaBom(tk.Tk):
         regression_menu.add_command(label='Prever novos casos…', command=self.prediction_dialog, state='disabled')
         stat_menu.add_cascade(label='Regressão', menu=regression_menu)
         tables_menu = tk.Menu(stat_menu, tearoff=False)
+        tables_menu.add_command(label='Tabela de frequências…',command=self.frequency_dialog)
         tables_menu.add_command(label='Qui-quadrado de associação…', command=self.contingency_dialog)
         stat_menu.add_cascade(label='Tabelas', menu=tables_menu)
         menu.add_cascade(label='Estat', menu=stat_menu)
@@ -155,7 +179,9 @@ class MiniTaBom(tk.Tk):
         graph_menu.add_command(label='Gráfico de dispersão…', command=lambda: self.xy_graph_dialog('scatter'))
         graph_menu.add_command(label='Gráfico de séries temporais…', command=lambda: self.xy_graph_dialog('time'))
         graph_menu.add_separator()
-        graph_menu.add_command(label='Histograma', command=self.plot)
+        graph_menu.add_command(label='Histograma', command=lambda:self.frequency_dialog('histogram'))
+        for key,label in [('bar','Gráfico de barras…'),('pareto','Diagrama de Pareto…'),('pie','Gráfico de setores…')]:
+            graph_menu.add_command(label=label,command=lambda kind=key:self.frequency_dialog(kind))
         graph_menu.add_command(label='Boxplot', command=lambda: self.plot('Boxplot'))
         graph_menu.add_command(label='Boxplots comparativos…', command=self.group_plot_dialog)
         menu.add_cascade(label='Gráfico', menu=graph_menu)
@@ -192,9 +218,10 @@ class MiniTaBom(tk.Tk):
             'Gráfico de dispersão…': 'scatter', 'Gráfico de séries temporais…': 'predict',
             'Tabelas': 'table', 'Qui-quadrado de associação…': 'table',
             'Teste de normalidade…': 'distribution',
+            POISSON_TITLE + '…': 'distribution',
             'Sessão': 'session', 'Planilha': 'table', 'Gerenciador de projeto': 'project',
             'Como usar': 'help', 'Cobertura do projeto…': 'project', 'Sobre o MiniTaBom': 'help',
-            'Verificar atualizações…': 'help',
+            'Verificar atualizações…': 'help', 'Calculadora…':'summary', 'Percentis e decis…':'summary', 'Tabela de frequências…':'table', 'Não paramétricos':'distribution', 'Mann–Whitney…':'distribution', 'Wilcoxon pareado…':'distribution', 'Kruskal–Wallis…':'anova', 'Igualdade de variâncias…':'groups', 'Gráfico de barras…':'histogram', 'Diagrama de Pareto…':'histogram', 'Gráfico de setores…':'histogram',
         }
         mapping.update({title + '…': 'distribution' for title in TITLES.values()})
         mapping.update({title + '…': 'distribution' for title in BASIC_TITLES.values()})
@@ -218,7 +245,7 @@ class MiniTaBom(tk.Tk):
             ttk.Button(bar, text=label, image=self.icons[icon], compound='left', style='Tool.TButton', command=command).pack(side='left', padx=1)
         ttk.Separator(bar, orient='vertical').pack(side='left', fill='y', padx=6)
         for label, command, icon in [('Desfazer', self.undo_data, 'undo'), ('Refazer', self.redo_data, 'redo'),
-                               ('Descritivas…', self.summary_dialog, 'summary'), ('Histograma', self.plot, 'histogram')]:
+                               ('Descritivas…', self.summary_dialog, 'summary'), ('Histograma', lambda:self.frequency_dialog('histogram'), 'histogram')]:
             ttk.Button(bar, text=label, image=self.icons[icon], compound='left', style='Tool.TButton', command=command).pack(side='left', padx=1)
         ttk.Separator(bar, orient='vertical').pack(side='left', fill='y', padx=6)
         ttk.Label(bar, text='Variável:').pack(side='left', padx=(4, 5))
@@ -359,7 +386,7 @@ class MiniTaBom(tk.Tk):
             self.navigator.delete(*children)
         self.result_positions = {}
         self.output.tag_remove('report-title', '1.0', 'end')
-        starts = ('Estatísticas descritivas:', 'T DE UMA AMOSTRA', 'T PAREADO', 'T DE WELCH', 'T DE DUAS AMOSTRAS', 'Z DE UMA AMOSTRA', 'TESTE DE UMA PROPORÇÃO', 'TESTE DE DUAS PROPORÇÕES', 'TESTE DE UMA VARIÂNCIA', 'TESTE DE DUAS VARIÂNCIAS', 'QUI-QUADRADO DE ASSOCIAÇÃO', 'TESTE DE NORMALIDADE', 'ANOVA DE UM FATOR', 'CORRELAÇÃO DE', 'REGRESSÃO LINEAR', 'PREVISÃO LINEAR', 'DISTRIBUIÇÃO —', 'OPERAÇÃO DE DADOS —')
+        starts = ('TAXA DE POISSON DE UMA AMOSTRA', 'MANN–WHITNEY', 'WILCOXON PAREADO', 'KRUSKAL–WALLIS', 'IGUALDADE DE VARIÂNCIAS', 'TABELA DE FREQUÊNCIAS', 'PERCENTIS DA AMOSTRA', 'CALCULADORA DE COLUNAS', 'Estatísticas descritivas:', 'T DE UMA AMOSTRA', 'T PAREADO', 'T DE WELCH', 'T DE DUAS AMOSTRAS', 'Z DE UMA AMOSTRA', 'TESTE DE UMA PROPORÇÃO', 'TESTE DE DUAS PROPORÇÕES', 'TESTE DE UMA VARIÂNCIA', 'TESTE DE DUAS VARIÂNCIAS', 'QUI-QUADRADO DE ASSOCIAÇÃO', 'TESTE DE NORMALIDADE', 'ANOVA DE UM FATOR', 'CORRELAÇÃO DE', 'REGRESSÃO LINEAR', 'PREVISÃO LINEAR', 'DISTRIBUIÇÃO —', 'OPERAÇÃO DE DADOS —')
         for line, text in enumerate(self.output.get('1.0', 'end-1c').splitlines(), 1):
             if text.startswith(starts):
                 key = f'result:{line}'
@@ -569,6 +596,24 @@ class MiniTaBom(tk.Tk):
             except (ValueError, OSError, UnicodeError) as error:
                 messagebox.showerror('Falha ao importar', str(error))
 
+    def open_excel(self):
+        self.worksheet.commit_edit()
+        path=filedialog.askopenfilename(filetypes=[('Excel (.xlsx)','*.xlsx')])
+        if not path:return None
+        try:return ExcelDialog(self,path)
+        except (ValueError,OSError) as error:
+            messagebox.showerror('Falha ao abrir Excel',str(error),parent=self);return None
+
+    def import_excel_data(self,headers,rows,meta,path):
+        if not self.confirm_replace():return False
+        self.headers,self.rows=headers,rows
+        self.history=WorksheetHistory(self.headers,self.rows)
+        self.project_path=None
+        self.output.delete('1.0','end');self.output.edit_reset()
+        self.output.insert('end',f"IMPORTAÇÃO EXCEL\n{Path(path).name}; aba {meta['sheet']}; intervalo {meta['range']}.\n"+meta['note']+'\n')
+        self.refresh();self.mark_dirty()
+        self.status.set('Excel importado · salve um projeto para preservar os dados');return True
+
     def save_csv(self):
         self.worksheet.commit_edit()
         path = filedialog.asksaveasfilename(defaultextension='.csv')
@@ -655,23 +700,61 @@ class MiniTaBom(tk.Tk):
         self.worksheet.commit_edit()
         return ExtendedInferenceDialog(self, mode)
 
+    def poisson_dialog(self):
+        self.worksheet.commit_edit()
+        return PoissonDialog(self)
+
+    def run_poisson(self, source, perform_test=True, **options):
+        self.worksheet.commit_edit()
+        try:
+            if source == 'summary':
+                result = one_poisson(**options)
+            elif source == 'column':
+                result = analyze_poisson(self.headers, self.rows, **options)
+            else:
+                raise ValueError('Formato de dados inválido.')
+            report = format_poisson(result, perform_test)
+        except (ValueError, ArithmeticError) as error:
+            messagebox.showerror('Não foi possível calcular', str(error), parent=self.grab_current() or self)
+            return False
+        self.append_analysis(report, POISSON_TITLE + ' adicionada à sessão')
+        return True
+
     def contingency_dialog(self):
         self.worksheet.commit_edit()
         return ContingencyDialog(self)
+
+    def study_dialog(self, mode):
+        self.worksheet.commit_edit()
+        return StudyTestDialog(self, mode)
+
+    def run_study(self, mode, **options):
+        self.worksheet.commit_edit()
+        try:
+            result = analyze_study(self.headers, self.rows, mode, **options)
+            report = format_study(result)
+        except (ValueError, ArithmeticError) as error:
+            messagebox.showerror('Não foi possível calcular', str(error), parent=self.grab_current() or self)
+            return False
+        self.append_analysis(report, result['title'] + ' concluído')
+        return True
 
     def normality_dialog(self):
         self.worksheet.commit_edit()
         return NormalityDialog(self)
 
-    def run_normality(self, column):
+    def run_normality(self, column, method='ad', show_graph=False):
         self.worksheet.commit_edit()
         try:
-            result = analyze_normality(self.headers, self.rows, column)
+            result = analyze_normality(self.headers, self.rows, column, method=method)
             report = format_normality(result)
         except ValueError as error:
             messagebox.showerror('Não foi possível testar a normalidade', str(error), parent=self.grab_current() or self)
             return False
         self.append_analysis(report, 'Teste de normalidade adicionado à sessão')
+        if show_graph:
+            values,_=numeric_column(self.rows,column)
+            self.center_dialog(ProbabilityGraph(self,values,result))
         return True
 
     def run_contingency(self, source, show_expected=True, show_residuals=False,
@@ -760,29 +843,35 @@ class MiniTaBom(tk.Tk):
         self.output.yview(start + '+1line')
         self.status.set(status)
 
-    def run_correlation(self, columns, **options):
+    def run_correlation(self, columns, check_bivariate=False, **options):
         self.worksheet.commit_edit()
         try:
             result = correlations(self.headers, self.rows, columns, **options)
             report = format_correlation(result)
-        except ValueError as error:
+            if check_bivariate:
+                report += '\n' + format_bivariate(bivariate_normality(self.headers,self.rows,columns))
+        except (ValueError,ArithmeticError) as error:
             messagebox.showerror('Não foi possível calcular a correlação', str(error), parent=self.grab_current() or self)
             return False
         self.append_analysis(report, 'Correlação adicionada à sessão')
         return True
 
-    def run_regression(self, response, predictors, show_graph=True, observations=False, **options):
+    def run_regression(self, response, predictors, show_graph=True, observations=False, store=False, **options):
         self.worksheet.commit_edit()
         self.configure(cursor='watch')
         self.update_idletasks()
         try:
             result = linear_regression(self.headers, self.rows, response, predictors, **options)
             report = format_regression(result, observations)
+            generated = regression_columns(self.headers,self.rows,result) if store else None
         except ValueError as error:
             messagebox.showerror('Não foi possível ajustar a regressão', str(error), parent=self.grab_current() or self)
             return False
         finally:
             self.configure(cursor='')
+        if generated is not None:
+            self.install_generated(*generated)
+            report += '\nColunas armazenadas: ' + ', '.join(generated[2]) + '\n'
         self.append_analysis(report, 'Regressão linear adicionada à sessão')
         self.last_regression = result
         self.regression_menu.entryconfigure(1, state='normal')
@@ -870,7 +959,7 @@ class MiniTaBom(tk.Tk):
         self.center_dialog(window)
         return True
 
-    def run_anova(self, equal_var=True, confidence=95, comparisons=False, show_graph=False, **selection):
+    def run_anova(self, equal_var=True, confidence=95, comparisons=False, show_graph=False, comparison_method='tukey', **selection):
         self.worksheet.commit_edit()
         self.status.set('Calculando ANOVA…')
         self.configure(cursor='watch')
@@ -878,7 +967,7 @@ class MiniTaBom(tk.Tk):
         graph = None
         try:
             groups, excluded = prepare_groups(self.headers, self.rows, **selection)
-            result = one_way(groups, equal_var=equal_var, confidence=confidence, comparisons=comparisons)
+            result = one_way(groups, equal_var=equal_var, confidence=confidence, comparisons=comparisons,comparison_method=comparison_method)
             report = format_anova_report(result, excluded)
             if show_graph:
                 response = self.headers[selection['response']] if 'response' in selection else 'Valores'
@@ -898,7 +987,7 @@ class MiniTaBom(tk.Tk):
             self.center_dialog(graph)
         return True
 
-    def run_ttest(self, mode, first=None, second=None, perform_test=True, **options):
+    def run_ttest(self, mode, first=None, second=None, perform_test=True, store=False, **options):
         self.worksheet.commit_edit()
         self.status.set('Calculando teste t…')
         self.configure(cursor='watch')
@@ -906,18 +995,78 @@ class MiniTaBom(tk.Tk):
         try:
             result = analyze_t_inputs(self.headers, self.rows, mode, first, second, **options)
             report = format_t_report(result, perform_test=perform_test)
+            generated=None
+            if store:
+                if mode!='paired' or options.get('source','columns')!='columns':
+                    raise ValueError('Armazenar diferenças requer duas colunas pareadas, sem resumo.')
+                _,differences,_=paired_values(self.headers,self.rows,first,second)
+                generated=append_generated(self.headers,self.rows,['Diferenças'],[differences])
         except ValueError as error:
             self.status.set('Cálculo não concluído · confira os dados e as opções')
             messagebox.showerror('Não foi possível calcular', str(error), parent=self.grab_current() or self)
             return False
         finally:
             self.configure(cursor='')
+        if generated is not None:
+            self.install_generated(*generated)
+            report += '\nDiferenças armazenadas em: ' + generated[2][0] + '\n'
         self.output.insert('end', '\n' + report)
         self.index_results()
         self.mark_dirty()
         self.output.see('end')
         self.status.set(TITLES[mode] + ' adicionado à sessão')
         return True
+
+    def install_generated(self, headers, rows, names):
+        start=len(self.headers)
+        self.headers,self.rows=headers,rows
+        self.data_changed();self.refresh();self.worksheet.select(0,start)
+
+    def calculator_dialog(self):
+        self.worksheet.commit_edit()
+        return CalculatorDialog(self)
+
+    def run_calculator(self,expression,name):
+        self.worksheet.commit_edit()
+        try:generated=calculate_column(self.headers,self.rows,expression,name)
+        except ValueError as error:
+            messagebox.showerror('Cálculo não concluído',str(error),parent=self.grab_current() or self)
+            return False
+        self.install_generated(*generated)
+        self.append_analysis('CALCULADORA DE COLUNAS\n'+generated[2][0]+' = '+expression+'\n','Coluna calculada · Ctrl+Z desfaz')
+        return True
+
+    def frequency_dialog(self,kind='table'):
+        self.worksheet.commit_edit()
+        return FrequencyDialog(self,kind)
+
+    def run_frequency(self,column,kind='table',**options):
+        self.worksheet.commit_edit()
+        try:
+            result=frequency_table(self.headers,self.rows,column,**options)
+            report=format_frequency(result)
+            graph=FrequencyGraph(self,result,kind) if kind!='table' else None
+        except (ValueError,ArithmeticError) as error:
+            messagebox.showerror('Frequências não calculadas',str(error),parent=self.grab_current() or self);return False
+        self.append_analysis(report,'Tabela de frequências adicionada à sessão')
+        if graph:self.center_dialog(graph)
+        return True
+
+    def percentile_dialog(self):
+        self.worksheet.commit_edit()
+        return PercentileDialog(self)
+
+    def run_percentiles(self,column,percentages,method):
+        self.worksheet.commit_edit()
+        try:
+            values,missing=numeric_column(self.rows,column)
+            result=sample_percentiles(values,percentages,method)
+            lines=['PERCENTIS DA AMOSTRA — '+self.headers[column],f'N={len(values)}; ausentes={missing}; método={method}']
+            for r in result:
+                lines.append(f"P{r['percentile']:g}: "+(f"{r['value']:.10g}" if r['value'] is not None else 'indefinido: posição fora da amostra'))
+        except (ValueError,ArithmeticError,IndexError) as error:
+            messagebox.showerror('Percentis não calculados',str(error),parent=self.grab_current() or self);return False
+        self.append_analysis('\n'.join(lines)+'\n','Percentis adicionados à sessão');return True
 
     def summary_dialog(self):
         self.worksheet.commit_edit()
