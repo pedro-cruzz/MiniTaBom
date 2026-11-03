@@ -35,6 +35,8 @@ from xy_graph_dialog import XYGraphDialog
 from data_operations import sort_rows, stack_columns, unstack_column, format_operation
 from data_operation_dialog import DataOperationDialog, DATA_TITLES
 from ui_geometry import centered_position, monitor_work_area
+from update_dialog import UpdateDialog
+from app_resources import resource_path
 
 class MiniTaBom(tk.Tk):
     def __init__(self):
@@ -166,6 +168,7 @@ class MiniTaBom(tk.Tk):
         help_menu = tk.Menu(menu, tearoff=False)
         help_menu.add_command(label='Como usar', accelerator='F1', command=self.show_help)
         help_menu.add_command(label='Cobertura do projeto…', command=self.coverage_dialog)
+        help_menu.add_command(label='Verificar atualizações…', command=self.update_dialog)
         help_menu.add_command(label='Sobre o MiniTaBom', command=lambda: messagebox.showinfo('MiniTaBom',
             'Projeto independente para fins educativos e estudo de estatística.\n'
             'Sem vínculo, patrocínio ou endosso da Minitab.\n'
@@ -191,6 +194,7 @@ class MiniTaBom(tk.Tk):
             'Teste de normalidade…': 'distribution',
             'Sessão': 'session', 'Planilha': 'table', 'Gerenciador de projeto': 'project',
             'Como usar': 'help', 'Cobertura do projeto…': 'project', 'Sobre o MiniTaBom': 'help',
+            'Verificar atualizações…': 'help',
         }
         mapping.update({title + '…': 'distribution' for title in TITLES.values()})
         mapping.update({title + '…': 'distribution' for title in BASIC_TITLES.values()})
@@ -370,6 +374,14 @@ class MiniTaBom(tk.Tk):
         else:
             self.table.focus_set()
 
+    def update_dialog(self):
+        existing = getattr(self, '_updates_window', None)
+        if existing is not None and existing.winfo_exists():
+            existing.lift()
+            return existing
+        self._updates_window = UpdateDialog(self)
+        return self._updates_window
+
     def show_help(self):
         messagebox.showinfo('Como usar o MiniTaBom',
             '1. Abra um projeto ou importe um CSV pelo menu Arquivo.\n'
@@ -391,7 +403,7 @@ class MiniTaBom(tk.Tk):
 
     def coverage_dialog(self):
         try:
-            inventory = json.loads(Path(__file__).with_name('INVENTARIO_FUNCIONAL.json').read_text(encoding='utf-8'))
+            inventory = json.loads(resource_path('INVENTARIO_FUNCIONAL.json').read_text(encoding='utf-8'))
         except (OSError, ValueError) as error:
             messagebox.showerror('Cobertura indisponível', str(error), parent=self)
             return

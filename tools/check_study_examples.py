@@ -5,7 +5,7 @@ import math
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / 'src'))
 
 from project import load_project
 from extended_inference import analyze_extended
@@ -15,9 +15,9 @@ from inference import analyze_t_inputs
 
 
 def main():
-    examples = {path.name: load_project(path) for path in ROOT.glob('exemplo_*.statlab')}
-    for name in ('INVENTARIO_FUNCIONAL.json', 'analise_instalacao/lacunas_priorizadas.json',
-                 'analise_instalacao/cobertura_minitab16.json', 'analise_instalacao/referencias_minitab16.json'):
+    examples = {path.name: load_project(path) for path in (ROOT / 'exemplos').glob('exemplo_*.statlab')}
+    for name in ('INVENTARIO_FUNCIONAL.json', 'docs/analise_instalacao/lacunas_priorizadas.json',
+                 'docs/analise_instalacao/cobertura_minitab16.json', 'docs/analise_instalacao/referencias_minitab16.json'):
         json.loads((ROOT / name).read_text(encoding='utf-8'))
     headers, rows, _ = examples['exemplo_proporcoes_variancias.statlab']
     result = analyze_extended(headers, rows, 'two_proportions', [2, 3], events=['Sim', 'Sim'])

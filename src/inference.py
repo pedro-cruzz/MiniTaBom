@@ -5,6 +5,7 @@ from pathlib import Path
 import statistics
 import sys
 from core import numeric_column
+from app_resources import resource_path
 
 
 def p_statement(value, label='Valor-p', unavailable='indisponível'):
@@ -15,7 +16,7 @@ def p_statement(value, label='Valor-p', unavailable='indisponível'):
 
 @lru_cache(maxsize=1)
 def scientific_stats():
-    local = Path(__file__).with_name('.deps')
+    local = resource_path('.deps')
     if local.is_dir() and str(local) not in sys.path:
         sys.path.insert(0, str(local))
     try:

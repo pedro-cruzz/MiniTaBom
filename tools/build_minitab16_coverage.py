@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def build():
     inventory = json.loads((ROOT / 'INVENTARIO_FUNCIONAL.json').read_text(encoding='utf-8'))
-    dialogs = json.loads((ROOT / 'analise_instalacao/dialogos_pt_br.json').read_text(encoding='utf-8'))
+    dialogs = json.loads((ROOT / 'docs/analise_instalacao/dialogos_pt_br.json').read_text(encoding='utf-8'))
     requirements = []
     # O primeiro bloco serve aos fluxos básicos; todas as outras áreas do 16
     # continuam no escopo, sem redução por prioridade ou pelo exercício futuro.
@@ -35,7 +35,7 @@ def build():
                                     'comparação executada e tolerâncias específicas']))
     candidates = [dict(recurso_22=r['recurso'], titulos=r.get('titulos', {}),
                        estado='triagem_historica_pendente', prioridade=3,
-                       evidencia='analise_instalacao/dialogos_pt_br.json',
+                       evidencia='docs/analise_instalacao/dialogos_pt_br.json',
                        presenca_no_16='nao_estabelecida') for r in dialogs['recursos']]
     result = dict(
         formato='statlab-fila-cobertura-minitab16', versao=1,
@@ -48,7 +48,7 @@ def build():
                   'Exercícios futuros serão associados aos requisitos e aos menus do 16 quando forem recebidos.',
                   'Implementação parcial, presença histórica e paridade numérica são verificações distintas.',
                   'As referências históricas disponíveis são consultadas por item; nenhum item recebe confirmação automática.'],
-        referencia_historica='analise_instalacao/referencias_minitab16.json',
+        referencia_historica='docs/analise_instalacao/referencias_minitab16.json',
         areas=[dict(id=a['id'], estado=a['estado']) for a in inventory['areas']],
         requisitos=requirements, candidatos_22=candidates,
         contagens=dict(areas=len(inventory['areas']), requisitos_de_trabalho=len(requirements),
@@ -65,7 +65,7 @@ def build():
 
 def main():
     result = build()
-    path = ROOT / 'analise_instalacao/cobertura_minitab16.json'
+    path = ROOT / 'docs/analise_instalacao/cobertura_minitab16.json'
     path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(result['contagens'], ensure_ascii=True))
 

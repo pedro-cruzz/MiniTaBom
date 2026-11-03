@@ -220,7 +220,7 @@ def inventory(root):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path('C:/Program Files/Minitab/Minitab 22'))
-    parser.add_argument('--output', type=Path, default=PROJECT / 'analise_instalacao')
+    parser.add_argument('--output', type=Path, default=PROJECT / 'docs' / 'analise_instalacao')
     args = parser.parse_args()
     root, output = args.root.resolve(), args.output.resolve()
     if not output.is_relative_to(PROJECT) or output.is_relative_to(root):

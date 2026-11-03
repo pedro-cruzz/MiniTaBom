@@ -4,6 +4,14 @@
 
 Esta seção atualiza o estado do pacote; o relato original abaixo é histórico.
 
+### Vigésima etapa — 03/11/2026: verificação manual de atualizações
+
+- Adicionados updates.py, update_dialog.py e app_metadata.json (versão inicial 0.1.0). Ajuda > Verificar atualizações abre diálogo com versão instalada, repositório, botão de consulta e link para a Release. Rede executada em thread; retorno à interface via fila/after, sem acessar Tk no worker. Fechar cancela o callback; respostas tardias não acessam a janela destruída.
+- Consulta manual da API oficial GitHub releases/latest com timeout de 10 segundos, limite de resposta, comparação semântica de versões e mensagens de erro. Endereço limitado ao GitHub; link da Release construído a partir do repositório/tag, sem aceitar URLs arbitrárias do JSON. Sem token, consulta automática na inicialização, download ou instalação automática.
+- Usuário informou que ainda está criando o repositório. Campo aceita link ou usuario/repositorio e salva a preferência em APPDATA/MiniTaBom/updates.json (fallback ~/.config). Nenhum endereço de repositório foi inventado e não houve consulta de ponta a ponta contra o projeto ainda inexistente.
+- Build inclui metadados; GitHub Actions preenche o repositório e a versão da tag no pacote. Construção local lê app_metadata.json. README explica versões/tags e necessidade de Release estável pública com ZIP anexado.
+- Verificação: 212 testes aprovados (11 novos), incluindo comparação de versões, igualdade/versão mais antiga, JSON inválido, limite de resposta, 404/403/500/offline/timeout, preferências e fluxo do diálogo. Respostas HTTP simuladas nos testes; não representam consulta real do repositório.
+
 ### Décima nona etapa — 03/11/2026: distribuição portátil MiniTaBom
 
 - Nome MiniTaBom aplicado à interface, documentação e classe principal; formato .statlab preservado. Finalidade educativa e independência em relação ao Minitab indicadas no README e na tela Sobre.

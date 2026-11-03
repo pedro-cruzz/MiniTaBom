@@ -1,4 +1,8 @@
 @echo off
 cd /d "%~dp0"
-python app.py
+if exist "%~dp0Aplicativo\MiniTaBom.exe" (
+    start "" "%~dp0Aplicativo\MiniTaBom.exe"
+    exit /b 0
+)
+python src\app.py
 if errorlevel 1 pause

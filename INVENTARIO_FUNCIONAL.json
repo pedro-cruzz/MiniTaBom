@@ -6,24 +6,24 @@
   "paridade_validada": false,
   "referencias_historicas_16": {
     "data_consulta": "2026-10-24",
-    "catalogo": "analise_instalacao/referencias_minitab16.json",
+    "catalogo": "docs/analise_instalacao/referencias_minitab16.json",
     "observacao": "Manual Meet Minitab Release 16.1.0, novidades 16/16.2 e notas até 16.2.4/16.2.4.4 localizados. Presença documental e validação numérica são critérios distintos; catálogo e Help completos ainda não auditados."
   },
   "inspecao_estatica_instalacao": {
     "versao": "22.6.0.0",
     "data": "2026-11-03",
-    "inventario": "analise_instalacao/inventario_instalacao.json",
-    "dialogos": "analise_instalacao/dialogos_pt_br.json",
-    "dialogos_legados": "analise_instalacao/dialogos_legados_pt_br.json",
-    "graficos": "analise_instalacao/graficos_pt_br.json",
-    "lacunas": "analise_instalacao/lacunas_priorizadas.json",
+    "inventario": "docs/analise_instalacao/inventario_instalacao.json",
+    "dialogos": "docs/analise_instalacao/dialogos_pt_br.json",
+    "dialogos_legados": "docs/analise_instalacao/dialogos_legados_pt_br.json",
+    "graficos": "docs/analise_instalacao/graficos_pt_br.json",
+    "lacunas": "docs/analise_instalacao/lacunas_priorizadas.json",
     "observacao": "612 recursos de tradução pt-BR catalogados; incluem partes compartilhadas e variantes. Presença em arquivo não prova disponibilidade, comportamento ou paridade com o 16."
   },
   "comparacoes_referencia": [
     {
       "funcao": "Welch bilateral, confiança 95%, duas colunas",
       "versao": "22.6.0.0",
-      "fixture": "fixtures/welch_minitab_22_6/observed.json",
+      "fixture": "tests/fixtures/welch_minitab_22_6/observed.json",
       "precisao": "Somente valores arredondados exibidos na interface"
     }
   ],
@@ -461,7 +461,7 @@
   "prioridade_alvo_16": {
     "data": "2026-11-03",
     "decisao": "Cobertura de todos os recursos do Minitab 16 tem prioridade sobre expansões exclusivas da versão 22.",
-    "fila": "analise_instalacao/cobertura_minitab16.json",
+    "fila": "docs/analise_instalacao/cobertura_minitab16.json",
     "exercicios": "Quando recebidos, associar cada questão aos métodos, menus e opções do 16 e à implementação disponível no MiniTaBom; não presumir o conteúdo da prova."
   }
 }

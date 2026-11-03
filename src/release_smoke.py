@@ -4,6 +4,7 @@ import math
 from pathlib import Path
 import sys
 import traceback
+from app_resources import resource_path
 
 
 def run(app_class, report_path):
@@ -16,10 +17,19 @@ def run(app_class, report_path):
         if 'MiniTaBom' not in app.title() or not app.icons:
             raise RuntimeError('Interface ou ícones indisponíveis.')
         report['checks'].append('Tk, interface e ícones')
-        inventory = json.loads(Path(__file__).with_name('INVENTARIO_FUNCIONAL.json').read_text(encoding='utf-8'))
+        inventory = json.loads(resource_path('INVENTARIO_FUNCIONAL.json').read_text(encoding='utf-8'))
         if len(inventory['areas']) != 23:
             raise RuntimeError('Inventário de cobertura ausente ou inválido.')
         report['checks'].append('recurso JSON de cobertura')
+        from updates import load_metadata
+        if not load_metadata()['version']:
+            raise RuntimeError('Versão do aplicativo ausente.')
+        dialog = app.update_dialog()
+        dialog.withdraw()
+        if str(dialog.check_button.cget('state')) != 'normal':
+            raise RuntimeError('Botão de atualizações indisponível.')
+        dialog.destroy()
+        report['checks'].append('diálogo de atualizações e versão (sem acesso à rede)')
         from inference import one_sample, scientific_stats
         if not math.isclose(one_sample([0, 2])['p'], .5, abs_tol=1e-12):
             raise RuntimeError('Resultado do teste t inconsistente.')

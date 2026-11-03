@@ -22,8 +22,8 @@ jobs:
       - name: Localizar pasta do aplicativo
         shell: pwsh
         run: |
-          $appFiles = @(Get-ChildItem -Path . -Filter app.py -Recurse -File | Where-Object { $_.FullName -notmatch '[\\/]\.' })
-          if ($appFiles.Count -ne 1) { throw 'Esperado exatamente um app.py no repositorio.' }
+          $appFiles = @(Get-ChildItem -Path . -Filter requirements-build.txt -Recurse -File | Where-Object { $_.FullName -notmatch '[\\/]\.' })
+          if ($appFiles.Count -ne 1) { throw 'Esperada exatamente uma raiz do MiniTaBom no repositorio.' }
           "APP_DIR=$($appFiles[0].Directory.FullName)" >> $env:GITHUB_ENV
       - name: Instalar dependências de construção
         working-directory: ${{ env.APP_DIR }}

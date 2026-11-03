@@ -18,6 +18,7 @@ def main():
     if sys.platform != 'win32' or platform.machine().lower() not in ('amd64', 'x86_64'):
         raise SystemExit('Gere este pacote no Windows x64 com Python x64.')
     os.chdir(ROOT)
+    sys.path.insert(0, str(ROOT / 'src'))
     for directory in (ROOT / '.deps', ROOT / '.build-tools'):
         if directory.is_dir():
             sys.path.insert(0, str(directory))
@@ -30,16 +31,27 @@ def main():
     stamp = datetime.now().strftime('%Y%m%d-%H%M%S-%f')
     build = ROOT / '.build' / stamp
     build.mkdir(parents=True)
+    from updates import load_metadata, normalize_repository, version_key
+    metadata = load_metadata()
+    if os.environ.get('GITHUB_REF_TYPE') == 'tag':
+        tag = os.environ['GITHUB_REF_NAME']
+        version_key(tag)
+        metadata['version'] = tag.lstrip('vV')
+    if not metadata.get('repository') and os.environ.get('GITHUB_REPOSITORY'):
+        metadata['repository'] = normalize_repository(os.environ['GITHUB_REPOSITORY'])
+    metadata_file = build / 'app_metadata.json'
+    metadata_file.write_text(json.dumps(metadata, ensure_ascii=False, indent=2), encoding='utf-8')
     os.environ['PYINSTALLER_CONFIG_DIR'] = str(build / 'cache')
     # Diretório próprio por compilação: nenhuma limpeza de arquivos anteriores.
     output = build / 'output'
-    args = [str(ROOT / 'app.py'), '--name', 'MiniTaBom', '--windowed', '--onedir',
+    args = [str(ROOT / 'src' / 'app.py'), '--name', 'MiniTaBom', '--windowed', '--onedir',
             '--noupx', '--distpath', str(output), '--workpath', str(build / 'work'),
-            '--specpath', str(build), '--paths', str(ROOT),
+            '--specpath', str(build), '--paths', str(ROOT / 'src'),
             '--hidden-import', 'scipy.stats', '--hidden-import', 'numpy',
             '--exclude-module', 'pytest', '--exclude-module', 'scipy.tests',
             '--exclude-module', 'numpy.tests',
             '--add-data', str(ROOT / 'INVENTARIO_FUNCIONAL.json') + os.pathsep + '.',
+            '--add-data', str(metadata_file) + os.pathsep + '.',
             '--log-level', 'WARN']
     for scientific_path in dict.fromkeys(str(Path(package.__file__).resolve().parent.parent)
                                          for package in (numpy, scipy)):
@@ -48,7 +60,7 @@ def main():
     bundle = output / 'MiniTaBom'
     examples = bundle / 'Exemplos'
     examples.mkdir()
-    for example in sorted(ROOT.glob('exemplo_*.statlab')):
+    for example in sorted((ROOT / 'exemplos').glob('exemplo_*.statlab')):
         shutil.copy2(example, examples / example.name)
     (bundle / 'LEIA-ME.txt').write_text(
         'MiniTaBom - projeto independente para fins educativos e estudo de estatística.\n\n'
@@ -74,7 +86,8 @@ def main():
     python_license = Path(sys.base_prefix) / 'LICENSE.txt'
     if python_license.is_file():
         shutil.copy2(python_license, licenses / 'Python-LICENSE.txt')
-    manifest = dict(name='MiniTaBom', platform='Windows x64', python=platform.python_version(),
+    manifest = dict(name='MiniTaBom', version=metadata['version'], repository=metadata['repository'],
+                    platform='Windows x64', python=platform.python_version(),
                     numpy=numpy.__version__, scipy=scipy.__version__,
                     pyinstaller=importlib.metadata.version('pyinstaller'),
                     purpose='Fins educativos e estudo de estatística',
@@ -89,6 +102,8 @@ def main():
     if completed.returncode != 0 or not report.get('ok') or not report.get('frozen'):
         raise SystemExit('Pacote reprovado no teste: ' + json.dumps(report, ensure_ascii=True))
     print('Teste do executável aprovado: ' + ', '.join(report['checks']), flush=True)
+    # Cópia local fácil de encontrar. Preserva arquivos extras salvos pelo usuário.
+    shutil.copytree(bundle, ROOT / 'Aplicativo', dirs_exist_ok=True)
     dist = ROOT / 'dist'
     dist.mkdir(exist_ok=True)
     archive = dist / 'MiniTaBom-Windows-x64.zip'

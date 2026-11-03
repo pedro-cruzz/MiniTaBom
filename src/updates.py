@@ -7,8 +7,9 @@ import socket
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlsplit
 from urllib.request import Request, urlopen
+from app_resources import resource_path
 
-METADATA_PATH = Path(__file__).with_name('app_metadata.json')
+METADATA_PATH = resource_path('app_metadata.json')
 
 
 def normalize_repository(value):
@@ -54,13 +55,11 @@ def preferences_path():
 
 
 def configured_repository():
-    bundled = load_metadata().get('repository', '')
-    if bundled:
-        return normalize_repository(bundled)
     path = preferences_path()
     if path.exists():
         return normalize_repository(json.loads(path.read_text(encoding='utf-8'))['repository'])
-    return ''
+    bundled = load_metadata().get('repository', '')
+    return normalize_repository(bundled) if bundled else ''
 
 
 def save_repository(repository):

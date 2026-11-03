@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 
 PROJECT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(PROJECT))
+sys.path.insert(0, str(PROJECT / 'src'))
 from app import MiniTaBom
 from ui_geometry import monitor_work_area, centered_position
 
@@ -19,7 +19,7 @@ class ProbeLab(MiniTaBom):
                       calculated=centered_position(parent, size, area), before=dialog.geometry())
         super().center_dialog(dialog)
         record['after'] = dialog.geometry()
-        path = PROJECT / 'diagnosticos' / 'geometry_probe.json'
+        path = PROJECT / 'docs' / 'diagnosticos' / 'geometry_probe.json'
         path.parent.mkdir(exist_ok=True)
         path.write_text(json.dumps(record, indent=2), encoding='utf-8')
 
