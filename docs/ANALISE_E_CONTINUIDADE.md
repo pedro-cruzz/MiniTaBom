@@ -4,6 +4,14 @@
 
 Esta seção atualiza o estado do pacote; o relato original abaixo é histórico.
 
+### Vigésima primeira etapa — 03/11/2026: repositório e organização das pastas
+
+- Usuário forneceu https://github.com/pedro-cruzz/MiniTaBom.git; app_metadata.json agora define pedro-cruzz/MiniTaBom como padrão. Consulta real ao endpoint releases/latest retornou HTTP 404 nesta data: não confirma uma Release estável pública disponível. Nenhum push ou publicação foi executado pelo agente.
+- Raiz Git existente preservada. Código separado em src/, testes e fixtures em tests/, projetos sintéticos em exemplos/ e relatórios/inspeção/diagnósticos em docs/. Ferramentas permanecem em tools/ e workflow em .github/. README de início rápido criado na raiz; documentação detalhada preservada em docs/MANUAL.md.
+- Caminhos de recursos centralizados em src/app_resources.py para funcionar tanto no código-fonte reorganizado quanto no executável. Atualizados scripts de estudo, inspeção, cobertura, inicialização, empacotamento e GitHub Actions.
+- Build passa a copiar o pacote verificado para Aplicativo/, com MiniTaBom.exe fácil de localizar, e continua gerando dist/MiniTaBom-Windows-x64.zip para distribuição. MiniTaBom.bat na raiz abre a versão pronta quando disponível ou usa src/app.py como alternativa. Arquivos extras eventualmente salvos em Aplicativo/ são preservados na cópia de construção.
+- Verificação da reorganização: 212 testes aprovados e 15 exemplos conferidos. Empacotamento inclui a verificação do diálogo de atualizações e recursos de runtime. O repositório configurado ainda requer uma Release estável para a consulta real de versão.
+
 ### Vigésima etapa — 03/11/2026: verificação manual de atualizações
 
 - Adicionados updates.py, update_dialog.py e app_metadata.json (versão inicial 0.1.0). Ajuda > Verificar atualizações abre diálogo com versão instalada, repositório, botão de consulta e link para a Release. Rede executada em thread; retorno à interface via fila/after, sem acessar Tk no worker. Fechar cancela o callback; respostas tardias não acessam a janela destruída.

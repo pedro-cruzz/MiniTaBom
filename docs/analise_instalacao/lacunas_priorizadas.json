@@ -9,8 +9,8 @@
     "dialogos_pt_br.json",
     "dialogos_legados_pt_br.json",
     "graficos_pt_br.json",
-    "../app.py",
-    "../INVENTARIO_FUNCIONAL.json"
+    "../../src/app.py",
+    "../../INVENTARIO_FUNCIONAL.json"
   ],
   "criterio_prioridade": "Todos os recursos do 16 têm prioridade sobre expansões exclusivas do 22. Dentro do 16, completar os fundamentos e fluxos iniciados primeiro; nenhuma área pendente está excluída. Consultar cobertura_minitab16.json.",
   "limites": [
