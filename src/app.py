@@ -61,8 +61,8 @@ class MiniTaBom(tk.Tk):
         self.project_path = None
         self.dirty = False
         self.last_regression = None
-        self.headers = ['Medição', 'Grupo']
-        self.rows = [[str(x), 'A'] for x in [10,12,11,14,13,15,12,16,14,13]]
+        self.headers = ['Coluna 1', 'Coluna 2', 'Coluna 3']
+        self.rows = []
         self.history = WorksheetHistory(self.headers, self.rows)
         self.status = tk.StringVar(value='Pronto')
         self.dimensions = tk.StringVar()
@@ -78,7 +78,6 @@ class MiniTaBom(tk.Tk):
         footer.pack(fill='x', side='bottom')
         ttk.Label(footer, textvariable=self.status, style='Status.TLabel').pack(side='left')
         ttk.Label(footer, textvariable=self.dimensions, style='Status.TLabel').pack(side='right')
-        self.output.insert('end', 'MiniTaBom — sessão de estudos\n\nDados de exemplo fictícios carregados.\nSelecione uma coluna e use Estat > Estatísticas básicas.\n')
         self.refresh()
         self.output.edit_modified(False)
         self.output.bind('<<Modified>>', self.output_changed)

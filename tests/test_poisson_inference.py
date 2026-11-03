@@ -107,7 +107,7 @@ class PoissonInterfaceTests(unittest.TestCase):
         from app import MiniTaBom
         self.app=MiniTaBom();self.app.withdraw()
         self.app.headers=['Contagens'];self.app.rows=[['0'],['1'],['2'],['*']]
-        self.app.refresh_table()
+        self.app.refresh()
 
     def tearDown(self):self.app.destroy()
 

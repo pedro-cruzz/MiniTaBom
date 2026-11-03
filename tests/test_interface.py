@@ -47,6 +47,12 @@ class InterfaceTests(unittest.TestCase):
         self.app = MiniTaBom()
         self.addCleanup(self.app.destroy)
         self.app.withdraw()
+        # Dados explícitos para os testes de edição e análise.
+        from history import WorksheetHistory
+        self.app.headers = ['Medição', 'Grupo']
+        self.app.rows = [[str(x), 'A'] for x in [10,12,11,14,13,15,12,16,14,13]]
+        self.app.history = WorksheetHistory(self.app.headers, self.app.rows)
+        self.app.refresh()
         self.app.update_idletasks()
 
     def start_edit(self, text):

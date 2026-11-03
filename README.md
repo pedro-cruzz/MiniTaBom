@@ -6,6 +6,8 @@ Projeto independente para **fins educativos e estudo de estatística**, em portu
 
 No computador em que o pacote foi gerado, abra **`Aplicativo/MiniTaBom.exe`**. Também é possível dar dois cliques em **`MiniTaBom.bat`**, na raiz desta pasta.
 
+O programa inicia com a planilha e a sessão vazias. Para estudar com dados de demonstração, abra um projeto da pasta `Exemplos` pelo menu Arquivo.
+
 Para outras pessoas, disponibilize **`dist/MiniTaBom-Windows-x64.zip`** nas [Releases do repositório](https://github.com/pedro-cruzz/MiniTaBom/releases). Quem baixar deve extrair a pasta inteira e abrir `MiniTaBom.exe`. Não é necessário instalar Python nem Minitab. Mantenha `_internal` junto do executável.
 
 O download do código-fonte pelo GitHub não inclui o executável; ele é distribuído separadamente nas Releases.

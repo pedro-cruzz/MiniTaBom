@@ -16,6 +16,9 @@ def run(app_class, report_path):
         app.update_idletasks()
         if 'MiniTaBom' not in app.title() or not app.icons:
             raise RuntimeError('Interface ou ícones indisponíveis.')
+        if app.rows or app.output.get('1.0', 'end-1c') or app.dirty:
+            raise RuntimeError('O programa deve iniciar com planilha e sessão vazias.')
+        report['checks'].append('inicialização com planilha e sessão vazias')
         report['checks'].append('Tk, interface e ícones')
         inventory = json.loads(resource_path('INVENTARIO_FUNCIONAL.json').read_text(encoding='utf-8'))
         if len(inventory['areas']) != 23:

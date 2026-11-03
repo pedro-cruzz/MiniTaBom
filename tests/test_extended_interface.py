@@ -15,6 +15,10 @@ class ExtendedInterfaceTests(unittest.TestCase):
         self.app = MiniTaBom()
         self.addCleanup(self.app.destroy)
         self.app.withdraw()
+        # Estes cenários analisam uma amostra; a abertura do app fica vazia.
+        self.app.headers = ['Medição', 'Grupo']
+        self.app.rows = [[str(x), 'A'] for x in [10,12,11,14,13,15,12,16,14,13]]
+        self.app.refresh()
         self.app.update_idletasks()
 
     def test_two_proportion_summary_dialog_report_and_navigation(self):
