@@ -19,6 +19,7 @@ O download do código-fonte pelo GitHub não inclui o executável; ele é distri
 | `tests/` | Testes automatizados e dados de referência em `fixtures/`. |
 | `exemplos/` | Projetos sintéticos `.statlab` para estudar. |
 | `docs/` | Manual, relatório de continuidade, inventário da instalação e diagnósticos. |
+| `desenvolvimento/` | Scripts para instalar dependências ou gerar o executável; uso de desenvolvimento. |
 | `tools/` | Ferramentas de empacotamento, inspeção e validação. |
 | `dist/` | ZIP portátil, checksum e relatório do teste do executável. |
 | `.github/workflows/` | Geração do pacote Windows pelo GitHub Actions. |
@@ -35,7 +36,7 @@ Versão inicial: **0.1.0**. Para uma atualização local, aumente `version` em `
 
 ## Executar pelo código-fonte
 
-Requer Python com Tkinter, pip e as dependências científicas do projeto. No Windows, execute `instalar_dependencias.bat` uma vez e depois:
+Requer Python com Tkinter, pip e as dependências científicas do projeto. No Windows, execute `desenvolvimento/instalar_dependencias.bat` uma vez e depois:
 
 ```powershell
 python src/app.py
@@ -50,7 +51,7 @@ python -B tools/check_study_examples.py
 
 ## Gerar o executável
 
-Execute **`gerar_executavel.bat`** no Windows x64 com Python x64. Ele instala as ferramentas de construção, gera o executável, faz a verificação local e prepara `Aplicativo/` e o ZIP em `dist/`.
+Execute **`desenvolvimento/gerar_executavel.bat`** no Windows x64 com Python x64. Ele instala as ferramentas de construção, gera o executável, faz a verificação local e prepara `Aplicativo/` e o ZIP em `dist/`.
 
 No GitHub: **Actions > Pacote Windows > Run workflow**. Tags iniciadas em `v` também disparam a construção. O artefato da execução contém o ZIP; anexe esse ZIP às Releases para disponibilizá-lo aos usuários. O fluxo não publica Releases automaticamente.
 

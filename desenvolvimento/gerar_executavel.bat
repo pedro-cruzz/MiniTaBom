@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0"
+cd /d "%~dp0.."
 python -m pip install --target .build-tools --upgrade -r requirements-build.txt
 if errorlevel 1 goto falha
 python tools\build_windows.py

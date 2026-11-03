@@ -284,7 +284,7 @@ O projeto passou a se chamar **MiniTaBom**, sem acento. O formato e a extensão 
 
 ## Gerar o pacote portátil
 
-Para quem desenvolve: execute `gerar_executavel.bat` no Windows x64 com Python x64. A primeira etapa precisa de internet e instala as ferramentas de construção em `.build-tools`. O script `tools/build_windows.py` empacota o aplicativo e suas dependências com PyInstaller, acrescenta os 15 exemplos e avisos de licenças, e testa o executável gerado antes de disponibilizar o ZIP.
+Para quem desenvolve: execute `desenvolvimento/gerar_executavel.bat` no Windows x64 com Python x64. A primeira etapa precisa de internet e instala as ferramentas de construção em `.build-tools`. O script `tools/build_windows.py` empacota o aplicativo e suas dependências com PyInstaller, acrescenta os 15 exemplos e avisos de licenças, e testa o executável gerado antes de disponibilizar o ZIP.
 
 Saídas: `dist/MiniTaBom-Windows-x64.zip`, checksum `.zip.sha256` e `dist/smoke-test.json`. Os arquivos intermediários ficam em `.build`; `.build-tools`, `.build` e `dist` são ignorados pelo Git. O pacote não inclui arquivos da instalação Minitab nem exige acesso a ela. A identificação de versão/dependências fica em `versao.json` dentro do pacote.
 
@@ -309,6 +309,6 @@ Se o endereço ainda não estiver preenchido, informe `usuario/repositorio` ou `
 
 A identificação inicial do aplicativo é **0.1.0**, em `app_metadata.json`. Nesse arquivo, `repository` pode receber o endereço real do seu repositório antes da geração local do ZIP. No GitHub Actions, o endereço do repositório é preenchido automaticamente no pacote; quando a construção parte de uma tag, a versão também vem dessa tag. Use tags como `v0.1.0`, `v0.2.0` e `v1.0.0`; uma versão maior é comparada numericamente (por exemplo, 0.10.0 é maior que 0.9.0).
 
-Ao gerar localmente uma atualização, aumente `version` em `app_metadata.json` antes de executar `gerar_executavel.bat`. Publique a Release estável com a tag correspondente e anexe o novo ZIP. Apenas subir alterações no código ou criar uma tag sem Release não disponibiliza uma atualização para esse botão. Repositórios privados não são suportados pela consulta sem autenticação.
+Ao gerar localmente uma atualização, aumente `version` em `app_metadata.json` antes de executar `desenvolvimento/gerar_executavel.bat`. Publique a Release estável com a tag correspondente e anexe o novo ZIP. Apenas subir alterações no código ou criar uma tag sem Release não disponibiliza uma atualização para esse botão. Repositórios privados não são suportados pela consulta sem autenticação.
 
 A consulta usa a [API oficial de Releases do GitHub](https://docs.github.com/en/rest/releases/releases#get-the-latest-release). Os testes simulam as respostas do serviço para verificar versões, erros e interface sem depender da rede. Enquanto o repositório do projeto não for criado e a primeira Release publicada, não há consulta real de ponta a ponta contra ele.

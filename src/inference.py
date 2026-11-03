@@ -22,7 +22,7 @@ def scientific_stats():
     try:
         from scipy import stats
     except ImportError as error:
-        raise ValueError('Instale as dependências com instalar_dependencias.bat para usar estas análises.') from error
+        raise ValueError('Instale as dependências com desenvolvimento/instalar_dependencias.bat para usar estas análises.') from error
     return stats
 
 
