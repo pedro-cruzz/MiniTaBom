@@ -2,7 +2,7 @@
 from core import _numeric_value
 
 
-def independent_samples(headers, rows, columns, source='columns', group=None, numeric=False):
+def independent_samples(headers, rows, columns, source='columns', group=None, numeric=False, levels=None):
     if source not in ('columns', 'stacked'):
         raise ValueError('Formato de amostras inválido.')
     if not columns or any(type(c) is not int or not 0 <= c < len(headers) for c in columns):
@@ -27,7 +27,12 @@ def independent_samples(headers, rows, columns, source='columns', group=None, nu
                 raise ValueError('A coluna de grupo deve conter exatamente dois grupos não ausentes.')
         if len(groups) != 2:
             raise ValueError('A coluna de grupo deve conter exatamente dois grupos não ausentes.')
-        samples = [dict(name=f'{headers[columns[0]]} [grupo {level!r}]', raw=values)
+        if levels is not None:
+            if (not isinstance(levels, (list, tuple)) or len(levels) != 2 or len(set(levels)) != 2
+                    or set(levels) != set(groups)):
+                raise ValueError('Os grupos originais não estão mais presentes; inicie uma nova análise.')
+            groups = {level: groups[level] for level in levels}
+        samples = [dict(name=f'{headers[columns[0]]} [grupo {level!r}]', level=level, raw=values)
                    for level, values in groups.items()]
     for sample in samples:
         values, missing = [], 0

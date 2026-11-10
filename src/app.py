@@ -4,12 +4,24 @@ from pathlib import Path
 import tkinter as tk
 from tkinter import ttk, filedialog, simpledialog, messagebox
 from core import read_table, numeric_column
-from project import load_project, save_project
+from project import load_document, save_document
+from workspace_model import new_document, new_sheet, active_sheet, sync_sheet, is_stale, validate_document
+from excel_import import read_excel_workbook
+from analysis_service import execute_t, rerun_analysis
+from regression_service import execute_regression, archived_model, model_for_prediction
+from regression_contract import REGRESSION_METHOD
+from prediction_service import execute_prediction
+from anova_service import execute_anova
+from anova_contract import ANOVA_METHOD
+from diagnostic_service import execute_normality,execute_study
+from diagnostic_contract import NORMALITY_METHOD
+from two_poisson_service import execute_two_poisson
+from two_poisson_dialog import TwoPoissonDialog
+from two_poisson import TITLE as TWO_POISSON_TITLE
 from core import DESCRIPTIVE_STATISTICS, descriptive_report
 from worksheet import Worksheet
 from history import WorksheetHistory
 from graphs import GraphWindow, GroupGraphWindow
-from inference import analyze_t_inputs, format_t_report
 from inference_dialog import InferenceDialog, TITLES
 from basic_inference import analyze_basic, z_mean, one_proportion, format_basic
 from basic_inference_dialog import BasicInferenceDialog, BASIC_TITLES
@@ -61,9 +73,12 @@ class MiniTaBom(tk.Tk):
         self.project_path = None
         self.dirty = False
         self.last_regression = None
+        self.last_regression_id = None
         self.headers = ['Coluna 1', 'Coluna 2', 'Coluna 3']
         self.rows = []
         self.history = WorksheetHistory(self.headers, self.rows)
+        self.document = new_document(self.headers, self.rows)
+        self.sheet_histories = {self.document['active_worksheet_id']: self.history}
         self.status = tk.StringVar(value='Pronto')
         self.dimensions = tk.StringVar()
         self.cell_name = tk.StringVar(value='C1 · linha 1')
@@ -115,7 +130,7 @@ class MiniTaBom(tk.Tk):
         file_menu.add_command(label='Salvar projeto como…', command=lambda: self.save_project(save_as=True))
         file_menu.add_separator()
         file_menu.add_command(label='Abrir CSV…', command=self.open_csv)
-        file_menu.add_command(label='Importar Excel…',command=self.open_excel)
+        file_menu.add_command(label='Abrir Excel…',command=self.open_excel)
         file_menu.add_command(label='Exportar CSV…', command=self.save_csv)
         file_menu.add_command(label='Exportar sessão…', command=self.export)
         file_menu.add_separator()
@@ -130,6 +145,8 @@ class MiniTaBom(tk.Tk):
             edit_menu.add_command(label=label, command=lambda method=method: self.worksheet_action(method))
         menu.add_cascade(label='Editar', menu=edit_menu)
         data_menu = tk.Menu(menu, tearoff=False)
+        data_menu.add_command(label='Nova planilha…', command=self.add_worksheet)
+        data_menu.add_command(label='Usar primeira linha como nomes das colunas',command=self.promote_first_row)
         data_menu.add_command(label='Adicionar linha', command=self.add_row)
         data_menu.add_command(label='Adicionar coluna…', command=self.add_column)
         data_menu.add_command(label='Renomear coluna atual…', command=lambda: self.rename_column(self.worksheet.active[1]))
@@ -154,6 +171,7 @@ class MiniTaBom(tk.Tk):
         for mode, title in EXTENDED_TITLES.items():
             basic_menu.add_command(label=title + '…', command=lambda mode=mode: self.extended_test_dialog(mode))
         basic_menu.add_command(label=POISSON_TITLE + '…', command=self.poisson_dialog)
+        basic_menu.add_command(label=TWO_POISSON_TITLE+'…',command=self.two_poisson_dialog)
         basic_menu.add_command(label='Correlação…', command=lambda: self.linear_dialog('correlation'))
         basic_menu.add_command(label='Teste de normalidade…', command=self.normality_dialog)
         basic_menu.add_command(label='Igualdade de variâncias…', command=lambda: self.study_dialog('variances'))
@@ -187,6 +205,7 @@ class MiniTaBom(tk.Tk):
         window_menu = tk.Menu(menu, tearoff=False)
         window_menu.add_command(label='Sessão', accelerator='Ctrl+M', command=lambda: self.focus_pane('session'))
         window_menu.add_command(label='Planilha', accelerator='Ctrl+D', command=lambda: self.focus_pane('worksheet'))
+        window_menu.add_command(label='Histórico de análises…', command=self.analysis_history_dialog)
         self.show_project = tk.BooleanVar(value=False)
         window_menu.add_checkbutton(label='Gerenciador de projeto', variable=self.show_project, command=self.toggle_project)
         menu.add_cascade(label='Janela', menu=window_menu)
@@ -218,6 +237,7 @@ class MiniTaBom(tk.Tk):
             'Tabelas': 'table', 'Qui-quadrado de associação…': 'table',
             'Teste de normalidade…': 'distribution',
             POISSON_TITLE + '…': 'distribution',
+            TWO_POISSON_TITLE+'…':'distribution', 'Abrir Excel…':'table',
             'Sessão': 'session', 'Planilha': 'table', 'Gerenciador de projeto': 'project',
             'Como usar': 'help', 'Cobertura do projeto…': 'project', 'Sobre o MiniTaBom': 'help',
             'Verificar atualizações…': 'help', 'Calculadora…':'summary', 'Percentis e decis…':'summary', 'Tabela de frequências…':'table', 'Não paramétricos':'distribution', 'Mann–Whitney…':'distribution', 'Wilcoxon pareado…':'distribution', 'Kruskal–Wallis…':'anova', 'Igualdade de variâncias…':'groups', 'Gráfico de barras…':'histogram', 'Diagrama de Pareto…':'histogram', 'Gráfico de setores…':'histogram',
@@ -296,6 +316,9 @@ class MiniTaBom(tk.Tk):
         editbar = ttk.Frame(grid, padding=(4, 2))
         editbar.pack(fill='x')
         ttk.Label(editbar, textvariable=self.cell_name, width=17, relief='sunken', padding=(4, 2)).pack(side='left', padx=(0, 6))
+        self.sheet_picker = ttk.Combobox(editbar, state='readonly', width=18)
+        self.sheet_picker.pack(side='left', padx=(0, 6))
+        self.sheet_picker.bind('<<ComboboxSelected>>', self.choose_worksheet)
         ttk.Label(editbar, textvariable=self.cell_value, anchor='w').pack(side='left', fill='x', expand=True)
         ttk.Button(editbar, text='+ Linha', style='Tool.TButton', command=self.add_row).pack(side='left', padx=1)
         ttk.Button(editbar, text='+ Coluna', style='Tool.TButton', command=self.add_column).pack(side='left', padx=1)
@@ -345,8 +368,9 @@ class MiniTaBom(tk.Tk):
         getattr(self.worksheet, method)()
 
     def data_changed(self):
-        self.clear_regression()
-        self.history.record(self.headers, self.rows)
+        self.sync_document()
+        self.restore_regression()
+        self.history.record(self.headers, self.rows, columns=active_sheet(self.document)['columns'])
         self.mark_dirty()
         self.dimensions.set(f'{len(self.rows)} linhas  |  {len(self.headers)} colunas')
         self.status.set('Dados alterados · execute novamente as análises para atualizar a sessão')
@@ -365,6 +389,9 @@ class MiniTaBom(tk.Tk):
             self.status.set('Nenhuma alteração para ' + ('desfazer' if direction == 'undo' else 'refazer'))
             return 'break'
         self.headers, self.rows = state
+        columns = self.history.current_columns()
+        if columns is not None:
+            active_sheet(self.document)['columns'] = columns
         self.refresh()
         self.worksheet.select(*active)
         self.mark_dirty()
@@ -385,7 +412,7 @@ class MiniTaBom(tk.Tk):
             self.navigator.delete(*children)
         self.result_positions = {}
         self.output.tag_remove('report-title', '1.0', 'end')
-        starts = ('TAXA DE POISSON DE UMA AMOSTRA', 'MANN–WHITNEY', 'WILCOXON PAREADO', 'KRUSKAL–WALLIS', 'IGUALDADE DE VARIÂNCIAS', 'TABELA DE FREQUÊNCIAS', 'PERCENTIS DA AMOSTRA', 'CALCULADORA DE COLUNAS', 'Estatísticas descritivas:', 'T DE UMA AMOSTRA', 'T PAREADO', 'T DE WELCH', 'T DE DUAS AMOSTRAS', 'Z DE UMA AMOSTRA', 'TESTE DE UMA PROPORÇÃO', 'TESTE DE DUAS PROPORÇÕES', 'TESTE DE UMA VARIÂNCIA', 'TESTE DE DUAS VARIÂNCIAS', 'QUI-QUADRADO DE ASSOCIAÇÃO', 'TESTE DE NORMALIDADE', 'ANOVA DE UM FATOR', 'CORRELAÇÃO DE', 'REGRESSÃO LINEAR', 'PREVISÃO LINEAR', 'DISTRIBUIÇÃO —', 'OPERAÇÃO DE DADOS —')
+        starts = ('DUAS TAXAS DE POISSON', 'TAXA DE POISSON DE UMA AMOSTRA', 'MANN–WHITNEY', 'WILCOXON PAREADO', 'KRUSKAL–WALLIS', 'IGUALDADE DE VARIÂNCIAS', 'TABELA DE FREQUÊNCIAS', 'PERCENTIS DA AMOSTRA', 'CALCULADORA DE COLUNAS', 'Estatísticas descritivas:', 'T DE UMA AMOSTRA', 'T PAREADO', 'T DE WELCH', 'T DE DUAS AMOSTRAS', 'Z DE UMA AMOSTRA', 'TESTE DE UMA PROPORÇÃO', 'TESTE DE DUAS PROPORÇÕES', 'TESTE DE UMA VARIÂNCIA', 'TESTE DE DUAS VARIÂNCIAS', 'QUI-QUADRADO DE ASSOCIAÇÃO', 'TESTE DE NORMALIDADE', 'ANOVA DE UM FATOR', 'CORRELAÇÃO DE', 'REGRESSÃO LINEAR', 'PREVISÃO LINEAR', 'DISTRIBUIÇÃO —', 'OPERAÇÃO DE DADOS —')
         for line, text in enumerate(self.output.get('1.0', 'end-1c').splitlines(), 1):
             if text.startswith(starts):
                 key = f'result:{line}'
@@ -429,7 +456,11 @@ class MiniTaBom(tk.Tk):
 
     def coverage_dialog(self):
         try:
-            inventory = json.loads(resource_path('INVENTARIO_FUNCIONAL.json').read_text(encoding='utf-8'))
+            registry = json.loads(resource_path('CAPACIDADES.json').read_text(encoding='utf-8'))
+            areas = {}
+            for requirement in registry['requirements']:
+                areas.setdefault(requirement['area'], []).append(requirement)
+            inventory = dict(alvo=registry['target'], areas=[dict(id=name, requirements=items) for name, items in areas.items()])
         except (OSError, ValueError) as error:
             messagebox.showerror('Cobertura indisponível', str(error), parent=self)
             return
@@ -439,7 +470,7 @@ class MiniTaBom(tk.Tk):
         dialog.geometry('860x560')
         dialog.minsize(650, 400)
         ttk.Label(dialog, text='Referência: ' + inventory['alvo'], style='Title.TLabel').pack(fill='x')
-        ttk.Label(dialog, text='Mapa inicial por áreas · a verificação integral das funções ainda está pendente.', padding=10).pack(fill='x')
+        ttk.Label(dialog, text='Registro de capacidades · implementação e validação no 16 são estados distintos.', padding=10).pack(fill='x')
         panes = ttk.Panedwindow(dialog, orient='horizontal')
         panes.pack(fill='both', expand=True, padx=10, pady=(0, 10))
         listing = ttk.Frame(panes)
@@ -463,14 +494,18 @@ class MiniTaBom(tk.Tk):
         for index, area in enumerate(inventory['areas']):
             name = area['id'].replace('_', ' ').capitalize()
             tree.insert('', 'end', iid=str(index), text=name,
-                        values=('Pendente' if area['estado'] == 'pendente' else 'Parcial',))
+                        values=('Parcial / pendente',))
         def show_area(event=None):
             if not tree.selection():
                 return
             area = inventory['areas'][int(tree.selection()[0])]
-            sections = [area['id'].replace('_', ' ').capitalize(), '\nDISPONÍVEL']
-            sections += ['• ' + value for value in area['existente']] or ['Nenhuma implementação nesta área.']
-            sections += ['\nPENDENTE'] + ['• ' + value for value in area['pendente']]
+            sections = [area['id']]
+            for r in area['requirements']:
+                state = r['states']
+                sections += ['\n' + r['id'] + ' — ' + r['name'],
+                             'Implementação: ' + state['implementation'] + '; interface: ' + state['ui'],
+                             'Validação16: ' + state['validation16'] + '; persistência: ' + state['persistence']]
+                sections += ['• ' + note for note in r['limitations']]
             detail.configure(state='normal')
             detail.delete('1.0', 'end')
             detail.insert('1.0', '\n'.join(sections))
@@ -487,7 +522,9 @@ class MiniTaBom(tk.Tk):
         if not self.confirm_replace():
             return
         self.headers, self.rows = ['Coluna 1', 'Coluna 2', 'Coluna 3'], []
+        self.document = new_document(self.headers, self.rows)
         self.history = WorksheetHistory(self.headers, self.rows)
+        self.sheet_histories = {self.document['active_worksheet_id']: self.history}
         self.project_path = None
         self.output.delete('1.0', 'end')
         self.output.edit_reset()
@@ -536,7 +573,8 @@ class MiniTaBom(tk.Tk):
         if not path:
             return False
         try:
-            save_project(path, self.headers, self.rows, self.output.get('1.0', 'end-1c'))
+            self.sync_document()
+            save_document(path, self.document)
         except (OSError, ValueError) as error:
             messagebox.showerror('Falha ao salvar projeto', str(error))
             return False
@@ -552,16 +590,19 @@ class MiniTaBom(tk.Tk):
         if not path:
             return
         try:
-            headers, rows, output = load_project(path)
+            document = load_document(path)
         except (OSError, ValueError) as error:
             messagebox.showerror('Falha ao abrir projeto', str(error))
             return
         if not self.confirm_replace():
             return
-        self.headers, self.rows = headers, rows
+        self.document = document
+        sheet = active_sheet(document)
+        self.headers, self.rows = [c['name'] for c in sheet['columns']], sheet['rows']
         self.history = WorksheetHistory(self.headers, self.rows)
+        self.sheet_histories = {sheet['id']: self.history}
         self.output.delete('1.0', 'end')
-        self.output.insert('1.0', output)
+        self.output.insert('1.0', document['output'])
         self.output.edit_reset()
         self.output.edit_modified(False)
         self.project_path, self.dirty = path, False
@@ -570,11 +611,126 @@ class MiniTaBom(tk.Tk):
         self.status.set('Projeto aberto · ' + Path(path).name)
 
     def refresh(self):
-        self.clear_regression()
+        self.sync_document()
+        self.restore_regression()
         self.column['values'] = self.headers
         self.worksheet.set_data(self.headers, self.rows)
         self.dimensions.set(f'{len(self.rows)} linhas  |  {len(self.headers)} colunas')
         self.index_results()
+
+    def sync_document(self):
+        sheet = active_sheet(self.document)
+        sync_sheet(sheet, self.headers, self.rows)
+        self.history.attach_columns(self.headers, self.rows, sheet['columns'])
+        self.document['output'] = self.output.get('1.0', 'end-1c')
+        if hasattr(self, 'sheet_picker'):
+            sheets = self.document['worksheets']
+            self.sheet_picker['values'] = [s['name'] for s in sheets]
+            self.sheet_picker.current(next(i for i, s in enumerate(sheets) if s['id'] == sheet['id']))
+            self.grid_title.configure(text=sheet['name'])
+
+    def reset_document(self):
+        self.document = new_document(self.headers, self.rows)
+        self.sheet_histories = {self.document['active_worksheet_id']: self.history}
+
+    def add_worksheet(self, name=None):
+        self.worksheet.commit_edit()
+        if name is None:
+            name = simpledialog.askstring('Nova planilha', 'Nome da planilha:',
+                                          initialvalue=f'Worksheet {len(self.document["worksheets"]) + 1}', parent=self)
+        if name is None:
+            return False
+        name = name.strip()
+        if not name or name in [s['name'] for s in self.document['worksheets']] or len(self.document['worksheets']) >= 100:
+            messagebox.showerror('Planilha inválida', 'Use nome único e não vazio; limite de 100 planilhas.', parent=self)
+            return False
+        self.sync_document()
+        sheet = new_sheet(name)
+        self.document['worksheets'].append(sheet)
+        self.switch_worksheet(sheet['id'])
+        self.mark_dirty()
+        return True
+
+    def choose_worksheet(self, event=None):
+        index = self.sheet_picker.current()
+        if index >= 0:
+            self.switch_worksheet(self.document['worksheets'][index]['id'])
+
+    def switch_worksheet(self, worksheet_id):
+        self.worksheet.commit_edit()
+        target = next((s for s in self.document['worksheets'] if s['id'] == worksheet_id), None)
+        if target is None:
+            raise ValueError('Planilha não encontrada.')
+        self.sync_document()
+        old_id = self.document['active_worksheet_id']
+        self.sheet_histories[old_id] = self.history
+        self.document['active_worksheet_id'] = worksheet_id
+        self.headers, self.rows = [c['name'] for c in target['columns']], target['rows']
+        self.history = self.sheet_histories.setdefault(worksheet_id, WorksheetHistory(self.headers, self.rows, columns=target['columns']))
+        self.refresh()
+        self.worksheet.select(0, 0)
+        if old_id != worksheet_id:
+            self.mark_dirty()
+        self.status.set('Planilha ativa · ' + target['name'])
+
+    def analysis_history_dialog(self):
+        from analysis_history_dialog import AnalysisHistoryDialog
+        self.worksheet.commit_edit()
+        self.sync_document()
+        return AnalysisHistoryDialog(self)
+
+    def rerun_saved_analysis(self, analysis_id):
+        self.worksheet.commit_edit()
+        self.sync_document()
+        try:
+            if len(self.document['analyses']) >= 10000:
+                raise ValueError('Limite de 10000 análises estruturadas por projeto atingido.')
+            result = rerun_analysis(self.document, analysis_id)
+            storage = self.prepare_analysis_storage(result)
+        except (ValueError, ArithmeticError) as error:
+            messagebox.showerror('Não foi possível reexecutar', str(error), parent=self.grab_current() or self)
+            return False
+        self.apply_analysis_storage(result, storage)
+        self.document['analyses'].append(result)
+        self.append_analysis(result['report'], 'Análise reexecutada · resultado anterior preservado')
+        if result['method_id']==REGRESSION_METHOD:
+            self.finish_regression(result)
+        elif result['method_id']==ANOVA_METHOD and result['parameters']['show_graph']:
+            self.show_saved_anova_graph(result['analysis_id'])
+        elif result['method_id']==NORMALITY_METHOD and result['parameters']['show_graph']:
+            self.show_saved_normality_graph(result['analysis_id'])
+        return True
+
+    def prepare_analysis_storage(self, result):
+        if result['method_id']==REGRESSION_METHOD:
+            if not result['parameters']['store']:return None
+            sheet=next(s for s in self.document['worksheets'] if s['id']==result['source']['worksheet_id'])
+            return sheet['id'],regression_columns([c['name'] for c in sheet['columns']],sheet['rows'],archived_model(result))
+        if not result['parameters'].get('store_differences', False):
+            return None
+        sheet = next(s for s in self.document['worksheets'] if s['id'] == result['source']['worksheet_id'])
+        headers = [c['name'] for c in sheet['columns']]
+        indices = [next(i for i, c in enumerate(sheet['columns']) if c['id'] == key)
+                   for key in result['source']['column_ids']]
+        _, differences, _ = paired_values(headers, sheet['rows'], *indices)
+        return sheet['id'], append_generated(headers, sheet['rows'], ['Diferenças'], [differences])
+
+    def apply_analysis_storage(self, result, storage):
+        if storage is None:
+            return
+        sheet_id, generated = storage
+        if sheet_id == self.document['active_worksheet_id']:
+            self.install_generated(*generated)
+        else:
+            sheet = next(s for s in self.document['worksheets'] if s['id'] == sheet_id)
+            history = self.sheet_histories.setdefault(sheet_id, WorksheetHistory([c['name'] for c in sheet['columns']], sheet['rows'], columns=sheet['columns']))
+            sync_sheet(sheet, generated[0], generated[1])
+            history.record(generated[0], generated[1], columns=sheet['columns'])
+        sheet = next(s for s in self.document['worksheets'] if s['id'] == sheet_id)
+        result['storage'] = dict(policy='append_new_column_per_execution', worksheet_id=sheet_id,
+                                 column_ids=[c['id'] for c in sheet['columns'] if c['name'] in generated[2]],
+                                 names=generated[2])
+        result['report'] += ('\nColunas armazenadas: ' if result['method_id']==REGRESSION_METHOD else '\nDiferenças armazenadas em: ') + ', '.join(generated[2]) + '\n'
 
     def open_csv(self):
         self.worksheet.commit_edit()
@@ -586,6 +742,7 @@ class MiniTaBom(tk.Tk):
                     return
                 self.headers, self.rows = headers, rows
                 self.history = WorksheetHistory(self.headers, self.rows)
+                self.reset_document()
                 self.project_path = None
                 self.output.delete('1.0', 'end')
                 self.output.edit_reset()
@@ -599,14 +756,52 @@ class MiniTaBom(tk.Tk):
         self.worksheet.commit_edit()
         path=filedialog.askopenfilename(filetypes=[('Excel (.xlsx)','*.xlsx')])
         if not path:return None
-        try:return ExcelDialog(self,path)
+        try:return self.import_excel_workbook(read_excel_workbook(path),path)
         except (ValueError,OSError) as error:
             messagebox.showerror('Falha ao abrir Excel',str(error),parent=self);return None
+
+    def import_excel_workbook(self,workbook,path):
+        document=new_document()
+        document['worksheets']=[new_sheet(item['name'],item['headers'],item['rows']) for item in workbook['worksheets']]
+        for sheet,item in zip(document['worksheets'],workbook['worksheets']):sheet['metadata']['excel_import']=item['metadata']
+        document['active_worksheet_id']=next(s['id'] for s in document['worksheets'] if s['name']==workbook['active_name'])
+        document['metadata']['excel_source']=Path(path).name
+        lines=['EXCEL ABERTO — '+Path(path).name,
+               f"{len(document['worksheets'])} aba(s). Troque de aba pelo seletor acima da planilha.",
+               'Todas as linhas foram mantidas, com colunas A, B, C...; nenhum intervalo precisa ser informado.']
+        for item in workbook['worksheets']:
+            if item['metadata']['uncached_formulas']:lines.append(item['name']+': '+item['metadata']['note'])
+        if any(item['metadata']['excel_state']!='visible' for item in workbook['worksheets']):
+            lines.append('Abas ocultas do arquivo também foram incluídas no seletor.')
+        document['output']='\n'.join(lines)+'\n'
+        validate_document(document)
+        if not self.confirm_replace():return False
+        self.document=document;sheet=active_sheet(document)
+        self.headers,self.rows=[c['name'] for c in sheet['columns']],sheet['rows']
+        self.history=WorksheetHistory(self.headers,self.rows,columns=sheet['columns']);self.sheet_histories={sheet['id']:self.history}
+        self.output.delete('1.0','end');self.output.insert('1.0',document['output']);self.output.edit_reset();self.output.edit_modified(False)
+        self.project_path=None;self.dirty=True;self.refresh();self.update_title()
+        self.status.set('Excel aberto · '+Path(path).name+' · todas as abas disponíveis')
+        return True
+
+    def promote_first_row(self):
+        self.worksheet.commit_edit()
+        if not self.rows:return False
+        headers=[value.strip() for value in self.rows[0]]
+        if any(not name for name in headers) or len(set(headers))!=len(headers):
+            messagebox.showerror('Nomes inválidos','A primeira linha deve conter um nome único e não vazio para cada coluna.',parent=self);return False
+        self.sync_document();sheet=active_sheet(self.document)
+        sheet['columns']=[dict(column,name=name) for column,name in zip(sheet['columns'],headers)]
+        self.headers,self.rows=headers,self.rows[1:]
+        self.data_changed();self.refresh();self.worksheet.select(0,0)
+        self.status.set('Primeira linha usada como nomes · Ctrl+Z desfaz')
+        return True
 
     def import_excel_data(self,headers,rows,meta,path):
         if not self.confirm_replace():return False
         self.headers,self.rows=headers,rows
         self.history=WorksheetHistory(self.headers,self.rows)
+        self.reset_document()
         self.project_path=None
         self.output.delete('1.0','end');self.output.edit_reset()
         self.output.insert('end',f"IMPORTAÇÃO EXCEL\n{Path(path).name}; aba {meta['sheet']}; intervalo {meta['range']}.\n"+meta['note']+'\n')
@@ -703,6 +898,22 @@ class MiniTaBom(tk.Tk):
         self.worksheet.commit_edit()
         return PoissonDialog(self)
 
+    def two_poisson_dialog(self):
+        self.worksheet.commit_edit();return TwoPoissonDialog(self)
+
+    def run_two_poisson(self,input_kind='columns',columns=None,**options):
+        self.worksheet.commit_edit();self.sync_document()
+        try:
+            if len(self.document['analyses'])>=10000:raise ValueError('Limite de 10000 análises por projeto atingido.')
+            indices=[] if input_kind=='summary' else columns
+            if not isinstance(indices,(list,tuple)) or any(type(i) is not int or not 0<=i<len(self.headers) for i in indices):
+                raise ValueError('Selecione as colunas de contagens e/ou grupo.')
+            sheet=active_sheet(self.document)
+            result=execute_two_poisson(sheet,[sheet['columns'][i]['id'] for i in indices],input_kind=input_kind,**options)
+        except (ValueError,ArithmeticError) as error:
+            messagebox.showerror('Não foi possível comparar as taxas',str(error),parent=self.grab_current() or self);return False
+        self.document['analyses'].append(result);self.append_analysis(result['report'],'Duas taxas Poisson adicionadas ao histórico');return True
+
     def run_poisson(self, source, perform_test=True, **options):
         self.worksheet.commit_edit()
         try:
@@ -730,12 +941,20 @@ class MiniTaBom(tk.Tk):
     def run_study(self, mode, **options):
         self.worksheet.commit_edit()
         try:
-            result = analyze_study(self.headers, self.rows, mode, **options)
-            report = format_study(result)
+            self.sync_document()
+            if len(self.document['analyses'])>=10000:raise ValueError('Limite de 10000 análises por projeto atingido.')
+            columns=options.pop('columns',None);response=options.pop('response',None);factor=options.pop('factor',None)
+            indices=columns if columns is not None else [response,factor]
+            if not isinstance(indices,(list,tuple)) or any(type(i) is not int or not 0<=i<len(self.headers) for i in indices):
+                raise ValueError('Selecione as colunas do teste.')
+            sheet=active_sheet(self.document)
+            result=execute_study(sheet,[sheet['columns'][i]['id'] for i in indices],mode,
+                                 input_kind='columns' if columns is not None else 'stacked',**options)
         except (ValueError, ArithmeticError) as error:
             messagebox.showerror('Não foi possível calcular', str(error), parent=self.grab_current() or self)
             return False
-        self.append_analysis(report, result['title'] + ' concluído')
+        self.document['analyses'].append(result)
+        self.append_analysis(result['report'],result['values']['title']+' concluído')
         return True
 
     def normality_dialog(self):
@@ -745,16 +964,29 @@ class MiniTaBom(tk.Tk):
     def run_normality(self, column, method='ad', show_graph=False):
         self.worksheet.commit_edit()
         try:
-            result = analyze_normality(self.headers, self.rows, column, method=method)
-            report = format_normality(result)
+            self.sync_document()
+            if len(self.document['analyses'])>=10000:raise ValueError('Limite de 10000 análises por projeto atingido.')
+            if type(column) is not int or not 0<=column<len(self.headers):raise ValueError('Selecione uma coluna válida.')
+            sheet=active_sheet(self.document)
+            result=execute_normality(sheet,[sheet['columns'][column]['id']],method=method,show_graph=show_graph)
         except ValueError as error:
             messagebox.showerror('Não foi possível testar a normalidade', str(error), parent=self.grab_current() or self)
             return False
-        self.append_analysis(report, 'Teste de normalidade adicionado à sessão')
+        self.document['analyses'].append(result)
+        self.append_analysis(result['report'], 'Teste de normalidade adicionado à sessão e ao histórico')
         if show_graph:
-            values,_=numeric_column(self.rows,column)
-            self.center_dialog(ProbabilityGraph(self,values,result))
+            self.show_saved_normality_graph(result['analysis_id'])
         return True
+
+    def show_saved_normality_graph(self,analysis_id):
+        try:
+            result=next((r for r in self.document['analyses'] if r['analysis_id']==analysis_id),None)
+            if result is None or result['method_id']!=NORMALITY_METHOD:raise ValueError('Selecione um teste de normalidade no histórico.')
+            graph=ProbabilityGraph(self,result['scenes'][0]['sample'],result['values'])
+        except ValueError as error:
+            messagebox.showerror('Gráfico indisponível',str(error),parent=self.grab_current() or self);return None
+        graph.title('Normalidade — resultado salvo em '+result['created_at'])
+        self.center_dialog(graph);return graph
 
     def run_contingency(self, source, show_expected=True, show_residuals=False,
                         show_contributions=False, show_percentages=False, **options):
@@ -860,26 +1092,84 @@ class MiniTaBom(tk.Tk):
         self.configure(cursor='watch')
         self.update_idletasks()
         try:
-            result = linear_regression(self.headers, self.rows, response, predictors, **options)
-            report = format_regression(result, observations)
-            generated = regression_columns(self.headers,self.rows,result) if store else None
+            self.sync_document()
+            if len(self.document['analyses'])>=10000:raise ValueError('Limite de 10000 análises por projeto atingido.')
+            sheet=active_sheet(self.document)
+            indices=[response,*predictors]
+            if any(type(i) is not int or not 0<=i<len(sheet['columns']) for i in indices):
+                raise ValueError('Selecione resposta e preditores válidos.')
+            result=execute_regression(sheet,[sheet['columns'][i]['id'] for i in indices],
+                                      show_graph=show_graph,observations=observations,store=store,**options)
+            storage=self.prepare_analysis_storage(result)
         except ValueError as error:
             messagebox.showerror('Não foi possível ajustar a regressão', str(error), parent=self.grab_current() or self)
             return False
         finally:
             self.configure(cursor='')
-        if generated is not None:
-            self.install_generated(*generated)
-            report += '\nColunas armazenadas: ' + ', '.join(generated[2]) + '\n'
-        self.append_analysis(report, 'Regressão linear adicionada à sessão')
-        self.last_regression = result
-        self.regression_menu.entryconfigure(1, state='normal')
-        if show_graph:
-            self.center_dialog(RegressionGraph(self, result))
+        self.apply_analysis_storage(result,storage)
+        self.document['analyses'].append(result)
+        self.append_analysis(result['report'], 'Regressão linear adicionada à sessão')
+        self.finish_regression(result)
         return True
+
+    def finish_regression(self,result):
+        self.document['metadata'].setdefault('active_regression_by_sheet',{})[result['source']['worksheet_id']]=result['analysis_id']
+        self.restore_regression()
+        if result['parameters']['show_graph']:
+            self.show_saved_regression_graph(result['analysis_id'])
+
+    def restore_regression(self):
+        self.clear_regression()
+        sheet=active_sheet(self.document)
+        selection=self.document['metadata'].get('active_regression_by_sheet',{}).get(sheet['id'])
+        candidates=[r for r in self.document['analyses'] if r['method_id']==REGRESSION_METHOD and r['source']['worksheet_id']==sheet['id']]
+        result=next((r for r in candidates if r['analysis_id']==selection),None) if selection else (candidates[-1] if candidates else None)
+        if result is None:return
+        try:model=model_for_prediction(result,sheet)
+        except ValueError:return
+        self.last_regression,self.last_regression_id=model,result['analysis_id']
+        self.regression_menu.entryconfigure(1,state='normal')
+
+    def use_saved_regression(self,analysis_id):
+        self.worksheet.commit_edit();self.sync_document()
+        try:
+            result=next((r for r in self.document['analyses'] if r['analysis_id']==analysis_id),None)
+            if result is None:raise ValueError('Modelo não encontrado.')
+            sheet=next(s for s in self.document['worksheets'] if s['id']==result['source']['worksheet_id'])
+            model_for_prediction(result,sheet)
+        except ValueError as error:
+            messagebox.showerror('Modelo indisponível',str(error),parent=self.grab_current() or self);return False
+        self.switch_worksheet(sheet['id'])
+        self.document['metadata'].setdefault('active_regression_by_sheet',{})[sheet['id']]=analysis_id
+        self.restore_regression();self.mark_dirty()
+        self.status.set('Modelo selecionado · use Estat > Regressão > Prever novos casos')
+        return True
+
+    def show_saved_regression_graph(self,analysis_id):
+        try:
+            result=next((r for r in self.document['analyses'] if r['analysis_id']==analysis_id),None)
+            if result is None:raise ValueError('Modelo não encontrado.')
+            graph=RegressionGraph(self,archived_model(result))
+        except ValueError as error:
+            messagebox.showerror('Gráfico indisponível',str(error),parent=self.grab_current() or self);return None
+        graph.title('Regressão — resultado salvo em '+result['created_at'])
+        self.center_dialog(graph)
+        return graph
+
+    def show_saved_anova_graph(self,analysis_id):
+        try:
+            result=next((r for r in self.document['analyses'] if r['analysis_id']==analysis_id),None)
+            if result is None or result['method_id']!=ANOVA_METHOD:raise ValueError('Selecione uma ANOVA no histórico.')
+            scene=result['scenes'][0]
+            graph=GroupGraphWindow(self,scene['groups'],scene['response_label'])
+        except ValueError as error:
+            messagebox.showerror('Gráfico indisponível',str(error),parent=self.grab_current() or self);return None
+        graph.title('ANOVA — resultado salvo em '+result['created_at'])
+        self.center_dialog(graph);return graph
 
     def clear_regression(self):
         self.last_regression = None
+        self.last_regression_id = None
         self.regression_menu.entryconfigure(1, state='disabled')
 
     def distribution_dialog(self):
@@ -899,6 +1189,7 @@ class MiniTaBom(tk.Tk):
 
     def prediction_dialog(self):
         self.worksheet.commit_edit()
+        self.sync_document();self.restore_regression()
         if self.last_regression is None:
             messagebox.showinfo('Modelo necessário', 'Ajuste uma regressão com os dados atuais antes de prever.', parent=self)
             return None
@@ -906,20 +1197,25 @@ class MiniTaBom(tk.Tk):
 
     def run_prediction(self, text=None, columns=None, omit_missing=True, **options):
         self.worksheet.commit_edit()
+        self.sync_document();self.restore_regression()
         try:
             if self.last_regression is None:
                 raise ValueError('Ajuste uma regressão com os dados atuais antes de prever.')
+            if len(self.document['analyses'])>=10000:raise ValueError('Limite de 10000 análises por projeto atingido.')
+            sheet=active_sheet(self.document)
             if columns is not None:
-                result = predict_columns(self.last_regression, self.headers, self.rows, columns,
-                                         omit_missing=omit_missing, **options)
+                if any(type(i) is not int or not 0<=i<len(sheet['columns']) for i in columns):
+                    raise ValueError('Selecione colunas válidas para prever.')
+                result=execute_prediction(self.document,self.last_regression_id,sheet['id'],input_kind='columns',
+                                          input_column_ids=[sheet['columns'][i]['id'] for i in columns],omit_missing=omit_missing,**options)
             else:
                 cases, numbers = parse_cases(text or '', len(self.last_regression['predictors']))
-                result = predict_linear(self.last_regression, cases, case_numbers=numbers, **options)
-            report = format_predictions(result)
+                result=execute_prediction(self.document,self.last_regression_id,sheet['id'],cases=cases,case_numbers=numbers,**options)
         except ValueError as error:
             messagebox.showerror('Não foi possível prever', str(error), parent=self.grab_current() or self)
             return False
-        self.append_analysis(report, 'Previsões adicionadas à sessão')
+        self.document['analyses'].append(result)
+        self.append_analysis(result['report'], 'Previsão adicionada à sessão e ao histórico')
         return True
 
     def anova_dialog(self):
@@ -965,25 +1261,28 @@ class MiniTaBom(tk.Tk):
         self.update_idletasks()
         graph = None
         try:
-            groups, excluded = prepare_groups(self.headers, self.rows, **selection)
-            result = one_way(groups, equal_var=equal_var, confidence=confidence, comparisons=comparisons,comparison_method=comparison_method)
-            report = format_anova_report(result, excluded)
-            if show_graph:
-                response = self.headers[selection['response']] if 'response' in selection else 'Valores'
-                graph = GroupGraphWindow(self, groups, response)
+            self.sync_document()
+            if len(self.document['analyses'])>=10000:raise ValueError('Limite de 10000 análises por projeto atingido.')
+            indices=selection['columns'] if selection.get('columns') is not None else [selection.get('response'),selection.get('factor')]
+            if not isinstance(indices,(list,tuple)) or any(type(i) is not int or not 0<=i<len(self.headers) for i in indices):
+                raise ValueError('Selecione os grupos ou resposta/fator da ANOVA.')
+            sheet=active_sheet(self.document)
+            result=execute_anova(sheet,[sheet['columns'][i]['id'] for i in indices],
+                                 input_kind='columns' if selection.get('columns') is not None else 'stacked',
+                                 equal_var=equal_var,confidence=confidence,comparisons=comparisons,comparison_method=comparison_method,show_graph=show_graph)
         except ValueError as error:
             self.status.set('ANOVA não concluída · confira os dados e as opções')
             messagebox.showerror('Não foi possível calcular', str(error), parent=self.grab_current() or self)
             return False
         finally:
             self.configure(cursor='')
-        self.output.insert('end', '\n' + report)
+        self.document['analyses'].append(result)
+        self.output.insert('end', '\n' + result['report'])
         self.index_results()
         self.mark_dirty()
         self.output.see('end')
         self.status.set('ANOVA de um fator adicionada à sessão')
-        if graph is not None:
-            self.center_dialog(graph)
+        if show_graph:self.show_saved_anova_graph(result['analysis_id'])
         return True
 
     def run_ttest(self, mode, first=None, second=None, perform_test=True, store=False, **options):
@@ -992,24 +1291,25 @@ class MiniTaBom(tk.Tk):
         self.configure(cursor='watch')
         self.update_idletasks()
         try:
-            result = analyze_t_inputs(self.headers, self.rows, mode, first, second, **options)
-            report = format_t_report(result, perform_test=perform_test)
-            generated=None
-            if store:
-                if mode!='paired' or options.get('source','columns')!='columns':
-                    raise ValueError('Armazenar diferenças requer duas colunas pareadas, sem resumo.')
-                _,differences,_=paired_values(self.headers,self.rows,first,second)
-                generated=append_generated(self.headers,self.rows,['Diferenças'],[differences])
+            self.sync_document()
+            if len(self.document['analyses']) >= 10000:
+                raise ValueError('Limite de 10000 análises estruturadas por projeto atingido.')
+            sheet = active_sheet(self.document)
+            indices = [] if options.get('source') == 'summary' else [first] if mode == 'one' else [first, second]
+            if any(type(i) is not int or not 0 <= i < len(sheet['columns']) for i in indices):
+                raise ValueError('Selecione as colunas das amostras.')
+            structured = execute_t(sheet, mode, [sheet['columns'][i]['id'] for i in indices],
+                                   perform_test=perform_test, store_differences=store, **options)
+            storage = self.prepare_analysis_storage(structured)
         except ValueError as error:
             self.status.set('Cálculo não concluído · confira os dados e as opções')
             messagebox.showerror('Não foi possível calcular', str(error), parent=self.grab_current() or self)
             return False
         finally:
             self.configure(cursor='')
-        if generated is not None:
-            self.install_generated(*generated)
-            report += '\nDiferenças armazenadas em: ' + generated[2][0] + '\n'
-        self.output.insert('end', '\n' + report)
+        self.apply_analysis_storage(structured, storage)
+        self.document['analyses'].append(structured)
+        self.output.insert('end', '\n' + structured['report'])
         self.index_results()
         self.mark_dirty()
         self.output.see('end')

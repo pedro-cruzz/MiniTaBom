@@ -1,0 +1,34 @@
+{
+  "manifest": {
+    "name": "MiniTaBom",
+    "version": "0.6.0",
+    "repository": "pedro-cruzz/MiniTaBom",
+    "platform": "Windows x64",
+    "python": "3.14.2",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pyinstaller": "6.22.3",
+    "purpose": "Fins educativos e estudo de estatística",
+    "built_at": "2026-11-09T20:31:58.478311-03:00"
+  },
+  "smoke": {
+    "ok": true,
+    "frozen": true,
+    "checks": [
+      "inicialização com planilha e sessão vazias",
+      "Tk, interface e ícones",
+      "recurso JSON de cobertura",
+      "diálogo de atualizações e versão (sem acesso à rede)",
+      "SciPy: teste t e distribuição de comparações",
+      "regressão NumPy/SciPy",
+      "postos, Ryan–Joiner, frequências, calculadora e novos gráficos",
+      "registro, projeto v2, duas planilhas, resultado persistente e reexecução",
+      "testes t pareado, resumos, empilhadas e ordem persistida dos grupos",
+      "modelo linear salvo, restauração, previsão sem novo ajuste e gráfico histórico",
+      "previsões vinculadas, ANOVA/comparações persistentes e boxplots históricos"
+    ]
+  },
+  "sha256": "71d0adb3e014c7d5a9966bb888a48f447de08e5663cfbc082ae9ae99db2a98aa",
+  "archive_crc_ok": true,
+  "original_help_included": false
+}

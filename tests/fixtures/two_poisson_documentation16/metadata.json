@@ -1,0 +1,7 @@
+{
+  "source": "Minitab 16.2.4.0 extracted Help, English",
+  "locator": "Mtbst/ST_Basic_Statistics/2_Sample_Poisson_Rate/example_of_2_sample_poisson_rate.txt",
+  "source_text_sha256": "cf280a3bfc8fcc144633dc33b6ba45cd6c31e641039d56725d22d2b1cf57a222",
+  "executed_reference": false,
+  "precision": "Rounded numbers from a documentation example, not a native execution; p displayed 0.000 means <0.0005 for this comparison."
+}

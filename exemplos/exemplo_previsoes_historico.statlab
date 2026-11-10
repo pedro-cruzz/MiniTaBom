@@ -1,0 +1,554 @@
+{
+  "format": "statlab",
+  "version": 2,
+  "project_id": "project-66da2b4681344aa5af3f30ca2e20e045",
+  "active_worksheet_id": "ws-5efdfb351c334b778d6f6b5ad90573fc",
+  "worksheets": [
+    {
+      "id": "ws-5efdfb351c334b778d6f6b5ad90573fc",
+      "name": "Worksheet 1",
+      "revision": 0,
+      "columns": [
+        {
+          "id": "col-5ad4800d88434b01a0624cc5602c88aa",
+          "name": "X",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        },
+        {
+          "id": "col-d2354b63fb694b01bbdb93f7bc93255d",
+          "name": "Y",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        },
+        {
+          "id": "col-87fcc7810eb8412c994fe1031a6aea82",
+          "name": "Novo X",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        }
+      ],
+      "rows": [
+        [
+          "0",
+          "1",
+          "4"
+        ],
+        [
+          "1",
+          "2",
+          "*"
+        ],
+        [
+          "2",
+          "4",
+          "5"
+        ],
+        [
+          "3",
+          "4",
+          ""
+        ]
+      ],
+      "metadata": {},
+      "fingerprint": "4c6cfa346204a4124c5ee66cf86e5747064ac47e850f8c656a23747cd718c557"
+    }
+  ],
+  "analyses": [
+    {
+      "analysis_id": "analysis-d47a07a5c29d4a19b72ed6fc4cfe6f65",
+      "parent_analysis_id": null,
+      "method_id": "regression.linear.numeric.v1",
+      "created_at": "2026-11-09T23:28:48.017787+00:00",
+      "parameters": {
+        "confidence": 95.0,
+        "observations": false,
+        "store": false,
+        "show_graph": false
+      },
+      "source": {
+        "worksheet_id": "ws-5efdfb351c334b778d6f6b5ad90573fc",
+        "column_ids": [
+          "col-d2354b63fb694b01bbdb93f7bc93255d",
+          "col-5ad4800d88434b01a0624cc5602c88aa"
+        ],
+        "revision": 0,
+        "fingerprint": "4c6cfa346204a4124c5ee66cf86e5747064ac47e850f8c656a23747cd718c557",
+        "input_fingerprint": "859bedd97a717de34ff8865a12e7156acadb63fda8b6099eefb55056f3af2ee4",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.6.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1",
+        "numpy": "2.5.4"
+      },
+      "missing": {
+        "policy": "complete_rows_response_and_predictors",
+        "count": 0,
+        "retained_rows": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "values": {
+        "response": "Y",
+        "predictors": [
+          "X"
+        ],
+        "n": 4,
+        "excluded": 0,
+        "row_numbers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "terms": [
+          {
+            "label": "Constante",
+            "coefficient": 1.0999999999999999,
+            "se": 0.4949747468305833,
+            "t": 2.222335598014863,
+            "p": 0.15633851226789255,
+            "low": -1.0297044456076583,
+            "high": 3.2297044456076582,
+            "vif": null
+          },
+          {
+            "label": "X",
+            "coefficient": 1.1,
+            "se": 0.2645751311064591,
+            "t": 4.157609203101499,
+            "p": 0.053270737593742554,
+            "low": -0.038374910079027824,
+            "high": 2.238374910079028,
+            "vif": 1.0
+          }
+        ],
+        "confidence": 95.0,
+        "df_model": 1,
+        "df_error": 2,
+        "df_total": 3,
+        "ss_model": 6.05,
+        "ss_error": 0.7000000000000001,
+        "ss_total": 6.75,
+        "ms_error": 0.35000000000000003,
+        "f": 17.285714285714285,
+        "p": 0.05327073759374255,
+        "s": 0.5916079783099616,
+        "r2": 89.62962962962962,
+        "adjusted": 84.44444444444444,
+        "press": 2.970521541950118,
+        "predicted": 55.992273452590844,
+        "fitted": [
+          1.0999999999999996,
+          2.1999999999999997,
+          3.3,
+          4.4
+        ],
+        "residuals": [
+          -0.09999999999999964,
+          -0.19999999999999987,
+          0.7,
+          -0.40000000000000036
+        ],
+        "observed": [
+          1.0,
+          2.0,
+          4.0,
+          4.0
+        ],
+        "x": [
+          [
+            0.0
+          ],
+          [
+            1.0
+          ],
+          [
+            2.0
+          ],
+          [
+            3.0
+          ]
+        ],
+        "leverage": [
+          0.7000000000000002,
+          0.3,
+          0.3,
+          0.7000000000000002
+        ],
+        "standardized": [
+          -0.3086066999241828,
+          -0.40406101782088405,
+          1.414213562373095,
+          -1.2344267996967366
+        ],
+        "cooks": [
+          0.11111111111111048,
+          0.034985422740524734,
+          0.4285714285714285,
+          1.7777777777777832
+        ],
+        "perfect": false,
+        "condition": 2.0,
+        "prediction_state": {
+          "x_mean": [
+            1.5
+          ],
+          "x_scale": [
+            2.23606797749979
+          ],
+          "y_mean": 2.75,
+          "y_scale": 1.75,
+          "coefficients": [
+            0.0,
+            1.405528442999868
+          ],
+          "inverse_factor": [
+            [
+              -0.5,
+              -0.0
+            ],
+            [
+              -0.0,
+              -1.0
+            ]
+          ]
+        }
+      },
+      "tables": [
+        {
+          "name": "coeficientes",
+          "rows": [
+            {
+              "label": "Constante",
+              "coefficient": 1.0999999999999999,
+              "se": 0.4949747468305833,
+              "t": 2.222335598014863,
+              "p": 0.15633851226789255,
+              "low": -1.0297044456076583,
+              "high": 3.2297044456076582,
+              "vif": null
+            },
+            {
+              "label": "X",
+              "coefficient": 1.1,
+              "se": 0.2645751311064591,
+              "t": 4.157609203101499,
+              "p": 0.053270737593742554,
+              "low": -0.038374910079027824,
+              "high": 2.238374910079028,
+              "vif": 1.0
+            }
+          ]
+        }
+      ],
+      "scenes": [
+        {
+          "kind": "regression_diagnostics",
+          "version": 1
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "REGRESSÃO LINEAR — Y\n\nY = 1.1 + 1.1 × X\nN = 4    Linhas excluídas por ausentes = 0\nMínimos quadrados com intercepto; preditores numéricos.\n\nTermo                              Coef        EP Coef            T      Valor-p        VIF\nConstante                           1.1    0.494974747    2.2223356     0.156339          —\n  Constante — IC de 95%: (-1.02970445; 3.22970445)\nX                                   1.1    0.264575131    4.1576092    0.0532707          1\n  X — IC de 95%: (-0.0383749101; 2.23837491)\n\nResumo do modelo\nS = 0.591607978    R² = 89.6296296%    R² ajustado = 84.4444444%\nPRESS = 2.97052154    R² predito = 55.9922735%\n\nAnálise de variância\nFonte                  GL               SQ               QM            F      Valor-p\nRegressão               1             6.05             6.05   17.2857143    0.0532707\nErro                    2              0.7             0.35\nTotal                   3             6.75\n"
+    },
+    {
+      "analysis_id": "analysis-5e485034fa9b4cf6a488a073badfb0cd",
+      "parent_analysis_id": null,
+      "method_id": "regression.prediction.v1",
+      "created_at": "2026-11-09T23:28:48.019303+00:00",
+      "parameters": {
+        "model_analysis_id": "analysis-d47a07a5c29d4a19b72ed6fc4cfe6f65",
+        "input_kind": "cases",
+        "cases": [
+          [
+            4.0
+          ]
+        ],
+        "case_numbers": [
+          1
+        ],
+        "input_column_ids": [],
+        "omit_missing": true,
+        "confidence": 95.0,
+        "alternative": "lower"
+      },
+      "source": {
+        "worksheet_id": "ws-5efdfb351c334b778d6f6b5ad90573fc",
+        "column_ids": [],
+        "revision": 0,
+        "fingerprint": "4c6cfa346204a4124c5ee66cf86e5747064ac47e850f8c656a23747cd718c557",
+        "kind": "fixed_prediction"
+      },
+      "versions": {
+        "application": "0.6.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1",
+        "numpy": "2.5.4"
+      },
+      "missing": {
+        "policy": "omit_incomplete_cases",
+        "rows": []
+      },
+      "values": {
+        "response": "Y",
+        "predictors": [
+          "X"
+        ],
+        "n": 4,
+        "confidence": 95.0,
+        "alternative": "lower",
+        "cases": [
+          {
+            "case": 1,
+            "values": [
+              4.0
+            ],
+            "fit": 5.500000000000001,
+            "se_fit": 0.724568837309472,
+            "leverage": 1.5000000000000002,
+            "ci": [
+              3.384269443082679,
+              {
+                "$statlab_number": "+inf"
+              }
+            ],
+            "pi": [
+              2.7686035959990245,
+              {
+                "$statlab_number": "+inf"
+              }
+            ],
+            "outside": [
+              "X"
+            ],
+            "high_leverage": true
+          }
+        ],
+        "omitted": [],
+        "source": "digitados",
+        "perfect": false
+      },
+      "tables": [
+        {
+          "name": "previsoes",
+          "rows": [
+            {
+              "case": 1,
+              "values": [
+                4.0
+              ],
+              "fit": 5.500000000000001,
+              "se_fit": 0.724568837309472,
+              "leverage": 1.5000000000000002,
+              "ci": [
+                3.384269443082679,
+                {
+                  "$statlab_number": "+inf"
+                }
+              ],
+              "pi": [
+                2.7686035959990245,
+                {
+                  "$statlab_number": "+inf"
+                }
+              ],
+              "outside": [
+                "X"
+              ],
+              "high_leverage": true
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending",
+        "model_analysis_id": "analysis-d47a07a5c29d4a19b72ed6fc4cfe6f65"
+      },
+      "report": "PREVISÃO LINEAR — Y\n\nModelo com N=4; casos de digitados.\nConfiança de 95%; intervalos individuais, limites inferiores.\nIC: média da resposta. IP: uma nova observação.\nOrdem dos preditores: X\n\nCaso 1: X=4\n  Previsão = 5.5    EP da média = 0.724568837\n  IC da média: (3.38426944; +∞)\n  IP da observação: (2.7686036; +∞)\n  Fora da faixa observada: X.\n  Alavancagem maior que a máxima das observações usadas no ajuste.\n\nLinhas omitidas por ausentes: 0\nA checagem de faixa é por preditor; não verifica todo o domínio multivariado do modelo.\n\nModelo fixado ao ajuste de 2026-11-09T23:28:48.017787+00:00.\nRecalcular esta previsão mantém esse modelo, sem novo ajuste.\n"
+    },
+    {
+      "analysis_id": "analysis-6444f711a3714ec19588e628bf1a93e2",
+      "parent_analysis_id": null,
+      "method_id": "regression.prediction.v1",
+      "created_at": "2026-11-09T23:28:48.020142+00:00",
+      "parameters": {
+        "model_analysis_id": "analysis-d47a07a5c29d4a19b72ed6fc4cfe6f65",
+        "input_kind": "columns",
+        "cases": null,
+        "case_numbers": null,
+        "input_column_ids": [
+          "col-87fcc7810eb8412c994fe1031a6aea82"
+        ],
+        "omit_missing": true,
+        "confidence": 95.0,
+        "alternative": "two-sided"
+      },
+      "source": {
+        "worksheet_id": "ws-5efdfb351c334b778d6f6b5ad90573fc",
+        "column_ids": [
+          "col-87fcc7810eb8412c994fe1031a6aea82"
+        ],
+        "revision": 0,
+        "fingerprint": "4c6cfa346204a4124c5ee66cf86e5747064ac47e850f8c656a23747cd718c557",
+        "kind": "prediction_columns",
+        "input_fingerprint": "297d56ae3afef127dcd808d6ed9664b4b0c4e4a78f22de89f7c25cf4a843e7db"
+      },
+      "versions": {
+        "application": "0.6.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1",
+        "numpy": "2.5.4"
+      },
+      "missing": {
+        "policy": "omit_incomplete_cases",
+        "rows": [
+          2,
+          4
+        ]
+      },
+      "values": {
+        "response": "Y",
+        "predictors": [
+          "X"
+        ],
+        "n": 4,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "cases": [
+          {
+            "case": 1,
+            "values": [
+              4.0
+            ],
+            "fit": 5.500000000000001,
+            "se_fit": 0.724568837309472,
+            "leverage": 1.5000000000000002,
+            "ci": [
+              2.3824319142590076,
+              8.617568085740995
+            ],
+            "pi": [
+              1.4752369077524667,
+              9.524763092247536
+            ],
+            "outside": [
+              "X"
+            ],
+            "high_leverage": true
+          },
+          {
+            "case": 3,
+            "values": [
+              5.0
+            ],
+            "fit": 6.6000000000000005,
+            "se_fit": 0.9721111047611791,
+            "leverage": 2.7,
+            "ci": [
+              2.4173435014795484,
+              10.782656498520453
+            ],
+            "pi": [
+              1.703664373829901,
+              11.4963356261701
+            ],
+            "outside": [
+              "X"
+            ],
+            "high_leverage": true
+          }
+        ],
+        "omitted": [
+          2,
+          4
+        ],
+        "source": "colunas: Novo X",
+        "perfect": false
+      },
+      "tables": [
+        {
+          "name": "previsoes",
+          "rows": [
+            {
+              "case": 1,
+              "values": [
+                4.0
+              ],
+              "fit": 5.500000000000001,
+              "se_fit": 0.724568837309472,
+              "leverage": 1.5000000000000002,
+              "ci": [
+                2.3824319142590076,
+                8.617568085740995
+              ],
+              "pi": [
+                1.4752369077524667,
+                9.524763092247536
+              ],
+              "outside": [
+                "X"
+              ],
+              "high_leverage": true
+            },
+            {
+              "case": 3,
+              "values": [
+                5.0
+              ],
+              "fit": 6.6000000000000005,
+              "se_fit": 0.9721111047611791,
+              "leverage": 2.7,
+              "ci": [
+                2.4173435014795484,
+                10.782656498520453
+              ],
+              "pi": [
+                1.703664373829901,
+                11.4963356261701
+              ],
+              "outside": [
+                "X"
+              ],
+              "high_leverage": true
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending",
+        "model_analysis_id": "analysis-d47a07a5c29d4a19b72ed6fc4cfe6f65"
+      },
+      "report": "PREVISÃO LINEAR — Y\n\nModelo com N=4; casos de colunas: Novo X.\nConfiança de 95%; intervalos individuais, bilaterais.\nIC: média da resposta. IP: uma nova observação.\nOrdem dos preditores: X\n\nCaso 1: X=4\n  Previsão = 5.5    EP da média = 0.724568837\n  IC da média: (2.38243191; 8.61756809)\n  IP da observação: (1.47523691; 9.52476309)\n  Fora da faixa observada: X.\n  Alavancagem maior que a máxima das observações usadas no ajuste.\n\nCaso 3: X=5\n  Previsão = 6.6    EP da média = 0.972111105\n  IC da média: (2.4173435; 10.7826565)\n  IP da observação: (1.70366437; 11.4963356)\n  Fora da faixa observada: X.\n  Alavancagem maior que a máxima das observações usadas no ajuste.\n\nLinhas omitidas por ausentes: 2\nA checagem de faixa é por preditor; não verifica todo o domínio multivariado do modelo.\n\nModelo fixado ao ajuste de 2026-11-09T23:28:48.017787+00:00.\nRecalcular esta previsão mantém esse modelo, sem novo ajuste.\n"
+    }
+  ],
+  "output": "EXEMPLO SINTÉTICO — previsões vinculadas\nNo histórico, recalcule os casos salvos ou as colunas atuais. O modelo permanece fixo.\n\nPREVISÃO LINEAR — Y\n\nModelo com N=4; casos de digitados.\nConfiança de 95%; intervalos individuais, limites inferiores.\nIC: média da resposta. IP: uma nova observação.\nOrdem dos preditores: X\n\nCaso 1: X=4\n  Previsão = 5.5    EP da média = 0.724568837\n  IC da média: (3.38426944; +∞)\n  IP da observação: (2.7686036; +∞)\n  Fora da faixa observada: X.\n  Alavancagem maior que a máxima das observações usadas no ajuste.\n\nLinhas omitidas por ausentes: 0\nA checagem de faixa é por preditor; não verifica todo o domínio multivariado do modelo.\n\nModelo fixado ao ajuste de 2026-11-09T23:28:48.017787+00:00.\nRecalcular esta previsão mantém esse modelo, sem novo ajuste.\n\nPREVISÃO LINEAR — Y\n\nModelo com N=4; casos de colunas: Novo X.\nConfiança de 95%; intervalos individuais, bilaterais.\nIC: média da resposta. IP: uma nova observação.\nOrdem dos preditores: X\n\nCaso 1: X=4\n  Previsão = 5.5    EP da média = 0.724568837\n  IC da média: (2.38243191; 8.61756809)\n  IP da observação: (1.47523691; 9.52476309)\n  Fora da faixa observada: X.\n  Alavancagem maior que a máxima das observações usadas no ajuste.\n\nCaso 3: X=5\n  Previsão = 6.6    EP da média = 0.972111105\n  IC da média: (2.4173435; 10.7826565)\n  IP da observação: (1.70366437; 11.4963356)\n  Fora da faixa observada: X.\n  Alavancagem maior que a máxima das observações usadas no ajuste.\n\nLinhas omitidas por ausentes: 2\nA checagem de faixa é por preditor; não verifica todo o domínio multivariado do modelo.\n\nModelo fixado ao ajuste de 2026-11-09T23:28:48.017787+00:00.\nRecalcular esta previsão mantém esse modelo, sem novo ajuste.\n",
+  "metadata": {}
+}

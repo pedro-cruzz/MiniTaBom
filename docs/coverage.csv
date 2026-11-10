@@ -1,19 +1,109 @@
-familia;estado;pendencias
-Planilha e dados;parcial;tipos fórmulas transformações filtros ordenação empilhamento
-Importação e projetos;parcial;Excel MTW MPJ metadados histórico
-Descritivas;parcial sem validação Minitab;quartis IC agrupamentos ponderação
-Gráficos;parcial sem validação Minitab;boxplot dispersão probabilidade séries edição exportação
-Distribuições;pendente;CDF PDF quantis geração aleatória
-Testes e intervalos;pendente;amostras pareados proporções variâncias poder tamanho amostral
-ANOVA;pendente;fatores efeitos mistos comparações diagnósticos
-Regressão;pendente;linear logística não linear seleção predição diagnósticos
-DOE;pendente;fatoriais superfície resposta misturas Taguchi otimização
-Controle de processo;pendente;cartas variáveis atributos fases subgrupos regras
-Capabilidade e medição;pendente;normal não normal atributos Gage R&R concordância
-Confiabilidade;pendente;censura distribuições testes acelerados reparáveis garantias
-Multivariada;pendente;PCA fatores agrupamentos discriminante correspondência
-Séries temporais;pendente;tendência decomposição suavização ARIMA
-Não paramétricos;pendente;testes métodos exatos aproximações empates
-Tabelas e atributos;pendente;contingência qui quadrado associação
-Macros e comandos;pendente;sintaxe variáveis fluxo compatibilidade automação
-Assistente e relatórios;pendente;fluxos orientados exportação composição
+﻿id,tipo,area,nome,implementacao,interface,validacao16,persistencia,prioridade
+audit.GAP-001,work_package,Plataforma,Várias planilhas e gerenciador de projeto,partial,partial,pending,partial,P0
+audit.GAP-002,work_package,Plataforma,"Resultados, modelos e gráficos persistentes",partial,partial,pending,partial,P0
+audit.GAP-003,work_package,Plataforma,Histórico reexecutável e rastreabilidade,partial,partial,pending,partial,P0
+audit.GAP-004,work_package,Plataforma,"Execução longa, progresso e cancelamento",pending,pending,pending,to_audit,P1
+audit.GAP-005,work_package,Plataforma,"Recuperação, preferências, impressão e ajuda contextual",partial,partial,pending,to_audit,P1
+audit.GAP-006,work_package,Dados,"Tipos de colunas, datas e metadados",partial,partial,pending,partial,P0
+audit.GAP-007,work_package,Dados,"Inserir, excluir e mover linhas/colunas",partial,partial,pending,to_audit,P1
+audit.GAP-008,work_package,Dados,"Ordenar, empilhar e desempilhar",partial,partial,pending,to_audit,P1
+audit.GAP-009,work_package,Dados,"Subconjuntos, dividir, transpor, juntar e agregar",pending,pending,pending,to_audit,P1
+audit.GAP-010,work_package,Dados,Recodificação e geração de padrões,pending,pending,pending,to_audit,P1
+audit.GAP-011,work_package,Arquivos,CSV e texto delimitado,partial,partial,pending,to_audit,P1
+audit.GAP-012,work_package,Arquivos,Excel,partial,partial,pending,to_audit,P1
+audit.GAP-013,work_package,Arquivos,MTW e MPJ,pending,pending,pending,to_audit,P1
+audit.GAP-014,work_package,Cálculo,Calculadora e fórmulas vinculadas,partial,partial,pending,to_audit,P1
+audit.GAP-015,work_package,Cálculo,Constantes e matrizes,pending,pending,pending,to_audit,P2
+audit.GAP-016,work_package,Distribuições,"Probabilidades, densidades e quantis",partial,partial,pending,to_audit,P1
+audit.GAP-017,work_package,Distribuições,Geração aleatória e semente,pending,pending,pending,to_audit,P1
+audit.GAP-018,work_package,Descritivas,Estatísticas univariadas e por grupo,partial,partial,pending,to_audit,P1
+audit.GAP-019,work_package,Descritivas,Armazenar estatísticas e resumo gráfico,pending,pending,pending,to_audit,P1
+audit.GAP-020,work_package,Descritivas,Percentis e tabelas de frequências,partial,partial,pending,to_audit,P1
+audit.GAP-021,work_package,Inferência,Testes t e Z,partial,partial,pending,to_audit,P1
+audit.GAP-022,work_package,Inferência,Uma e duas proporções,partial,partial,pending,to_audit,P1
+audit.GAP-023,work_package,Inferência,Uma e duas taxas de Poisson,partial,partial,pending,partial,P1
+audit.GAP-024,work_package,Inferência,Variâncias e igualdade entre grupos,partial,partial,pending,partial,P1
+audit.GAP-025,work_package,Inferência,Normalidade e gráfico de probabilidade,partial,partial,pending,partial,P1
+audit.GAP-026,work_package,Inferência,Correlação e covariância,partial,partial,pending,to_audit,P1
+audit.GAP-027,work_package,Inferência,Equivalência e outras extensões,pending,pending,pending,to_audit,P2
+audit.GAP-028,work_package,ANOVA,Um fator e comparações,partial,partial,pending,partial,P1
+audit.GAP-029,work_package,ANOVA,"Dois fatores, ANOVA balanceada e GLM",pending,pending,pending,to_audit,P2
+audit.GAP-030,work_package,ANOVA,"MANOVA, ANOM, efeitos e interações",pending,pending,pending,to_audit,P2
+audit.GAP-031,work_package,Regressão,Linear simples e múltipla,partial,partial,pending,to_audit,P1
+audit.GAP-032,work_package,Regressão,Predição e persistência do modelo,partial,partial,pending,partial,P1
+audit.GAP-033,work_package,Regressão,"Stepwise, melhores subconjuntos e gráficos",pending,pending,pending,to_audit,P2
+audit.GAP-034,work_package,Regressão,"Logística, não linear e demais modelos",pending,pending,pending,to_audit,P2
+audit.GAP-035,work_package,Não paramétricos,"Mann–Whitney, Wilcoxon e Kruskal–Wallis",partial,partial,pending,partial,P1
+audit.GAP-036,work_package,Não paramétricos,"Sinais, mediana de Mood, Friedman e corridas",pending,pending,pending,to_audit,P2
+audit.GAP-037,work_package,Tabelas,Contingência e associação,partial,partial,pending,to_audit,P1
+audit.GAP-038,work_package,Tabelas,"Aderência, tabelas resumidas e outros testes",pending,pending,pending,to_audit,P2
+audit.GAP-039,work_package,Poder e amostra,"Médias, proporções, taxas, ANOVA e desenhos",pending,pending,pending,to_audit,P2
+audit.GAP-040,work_package,Séries temporais,"Tendência, decomposição e suavização",pending,pending,pending,to_audit,P2
+audit.GAP-041,work_package,Séries temporais,"ACF, PACF, correlação cruzada, ARIMA e defasagens",pending,pending,pending,to_audit,P2
+audit.GAP-042,work_package,Multivariada,PCA e análise fatorial,pending,pending,pending,to_audit,P2
+audit.GAP-043,work_package,Multivariada,"Clusters, discriminante e correspondência",pending,pending,pending,to_audit,P2
+audit.GAP-044,work_package,CEP,Cartas de variáveis,pending,pending,pending,to_audit,P2
+audit.GAP-045,work_package,CEP,"Cartas de atributos, EWMA, CUSUM e especiais",pending,pending,pending,to_audit,P2
+audit.GAP-046,work_package,CEP,"Fases, testes de causas especiais e atualização",pending,pending,pending,to_audit,P2
+audit.GAP-047,work_package,Capabilidade,Normal e Sixpack,pending,pending,pending,to_audit,P2
+audit.GAP-048,work_package,Capabilidade,"Não normal, atributos e transformações",pending,pending,pending,to_audit,P2
+audit.GAP-049,work_package,Medição,"Gage R&R cruzado, aninhado e estudos adicionais",pending,pending,pending,to_audit,P2
+audit.GAP-050,work_package,Medição,"Viés, linearidade, tipo 1 e concordância de atributos",pending,pending,pending,to_audit,P2
+audit.GAP-051,work_package,DOE,"Criar, definir e modificar fatoriais",pending,pending,pending,to_audit,P2
+audit.GAP-052,work_package,DOE,Analisar fatoriais e gráficos de efeitos,pending,pending,pending,to_audit,P2
+audit.GAP-053,work_package,DOE,Superfície de resposta,pending,pending,pending,to_audit,P2
+audit.GAP-054,work_package,DOE,Misturas,pending,pending,pending,to_audit,P2
+audit.GAP-055,work_package,DOE,Taguchi e desenhos ótimos,pending,pending,pending,to_audit,P2
+audit.GAP-056,work_package,DOE,Otimizador de respostas,pending,pending,pending,to_audit,P2
+audit.GAP-057,work_package,Confiabilidade,Distribuições e análise de vida com censura,pending,pending,pending,to_audit,P2
+audit.GAP-058,work_package,Confiabilidade,Regressão de vida e testes acelerados,pending,pending,pending,to_audit,P2
+audit.GAP-059,work_package,Confiabilidade,"Reparáveis, garantia e planos de testes",pending,pending,pending,to_audit,P2
+audit.GAP-060,work_package,Gráficos,"Histograma, boxplot, barras, Pareto e setores",partial,partial,pending,to_audit,P1
+audit.GAP-061,work_package,Gráficos,Dispersão e série temporal,partial,partial,pending,to_audit,P1
+audit.GAP-062,work_package,Gráficos,"Individuais, pontos, intervalos e outros 2D",pending,pending,pending,to_audit,P2
+audit.GAP-063,work_package,Gráficos,"3D, superfícies, contornos e gráficos especiais",pending,pending,pending,to_audit,P2
+audit.GAP-064,work_package,Gráficos,"Editor comum, layouts, brushing e exportações",partial,partial,pending,to_audit,P1
+audit.GAP-065,work_package,Automação,Comandos de sessão e executivos MTB,pending,pending,pending,to_audit,P2
+audit.GAP-066,work_package,Automação,"Macros, variáveis, fluxo e armazenamento",pending,pending,pending,to_audit,P2
+audit.GAP-067,work_package,Automação,"API, integração e menus personalizados",pending,pending,pending,to_audit,P2
+audit.GAP-068,work_package,Assistente,"Fluxos guiados, diagnósticos e relatórios",pending,pending,pending,to_audit,P2
+audit.GAP-069,work_package,Validação,Inventário e fixtures do Minitab 16,partial,partial,pending,to_audit,P0
+audit.GAP-070,work_package,Distribuição,"Executável, dependências e pacote portátil",partial,partial,pending,to_audit,P1
+audit.GAP-071,work_package,Exploratória,"Letter values, median polish e métodos resistentes",pending,pending,pending,to_audit,P2
+audit.GAP-072,work_package,Qualidade,Amostragem de aceitação por atributos e variáveis,pending,pending,pending,to_audit,P2
+audit.GAP-073,work_package,Qualidade,Intervalos de tolerância estatística,pending,pending,pending,to_audit,P2
+audit.GAP-074,work_package,Six Sigma,Toleranciamento de montagens e gap pools,pending,pending,pending,to_audit,P2
+audit.GAP-075,work_package,Six Sigma,Relatórios de processo e produto,pending,pending,pending,to_audit,P2
+audit.GAP-076,work_package,Qualidade,"Causa e efeito, multi-vari e run chart",pending,pending,pending,to_audit,P2
+audit.GAP-077,work_package,Confiabilidade,Análise Probit,pending,pending,pending,to_audit,P2
+audit.GAP-078,work_package,Regressão,Regressão ortogonal,pending,pending,pending,to_audit,P2
+audit.GAP-079,work_package,Multivariada,Análise de itens,pending,pending,pending,to_audit,P2
+audit.GAP-080,work_package,Distribuições,Famílias adicionais confirmadas na ajuda,pending,pending,pending,to_audit,P1
+platform.project.v2,requirement,Plataforma,Projeto v2 com migração explícita de v1,implemented,implemented,pending,implemented,P0
+platform.worksheets.collection,requirement,Plataforma,Criar e alternar planilhas com IDs,implemented,implemented,pending,implemented,P0
+platform.columns.identity,requirement,Plataforma,"IDs de coluna, revisão e fingerprint",implemented,implemented,pending,implemented,P0
+platform.analysis.result,requirement,Plataforma,Resultado estruturado de testes t nos formatos disponíveis,implemented,implemented,pending,implemented,P0
+platform.analysis.rerun,requirement,Plataforma,Salvar/reabrir/reexecutar testes t nos formatos disponíveis,implemented,implemented,pending,implemented,P0
+basic.t.one.column,requirement,Inferência,t de uma amostra em coluna,implemented,implemented,pending,implemented,P1
+basic.t.summary,requirement,Inferência,t com estatísticas resumidas,implemented,implemented,pending,implemented,P1
+basic.t.stacked,requirement,Inferência,t de duas amostras empilhadas,implemented,implemented,pending,implemented,P1
+basic.poisson.one,requirement,Inferência,Taxa de Poisson de uma amostra,implemented,implemented,pending,pending,P1
+basic.normality.rj,requirement,Inferência,Normalidade Ryan–Joiner,implemented,implemented,pending,pending,P1
+basic.normality.ks,requirement,Inferência,KS com normal estimada,implemented,implemented,pending,pending,P1
+basic.normality.plot,requirement,Inferência,Gráfico de probabilidade normal,implemented,implemented,pending,pending,P1
+basic.variances.groups,requirement,Inferência,Levene/Bartlett com vários grupos,implemented,implemented,pending,pending,P1
+descriptive.frequency.cumulative,requirement,Descritivas,Frequências relativas e acumuladas,implemented,implemented,pending,pending,P1
+regression.store.diagnostics,requirement,Regressão,Armazenar ajustados e resíduos,implemented,implemented,pending,pending,P1
+basic.poisson.two,requirement,Inferência,Duas taxas de Poisson,implemented,implemented,pending,implemented,P1
+basic.t.paired.columns,requirement,Inferência,t pareado em colunas com histórico e armazenamento,implemented,implemented,pending,implemented,P1
+basic.t.paired.summary,requirement,Inferência,t pareado pelo resumo das diferenças,implemented,implemented,pending,implemented,P1
+basic.t.two.columns,requirement,Inferência,t de duas amostras em colunas com opções de variância e GL,implemented,implemented,pending,implemented,P1
+platform.history.column_identity,requirement,Plataforma,Preservar IDs/metadados de coluna no desfazer/refazer,implemented,implemented,pending,implemented,P0
+regression.model.persist,requirement,Regressão,Modelo linear persistido e previsão após reabrir,implemented,implemented,pending,implemented,P0
+regression.model.rerun,requirement,Regressão,Reexecutar regressão com parâmetros e armazenamento,implemented,implemented,pending,implemented,P0
+regression.graph.restore,requirement,Regressão,Restaurar gráficos de ajuste e resíduos do modelo salvo,implemented,implemented,pending,implemented,P0
+prediction.history,requirement,Regressão,Previsões persistentes e modelo original fixado,implemented,implemented,pending,implemented,P0
+anova.history,requirement,ANOVA,ANOVA/comparações e boxplots persistentes,implemented,implemented,pending,implemented,P0
+normality.history,requirement,Inferência,Normalidade e gráfico de probabilidade no histórico,implemented,implemented,pending,implemented,P0
+study.history,requirement,Não paramétricos,Postos e igualdade de variâncias no histórico,implemented,implemented,pending,implemented,P0
+files.excel.open_workbook,requirement,Arquivos,"Abrir Excel sem intervalo, com todas as abas",implemented,implemented,pending,implemented,P0

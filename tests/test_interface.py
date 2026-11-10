@@ -561,7 +561,7 @@ class InterfaceTests(unittest.TestCase):
             self.assertFalse(self.app.run_prediction(text='2'))
         self.assertEqual(self.app.output.get('1.0', 'end'), before)
 
-    def test_prediction_from_columns_and_reopening_clears_cached_model(self):
+    def test_prediction_from_columns_and_refresh_restores_compatible_model(self):
         self.load_linear_sample()
         self.app.run_regression(1, [0], show_graph=False)
         dialog = self.app.prediction_dialog()
@@ -575,7 +575,8 @@ class InterfaceTests(unittest.TestCase):
         self.assertFalse(dialog.winfo_exists())
         self.assertIn('casos de colunas: X', self.app.output.get('1.0', 'end'))
         self.app.refresh()
-        self.assertIsNone(self.app.last_regression)
+        self.assertIsNotNone(self.app.last_regression)
+        self.assertTrue(self.app.run_prediction(text='2'))
 
     def test_distribution_dialog_submits_binomial_and_indexes_result(self):
         dialog = self.app.distribution_dialog()

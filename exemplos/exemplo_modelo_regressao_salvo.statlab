@@ -1,0 +1,266 @@
+{
+  "format": "statlab",
+  "version": 2,
+  "project_id": "project-9f5e046477fa4d01b3dc8f8889d3cb1e",
+  "active_worksheet_id": "ws-bd863f9ea442463287ba7637815d2b1a",
+  "worksheets": [
+    {
+      "id": "ws-bd863f9ea442463287ba7637815d2b1a",
+      "name": "Worksheet 1",
+      "revision": 0,
+      "columns": [
+        {
+          "id": "col-d8fdfe50e7ce4ecc915fa1baacbef240",
+          "name": "X",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        },
+        {
+          "id": "col-396e6fce15ce41659b5a2b5aff4b36d5",
+          "name": "Y",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        }
+      ],
+      "rows": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "2"
+        ],
+        [
+          "2",
+          "4"
+        ],
+        [
+          "3",
+          "4"
+        ]
+      ],
+      "metadata": {},
+      "fingerprint": "232c84a8d9d46d66a2a7960d2dc3c433ca1628143fd8b598f1a621d92a8f729f"
+    }
+  ],
+  "analyses": [
+    {
+      "analysis_id": "analysis-00e3b23c268842eca5114ed858f5505e",
+      "parent_analysis_id": null,
+      "method_id": "regression.linear.numeric.v1",
+      "created_at": "2026-11-09T23:17:45.700022+00:00",
+      "parameters": {
+        "confidence": 95.0,
+        "observations": false,
+        "store": false,
+        "show_graph": false
+      },
+      "source": {
+        "worksheet_id": "ws-bd863f9ea442463287ba7637815d2b1a",
+        "column_ids": [
+          "col-396e6fce15ce41659b5a2b5aff4b36d5",
+          "col-d8fdfe50e7ce4ecc915fa1baacbef240"
+        ],
+        "revision": 0,
+        "fingerprint": "232c84a8d9d46d66a2a7960d2dc3c433ca1628143fd8b598f1a621d92a8f729f",
+        "input_fingerprint": "00709e792efc81abe1b416e69f0793927f7e2979b9c5a26631afdb5784381391",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.5.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1",
+        "numpy": "2.5.4"
+      },
+      "missing": {
+        "policy": "complete_rows_response_and_predictors",
+        "count": 0,
+        "retained_rows": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "values": {
+        "response": "Y",
+        "predictors": [
+          "X"
+        ],
+        "n": 4,
+        "excluded": 0,
+        "row_numbers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "terms": [
+          {
+            "label": "Constante",
+            "coefficient": 1.0999999999999999,
+            "se": 0.4949747468305833,
+            "t": 2.222335598014863,
+            "p": 0.15633851226789255,
+            "low": -1.0297044456076583,
+            "high": 3.2297044456076582,
+            "vif": null
+          },
+          {
+            "label": "X",
+            "coefficient": 1.1,
+            "se": 0.2645751311064591,
+            "t": 4.157609203101499,
+            "p": 0.053270737593742554,
+            "low": -0.038374910079027824,
+            "high": 2.238374910079028,
+            "vif": 1.0
+          }
+        ],
+        "confidence": 95.0,
+        "df_model": 1,
+        "df_error": 2,
+        "df_total": 3,
+        "ss_model": 6.05,
+        "ss_error": 0.7000000000000001,
+        "ss_total": 6.75,
+        "ms_error": 0.35000000000000003,
+        "f": 17.285714285714285,
+        "p": 0.05327073759374255,
+        "s": 0.5916079783099616,
+        "r2": 89.62962962962962,
+        "adjusted": 84.44444444444444,
+        "press": 2.970521541950118,
+        "predicted": 55.992273452590844,
+        "fitted": [
+          1.0999999999999996,
+          2.1999999999999997,
+          3.3,
+          4.4
+        ],
+        "residuals": [
+          -0.09999999999999964,
+          -0.19999999999999987,
+          0.7,
+          -0.40000000000000036
+        ],
+        "observed": [
+          1.0,
+          2.0,
+          4.0,
+          4.0
+        ],
+        "x": [
+          [
+            0.0
+          ],
+          [
+            1.0
+          ],
+          [
+            2.0
+          ],
+          [
+            3.0
+          ]
+        ],
+        "leverage": [
+          0.7000000000000002,
+          0.3,
+          0.3,
+          0.7000000000000002
+        ],
+        "standardized": [
+          -0.3086066999241828,
+          -0.40406101782088405,
+          1.414213562373095,
+          -1.2344267996967366
+        ],
+        "cooks": [
+          0.11111111111111048,
+          0.034985422740524734,
+          0.4285714285714285,
+          1.7777777777777832
+        ],
+        "perfect": false,
+        "condition": 2.0,
+        "prediction_state": {
+          "x_mean": [
+            1.5
+          ],
+          "x_scale": [
+            2.23606797749979
+          ],
+          "y_mean": 2.75,
+          "y_scale": 1.75,
+          "coefficients": [
+            0.0,
+            1.405528442999868
+          ],
+          "inverse_factor": [
+            [
+              -0.5,
+              -0.0
+            ],
+            [
+              -0.0,
+              -1.0
+            ]
+          ]
+        }
+      },
+      "tables": [
+        {
+          "name": "coeficientes",
+          "rows": [
+            {
+              "label": "Constante",
+              "coefficient": 1.0999999999999999,
+              "se": 0.4949747468305833,
+              "t": 2.222335598014863,
+              "p": 0.15633851226789255,
+              "low": -1.0297044456076583,
+              "high": 3.2297044456076582,
+              "vif": null
+            },
+            {
+              "label": "X",
+              "coefficient": 1.1,
+              "se": 0.2645751311064591,
+              "t": 4.157609203101499,
+              "p": 0.053270737593742554,
+              "low": -0.038374910079027824,
+              "high": 2.238374910079028,
+              "vif": 1.0
+            }
+          ]
+        }
+      ],
+      "scenes": [
+        {
+          "kind": "regression_diagnostics",
+          "version": 1
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "REGRESSÃO LINEAR — Y\n\nY = 1.1 + 1.1 × X\nN = 4    Linhas excluídas por ausentes = 0\nMínimos quadrados com intercepto; preditores numéricos.\n\nTermo                              Coef        EP Coef            T      Valor-p        VIF\nConstante                           1.1    0.494974747    2.2223356     0.156339          —\n  Constante — IC de 95%: (-1.02970445; 3.22970445)\nX                                   1.1    0.264575131    4.1576092    0.0532707          1\n  X — IC de 95%: (-0.0383749101; 2.23837491)\n\nResumo do modelo\nS = 0.591607978    R² = 89.6296296%    R² ajustado = 84.4444444%\nPRESS = 2.97052154    R² predito = 55.9922735%\n\nAnálise de variância\nFonte                  GL               SQ               QM            F      Valor-p\nRegressão               1             6.05             6.05   17.2857143    0.0532707\nErro                    2              0.7             0.35\nTotal                   3             6.75\n"
+    }
+  ],
+  "output": "EXEMPLO SINTÉTICO — modelo de regressão salvo\nAo abrir, use Estat > Regressão > Prever novos casos e informe 4.\nPrevisão analítica: 5,5; EP da média = raiz de 0,525.\nConsulte Janela > Histórico de análises para ver gráficos ou reexecutar.\n\nREGRESSÃO LINEAR — Y\n\nY = 1.1 + 1.1 × X\nN = 4    Linhas excluídas por ausentes = 0\nMínimos quadrados com intercepto; preditores numéricos.\n\nTermo                              Coef        EP Coef            T      Valor-p        VIF\nConstante                           1.1    0.494974747    2.2223356     0.156339          —\n  Constante — IC de 95%: (-1.02970445; 3.22970445)\nX                                   1.1    0.264575131    4.1576092    0.0532707          1\n  X — IC de 95%: (-0.0383749101; 2.23837491)\n\nResumo do modelo\nS = 0.591607978    R² = 89.6296296%    R² ajustado = 84.4444444%\nPRESS = 2.97052154    R² predito = 55.9922735%\n\nAnálise de variância\nFonte                  GL               SQ               QM            F      Valor-p\nRegressão               1             6.05             6.05   17.2857143    0.0532707\nErro                    2              0.7             0.35\nTotal                   3             6.75\n",
+  "metadata": {
+    "active_regression_by_sheet": {
+      "ws-bd863f9ea442463287ba7637815d2b1a": "analysis-00e3b23c268842eca5114ed858f5505e"
+    }
+  }
+}

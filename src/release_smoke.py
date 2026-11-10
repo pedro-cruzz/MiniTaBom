@@ -62,6 +62,134 @@ def run(app_class, report_path):
         chart=FrequencyGraph(app,frequency_table(['X'],[['A'],['B'],['B']],0),'pareto')
         chart.withdraw();chart.draw();chart.destroy()
         report['checks'].append('postos, Ryan–Joiner, frequências, calculadora e novos gráficos')
+        registry = json.loads(resource_path('CAPACIDADES.json').read_text(encoding='utf-8'))
+        if not registry['requirements'] or registry['parity_validated']:
+            raise RuntimeError('Registro de capacidades ausente ou com estado inesperado.')
+        import tempfile
+        from project import load_document
+        from analysis_service import rerun_analysis
+        app.headers=['X'];app.rows=[['0'],['2'],['*']];app.refresh()
+        if not app.run_ttest('one',0):
+            raise RuntimeError('Serviço estruturado do teste t indisponível.')
+        if not app.add_worksheet('Segunda'):
+            raise RuntimeError('Coleção de planilhas indisponível.')
+        app.headers=['Y'];app.rows=[['4'],['6']];app.refresh()
+        if not app.run_ttest('one',0,null=5):
+            raise RuntimeError('Análise na segunda planilha indisponível.')
+        with tempfile.TemporaryDirectory() as directory:
+            app.project_path=str(Path(directory)/'smoke.statlab')
+            if not app.save_project():
+                raise RuntimeError('Gravação de projeto v2 indisponível.')
+            document=load_document(app.project_path)
+            if len(document['worksheets'])!=2 or len(document['analyses'])!=2:
+                raise RuntimeError('Planilhas ou resultados não persistidos.')
+            rerun=rerun_analysis(document,document['analyses'][0]['analysis_id'])
+            if not math.isclose(rerun['values']['p'],.5,abs_tol=1e-12):
+                raise RuntimeError('Reexecução após reabrir o projeto inconsistente.')
+        history=app.analysis_history_dialog();history.withdraw();history.destroy()
+        report['checks'].append('registro, projeto v2, duas planilhas, resultado persistente e reexecução')
+        app.headers=['A','B','Resposta','Grupo']
+        app.rows=[['0','0','0','A'],['2','0','2','A'],['*','1','2','B'],['','*','4','B']]
+        app.refresh()
+        if not app.run_ttest('paired',0,1,store=True):
+            raise RuntimeError('Histórico/armazenamento pareado indisponível.')
+        if not app.run_ttest('two',2,3,source='stacked',legacy_df=False):
+            raise RuntimeError('Histórico de amostras empilhadas indisponível.')
+        stacked=app.document['analyses'][-1]
+        if not app.run_ttest('two',source='summary',summaries=[dict(n=2,mean=1.,sd=2.),dict(n=3,mean=4.,sd=3.)]):
+            raise RuntimeError('Histórico de resumos indisponível.')
+        with tempfile.TemporaryDirectory() as directory:
+            app.project_path=str(Path(directory)/'formats.statlab')
+            if not app.save_project():raise RuntimeError('Gravação dos formatos t indisponível.')
+            document=load_document(app.project_path)
+            summary=rerun_analysis(document,document['analyses'][-1]['analysis_id'])
+            repeated=rerun_analysis(document,stacked['analysis_id'])
+            if summary['parameters']['summaries'] is None or repeated['parameters']['group_order']!=['A','B']:
+                raise RuntimeError('Parâmetros efetivos dos testes t não preservados.')
+        report['checks'].append('testes t pareado, resumos, empilhadas e ordem persistida dos grupos')
+        from workspace_model import active_sheet
+        app.headers=['X','Y'];app.rows=[['0','1'],['1','2'],['2','4'],['3','4']];app.refresh()
+        if not app.run_regression(1,[0],show_graph=False,store=True):
+            raise RuntimeError('Regressão persistente indisponível.')
+        regression_id=app.last_regression_id
+        with tempfile.TemporaryDirectory() as directory:
+            app.project_path=str(Path(directory)/'regression.statlab')
+            if not app.save_project():raise RuntimeError('Gravação de modelo indisponível.')
+            document=load_document(app.project_path)
+            app.document=document;sheet=active_sheet(document)
+            app.headers=[c['name'] for c in sheet['columns']];app.rows=sheet['rows']
+            app.clear_regression();app.refresh()
+            if app.last_regression_id!=regression_id or not app.run_prediction(text='4'):
+                raise RuntimeError('Restauração do modelo/previsão indisponível.')
+            if 'Previsão = 5.5' not in app.output.get('1.0','end'):
+                raise RuntimeError('Previsão do modelo persistido inconsistente.')
+            forecast_id=app.document['analyses'][-1]['analysis_id']
+            graph=app.show_saved_regression_graph(regression_id)
+            if graph is None:raise RuntimeError('Gráfico histórico indisponível.')
+            graph.withdraw();graph.draw();graph.destroy()
+            if not app.rerun_saved_analysis(regression_id):
+                raise RuntimeError('Reexecução do modelo indisponível.')
+            if not app.rerun_saved_analysis(forecast_id) or app.document['analyses'][-1]['parameters']['model_analysis_id']!=regression_id:
+                raise RuntimeError('A previsão perdeu o vínculo com o modelo original.')
+        report['checks'].append('modelo linear salvo, restauração, previsão sem novo ajuste e gráfico histórico')
+        app.headers=['A','B','C'];app.rows=[['1','4','7'],['2','5','8'],['3','6','9']];app.refresh()
+        if not app.run_anova(columns=[0,1,2],comparisons=True,comparison_method='lsd'):
+            raise RuntimeError('ANOVA persistente indisponível.')
+        anova_id=app.document['analyses'][-1]['analysis_id']
+        graph=app.show_saved_anova_graph(anova_id)
+        if graph is None:raise RuntimeError('Boxplot histórico de ANOVA indisponível.')
+        graph.withdraw();graph.draw();graph.destroy()
+        with tempfile.TemporaryDirectory() as directory:
+            app.project_path=str(Path(directory)/'prediction-anova.statlab')
+            if not app.save_project():raise RuntimeError('Gravação de previsão/ANOVA indisponível.')
+            document=load_document(app.project_path)
+            prediction=rerun_analysis(document,forecast_id)
+            anova=rerun_analysis(document,anova_id)
+            if not math.isclose(prediction['values']['cases'][0]['fit'],5.5,abs_tol=1e-12) or not math.isclose(anova['values']['p'],.001,abs_tol=1e-12):
+                raise RuntimeError('Reexecução de previsão/ANOVA inconsistente.')
+        report['checks'].append('previsões vinculadas, ANOVA/comparações persistentes e boxplots históricos')
+        app.headers=['A','B','C'];app.rows=[[str(i+1),str(20+2*i),str(2+3*i)] for i in range(8)];app.refresh()
+        if not app.run_normality(0,method='rj'):raise RuntimeError('Normalidade persistente indisponível.')
+        normality_id=app.document['analyses'][-1]['analysis_id']
+        for mode,options in [('mannwhitney',dict(columns=[0,1],method='exact')),('wilcoxon',dict(columns=[0,1],method='exact')),
+                             ('kruskal',dict(columns=[0,1,2])),('variances',dict(columns=[0,1,2],center='bartlett'))]:
+            if not app.run_study(mode,**options):raise RuntimeError('Teste persistente indisponível: '+mode)
+        graph=app.show_saved_normality_graph(normality_id)
+        if graph is None:raise RuntimeError('Gráfico histórico de normalidade indisponível.')
+        graph.withdraw();graph.draw();graph.destroy()
+        with tempfile.TemporaryDirectory() as directory:
+            app.project_path=str(Path(directory)/'diagnostics.statlab')
+            if not app.save_project():raise RuntimeError('Gravação dos diagnósticos indisponível.')
+            document=load_document(app.project_path)
+            normality=rerun_analysis(document,normality_id)
+            variance=rerun_analysis(document,document['analyses'][-1]['analysis_id'])
+            if normality['values']['method_key']!='rj' or variance['parameters']['center']!='bartlett':
+                raise RuntimeError('Opções dos diagnósticos não preservadas.')
+        report['checks'].append('normalidade/gráfico histórico, postos, variâncias e reexecução persistente')
+        if not app.run_two_poisson(input_kind='summary',summaries=[dict(events=713,n=40),dict(events=515,n=20)],lengths=[3.,6.]):
+            raise RuntimeError('Duas taxas Poisson indisponíveis.')
+        poisson_id=app.document['analyses'][-1]['analysis_id']
+        if not math.isclose(app.document['analyses'][-1]['values']['estimate'],1.65,abs_tol=1e-12):
+            raise RuntimeError('Comparação de taxas inconsistente.')
+        with tempfile.TemporaryDirectory() as directory:
+            app.project_path=str(Path(directory)/'two-poisson.statlab')
+            if not app.save_project():raise RuntimeError('Gravação das taxas indisponível.')
+            document=load_document(app.project_path)
+            if not math.isclose(rerun_analysis(document,poisson_id)['values']['estimate'],1.65,abs_tol=1e-12):
+                raise RuntimeError('Reexecução de taxas inconsistente.')
+        from excel_import import read_excel_workbook
+        import zipfile
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'automatic.xlsx'
+            ns='http://schemas.openxmlformats.org/spreadsheetml/2006/main'
+            with zipfile.ZipFile(path,'w') as archive:
+                archive.writestr('xl/workbook.xml',f'<workbook xmlns="{ns}" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Dados" sheetId="1" r:id="r1"/></sheets></workbook>')
+                archive.writestr('xl/_rels/workbook.xml.rels','<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="r1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/></Relationships>')
+                archive.writestr('xl/worksheets/sheet1.xml',f'<worksheet xmlns="{ns}"><sheetData><row r="2"><c r="B2"><v>12</v></c></row></sheetData></worksheet>')
+            app.dirty=False
+            if not app.import_excel_workbook(read_excel_workbook(path),path) or app.rows!=[['',''],['','12']]:
+                raise RuntimeError('Abertura automática do Excel indisponível.')
+        report['checks'].append('Excel sem intervalo e duas taxas Poisson com persistência')
         report['ok'] = True
     except Exception:
         report['error'] = traceback.format_exc()

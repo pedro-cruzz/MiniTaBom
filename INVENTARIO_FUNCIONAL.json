@@ -46,14 +46,15 @@
         "Menus e navegador simplificados",
         "Atalhos básicos",
         "Grade com cabeçalhos fixos em duas faixas e gerenciador recolhível",
-        "Ícones próprios nos comandos dos menus, barra de ferramentas e abas dos diálogos"
+        "Ícones próprios nos comandos dos menus, barra de ferramentas e abas dos diálogos",
+        "Coleção de planilhas com IDs, seletor e histórico de desfazer independente; histórico estruturado/reexecução dos formatos disponíveis dos testes t"
       ],
       "pendente": [
         "Inventário integral dos menus do 16",
         "Janelas internas e gerenciamento clássico",
         "Preferências e acessibilidade",
-        "Histórico de análises e comandos",
-        "Múltiplas planilhas",
+        "Demais análises no histórico estruturado e comandos",
+        "Planilhas: excluir/renomear e demais opções do gerenciador; coleção e alternância básicas implementadas",
         "Ajuda contextual por análise",
         "Compatibilidade visual validada"
       ]
@@ -93,14 +94,16 @@
         "CSV UTF-8",
         "Projeto próprio .statlab",
         "Exportação de sessão em texto",
-        "Importação .xlsx por aba e intervalo, cabeçalhos opcionais e prévia; valores/caches de fórmulas, sem executar macros ou links"
+        "Importação .xlsx por aba e intervalo, cabeçalhos opcionais e prévia; valores/caches de fórmulas, sem executar macros ou links",
+        "Projeto statlab v2 com migração de v1; planilhas, IDs, revisões e resultados estruturados dos testes t",
+        "Abrir Excel .xlsx automaticamente, com todas as abas/posições; fórmulas sem cache exibidas como texto e cabeçalho opcional reversível"
       ],
       "pendente": [
         "Demais formatos/opções Excel, formatos de células, datas e metadados completos",
         "MTW e MPJ do 16",
         "Demais formatos suportados na versão alvo",
         "Precisão e metadados dos formatos",
-        "Persistência de gráficos e resultados estruturados",
+        "Persistência de gráficos, modelos e demais resultados estruturados",
         "Recuperação e salvamento automático",
         "Impressão"
       ]
@@ -223,25 +226,28 @@
         "Duas proporções: colunas/resumo/empilhadas, Z separado/combinado, IC Wald e Fisher condicional com limite operacional explícito",
         "Uma variância: qui-quadrado normal, coluna/resumo, hipótese e IC em desvio ou variância",
         "Duas variâncias: F normal, colunas/resumo/empilhadas, razão de desvios ou variâncias e alternativas",
-        "Normalidade Anderson-Darling com parâmetros estimados, correção de N e valor-p aproximado; ainda sem gráfico",
+        "Normalidade Anderson-Darling com parâmetros estimados, correção de N e valor-p aproximado; gráfico de probabilidade básico disponível",
         "Testes t de uma e duas amostras com N/média/desvio padrão resumidos",
         "Teste t pareado por resumo das diferenças, sem reconstrução de observações",
         "Duas amostras t em resposta/grupo, exclusão por grupo e ordem de primeira aparição explícitas",
         "Normalidade: Anderson–Darling, Ryan–Joiner, KS normal estimada, Shapiro–Wilk e D’Agostino–Pearson, com limites explícitos",
         "Igualdade de variâncias de vários grupos: Levene mediana/média e Bartlett",
         "Armazenar diferenças do t pareado preservando linhas ausentes",
-        "Diagnóstico bivariado complementar de Mardia com correção de assimetria para N<20; sem equivalência de comando do 16 presumida"
+        "Diagnóstico bivariado complementar de Mardia com correção de assimetria para N<20; sem equivalência de comando do 16 presumida",
+        "Uma taxa Poisson: coluna/resumo, exposição, método exato por verossimilhanças ou normal, IC e alternativas; validação16 pendente",
+        "Histórico v2 e reexecução dos sete formatos t; parâmetros/GL/ordem de grupos preservados, resumos independentes das células e armazenamento pareado repetível",
+        "Duas taxas/médias Poisson: colunas/resumo/empilhadas, exposições distintas, Z separado/combinado, exato condicional para diferença zero, IC normal e histórico"
       ],
       "pendente": [
-        "Testes t: entradas sumarizadas e amostras empilhadas",
+        "Testes t: gráficos, armazenamento adicional e validação diferencial das entradas resumidas/empilhadas",
         "Armazenamento de estatísticas e gráficos anexos dos testes t",
         "Casos de erro padrão zero conforme versão alvo",
         "Z: várias amostras simultâneas, gráficos, armazenamento e validação dos padrões",
         "Proporções: várias análises simultâneas, Blaker, correção de continuidade, outros ICs da diferença e demais opções",
-        "Taxas de Poisson",
-        "Variâncias: Bonett, Levene, mais de duas amostras, gráficos e comparação dos padrões na versão alvo",
+        "Poisson: frequências opcionais, demais opções e validação diferencial de uma/duas taxas",
+        "Variâncias: Bonett, intervalos robustos, gráficos e comparação no 16; Levene/Bartlett de vários grupos já implementados",
         "Demais intervalos de confiança",
-        "Normalidade: Ryan-Joiner, Kolmogorov-Smirnov, gráficos de probabilidade, outras opções e comparação na versão alvo; aderência",
+        "Normalidade: bandas e demais opções gráficas, comparação no 16 e aderência; RJ/KS/gráfico básico implementados",
         "Correlação: IC de Spearman, matriz gráfica/armazenamento e validação de padrões do 16",
         "Equivalência e outros testes existentes no 16 a confirmar",
         "Validação diferencial integral com Minitab 16"
@@ -292,7 +298,7 @@
         "Modelos sem intercepto e transformações",
         "Demais opções de predição, armazenamento, gráficos de intervalos e persistência do modelo",
         "Falta de ajuste, SQ por termo e diagnósticos/influência adicionais",
-        "Armazenar coeficientes, ajustados e resíduos na planilha",
+        "Armazenar coeficientes e demais opções; ajustados e resíduos já são armazenados",
         "Logística e demais modelos existentes no 16",
         "Não linear e modelos com pesos a conferir",
         "Validação diferencial no Minitab 16, inclusive ajuste perfeito e colinearidade"
@@ -495,5 +501,7 @@
     ],
     "materiais": "docs/analise_estudo/verificacao_novos_fluxos.json",
     "continuacao": "Usuário autorizou continuidade sem novo pedido por bloco. A tentativa de agendamento foi bloqueada pela política de aprovação da ferramenta nesta sessão."
-  }
+  },
+  "registro_atual": "CAPACIDADES.json",
+  "natureza": "Resumo legado reconciliado; estados atuais e IDs estáveis em CAPACIDADES.json."
 }

@@ -1,0 +1,798 @@
+{
+  "format": "statlab",
+  "version": 2,
+  "project_id": "project-db20c9ac8ed542d49fa003972951f7bd",
+  "active_worksheet_id": "ws-713ff1f96a8a486289dc0f5bb2d0741b",
+  "worksheets": [
+    {
+      "id": "ws-713ff1f96a8a486289dc0f5bb2d0741b",
+      "name": "Worksheet 1",
+      "revision": 0,
+      "columns": [
+        {
+          "id": "col-bd5f07aa94d94348bd5174c9df44cf39",
+          "name": "A",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        },
+        {
+          "id": "col-da69132e5f3f4ea6ac85d0644f4c02bf",
+          "name": "B",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        },
+        {
+          "id": "col-419e3c5701ae4cc9a7054dea5237c39d",
+          "name": "Resposta",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        },
+        {
+          "id": "col-80031aba864d4e6b8953a0a883aa87d6",
+          "name": "Grupo",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        }
+      ],
+      "rows": [
+        [
+          "0",
+          "0",
+          "0",
+          "A"
+        ],
+        [
+          "2",
+          "0",
+          "2",
+          "A"
+        ],
+        [
+          "4",
+          "1",
+          "2",
+          "B"
+        ],
+        [
+          "*",
+          "*",
+          "4",
+          "B"
+        ]
+      ],
+      "metadata": {},
+      "fingerprint": "1211adaab5df1d8273dda7c4197cf22713cd42a8760689ffcac51c323a4cc56e"
+    }
+  ],
+  "analyses": [
+    {
+      "analysis_id": "analysis-5b2330f684ed426a9e00abf8c147a09e",
+      "parent_analysis_id": null,
+      "method_id": "basic.t_one.column.v1",
+      "created_at": "2026-11-06T21:15:21.142522+00:00",
+      "parameters": {
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "perform_test": true
+      },
+      "source": {
+        "worksheet_id": "ws-713ff1f96a8a486289dc0f5bb2d0741b",
+        "column_ids": [
+          "col-bd5f07aa94d94348bd5174c9df44cf39"
+        ],
+        "revision": 0,
+        "fingerprint": "1211adaab5df1d8273dda7c4197cf22713cd42a8760689ffcac51c323a4cc56e",
+        "kind": "columns",
+        "input_fingerprint": "453f079718fdef716a38812c34073e0b4613250560f84bcf1ee6565e3cba45c4"
+      },
+      "versions": {
+        "application": "0.4.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_empty_or_star",
+        "counts": [
+          1
+        ]
+      },
+      "values": {
+        "estimate": 2.0,
+        "se": 1.1547005383792517,
+        "df": 2,
+        "t": 1.732050807568877,
+        "p": 0.2254033307585167,
+        "low": -2.9682754235006605,
+        "high": 6.9682754235006605,
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "samples": [
+          {
+            "n": 3,
+            "mean": 2.0,
+            "sd": 2.0,
+            "se": 1.1547005383792517
+          }
+        ],
+        "mode": "one",
+        "method": "t de uma amostra",
+        "missing": [
+          1
+        ],
+        "labels": [
+          "A"
+        ]
+      },
+      "tables": [
+        {
+          "name": "amostras",
+          "rows": [
+            {
+              "n": 3,
+              "mean": 2.0,
+              "sd": 2.0,
+              "se": 1.1547005383792517
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "T DE UMA AMOSTRA\n\nAmostra                         N          Média        DesvPad       EP Média\nA                               3              2              2     1.15470054\n\nAusentes por amostra: 1\nEstimativa: 2\nIC de 95%: (-2.96827542; 6.96827542)\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = 1.73205081    GL = 2    Valor-p = 0.225403331\n"
+    },
+    {
+      "analysis_id": "analysis-35a7bbb8e18f49eebd21930c5c0610f0",
+      "parent_analysis_id": null,
+      "method_id": "basic.t_paired.columns.v1",
+      "created_at": "2026-11-06T21:15:21.143819+00:00",
+      "parameters": {
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "perform_test": true,
+        "equal_var": false,
+        "legacy_df": true,
+        "summaries": null,
+        "group_order": null,
+        "store_differences": false
+      },
+      "source": {
+        "worksheet_id": "ws-713ff1f96a8a486289dc0f5bb2d0741b",
+        "column_ids": [
+          "col-bd5f07aa94d94348bd5174c9df44cf39",
+          "col-da69132e5f3f4ea6ac85d0644f4c02bf"
+        ],
+        "revision": 0,
+        "fingerprint": "1211adaab5df1d8273dda7c4197cf22713cd42a8760689ffcac51c323a4cc56e",
+        "kind": "columns",
+        "input_fingerprint": "19d6f92a0cff5977a57816738d27e6d528b7297231b5b6d08c0815b42c6a6b64"
+      },
+      "versions": {
+        "application": "0.4.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_pair_if_either_missing",
+        "counts": [
+          1
+        ]
+      },
+      "values": {
+        "estimate": 1.6666666666666667,
+        "se": 0.881917103688197,
+        "df": 2,
+        "t": 1.8898223650461359,
+        "p": 0.19935923097456437,
+        "low": -2.1279163669300933,
+        "high": 5.461249700263426,
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "samples": [
+          {
+            "n": 3,
+            "mean": 2.0,
+            "sd": 2.0,
+            "se": 1.1547005383792517
+          },
+          {
+            "n": 3,
+            "mean": 0.3333333333333333,
+            "sd": 0.5773502691896257,
+            "se": 0.3333333333333333
+          },
+          {
+            "n": 3,
+            "mean": 1.6666666666666667,
+            "sd": 1.5275252316519468,
+            "se": 0.881917103688197
+          }
+        ],
+        "mode": "paired",
+        "method": "t pareado · diferença = primeira − segunda",
+        "missing": [
+          1
+        ],
+        "labels": [
+          "A",
+          "B",
+          "Diferença"
+        ]
+      },
+      "tables": [
+        {
+          "name": "amostras",
+          "rows": [
+            {
+              "n": 3,
+              "mean": 2.0,
+              "sd": 2.0,
+              "se": 1.1547005383792517
+            },
+            {
+              "n": 3,
+              "mean": 0.3333333333333333,
+              "sd": 0.5773502691896257,
+              "se": 0.3333333333333333
+            },
+            {
+              "n": 3,
+              "mean": 1.6666666666666667,
+              "sd": 1.5275252316519468,
+              "se": 0.881917103688197
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "T PAREADO · DIFERENÇA = PRIMEIRA − SEGUNDA\n\nAmostra                         N          Média        DesvPad       EP Média\nA                               3              2              2     1.15470054\nB                               3    0.333333333    0.577350269    0.333333333\nDiferença                       3     1.66666667     1.52752523    0.881917104\n\nPares excluídos: 1\nEstimativa: 1.66666667\nIC de 95%: (-2.12791637; 5.4612497)\nDiferença definida como: primeira amostra − segunda amostra.\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = 1.88982237    GL = 2    Valor-p = 0.199359231\n"
+    },
+    {
+      "analysis_id": "analysis-cde53077eb124b63830e993e872d3408",
+      "parent_analysis_id": null,
+      "method_id": "basic.t_two.columns.v1",
+      "created_at": "2026-11-06T21:15:21.144395+00:00",
+      "parameters": {
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "perform_test": true,
+        "equal_var": false,
+        "legacy_df": true,
+        "summaries": null,
+        "group_order": null,
+        "store_differences": false
+      },
+      "source": {
+        "worksheet_id": "ws-713ff1f96a8a486289dc0f5bb2d0741b",
+        "column_ids": [
+          "col-bd5f07aa94d94348bd5174c9df44cf39",
+          "col-da69132e5f3f4ea6ac85d0644f4c02bf"
+        ],
+        "revision": 0,
+        "fingerprint": "1211adaab5df1d8273dda7c4197cf22713cd42a8760689ffcac51c323a4cc56e",
+        "kind": "columns",
+        "input_fingerprint": "19d6f92a0cff5977a57816738d27e6d528b7297231b5b6d08c0815b42c6a6b64"
+      },
+      "versions": {
+        "application": "0.4.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_each_sample",
+        "counts": [
+          1,
+          1
+        ]
+      },
+      "values": {
+        "estimate": 1.6666666666666667,
+        "se": 1.2018504251546633,
+        "df": 2,
+        "t": 1.3867504905630725,
+        "p": 0.29985995798599513,
+        "low": -3.5044783458755964,
+        "high": 6.83781167920893,
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "samples": [
+          {
+            "n": 3,
+            "mean": 2.0,
+            "sd": 2.0,
+            "se": 1.1547005383792517
+          },
+          {
+            "n": 3,
+            "mean": 0.3333333333333333,
+            "sd": 0.5773502691896257,
+            "se": 0.3333333333333333
+          }
+        ],
+        "mode": "two",
+        "method": "t de Welch · GL inteiro (referência 16)",
+        "df_raw": 2.3310344827586214,
+        "missing": [
+          1,
+          1
+        ],
+        "labels": [
+          "A",
+          "B"
+        ]
+      },
+      "tables": [
+        {
+          "name": "amostras",
+          "rows": [
+            {
+              "n": 3,
+              "mean": 2.0,
+              "sd": 2.0,
+              "se": 1.1547005383792517
+            },
+            {
+              "n": 3,
+              "mean": 0.3333333333333333,
+              "sd": 0.5773502691896257,
+              "se": 0.3333333333333333
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "T DE WELCH · GL INTEIRO (REFERÊNCIA 16)\n\nAmostra                         N          Média        DesvPad       EP Média\nA                               3              2              2     1.15470054\nB                               3    0.333333333    0.577350269    0.333333333\n\nAusentes por amostra: 1, 1\nEstimativa: 1.66666667\nIC de 95%: (-3.50447835; 6.83781168)\nDiferença definida como: primeira amostra − segunda amostra.\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = 1.38675049    GL = 2    Valor-p = 0.299859958\n"
+    },
+    {
+      "analysis_id": "analysis-b01a791e69a943458bc27f16a70ecb2a",
+      "parent_analysis_id": null,
+      "method_id": "basic.t_two.stacked.v1",
+      "created_at": "2026-11-06T21:15:21.147935+00:00",
+      "parameters": {
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "perform_test": true,
+        "equal_var": false,
+        "legacy_df": true,
+        "summaries": null,
+        "group_order": [
+          "A",
+          "B"
+        ],
+        "store_differences": false
+      },
+      "source": {
+        "worksheet_id": "ws-713ff1f96a8a486289dc0f5bb2d0741b",
+        "column_ids": [
+          "col-419e3c5701ae4cc9a7054dea5237c39d",
+          "col-80031aba864d4e6b8953a0a883aa87d6"
+        ],
+        "revision": 0,
+        "fingerprint": "1211adaab5df1d8273dda7c4197cf22713cd42a8760689ffcac51c323a4cc56e",
+        "kind": "stacked",
+        "input_fingerprint": "7390c0235e41151e05caf111591463260a62b46166b1b0e3d62795062ca60e8e"
+      },
+      "versions": {
+        "application": "0.4.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_group_then_sample",
+        "counts": [
+          0,
+          0
+        ],
+        "excluded_groups": 0
+      },
+      "values": {
+        "estimate": -2.0,
+        "se": 1.4142135623730951,
+        "df": 2,
+        "t": -1.414213562373095,
+        "p": 0.29289321881345254,
+        "low": -8.084869844593308,
+        "high": 4.0848698445933085,
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "samples": [
+          {
+            "n": 2,
+            "mean": 1.0,
+            "sd": 1.4142135623730951,
+            "se": 1.0
+          },
+          {
+            "n": 2,
+            "mean": 3.0,
+            "sd": 1.4142135623730951,
+            "se": 1.0
+          }
+        ],
+        "mode": "two",
+        "method": "t de Welch · GL inteiro (referência 16)",
+        "df_raw": 2.000000000000001,
+        "labels": [
+          "Resposta [grupo 'A']",
+          "Resposta [grupo 'B']"
+        ],
+        "missing": [
+          0,
+          0
+        ],
+        "excluded_groups": 0,
+        "source": "stacked",
+        "group_order": [
+          "A",
+          "B"
+        ],
+        "group_order_policy": "fixed"
+      },
+      "tables": [
+        {
+          "name": "amostras",
+          "rows": [
+            {
+              "n": 2,
+              "mean": 1.0,
+              "sd": 1.4142135623730951,
+              "se": 1.0
+            },
+            {
+              "n": 2,
+              "mean": 3.0,
+              "sd": 1.4142135623730951,
+              "se": 1.0
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "T DE WELCH · GL INTEIRO (REFERÊNCIA 16)\n\nAmostra                         N          Média        DesvPad       EP Média\nResposta [grupo 'A']            2              1     1.41421356              1\nResposta [grupo 'B']            2              3     1.41421356              1\n\nAusentes por amostra: 0, 0\nLinhas excluídas por grupo ausente: 0\nOrdem das amostras: ordem dos grupos preservada nos parâmetros.\nEstimativa: -2\nIC de 95%: (-8.08486984; 4.08486984)\nDiferença definida como: primeira amostra − segunda amostra.\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = -1.41421356    GL = 2    Valor-p = 0.292893219\n"
+    },
+    {
+      "analysis_id": "analysis-a0ab3ee64b2a4cbb9e37515ed9098228",
+      "parent_analysis_id": null,
+      "method_id": "basic.t_one.summary.v1",
+      "created_at": "2026-11-06T21:15:21.148526+00:00",
+      "parameters": {
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "perform_test": true,
+        "equal_var": false,
+        "legacy_df": true,
+        "summaries": [
+          {
+            "n": 3,
+            "mean": 2.0,
+            "sd": 1.0
+          }
+        ],
+        "group_order": null,
+        "store_differences": false
+      },
+      "source": {
+        "worksheet_id": "ws-713ff1f96a8a486289dc0f5bb2d0741b",
+        "column_ids": [],
+        "revision": 0,
+        "fingerprint": "1211adaab5df1d8273dda7c4197cf22713cd42a8760689ffcac51c323a4cc56e",
+        "kind": "summary"
+      },
+      "versions": {
+        "application": "0.4.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "summary_missing_unknown",
+        "counts": [
+          null
+        ]
+      },
+      "values": {
+        "estimate": 2.0,
+        "se": 0.5773502691896258,
+        "df": 2,
+        "t": 3.464101615137754,
+        "p": 0.07417990022744857,
+        "low": -0.48413771175033027,
+        "high": 4.48413771175033,
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "samples": [
+          {
+            "n": 3,
+            "mean": 2.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258
+          }
+        ],
+        "mode": "one",
+        "method": "t de uma amostra",
+        "labels": [
+          "Amostra"
+        ],
+        "missing": [
+          null
+        ],
+        "source": "summary"
+      },
+      "tables": [
+        {
+          "name": "amostras",
+          "rows": [
+            {
+              "n": 3,
+              "mean": 2.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "T DE UMA AMOSTRA\n\nAmostra                         N          Média        DesvPad       EP Média\nAmostra                         3              2              1    0.577350269\n\nEntrada: dados resumidos; ausentes não informados.\nEstimativa: 2\nIC de 95%: (-0.484137712; 4.48413771)\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = 3.46410162    GL = 2    Valor-p = 0.0741799002\n"
+    },
+    {
+      "analysis_id": "analysis-4a834a3f621148c3ba56407b23b52bd6",
+      "parent_analysis_id": null,
+      "method_id": "basic.t_paired.summary.v1",
+      "created_at": "2026-11-06T21:15:21.149079+00:00",
+      "parameters": {
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "perform_test": true,
+        "equal_var": false,
+        "legacy_df": true,
+        "summaries": [
+          {
+            "n": 3,
+            "mean": -2.0,
+            "sd": 1.0
+          }
+        ],
+        "group_order": null,
+        "store_differences": false
+      },
+      "source": {
+        "worksheet_id": "ws-713ff1f96a8a486289dc0f5bb2d0741b",
+        "column_ids": [],
+        "revision": 0,
+        "fingerprint": "1211adaab5df1d8273dda7c4197cf22713cd42a8760689ffcac51c323a4cc56e",
+        "kind": "summary"
+      },
+      "versions": {
+        "application": "0.4.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "summary_missing_unknown",
+        "counts": [
+          null
+        ]
+      },
+      "values": {
+        "estimate": -2.0,
+        "se": 0.5773502691896258,
+        "df": 2,
+        "t": -3.464101615137754,
+        "p": 0.07417990022744857,
+        "low": -4.48413771175033,
+        "high": 0.48413771175033027,
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "samples": [
+          {
+            "n": 3,
+            "mean": -2.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258
+          }
+        ],
+        "mode": "paired",
+        "method": "t pareado · resumo das diferenças (primeira − segunda)",
+        "labels": [
+          "Diferença"
+        ],
+        "missing": [
+          null
+        ],
+        "source": "summary"
+      },
+      "tables": [
+        {
+          "name": "amostras",
+          "rows": [
+            {
+              "n": 3,
+              "mean": -2.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "T PAREADO · RESUMO DAS DIFERENÇAS (PRIMEIRA − SEGUNDA)\n\nAmostra                         N          Média        DesvPad       EP Média\nDiferença                       3             -2              1    0.577350269\n\nEntrada: dados resumidos; ausentes não informados.\nEstimativa: -2\nIC de 95%: (-4.48413771; 0.484137712)\nDiferença definida como: primeira amostra − segunda amostra.\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = -3.46410162    GL = 2    Valor-p = 0.0741799002\n"
+    },
+    {
+      "analysis_id": "analysis-984fe92f46634694bae07f3074201817",
+      "parent_analysis_id": null,
+      "method_id": "basic.t_two.summary.v1",
+      "created_at": "2026-11-06T21:15:21.149615+00:00",
+      "parameters": {
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "perform_test": true,
+        "equal_var": false,
+        "legacy_df": true,
+        "summaries": [
+          {
+            "n": 3,
+            "mean": 2.0,
+            "sd": 1.0
+          },
+          {
+            "n": 4,
+            "mean": 3.0,
+            "sd": 2.0
+          }
+        ],
+        "group_order": null,
+        "store_differences": false
+      },
+      "source": {
+        "worksheet_id": "ws-713ff1f96a8a486289dc0f5bb2d0741b",
+        "column_ids": [],
+        "revision": 0,
+        "fingerprint": "1211adaab5df1d8273dda7c4197cf22713cd42a8760689ffcac51c323a4cc56e",
+        "kind": "summary"
+      },
+      "versions": {
+        "application": "0.4.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "summary_missing_unknown",
+        "counts": [
+          null,
+          null
+        ]
+      },
+      "values": {
+        "estimate": -1.0,
+        "se": 1.1547005383792515,
+        "df": 4,
+        "t": -0.8660254037844387,
+        "p": 0.4353309425143758,
+        "low": -4.2059626577523295,
+        "high": 2.2059626577523295,
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "samples": [
+          {
+            "n": 3,
+            "mean": 2.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258
+          },
+          {
+            "n": 4,
+            "mean": 3.0,
+            "sd": 2.0,
+            "se": 1.0
+          }
+        ],
+        "mode": "two",
+        "method": "t de Welch · GL inteiro (referência 16)",
+        "df_raw": 4.571428571428569,
+        "labels": [
+          "Amostra 1",
+          "Amostra 2"
+        ],
+        "missing": [
+          null,
+          null
+        ],
+        "source": "summary"
+      },
+      "tables": [
+        {
+          "name": "amostras",
+          "rows": [
+            {
+              "n": 3,
+              "mean": 2.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258
+            },
+            {
+              "n": 4,
+              "mean": 3.0,
+              "sd": 2.0,
+              "se": 1.0
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "T DE WELCH · GL INTEIRO (REFERÊNCIA 16)\n\nAmostra                         N          Média        DesvPad       EP Média\nAmostra 1                       3              2              1    0.577350269\nAmostra 2                       4              3              2              1\n\nEntrada: dados resumidos; ausentes não informados.\nEstimativa: -1\nIC de 95%: (-4.20596266; 2.20596266)\nDiferença definida como: primeira amostra − segunda amostra.\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = -0.866025404    GL = 4    Valor-p = 0.435330943\n"
+    }
+  ],
+  "output": "EXEMPLO SINTÉTICO — histórico dos testes t\nAbra Janela > Histórico de análises para reexecutar cada formato.\n\nT DE UMA AMOSTRA\n\nAmostra                         N          Média        DesvPad       EP Média\nA                               3              2              2     1.15470054\n\nAusentes por amostra: 1\nEstimativa: 2\nIC de 95%: (-2.96827542; 6.96827542)\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = 1.73205081    GL = 2    Valor-p = 0.225403331\n\nT PAREADO · DIFERENÇA = PRIMEIRA − SEGUNDA\n\nAmostra                         N          Média        DesvPad       EP Média\nA                               3              2              2     1.15470054\nB                               3    0.333333333    0.577350269    0.333333333\nDiferença                       3     1.66666667     1.52752523    0.881917104\n\nPares excluídos: 1\nEstimativa: 1.66666667\nIC de 95%: (-2.12791637; 5.4612497)\nDiferença definida como: primeira amostra − segunda amostra.\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = 1.88982237    GL = 2    Valor-p = 0.199359231\n\nT DE WELCH · GL INTEIRO (REFERÊNCIA 16)\n\nAmostra                         N          Média        DesvPad       EP Média\nA                               3              2              2     1.15470054\nB                               3    0.333333333    0.577350269    0.333333333\n\nAusentes por amostra: 1, 1\nEstimativa: 1.66666667\nIC de 95%: (-3.50447835; 6.83781168)\nDiferença definida como: primeira amostra − segunda amostra.\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = 1.38675049    GL = 2    Valor-p = 0.299859958\n\nT DE WELCH · GL INTEIRO (REFERÊNCIA 16)\n\nAmostra                         N          Média        DesvPad       EP Média\nResposta [grupo 'A']            2              1     1.41421356              1\nResposta [grupo 'B']            2              3     1.41421356              1\n\nAusentes por amostra: 0, 0\nLinhas excluídas por grupo ausente: 0\nOrdem das amostras: ordem dos grupos preservada nos parâmetros.\nEstimativa: -2\nIC de 95%: (-8.08486984; 4.08486984)\nDiferença definida como: primeira amostra − segunda amostra.\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = -1.41421356    GL = 2    Valor-p = 0.292893219\n\nT DE UMA AMOSTRA\n\nAmostra                         N          Média        DesvPad       EP Média\nAmostra                         3              2              1    0.577350269\n\nEntrada: dados resumidos; ausentes não informados.\nEstimativa: 2\nIC de 95%: (-0.484137712; 4.48413771)\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = 3.46410162    GL = 2    Valor-p = 0.0741799002\n\nT PAREADO · RESUMO DAS DIFERENÇAS (PRIMEIRA − SEGUNDA)\n\nAmostra                         N          Média        DesvPad       EP Média\nDiferença                       3             -2              1    0.577350269\n\nEntrada: dados resumidos; ausentes não informados.\nEstimativa: -2\nIC de 95%: (-4.48413771; 0.484137712)\nDiferença definida como: primeira amostra − segunda amostra.\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = -3.46410162    GL = 2    Valor-p = 0.0741799002\n\nT DE WELCH · GL INTEIRO (REFERÊNCIA 16)\n\nAmostra                         N          Média        DesvPad       EP Média\nAmostra 1                       3              2              1    0.577350269\nAmostra 2                       4              3              2              1\n\nEntrada: dados resumidos; ausentes não informados.\nEstimativa: -1\nIC de 95%: (-4.20596266; 2.20596266)\nDiferença definida como: primeira amostra − segunda amostra.\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = -0.866025404    GL = 4    Valor-p = 0.435330943\n",
+  "metadata": {}
+}

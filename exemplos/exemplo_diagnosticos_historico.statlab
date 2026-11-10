@@ -1,0 +1,1008 @@
+{
+  "format": "statlab",
+  "version": 2,
+  "project_id": "project-1e809539825e4a2b9ce02253a7999921",
+  "active_worksheet_id": "ws-10efe5dbc2f24e43b2fa3fc61b7a8e4d",
+  "worksheets": [
+    {
+      "id": "ws-10efe5dbc2f24e43b2fa3fc61b7a8e4d",
+      "name": "Worksheet 1",
+      "revision": 0,
+      "columns": [
+        {
+          "id": "col-d567260bfadd4d76a9ef730c5c1be349",
+          "name": "A",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        },
+        {
+          "id": "col-7ec433199bee4f21bac56f3cdde6d108",
+          "name": "B",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        },
+        {
+          "id": "col-dbba49f82d7f49208f088a91a8914e94",
+          "name": "C",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        }
+      ],
+      "rows": [
+        [
+          "1",
+          "5.0",
+          "3.5"
+        ],
+        [
+          "2",
+          "7.5",
+          "5.0"
+        ],
+        [
+          "3",
+          "10.0",
+          "6.5"
+        ],
+        [
+          "4",
+          "11.0",
+          "8.0"
+        ],
+        [
+          "5",
+          "13.5",
+          "9.5"
+        ],
+        [
+          "6",
+          "16.0",
+          "11.0"
+        ],
+        [
+          "7",
+          "17.0",
+          "12.5"
+        ],
+        [
+          "9",
+          "21.5",
+          "15.5"
+        ],
+        [
+          "11",
+          "26.0",
+          "18.5"
+        ],
+        [
+          "14",
+          "31.0",
+          "23.0"
+        ],
+        [
+          "16",
+          "35.5",
+          "26.0"
+        ],
+        [
+          "18",
+          "40.0",
+          "29.0"
+        ]
+      ],
+      "metadata": {},
+      "fingerprint": "f20df0141375b711473d9f2b76bb92aadd9fd93f26fe76b090acd0d0c71e85a3"
+    }
+  ],
+  "analyses": [
+    {
+      "analysis_id": "analysis-7b6545370d1940039667da6fe98e5728",
+      "parent_analysis_id": null,
+      "method_id": "diagnostic.normality.v1",
+      "created_at": "2026-11-10T20:12:45.642020+00:00",
+      "parameters": {
+        "method": "ad",
+        "show_graph": false
+      },
+      "source": {
+        "worksheet_id": "ws-10efe5dbc2f24e43b2fa3fc61b7a8e4d",
+        "column_ids": [
+          "col-d567260bfadd4d76a9ef730c5c1be349"
+        ],
+        "revision": 0,
+        "fingerprint": "f20df0141375b711473d9f2b76bb92aadd9fd93f26fe76b090acd0d0c71e85a3",
+        "input_fingerprint": "08de30ae041af88d1ff476b85f1d179add57109540b88d4e7967eecaadebcec6",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.7.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_empty_or_star",
+        "count": 0
+      },
+      "values": {
+        "n": 12,
+        "mean": 8.0,
+        "sd": 5.640760748177662,
+        "statistic": 0.33078979230481664,
+        "adjusted": 0.35663274482863044,
+        "p": 0.4566447889494511,
+        "p_upper": null,
+        "repeated": 0,
+        "missing": 0,
+        "source": "A",
+        "method_key": "ad",
+        "method": "Anderson–Darling",
+        "stat_label": "A²"
+      },
+      "tables": [
+        {
+          "name": "diagnostico",
+          "rows": [
+            {
+              "n": 12,
+              "mean": 8.0,
+              "sd": 5.640760748177662,
+              "statistic": 0.33078979230481664,
+              "adjusted": 0.35663274482863044,
+              "p": 0.4566447889494511,
+              "p_upper": null,
+              "repeated": 0,
+              "missing": 0,
+              "source": "A",
+              "method_key": "ad",
+              "method": "Anderson–Darling",
+              "stat_label": "A²"
+            }
+          ]
+        }
+      ],
+      "scenes": [
+        {
+          "kind": "normal_probability",
+          "version": 1,
+          "sample": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            9.0,
+            11.0,
+            14.0,
+            16.0,
+            18.0
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "TESTE DE NORMALIDADE — A\n\nMétodo: Anderson–Darling. Média e desvio estimados dos dados.\nH0: a população segue uma distribuição normal.\nH1: a população não segue uma distribuição normal.\nN = 12    Ausentes omitidos = 0\nMédia = 8    Desvio padrão = 5.64076075\nA² = 0.330789792\nEstatística ajustada = 0.356632745\nValor-p aproximado = 0.456644789\nObservações repetidas além da primeira ocorrência: 0\nAmostra pequena: o teste pode ter pouco poder para detectar desvios de normalidade.\nUm valor-p alto não comprova normalidade; avalie também a amostragem e o padrão dos dados.\n"
+    },
+    {
+      "analysis_id": "analysis-7091075617f74f27bc3a5d2d0a13fc17",
+      "parent_analysis_id": null,
+      "method_id": "diagnostic.normality.v1",
+      "created_at": "2026-11-10T20:12:45.645005+00:00",
+      "parameters": {
+        "method": "rj",
+        "show_graph": false
+      },
+      "source": {
+        "worksheet_id": "ws-10efe5dbc2f24e43b2fa3fc61b7a8e4d",
+        "column_ids": [
+          "col-d567260bfadd4d76a9ef730c5c1be349"
+        ],
+        "revision": 0,
+        "fingerprint": "f20df0141375b711473d9f2b76bb92aadd9fd93f26fe76b090acd0d0c71e85a3",
+        "input_fingerprint": "08de30ae041af88d1ff476b85f1d179add57109540b88d4e7967eecaadebcec6",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.7.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_empty_or_star",
+        "count": 0
+      },
+      "values": {
+        "n": 12,
+        "mean": 8.0,
+        "sd": 5.640760748177662,
+        "missing": 0,
+        "source": "A",
+        "repeated": 0,
+        "method_key": "rj",
+        "method": "Ryan–Joiner",
+        "p_upper": null,
+        "p_lower": 0.1,
+        "critical": {
+          "0.10": 0.9422420834914957,
+          "0.05": 0.927513781553077,
+          "0.01": 0.8947360379933827
+        },
+        "stat_label": "RJ",
+        "statistic": 0.9731239182776962,
+        "p": null
+      },
+      "tables": [
+        {
+          "name": "diagnostico",
+          "rows": [
+            {
+              "n": 12,
+              "mean": 8.0,
+              "sd": 5.640760748177662,
+              "missing": 0,
+              "source": "A",
+              "repeated": 0,
+              "method_key": "rj",
+              "method": "Ryan–Joiner",
+              "p_upper": null,
+              "p_lower": 0.1,
+              "critical": {
+                "0.10": 0.9422420834914957,
+                "0.05": 0.927513781553077,
+                "0.01": 0.8947360379933827
+              },
+              "stat_label": "RJ",
+              "statistic": 0.9731239182776962,
+              "p": null
+            }
+          ]
+        }
+      ],
+      "scenes": [
+        {
+          "kind": "normal_probability",
+          "version": 1,
+          "sample": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            9.0,
+            11.0,
+            14.0,
+            16.0,
+            18.0
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "TESTE DE NORMALIDADE — A\n\nMétodo: Ryan–Joiner. Média e desvio estimados dos dados.\nH0: a população segue uma distribuição normal.\nH1: a população não segue uma distribuição normal.\nN = 12    Ausentes omitidos = 0\nMédia = 8    Desvio padrão = 5.64076075\nRJ = 0.973123918\nValor-p aproximado > 0.1\nObservações repetidas além da primeira ocorrência: 0\nAmostra pequena: o teste pode ter pouco poder para detectar desvios de normalidade.\nUm valor-p alto não comprova normalidade; avalie também a amostragem e o padrão dos dados.\n"
+    },
+    {
+      "analysis_id": "analysis-f3c75e5d1fed4b5ab0e78afe33d08426",
+      "parent_analysis_id": null,
+      "method_id": "diagnostic.normality.v1",
+      "created_at": "2026-11-10T20:12:45.646085+00:00",
+      "parameters": {
+        "method": "ks",
+        "show_graph": false
+      },
+      "source": {
+        "worksheet_id": "ws-10efe5dbc2f24e43b2fa3fc61b7a8e4d",
+        "column_ids": [
+          "col-d567260bfadd4d76a9ef730c5c1be349"
+        ],
+        "revision": 0,
+        "fingerprint": "f20df0141375b711473d9f2b76bb92aadd9fd93f26fe76b090acd0d0c71e85a3",
+        "input_fingerprint": "08de30ae041af88d1ff476b85f1d179add57109540b88d4e7967eecaadebcec6",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.7.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_empty_or_star",
+        "count": 0
+      },
+      "values": {
+        "n": 12,
+        "mean": 8.0,
+        "sd": 5.640760748177662,
+        "missing": 0,
+        "source": "A",
+        "repeated": 0,
+        "method_key": "ks",
+        "method": "Kolmogorov–Smirnov (normal estimada)",
+        "p_upper": null,
+        "p_lower": 0.15,
+        "adjusted": 0.5685705984295647,
+        "stat_label": "D",
+        "statistic": 0.15368951668244268,
+        "p": null
+      },
+      "tables": [
+        {
+          "name": "diagnostico",
+          "rows": [
+            {
+              "n": 12,
+              "mean": 8.0,
+              "sd": 5.640760748177662,
+              "missing": 0,
+              "source": "A",
+              "repeated": 0,
+              "method_key": "ks",
+              "method": "Kolmogorov–Smirnov (normal estimada)",
+              "p_upper": null,
+              "p_lower": 0.15,
+              "adjusted": 0.5685705984295647,
+              "stat_label": "D",
+              "statistic": 0.15368951668244268,
+              "p": null
+            }
+          ]
+        }
+      ],
+      "scenes": [
+        {
+          "kind": "normal_probability",
+          "version": 1,
+          "sample": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            9.0,
+            11.0,
+            14.0,
+            16.0,
+            18.0
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "TESTE DE NORMALIDADE — A\n\nMétodo: Kolmogorov–Smirnov (normal estimada). Média e desvio estimados dos dados.\nH0: a população segue uma distribuição normal.\nH1: a população não segue uma distribuição normal.\nN = 12    Ausentes omitidos = 0\nMédia = 8    Desvio padrão = 5.64076075\nD = 0.153689517\nEstatística ajustada = 0.568570598\nValor-p aproximado > 0.15\nObservações repetidas além da primeira ocorrência: 0\nAmostra pequena: o teste pode ter pouco poder para detectar desvios de normalidade.\nUm valor-p alto não comprova normalidade; avalie também a amostragem e o padrão dos dados.\n"
+    },
+    {
+      "analysis_id": "analysis-9124144891d3460c90697f65277b3882",
+      "parent_analysis_id": null,
+      "method_id": "diagnostic.normality.v1",
+      "created_at": "2026-11-10T20:12:45.647749+00:00",
+      "parameters": {
+        "method": "shapiro",
+        "show_graph": false
+      },
+      "source": {
+        "worksheet_id": "ws-10efe5dbc2f24e43b2fa3fc61b7a8e4d",
+        "column_ids": [
+          "col-d567260bfadd4d76a9ef730c5c1be349"
+        ],
+        "revision": 0,
+        "fingerprint": "f20df0141375b711473d9f2b76bb92aadd9fd93f26fe76b090acd0d0c71e85a3",
+        "input_fingerprint": "08de30ae041af88d1ff476b85f1d179add57109540b88d4e7967eecaadebcec6",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.7.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_empty_or_star",
+        "count": 0
+      },
+      "values": {
+        "n": 12,
+        "mean": 8.0,
+        "sd": 5.640760748177662,
+        "missing": 0,
+        "source": "A",
+        "repeated": 0,
+        "method_key": "shapiro",
+        "method": "Shapiro–Wilk",
+        "p_upper": null,
+        "p_lower": null,
+        "stat_label": "W",
+        "statistic": 0.931323920761724,
+        "p": 0.3943563146068628
+      },
+      "tables": [
+        {
+          "name": "diagnostico",
+          "rows": [
+            {
+              "n": 12,
+              "mean": 8.0,
+              "sd": 5.640760748177662,
+              "missing": 0,
+              "source": "A",
+              "repeated": 0,
+              "method_key": "shapiro",
+              "method": "Shapiro–Wilk",
+              "p_upper": null,
+              "p_lower": null,
+              "stat_label": "W",
+              "statistic": 0.931323920761724,
+              "p": 0.3943563146068628
+            }
+          ]
+        }
+      ],
+      "scenes": [
+        {
+          "kind": "normal_probability",
+          "version": 1,
+          "sample": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            9.0,
+            11.0,
+            14.0,
+            16.0,
+            18.0
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "TESTE DE NORMALIDADE — A\n\nMétodo: Shapiro–Wilk. Média e desvio estimados dos dados.\nH0: a população segue uma distribuição normal.\nH1: a população não segue uma distribuição normal.\nN = 12    Ausentes omitidos = 0\nMédia = 8    Desvio padrão = 5.64076075\nW = 0.931323921\nValor-p aproximado = 0.394356315\nObservações repetidas além da primeira ocorrência: 0\nAmostra pequena: o teste pode ter pouco poder para detectar desvios de normalidade.\nUm valor-p alto não comprova normalidade; avalie também a amostragem e o padrão dos dados.\n"
+    },
+    {
+      "analysis_id": "analysis-50397ebe70464190a8ff7c8527aaa37b",
+      "parent_analysis_id": null,
+      "method_id": "diagnostic.normality.v1",
+      "created_at": "2026-11-10T20:12:45.649720+00:00",
+      "parameters": {
+        "method": "dagostino",
+        "show_graph": false
+      },
+      "source": {
+        "worksheet_id": "ws-10efe5dbc2f24e43b2fa3fc61b7a8e4d",
+        "column_ids": [
+          "col-d567260bfadd4d76a9ef730c5c1be349"
+        ],
+        "revision": 0,
+        "fingerprint": "f20df0141375b711473d9f2b76bb92aadd9fd93f26fe76b090acd0d0c71e85a3",
+        "input_fingerprint": "08de30ae041af88d1ff476b85f1d179add57109540b88d4e7967eecaadebcec6",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.7.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_empty_or_star",
+        "count": 0
+      },
+      "values": {
+        "n": 12,
+        "mean": 8.0,
+        "sd": 5.640760748177662,
+        "missing": 0,
+        "source": "A",
+        "repeated": 0,
+        "method_key": "dagostino",
+        "method": "D’Agostino–Pearson",
+        "p_upper": null,
+        "p_lower": null,
+        "stat_label": "K²",
+        "statistic": 1.4479742383468568,
+        "p": 0.4848153805499602
+      },
+      "tables": [
+        {
+          "name": "diagnostico",
+          "rows": [
+            {
+              "n": 12,
+              "mean": 8.0,
+              "sd": 5.640760748177662,
+              "missing": 0,
+              "source": "A",
+              "repeated": 0,
+              "method_key": "dagostino",
+              "method": "D’Agostino–Pearson",
+              "p_upper": null,
+              "p_lower": null,
+              "stat_label": "K²",
+              "statistic": 1.4479742383468568,
+              "p": 0.4848153805499602
+            }
+          ]
+        }
+      ],
+      "scenes": [
+        {
+          "kind": "normal_probability",
+          "version": 1,
+          "sample": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            7.0,
+            9.0,
+            11.0,
+            14.0,
+            16.0,
+            18.0
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "TESTE DE NORMALIDADE — A\n\nMétodo: D’Agostino–Pearson. Média e desvio estimados dos dados.\nH0: a população segue uma distribuição normal.\nH1: a população não segue uma distribuição normal.\nN = 12    Ausentes omitidos = 0\nMédia = 8    Desvio padrão = 5.64076075\nK² = 1.44797424\nValor-p aproximado = 0.484815381\nObservações repetidas além da primeira ocorrência: 0\nAmostra pequena: o teste pode ter pouco poder para detectar desvios de normalidade.\nD’Agostino–Pearson: a aproximação da curtose pode ser pouco precisa com N<20.\nUm valor-p alto não comprova normalidade; avalie também a amostragem e o padrão dos dados.\n"
+    },
+    {
+      "analysis_id": "analysis-599cbcb3e07e48fc96120e50621c976f",
+      "parent_analysis_id": null,
+      "method_id": "study.mannwhitney.v1",
+      "created_at": "2026-11-10T20:12:45.652161+00:00",
+      "parameters": {
+        "mode": "mannwhitney",
+        "input_kind": "columns",
+        "group_order": null,
+        "alternative": "two-sided",
+        "method": "auto",
+        "correction": true,
+        "zero_method": "wilcox",
+        "center": "median"
+      },
+      "source": {
+        "worksheet_id": "ws-10efe5dbc2f24e43b2fa3fc61b7a8e4d",
+        "column_ids": [
+          "col-d567260bfadd4d76a9ef730c5c1be349",
+          "col-7ec433199bee4f21bac56f3cdde6d108"
+        ],
+        "revision": 0,
+        "fingerprint": "f20df0141375b711473d9f2b76bb92aadd9fd93f26fe76b090acd0d0c71e85a3",
+        "input_fingerprint": "d5e0d432fa449c4487591cdb5e516dde8fb9dc0ca3a2bb6c760a5470cee4e375",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.7.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "per_group",
+        "count": 0
+      },
+      "values": {
+        "mode": "mannwhitney",
+        "title": "Mann–Whitney",
+        "statistic": 25.5,
+        "p": 0.007871208475930657,
+        "method": "asymptotic",
+        "df": null,
+        "summaries": [
+          {
+            "label": "A",
+            "n": 12,
+            "median": 6.5,
+            "sd": 5.640760748177662
+          },
+          {
+            "label": "B",
+            "n": 12,
+            "median": 16.5,
+            "sd": 11.385796574520539
+          }
+        ],
+        "alternative": "two-sided",
+        "correction": true,
+        "details": [
+          "Estatística U da primeira amostra.",
+          "H0: as distribuições das duas populações são iguais.",
+          "A interpretação como diferença de localização requer formas de distribuição comparáveis.",
+          "Observações/linhas excluídas: 0."
+        ],
+        "notes": [],
+        "excluded": 0,
+        "zeros": null,
+        "ties": true
+      },
+      "tables": [
+        {
+          "name": "diagnostico",
+          "rows": [
+            {
+              "label": "A",
+              "n": 12,
+              "median": 6.5,
+              "sd": 5.640760748177662
+            },
+            {
+              "label": "B",
+              "n": 12,
+              "median": 16.5,
+              "sd": 11.385796574520539
+            }
+          ]
+        }
+      ],
+      "scenes": [],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "MANN–WHITNEY\n\nMétodo: asymptotic\nA: N=12; mediana=6.5; desvio amostral=5.64076075\nB: N=12; mediana=16.5; desvio amostral=11.3857966\n\nEstatística = 25.5\nValor-p = 0.00787120848\nAlternativa: bilateral\nCorreção de continuidade na aproximação: sim\nEstatística U da primeira amostra.\nH0: as distribuições das duas populações são iguais.\nA interpretação como diferença de localização requer formas de distribuição comparáveis.\nObservações/linhas excluídas: 0.\n"
+    },
+    {
+      "analysis_id": "analysis-e95e3a15a2f94dce89cc83d634546ca6",
+      "parent_analysis_id": null,
+      "method_id": "study.wilcoxon.v1",
+      "created_at": "2026-11-10T20:12:45.653715+00:00",
+      "parameters": {
+        "mode": "wilcoxon",
+        "input_kind": "columns",
+        "group_order": null,
+        "alternative": "two-sided",
+        "method": "auto",
+        "correction": true,
+        "zero_method": "wilcox",
+        "center": "median"
+      },
+      "source": {
+        "worksheet_id": "ws-10efe5dbc2f24e43b2fa3fc61b7a8e4d",
+        "column_ids": [
+          "col-d567260bfadd4d76a9ef730c5c1be349",
+          "col-7ec433199bee4f21bac56f3cdde6d108"
+        ],
+        "revision": 0,
+        "fingerprint": "f20df0141375b711473d9f2b76bb92aadd9fd93f26fe76b090acd0d0c71e85a3",
+        "input_fingerprint": "d5e0d432fa449c4487591cdb5e516dde8fb9dc0ca3a2bb6c760a5470cee4e375",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.7.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "pairwise",
+        "count": 0
+      },
+      "values": {
+        "mode": "wilcoxon",
+        "title": "Wilcoxon pareado",
+        "statistic": 0.0,
+        "p": 0.002506841661528245,
+        "method": "asymptotic",
+        "df": null,
+        "summaries": [
+          {
+            "label": "Diferença: A − B",
+            "n": 12,
+            "median": -10.0
+          }
+        ],
+        "alternative": "two-sided",
+        "correction": true,
+        "details": [
+          "Pares excluídos: 0; diferenças zero: 0; regra de zeros: wilcox.",
+          "Diferenças calculadas a partir dos textos decimais; postos médios nos empates.",
+          "H0: distribuição das diferenças simétrica em torno de zero."
+        ],
+        "notes": [],
+        "excluded": 0,
+        "zeros": 0,
+        "ties": true
+      },
+      "tables": [
+        {
+          "name": "diagnostico",
+          "rows": [
+            {
+              "label": "Diferença: A − B",
+              "n": 12,
+              "median": -10.0
+            }
+          ]
+        }
+      ],
+      "scenes": [],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "WILCOXON PAREADO\n\nMétodo: asymptotic\nDiferença: A − B: N=12; mediana=-10\n\nEstatística = 0\nValor-p = 0.00250684166\nAlternativa: bilateral\nCorreção de continuidade na aproximação: sim\nPares excluídos: 0; diferenças zero: 0; regra de zeros: wilcox.\nDiferenças calculadas a partir dos textos decimais; postos médios nos empates.\nH0: distribuição das diferenças simétrica em torno de zero.\n"
+    },
+    {
+      "analysis_id": "analysis-2df29826be8b497bb616a2d56519cd39",
+      "parent_analysis_id": null,
+      "method_id": "study.kruskal.v1",
+      "created_at": "2026-11-10T20:12:45.655105+00:00",
+      "parameters": {
+        "mode": "kruskal",
+        "input_kind": "columns",
+        "group_order": null,
+        "alternative": "two-sided",
+        "method": "auto",
+        "correction": true,
+        "zero_method": "wilcox",
+        "center": "median"
+      },
+      "source": {
+        "worksheet_id": "ws-10efe5dbc2f24e43b2fa3fc61b7a8e4d",
+        "column_ids": [
+          "col-d567260bfadd4d76a9ef730c5c1be349",
+          "col-7ec433199bee4f21bac56f3cdde6d108",
+          "col-dbba49f82d7f49208f088a91a8914e94"
+        ],
+        "revision": 0,
+        "fingerprint": "f20df0141375b711473d9f2b76bb92aadd9fd93f26fe76b090acd0d0c71e85a3",
+        "input_fingerprint": "4f4a17e421a8e3f407993eb1a4ae2fefe2b8524a4bd8b092bc907d801d005f31",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.7.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "per_group",
+        "count": 0
+      },
+      "values": {
+        "mode": "kruskal",
+        "title": "Kruskal–Wallis",
+        "statistic": 8.191097508591053,
+        "p": 0.016646608877915133,
+        "method": "qui-quadrado aproximado, correção de empates",
+        "df": 2,
+        "summaries": [
+          {
+            "label": "A",
+            "n": 12,
+            "median": 6.5,
+            "sd": 5.640760748177662
+          },
+          {
+            "label": "B",
+            "n": 12,
+            "median": 16.5,
+            "sd": 11.385796574520539
+          },
+          {
+            "label": "C",
+            "n": 12,
+            "median": 11.75,
+            "sd": 8.461141122266493
+          }
+        ],
+        "alternative": "two-sided",
+        "correction": true,
+        "details": [
+          "H0: distribuições com mesma localização (interpretação em medianas sob formas comparáveis).",
+          "O teste global não identifica quais pares diferem.",
+          "Observações/linhas excluídas: 0."
+        ],
+        "notes": [],
+        "excluded": 0,
+        "zeros": null,
+        "ties": null
+      },
+      "tables": [
+        {
+          "name": "diagnostico",
+          "rows": [
+            {
+              "label": "A",
+              "n": 12,
+              "median": 6.5,
+              "sd": 5.640760748177662
+            },
+            {
+              "label": "B",
+              "n": 12,
+              "median": 16.5,
+              "sd": 11.385796574520539
+            },
+            {
+              "label": "C",
+              "n": 12,
+              "median": 11.75,
+              "sd": 8.461141122266493
+            }
+          ]
+        }
+      ],
+      "scenes": [],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "KRUSKAL–WALLIS\n\nMétodo: qui-quadrado aproximado, correção de empates\nA: N=12; mediana=6.5; desvio amostral=5.64076075\nB: N=12; mediana=16.5; desvio amostral=11.3857966\nC: N=12; mediana=11.75; desvio amostral=8.46114112\n\nEstatística = 8.19109751\nValor-p = 0.0166466089\nGL = 2\nH0: distribuições com mesma localização (interpretação em medianas sob formas comparáveis).\nO teste global não identifica quais pares diferem.\nObservações/linhas excluídas: 0.\n"
+    },
+    {
+      "analysis_id": "analysis-5a363ff1569f4fc784a0780b17e2df4a",
+      "parent_analysis_id": null,
+      "method_id": "study.variances.v1",
+      "created_at": "2026-11-10T20:12:45.656587+00:00",
+      "parameters": {
+        "mode": "variances",
+        "input_kind": "columns",
+        "group_order": null,
+        "alternative": "two-sided",
+        "method": "auto",
+        "correction": true,
+        "zero_method": "wilcox",
+        "center": "median"
+      },
+      "source": {
+        "worksheet_id": "ws-10efe5dbc2f24e43b2fa3fc61b7a8e4d",
+        "column_ids": [
+          "col-d567260bfadd4d76a9ef730c5c1be349",
+          "col-7ec433199bee4f21bac56f3cdde6d108",
+          "col-dbba49f82d7f49208f088a91a8914e94"
+        ],
+        "revision": 0,
+        "fingerprint": "f20df0141375b711473d9f2b76bb92aadd9fd93f26fe76b090acd0d0c71e85a3",
+        "input_fingerprint": "4f4a17e421a8e3f407993eb1a4ae2fefe2b8524a4bd8b092bc907d801d005f31",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.7.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "per_group",
+        "count": 0
+      },
+      "values": {
+        "mode": "variances",
+        "title": "Igualdade de variâncias",
+        "statistic": 2.009774436090224,
+        "p": 0.15009509298133047,
+        "method": "Levene centrado na mediana (Brown–Forsythe)",
+        "df": [
+          2,
+          33
+        ],
+        "summaries": [
+          {
+            "label": "A",
+            "n": 12,
+            "median": 6.5,
+            "sd": 5.640760748177662
+          },
+          {
+            "label": "B",
+            "n": 12,
+            "median": 16.5,
+            "sd": 11.385796574520539
+          },
+          {
+            "label": "C",
+            "n": 12,
+            "median": 11.75,
+            "sd": 8.461141122266493
+          }
+        ],
+        "alternative": "two-sided",
+        "correction": true,
+        "details": [
+          "H0: todas as variâncias populacionais são iguais.",
+          "Razão maior/menor variância: 4.07428571",
+          "Observações/linhas excluídas: 0."
+        ],
+        "notes": [],
+        "excluded": 0,
+        "zeros": null,
+        "ties": null
+      },
+      "tables": [
+        {
+          "name": "diagnostico",
+          "rows": [
+            {
+              "label": "A",
+              "n": 12,
+              "median": 6.5,
+              "sd": 5.640760748177662
+            },
+            {
+              "label": "B",
+              "n": 12,
+              "median": 16.5,
+              "sd": 11.385796574520539
+            },
+            {
+              "label": "C",
+              "n": 12,
+              "median": 11.75,
+              "sd": 8.461141122266493
+            }
+          ]
+        }
+      ],
+      "scenes": [],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "IGUALDADE DE VARIÂNCIAS\n\nMétodo: Levene centrado na mediana (Brown–Forsythe)\nA: N=12; mediana=6.5; desvio amostral=5.64076075\nB: N=12; mediana=16.5; desvio amostral=11.3857966\nC: N=12; mediana=11.75; desvio amostral=8.46114112\n\nEstatística = 2.00977444\nValor-p = 0.150095093\nGL = [2, 33]\nH0: todas as variâncias populacionais são iguais.\nRazão maior/menor variância: 4.07428571\nObservações/linhas excluídas: 0.\n"
+    }
+  ],
+  "output": "EXEMPLO SINTÉTICO — diagnósticos no histórico\nAbra Janela > Histórico para reexecutar ou consultar os gráficos de normalidade.\nLimites de valor-p e opções exato/aproximado são preservados.\n\nTESTE DE NORMALIDADE — A\n\nMétodo: Anderson–Darling. Média e desvio estimados dos dados.\nH0: a população segue uma distribuição normal.\nH1: a população não segue uma distribuição normal.\nN = 12    Ausentes omitidos = 0\nMédia = 8    Desvio padrão = 5.64076075\nA² = 0.330789792\nEstatística ajustada = 0.356632745\nValor-p aproximado = 0.456644789\nObservações repetidas além da primeira ocorrência: 0\nAmostra pequena: o teste pode ter pouco poder para detectar desvios de normalidade.\nUm valor-p alto não comprova normalidade; avalie também a amostragem e o padrão dos dados.\n\nTESTE DE NORMALIDADE — A\n\nMétodo: Ryan–Joiner. Média e desvio estimados dos dados.\nH0: a população segue uma distribuição normal.\nH1: a população não segue uma distribuição normal.\nN = 12    Ausentes omitidos = 0\nMédia = 8    Desvio padrão = 5.64076075\nRJ = 0.973123918\nValor-p aproximado > 0.1\nObservações repetidas além da primeira ocorrência: 0\nAmostra pequena: o teste pode ter pouco poder para detectar desvios de normalidade.\nUm valor-p alto não comprova normalidade; avalie também a amostragem e o padrão dos dados.\n\nTESTE DE NORMALIDADE — A\n\nMétodo: Kolmogorov–Smirnov (normal estimada). Média e desvio estimados dos dados.\nH0: a população segue uma distribuição normal.\nH1: a população não segue uma distribuição normal.\nN = 12    Ausentes omitidos = 0\nMédia = 8    Desvio padrão = 5.64076075\nD = 0.153689517\nEstatística ajustada = 0.568570598\nValor-p aproximado > 0.15\nObservações repetidas além da primeira ocorrência: 0\nAmostra pequena: o teste pode ter pouco poder para detectar desvios de normalidade.\nUm valor-p alto não comprova normalidade; avalie também a amostragem e o padrão dos dados.\n\nTESTE DE NORMALIDADE — A\n\nMétodo: Shapiro–Wilk. Média e desvio estimados dos dados.\nH0: a população segue uma distribuição normal.\nH1: a população não segue uma distribuição normal.\nN = 12    Ausentes omitidos = 0\nMédia = 8    Desvio padrão = 5.64076075\nW = 0.931323921\nValor-p aproximado = 0.394356315\nObservações repetidas além da primeira ocorrência: 0\nAmostra pequena: o teste pode ter pouco poder para detectar desvios de normalidade.\nUm valor-p alto não comprova normalidade; avalie também a amostragem e o padrão dos dados.\n\nTESTE DE NORMALIDADE — A\n\nMétodo: D’Agostino–Pearson. Média e desvio estimados dos dados.\nH0: a população segue uma distribuição normal.\nH1: a população não segue uma distribuição normal.\nN = 12    Ausentes omitidos = 0\nMédia = 8    Desvio padrão = 5.64076075\nK² = 1.44797424\nValor-p aproximado = 0.484815381\nObservações repetidas além da primeira ocorrência: 0\nAmostra pequena: o teste pode ter pouco poder para detectar desvios de normalidade.\nD’Agostino–Pearson: a aproximação da curtose pode ser pouco precisa com N<20.\nUm valor-p alto não comprova normalidade; avalie também a amostragem e o padrão dos dados.\n\nMANN–WHITNEY\n\nMétodo: asymptotic\nA: N=12; mediana=6.5; desvio amostral=5.64076075\nB: N=12; mediana=16.5; desvio amostral=11.3857966\n\nEstatística = 25.5\nValor-p = 0.00787120848\nAlternativa: bilateral\nCorreção de continuidade na aproximação: sim\nEstatística U da primeira amostra.\nH0: as distribuições das duas populações são iguais.\nA interpretação como diferença de localização requer formas de distribuição comparáveis.\nObservações/linhas excluídas: 0.\n\nWILCOXON PAREADO\n\nMétodo: asymptotic\nDiferença: A − B: N=12; mediana=-10\n\nEstatística = 0\nValor-p = 0.00250684166\nAlternativa: bilateral\nCorreção de continuidade na aproximação: sim\nPares excluídos: 0; diferenças zero: 0; regra de zeros: wilcox.\nDiferenças calculadas a partir dos textos decimais; postos médios nos empates.\nH0: distribuição das diferenças simétrica em torno de zero.\n\nKRUSKAL–WALLIS\n\nMétodo: qui-quadrado aproximado, correção de empates\nA: N=12; mediana=6.5; desvio amostral=5.64076075\nB: N=12; mediana=16.5; desvio amostral=11.3857966\nC: N=12; mediana=11.75; desvio amostral=8.46114112\n\nEstatística = 8.19109751\nValor-p = 0.0166466089\nGL = 2\nH0: distribuições com mesma localização (interpretação em medianas sob formas comparáveis).\nO teste global não identifica quais pares diferem.\nObservações/linhas excluídas: 0.\n\nIGUALDADE DE VARIÂNCIAS\n\nMétodo: Levene centrado na mediana (Brown–Forsythe)\nA: N=12; mediana=6.5; desvio amostral=5.64076075\nB: N=12; mediana=16.5; desvio amostral=11.3857966\nC: N=12; mediana=11.75; desvio amostral=8.46114112\n\nEstatística = 2.00977444\nValor-p = 0.150095093\nGL = [2, 33]\nH0: todas as variâncias populacionais são iguais.\nRazão maior/menor variância: 4.07428571\nObservações/linhas excluídas: 0.\n",
+  "metadata": {}
+}

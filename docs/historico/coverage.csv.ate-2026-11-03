@@ -1,0 +1,19 @@
+familia;estado;pendencias
+Planilha e dados;parcial;tipos fórmulas transformações filtros ordenação empilhamento
+Importação e projetos;parcial;Excel MTW MPJ metadados histórico
+Descritivas;parcial sem validação Minitab;quartis IC agrupamentos ponderação
+Gráficos;parcial sem validação Minitab;boxplot dispersão probabilidade séries edição exportação
+Distribuições;pendente;CDF PDF quantis geração aleatória
+Testes e intervalos;pendente;amostras pareados proporções variâncias poder tamanho amostral
+ANOVA;pendente;fatores efeitos mistos comparações diagnósticos
+Regressão;pendente;linear logística não linear seleção predição diagnósticos
+DOE;pendente;fatoriais superfície resposta misturas Taguchi otimização
+Controle de processo;pendente;cartas variáveis atributos fases subgrupos regras
+Capabilidade e medição;pendente;normal não normal atributos Gage R&R concordância
+Confiabilidade;pendente;censura distribuições testes acelerados reparáveis garantias
+Multivariada;pendente;PCA fatores agrupamentos discriminante correspondência
+Séries temporais;pendente;tendência decomposição suavização ARIMA
+Não paramétricos;pendente;testes métodos exatos aproximações empates
+Tabelas e atributos;pendente;contingência qui quadrado associação
+Macros e comandos;pendente;sintaxe variáveis fluxo compatibilidade automação
+Assistente e relatórios;pendente;fluxos orientados exportação composição

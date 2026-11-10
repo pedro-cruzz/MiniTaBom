@@ -1,0 +1,310 @@
+{
+  "format": "statlab",
+  "version": 2,
+  "project_id": "project-079ba70e80a349b0badcb9cdb1e068b4",
+  "active_worksheet_id": "ws-0f09e5dd6f7e47b794c8c35b935eec60",
+  "worksheets": [
+    {
+      "id": "ws-0f09e5dd6f7e47b794c8c35b935eec60",
+      "name": "Worksheet 1",
+      "revision": 0,
+      "columns": [
+        {
+          "id": "col-f59d84387fd04f87b21b20a9032776ea",
+          "name": "A",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        },
+        {
+          "id": "col-d35c308a377a4d049e9c2964afedba9f",
+          "name": "B",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        }
+      ],
+      "rows": [
+        [
+          "1",
+          "2"
+        ],
+        [
+          "3",
+          "4"
+        ],
+        [
+          "0",
+          "1"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ],
+      "metadata": {},
+      "fingerprint": "8d991f6012a348d761aa39ed0acb8bb8ffe425c5097d4e766169753ff6fdfa71"
+    }
+  ],
+  "analyses": [
+    {
+      "analysis_id": "analysis-360016568867426e87c05ebab4e5d991",
+      "parent_analysis_id": null,
+      "method_id": "basic.poisson.two.v1",
+      "created_at": "2026-11-10T20:29:15.704989+00:00",
+      "parameters": {
+        "input_kind": "columns",
+        "summaries": null,
+        "group_order": null,
+        "lengths": [
+          1.0,
+          2.0
+        ],
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "pooled": false,
+        "measure": "rate",
+        "perform_test": true
+      },
+      "source": {
+        "worksheet_id": "ws-0f09e5dd6f7e47b794c8c35b935eec60",
+        "column_ids": [
+          "col-f59d84387fd04f87b21b20a9032776ea",
+          "col-d35c308a377a4d049e9c2964afedba9f"
+        ],
+        "revision": 0,
+        "fingerprint": "8d991f6012a348d761aa39ed0acb8bb8ffe425c5097d4e766169753ff6fdfa71",
+        "kind": "columns",
+        "input_fingerprint": "ecdf4d6ae673e3e2485f81072112e7a6ef3f6562c6f7973260d3b26a59a6d6dc"
+      },
+      "versions": {
+        "application": "0.8.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_per_sample",
+        "counts": [
+          0,
+          0
+        ],
+        "excluded_groups": 0
+      },
+      "values": {
+        "samples": [
+          {
+            "name": "A",
+            "events": 6,
+            "n": 4,
+            "length": 1.0,
+            "exposure": 4.0,
+            "rate": 1.5,
+            "mean": 1.5,
+            "missing": 0
+          },
+          {
+            "name": "B",
+            "events": 7,
+            "n": 4,
+            "length": 2.0,
+            "exposure": 8.0,
+            "rate": 0.875,
+            "mean": 1.75,
+            "missing": 0
+          }
+        ],
+        "estimate": 0.625,
+        "se": 0.6959705453537527,
+        "se_test": 0.6959705453537527,
+        "statistic": 0.8980265101338746,
+        "p": 0.36917141633269157,
+        "exact_p": 0.4826161323646464,
+        "conditional_probability": 0.3333333333333333,
+        "low": -0.7390772031940556,
+        "high": 1.9890772031940556,
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "pooled": false,
+        "measure": "rate",
+        "perform_test": true,
+        "warnings": [
+          "Contagens pequenas: a aproximação normal e o IC podem ser inadequados."
+        ],
+        "source": "Colunas separadas",
+        "excluded_groups": 0,
+        "group_order": null
+      },
+      "tables": [
+        {
+          "name": "amostras",
+          "rows": [
+            {
+              "name": "A",
+              "events": 6,
+              "n": 4,
+              "length": 1.0,
+              "exposure": 4.0,
+              "rate": 1.5,
+              "mean": 1.5,
+              "missing": 0
+            },
+            {
+              "name": "B",
+              "events": 7,
+              "n": 4,
+              "length": 2.0,
+              "exposure": 8.0,
+              "rate": 0.875,
+              "mean": 1.75,
+              "missing": 0
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Contagens pequenas: a aproximação normal e o IC podem ser inadequados.",
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "DUAS TAXAS DE POISSON — Colunas separadas\n\nComparação de taxa por unidade. Diferença = primeira − segunda.\nA: N=4; ocorrências=6; exposição por observação=1; ausentes=0.\n  Taxa=1.5; média=1.5.\nB: N=4; ocorrências=7; exposição por observação=2; ausentes=0.\n  Taxa=0.875; média=1.75.\nDiferença estimada = 0.625\nIC normal de 95%: (-0.739077203; 1.9890772)\nH0: diferença = 0; H1: diferença ≠ 0.\nTeste normal: estimativas separadas.\nZ = 0.89802651\nValor-p normal = 0.369171416\nValor-p exato condicional = 0.482616132\nExato bilateral: duas vezes a menor cauda binomial inclusiva, limitado a 1.\nLinhas excluídas por grupo ausente: 0\nO IC usa aproximação normal com estimativas separadas, inclusive quando o teste usa taxa combinada ou exato.\nModelo: processos Poisson independentes, taxa constante e mesma exposição dentro de cada amostra.\nContagens pequenas: a aproximação normal e o IC podem ser inadequados.\n"
+    },
+    {
+      "analysis_id": "analysis-dab6c296c24b4ae4a19e0fbdcc6c0bef",
+      "parent_analysis_id": null,
+      "method_id": "basic.poisson.two.v1",
+      "created_at": "2026-11-10T20:29:15.706855+00:00",
+      "parameters": {
+        "input_kind": "summary",
+        "summaries": [
+          {
+            "events": 713,
+            "n": 40
+          },
+          {
+            "events": 515,
+            "n": 20
+          }
+        ],
+        "group_order": null,
+        "lengths": [
+          3.0,
+          6.0
+        ],
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "pooled": false,
+        "measure": "rate",
+        "perform_test": true
+      },
+      "source": {
+        "worksheet_id": "ws-0f09e5dd6f7e47b794c8c35b935eec60",
+        "column_ids": [],
+        "revision": 0,
+        "fingerprint": "8d991f6012a348d761aa39ed0acb8bb8ffe425c5097d4e766169753ff6fdfa71",
+        "kind": "summary"
+      },
+      "versions": {
+        "application": "0.8.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "unknown_summary",
+        "counts": [
+          null,
+          null
+        ],
+        "excluded_groups": 0
+      },
+      "values": {
+        "samples": [
+          {
+            "name": "Amostra 1",
+            "events": 713,
+            "n": 40,
+            "length": 3.0,
+            "exposure": 120.0,
+            "rate": 5.941666666666666,
+            "mean": 17.825,
+            "missing": null
+          },
+          {
+            "name": "Amostra 2",
+            "events": 515,
+            "n": 20,
+            "length": 6.0,
+            "exposure": 120.0,
+            "rate": 4.291666666666667,
+            "mean": 25.75,
+            "missing": null
+          }
+        ],
+        "estimate": 1.6499999999999995,
+        "se": 0.29202359113225385,
+        "se_test": 0.29202359113225385,
+        "statistic": 5.6502284407999595,
+        "p": 1.6023475308673444e-08,
+        "exact_p": 1.7661223126975874e-08,
+        "conditional_probability": 0.5,
+        "low": 1.0776442787447316,
+        "high": 2.2223557212552674,
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "pooled": false,
+        "measure": "rate",
+        "perform_test": true,
+        "warnings": [],
+        "source": "Dados resumidos",
+        "excluded_groups": 0
+      },
+      "tables": [
+        {
+          "name": "amostras",
+          "rows": [
+            {
+              "name": "Amostra 1",
+              "events": 713,
+              "n": 40,
+              "length": 3.0,
+              "exposure": 120.0,
+              "rate": 5.941666666666666,
+              "mean": 17.825,
+              "missing": null
+            },
+            {
+              "name": "Amostra 2",
+              "events": 515,
+              "n": 20,
+              "length": 6.0,
+              "exposure": 120.0,
+              "rate": 4.291666666666667,
+              "mean": 25.75,
+              "missing": null
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "DUAS TAXAS DE POISSON — Dados resumidos\n\nComparação de taxa por unidade. Diferença = primeira − segunda.\nAmostra 1: N=40; ocorrências=713; exposição por observação=3; ausentes=não informados.\n  Taxa=5.94166667; média=17.825.\nAmostra 2: N=20; ocorrências=515; exposição por observação=6; ausentes=não informados.\n  Taxa=4.29166667; média=25.75.\nDiferença estimada = 1.65\nIC normal de 95%: (1.07764428; 2.22235572)\nH0: diferença = 0; H1: diferença ≠ 0.\nTeste normal: estimativas separadas.\nZ = 5.65022844\nValor-p normal < 0,000001\nValor-p exato condicional < 0,000001\nExato bilateral: duas vezes a menor cauda binomial inclusiva, limitado a 1.\nLinhas excluídas por grupo ausente: 0\nO IC usa aproximação normal com estimativas separadas, inclusive quando o teste usa taxa combinada ou exato.\nModelo: processos Poisson independentes, taxa constante e mesma exposição dentro de cada amostra.\n"
+    }
+  ],
+  "output": "EXEMPLO SINTÉTICO — duas taxas Poisson\nEstat > Estatísticas básicas > Duas taxas de Poisson.\nO histórico contém um exemplo em colunas e o exemplo resumido da documentação 16.\nEste último é uma conferência documental, não execução no Minitab 16.\n\nDUAS TAXAS DE POISSON — Colunas separadas\n\nComparação de taxa por unidade. Diferença = primeira − segunda.\nA: N=4; ocorrências=6; exposição por observação=1; ausentes=0.\n  Taxa=1.5; média=1.5.\nB: N=4; ocorrências=7; exposição por observação=2; ausentes=0.\n  Taxa=0.875; média=1.75.\nDiferença estimada = 0.625\nIC normal de 95%: (-0.739077203; 1.9890772)\nH0: diferença = 0; H1: diferença ≠ 0.\nTeste normal: estimativas separadas.\nZ = 0.89802651\nValor-p normal = 0.369171416\nValor-p exato condicional = 0.482616132\nExato bilateral: duas vezes a menor cauda binomial inclusiva, limitado a 1.\nLinhas excluídas por grupo ausente: 0\nO IC usa aproximação normal com estimativas separadas, inclusive quando o teste usa taxa combinada ou exato.\nModelo: processos Poisson independentes, taxa constante e mesma exposição dentro de cada amostra.\nContagens pequenas: a aproximação normal e o IC podem ser inadequados.\n\nDUAS TAXAS DE POISSON — Dados resumidos\n\nComparação de taxa por unidade. Diferença = primeira − segunda.\nAmostra 1: N=40; ocorrências=713; exposição por observação=3; ausentes=não informados.\n  Taxa=5.94166667; média=17.825.\nAmostra 2: N=20; ocorrências=515; exposição por observação=6; ausentes=não informados.\n  Taxa=4.29166667; média=25.75.\nDiferença estimada = 1.65\nIC normal de 95%: (1.07764428; 2.22235572)\nH0: diferença = 0; H1: diferença ≠ 0.\nTeste normal: estimativas separadas.\nZ = 5.65022844\nValor-p normal < 0,000001\nValor-p exato condicional < 0,000001\nExato bilateral: duas vezes a menor cauda binomial inclusiva, limitado a 1.\nLinhas excluídas por grupo ausente: 0\nO IC usa aproximação normal com estimativas separadas, inclusive quando o teste usa taxa combinada ou exato.\nModelo: processos Poisson independentes, taxa constante e mesma exposição dentro de cada amostra.\n",
+  "metadata": {}
+}

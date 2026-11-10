@@ -120,7 +120,7 @@ def _two_summaries(a, b, equal_var=False, legacy_df=True, **options):
 
 
 def analyze_t_inputs(headers, rows, mode, first=None, second=None,
-                     source='columns', summaries=None, equal_var=False, legacy_df=True, **options):
+                     source='columns', summaries=None, equal_var=False, legacy_df=True, group_order=None, **options):
     if mode not in ('one', 'paired', 'two'):
         raise ValueError('Tipo de teste inválido.')
     if source == 'columns':
@@ -144,11 +144,12 @@ def analyze_t_inputs(headers, rows, mode, first=None, second=None,
         if source == 'stacked' and mode == 'two':
             from sample_inputs import independent_samples
             samples, excluded = independent_samples(headers, rows, [first], source='stacked',
-                                                     group=second, numeric=True)
+                                                     group=second, numeric=True, levels=group_order)
             result = two_sample(*(s['values'] for s in samples), equal_var=equal_var,
                                 legacy_df=legacy_df, **options)
             result.update(labels=[s['name'] for s in samples], missing=[s['missing'] for s in samples],
-                          excluded_groups=excluded, source='stacked')
+                          excluded_groups=excluded, source='stacked', group_order=[s['level'] for s in samples],
+                          group_order_policy='fixed' if group_order is not None else 'first_appearance')
             return result
     except (OverflowError, ArithmeticError) as error:
         raise ValueError('Magnitude dos dados excede a precisão numérica suportada.') from error
@@ -227,7 +228,9 @@ def format_t_report(result, perform_test=True):
                     else 'Ausentes por amostra: ' + ', '.join(map(str, result['missing'])))
     if result.get('source') == 'stacked':
         missing_note += '\nLinhas excluídas por grupo ausente: ' + str(result['excluded_groups'])
-        missing_note += '\nOrdem das amostras: primeira aparição dos grupos na planilha.'
+        missing_note += ('\nOrdem das amostras: ordem dos grupos preservada nos parâmetros.'
+                         if result.get('group_order_policy') == 'fixed' else
+                         '\nOrdem das amostras: primeira aparição dos grupos na planilha.')
     lines += ['', missing_note,
               'Estimativa: ' + number(result['estimate']),
               f"IC de {result['confidence']:g}%: ({number(result['low'])}; {number(result['high'])})"]

@@ -57,56 +57,107 @@ def _coordinate(reference):
     return row,column
 
 
+def _shared_strings(archive):
+    if 'xl/sharedStrings.xml' not in archive.namelist():return []
+    return [''.join(t.text or '' for t in item.iter('{'+NS['m']+'}t')) for item in _xml(archive,'xl/sharedStrings.xml')]
+
+
+def _sheet_cells(archive,sheet,shared):
+    cells={};formulas={}
+    for cell in _xml(archive,sheet['member']).iter('{'+NS['m']+'}c'):
+        coordinate=_coordinate(cell.get('r',''))
+        value=cell.find('m:v',NS);kind=cell.get('t','n');formula=cell.find('m:f',NS)
+        if formula is not None:
+            formulas[coordinate]='='+formula.text if formula.text else '#FORMULA SEM RESULTADO SALVO'
+            if value is None or value.text is None:
+                cells[coordinate]=None;continue
+        if kind=='inlineStr':text=''.join(t.text or '' for t in cell.iter('{'+NS['m']+'}t'))
+        elif value is None:continue
+        elif kind=='s':
+            try:
+                index=int(value.text)
+                if not 0<=index<len(shared):raise IndexError
+                text=shared[index]
+            except (ValueError,IndexError,TypeError):raise ValueError('Índice de texto inválido no Excel.') from None
+        elif kind=='b':text='TRUE' if value.text=='1' else 'FALSE'
+        elif kind=='e':text=value.text or '#ERRO'
+        else:text=value.text or ''
+        if text!='':cells[coordinate]=text
+    return cells,formulas
+
+
+def column_letter(number):
+    text=''
+    while number:
+        number,remainder=divmod(number-1,26);text=chr(65+remainder)+text
+    return text
+
+
+def _table(cells,formulas,sheet_name,cell_range='',header=True,automatic=False):
+    if not cells:
+        if automatic:return ['A','B','C'],[],dict(sheet=sheet_name,range='vazia',formulas=0,uncached_formulas=0,note='Aba vazia.')
+        raise ValueError('A aba não contém valores para importar.')
+    if cell_range.strip():
+        references=cell_range.split(':')
+        if len(references)>2:raise ValueError('Use um único intervalo retangular.')
+        start=_coordinate(references[0]);end=_coordinate(references[-1])
+    else:
+        start=(1,1) if automatic else (min(r for r,c in cells),min(c for r,c in cells))
+        end=(max(r for r,c in cells),max(c for r,c in cells))
+    r1,c1=start;r2,c2=end
+    height,width=r2-r1+1,c2-c1+1
+    if not 1<=height<=MAX_ROWS or not 1<=width<=MAX_COLUMNS or height*width>MAX_CELLS:
+        raise ValueError(('A aba excede o tamanho suportado: ' if automatic else 'Selecione intervalo com até ')+
+                         '200000 linhas, 512 colunas e 2000000 células.')
+    values=[];formula_count=uncached=0
+    for r in range(r1,r2+1):
+        row=[]
+        for c in range(c1,c2+1):
+            value=cells.get((r,c),'')
+            if value is None:
+                if not automatic:raise ValueError('Há fórmula sem resultado salvo no intervalo. Recalcule e salve no Excel antes de importar.')
+                value=formulas[(r,c)];uncached+=1
+            formula_count+=(r,c) in formulas;row.append(value)
+        values.append(row)
+    headers=([column_letter(c) for c in range(c1,c2+1)] if automatic else
+             [v.strip() for v in values.pop(0)] if header else [f'C{i+1}' for i in range(width)])
+    if not all(headers) or len(set(headers))!=len(headers):
+        raise ValueError('Os cabeçalhos do intervalo devem ser únicos e não vazios; escolha outro intervalo ou desmarque o cabeçalho.')
+    note='Datas numéricas do Excel permanecem como números seriais; fórmulas usam o último resultado salvo.'
+    if uncached:note+=f' {uncached} fórmula(s) sem resultado salvo exibidas como texto, sem cálculo.'
+    return headers,values,dict(sheet=sheet_name,range=cell_range or ('A1:'+column_letter(c2)+str(r2) if automatic else 'área preenchida'),
+                              formulas=formula_count,uncached_formulas=uncached,note=note)
+
+
 def read_excel(path,sheet_name,cell_range='',header=True):
     with _open(path) as archive:
         sheet=next((s for s in _sheets(archive) if s['name']==sheet_name),None)
         if sheet is None:raise ValueError('Selecione uma aba existente.')
-        shared=[]
-        if 'xl/sharedStrings.xml' in archive.namelist():
-            shared=[''.join(t.text or '' for t in item.iter('{'+NS['m']+'}t')) for item in _xml(archive,'xl/sharedStrings.xml')]
-        cells={};formulas=set()
-        for cell in _xml(archive,sheet['member']).iter('{'+NS['m']+'}c'):
-            coordinate=_coordinate(cell.get('r',''))
-            value=cell.find('m:v',NS);kind=cell.get('t','n')
-            if cell.find('m:f',NS) is not None:
-                formulas.add(coordinate)
-                if value is None or value.text is None:
-                    cells[coordinate]=None;continue
-            if kind=='inlineStr':text=''.join(t.text or '' for t in cell.iter('{'+NS['m']+'}t'))
-            elif value is None:continue
-            elif kind=='s':
-                try:
-                    index=int(value.text)
-                    if not 0<=index<len(shared):raise IndexError
-                    text=shared[index]
-                except (ValueError,IndexError,TypeError):raise ValueError('Índice de texto inválido no Excel.') from None
-            elif kind=='b':text='TRUE' if value.text=='1' else 'FALSE'
-            elif kind=='e':text=value.text or '#ERRO'
-            else:text=value.text or ''
-            if text!='':cells[coordinate]=text
-        if not cells:raise ValueError('A aba não contém valores para importar.')
-        if cell_range.strip():
-            references=cell_range.split(':')
-            if len(references)>2:raise ValueError('Use um único intervalo retangular.')
-            start=_coordinate(references[0]);end=_coordinate(references[-1])
-        else:
-            start=(min(r for r,c in cells),min(c for r,c in cells))
-            end=(max(r for r,c in cells),max(c for r,c in cells))
-        r1,c1=start;r2,c2=end
-        height,width=r2-r1+1,c2-c1+1
-        if not 1<=height<=MAX_ROWS or not 1<=width<=MAX_COLUMNS or height*width>MAX_CELLS:
-            raise ValueError('Selecione intervalo com até 200000 linhas, 512 colunas e 2000000 células.')
-        values=[];formula_count=0
-        for r in range(r1,r2+1):
-            row=[]
-            for c in range(c1,c2+1):
-                value=cells.get((r,c),'')
-                if value is None:raise ValueError('Há fórmula sem resultado salvo no intervalo. Recalcule e salve no Excel antes de importar.')
-                formula_count+=(r,c) in formulas;row.append(value)
-            values.append(row)
-        headers=[v.strip() for v in values.pop(0)] if header else [f'C{i+1}' for i in range(width)]
-        if not all(headers) or len(set(headers))!=len(headers):
-            raise ValueError('Os cabeçalhos do intervalo devem ser únicos e não vazios; escolha outro intervalo ou desmarque o cabeçalho.')
-        # Serial numérico do Excel é preservado; tipo de coluna ainda é textual.
-        return headers,values,dict(sheet=sheet_name,range=cell_range or 'área preenchida',formulas=formula_count,
-                                   note='Datas numéricas do Excel permanecem como números seriais; fórmulas usam o último resultado salvo.')
+        cells,formulas=_sheet_cells(archive,sheet,_shared_strings(archive))
+        return _table(cells,formulas,sheet_name,cell_range,header)
+
+
+def read_excel_workbook(path):
+    """Abre todas as abas sem pedir intervalo e sem descartar a primeira linha."""
+    with _open(path) as archive:
+        sheets=_sheets(archive);names=[s['name'] for s in sheets]
+        if (len(sheets)>100 or any(not isinstance(n,str) or not n.strip() for n in names) or len(set(names))!=len(names)):
+            raise ValueError('Use até 100 abas com nomes únicos e não vazios.')
+        shared=_shared_strings(archive);result=[];total_cells=0
+        for sheet in sheets:
+            cells,formulas=_sheet_cells(archive,sheet,shared)
+            headers,rows,meta=_table(cells,formulas,sheet['name'],automatic=True)
+            total_cells+=len(headers)*len(rows)
+            if total_cells>MAX_CELLS:raise ValueError('O conjunto de abas excede 2000000 células.')
+            meta['excel_state']=sheet['state']
+            result.append(dict(name=sheet['name'],headers=headers,rows=rows,metadata=meta))
+        active=next((s['name'] for s in sheets if s['state']=='visible'),names[0])
+        workbook=_xml(archive,'xl/workbook.xml');view=workbook.find('m:bookViews/m:workbookView',NS)
+        if view is not None:
+            try:
+                tabs=workbook.findall('m:sheets/m:sheet',NS);index=int(view.get('activeTab','0'))
+                if not 0<=index<len(tabs):raise IndexError
+                original=tabs[index].get('name')
+                if any(s['name']==original and s['state']=='visible' for s in sheets):active=original
+            except (ValueError,IndexError):pass
+        return dict(worksheets=result,active_name=active)

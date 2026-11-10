@@ -1,0 +1,22 @@
+{
+  "python": "3.14.2",
+  "rows": 20000,
+  "columns": 10,
+  "cells": 200000,
+  "snapshots": 6,
+  "initial_seconds": 0.3873312999785412,
+  "edit_and_snapshot_seconds": [
+    0.38098400001763366,
+    0.4181015999929514,
+    0.37529470000299625,
+    0.38136929998290725,
+    0.40542529997765087
+  ],
+  "traced_bytes": 26976344,
+  "peak_traced_bytes": 28380473,
+  "limitations": [
+    "Tempo inclui overhead de tracemalloc.",
+    "Mede modelo/snapshots, sem renderização da grade ou cálculos estatísticos.",
+    "Não extrapolar para todos os formatos, máquinas ou 50 snapshots."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "input": {
+    "events1": 713,
+    "n1": 40,
+    "events2": 515,
+    "n2": 20,
+    "length1": 3,
+    "length2": 6
+  },
+  "rate": {
+    "estimate": 1.65,
+    "low": 1.07764,
+    "high": 2.22236,
+    "statistic": 5.65
+  },
+  "mean": {
+    "estimate": -7.925,
+    "low": -10.5053,
+    "high": -5.34474,
+    "statistic": -6.02
+  }
+}

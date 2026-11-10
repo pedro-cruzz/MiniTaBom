@@ -1,0 +1,230 @@
+{
+  "format": "statlab",
+  "version": 2,
+  "project_id": "project-491ea627c5254b538ca5eb8d7a02d3eb",
+  "active_worksheet_id": "ws-6d61c396a891421ba8066facb7ab4693",
+  "worksheets": [
+    {
+      "id": "ws-6d61c396a891421ba8066facb7ab4693",
+      "name": "Worksheet 1",
+      "revision": 0,
+      "columns": [
+        {
+          "id": "col-a55f644b656d49b9b246db86b6c8a1fc",
+          "name": "Medição",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        }
+      ],
+      "rows": [
+        [
+          "0"
+        ],
+        [
+          "2"
+        ],
+        [
+          "*"
+        ]
+      ],
+      "metadata": {},
+      "fingerprint": "8e6eb78f58071281d51f7d1be1ff3526438757aefe021c56d772a0ef98b9c5d3"
+    },
+    {
+      "id": "ws-f9a852213c0b4982a812a72df5565402",
+      "name": "Outra amostra",
+      "revision": 0,
+      "columns": [
+        {
+          "id": "col-fa5ecd844635459ebf2a1295d2b52368",
+          "name": "Resposta",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        }
+      ],
+      "rows": [
+        [
+          "4"
+        ],
+        [
+          "6"
+        ],
+        [
+          "8"
+        ]
+      ],
+      "metadata": {},
+      "fingerprint": "c7fc91eba1126d1e1f2e53189869e015b5ff7bbbf490a2df5927cd63b9def36d"
+    }
+  ],
+  "analyses": [
+    {
+      "analysis_id": "analysis-66a899aa14564960a9dacd31463a905e",
+      "parent_analysis_id": null,
+      "method_id": "basic.t_one.column.v1",
+      "created_at": "2026-11-06T21:03:18.233542+00:00",
+      "parameters": {
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "perform_test": true
+      },
+      "source": {
+        "worksheet_id": "ws-6d61c396a891421ba8066facb7ab4693",
+        "column_ids": [
+          "col-a55f644b656d49b9b246db86b6c8a1fc"
+        ],
+        "revision": 0,
+        "fingerprint": "8e6eb78f58071281d51f7d1be1ff3526438757aefe021c56d772a0ef98b9c5d3"
+      },
+      "versions": {
+        "application": "0.3.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_empty_or_star",
+        "counts": [
+          1
+        ]
+      },
+      "values": {
+        "estimate": 1.0,
+        "se": 1.0,
+        "df": 1,
+        "t": 1.0,
+        "p": 0.5000000000000001,
+        "low": -11.706204736174694,
+        "high": 13.706204736174694,
+        "null": 0.0,
+        "confidence": 95.0,
+        "alternative": "two-sided",
+        "samples": [
+          {
+            "n": 2,
+            "mean": 1.0,
+            "sd": 1.4142135623730951,
+            "se": 1.0
+          }
+        ],
+        "mode": "one",
+        "method": "t de uma amostra",
+        "missing": [
+          1
+        ],
+        "labels": [
+          "Medição"
+        ]
+      },
+      "tables": [
+        {
+          "name": "amostras",
+          "rows": [
+            {
+              "n": 2,
+              "mean": 1.0,
+              "sd": 1.4142135623730951,
+              "se": 1.0
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "T DE UMA AMOSTRA\n\nAmostra                         N          Média        DesvPad       EP Média\nMedição                         2              1     1.41421356              1\n\nAusentes por amostra: 1\nEstimativa: 1\nIC de 95%: (-11.7062047; 13.7062047)\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = 1    GL = 1    Valor-p = 0.5\n"
+    },
+    {
+      "analysis_id": "analysis-c48b47ba3bbd4817b7534d714310aa6e",
+      "parent_analysis_id": null,
+      "method_id": "basic.t_one.column.v1",
+      "created_at": "2026-11-06T21:03:18.234945+00:00",
+      "parameters": {
+        "null": 5,
+        "confidence": 90,
+        "alternative": "two-sided",
+        "perform_test": true
+      },
+      "source": {
+        "worksheet_id": "ws-f9a852213c0b4982a812a72df5565402",
+        "column_ids": [
+          "col-fa5ecd844635459ebf2a1295d2b52368"
+        ],
+        "revision": 0,
+        "fingerprint": "c7fc91eba1126d1e1f2e53189869e015b5ff7bbbf490a2df5927cd63b9def36d"
+      },
+      "versions": {
+        "application": "0.3.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "omit_empty_or_star",
+        "counts": [
+          0
+        ]
+      },
+      "values": {
+        "estimate": 6.0,
+        "se": 1.1547005383792517,
+        "df": 2,
+        "t": 0.8660254037844385,
+        "p": 0.47776703213290656,
+        "low": 2.6282910783059004,
+        "high": 9.3717089216941,
+        "null": 5,
+        "confidence": 90,
+        "alternative": "two-sided",
+        "samples": [
+          {
+            "n": 3,
+            "mean": 6.0,
+            "sd": 2.0,
+            "se": 1.1547005383792517
+          }
+        ],
+        "mode": "one",
+        "method": "t de uma amostra",
+        "missing": [
+          0
+        ],
+        "labels": [
+          "Resposta"
+        ]
+      },
+      "tables": [
+        {
+          "name": "amostras",
+          "rows": [
+            {
+              "n": 3,
+              "mean": 6.0,
+              "sd": 2.0,
+              "se": 1.1547005383792517
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "T DE UMA AMOSTRA\n\nAmostra                         N          Média        DesvPad       EP Média\nResposta                        3              6              2     1.15470054\n\nAusentes por amostra: 0\nEstimativa: 6\nIC de 90%: (2.62829108; 9.37170892)\n\nH0: parâmetro = 5\nH1: parâmetro ≠ 5\nT = 0.866025404    GL = 2    Valor-p = 0.477767032\n"
+    }
+  ],
+  "output": "EXEMPLO SINTÉTICO — projeto v2\nUse o seletor de planilhas e Janela > Histórico de análises.\nO teste t usa dados sintéticos; validação diferencial no Minitab 16 pendente.\n\nT DE UMA AMOSTRA\n\nAmostra                         N          Média        DesvPad       EP Média\nMedição                         2              1     1.41421356              1\n\nAusentes por amostra: 1\nEstimativa: 1\nIC de 95%: (-11.7062047; 13.7062047)\n\nH0: parâmetro = 0\nH1: parâmetro ≠ 0\nT = 1    GL = 1    Valor-p = 0.5\n\nT DE UMA AMOSTRA\n\nAmostra                         N          Média        DesvPad       EP Média\nResposta                        3              6              2     1.15470054\n\nAusentes por amostra: 0\nEstimativa: 6\nIC de 90%: (2.62829108; 9.37170892)\n\nH0: parâmetro = 5\nH1: parâmetro ≠ 5\nT = 0.866025404    GL = 2    Valor-p = 0.477767032\n",
+  "metadata": {}
+}

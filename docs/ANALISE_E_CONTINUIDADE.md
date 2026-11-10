@@ -1,5 +1,48 @@
 # MiniTaBom — relatório técnico de investigação e continuidade
 
+## Continuação — 10/11/2026: MiniTaBom 0.8.0
+
+- Pedido do usuário priorizado: Arquivo > Abrir Excel abre o workbook sem tela de intervalo, com abas/posições/primeira linha preservadas. Ação opcional de cabeçalhos com undo/redo; leitor por intervalo mantido como API legada.
+- Duas taxas/médias de Poisson implementadas: colunas/resumo/empilhadas, exposições, Z, taxa combinada, exato condicional para diferença zero e IC normal. Histórico/reexecução completos para os formatos disponíveis; frequências opcionais e validação diferencial16 ainda pendentes.
+- 342 testes e 24 exemplos aprovados. Conferência com exemplo documental16 rotulada como documentação, não execução. Relatório/logs em [entregas/2026-11-10-excel-poisson/ENTREGA.md](entregas/2026-11-10-excel-poisson/ENTREGA.md).
+
+## Continuação — 10/11/2026: MiniTaBom 0.7.0
+
+- Normalidade (cinco métodos), Mann–Whitney, Wilcoxon pareado, Kruskal–Wallis e Levene/Bartlett integrados ao histórico estruturado e reexecução.
+- Opções solicitadas e método efetivo separados; limites de valor-p, ausentes, zeros/empates e ordem de grupos preservados. Gráfico de probabilidade reconstruído do snapshot histórico.
+- Histórico libera gráficos abertos na reexecução; gravação respeita o limite de leitura de 256 MiB antes de substituir o arquivo.
+- 328 testes e 23 exemplos aprovados. Logs e limites em [entregas/2026-11-10-diagnosticos/ENTREGA.md](entregas/2026-11-10-diagnosticos/ENTREGA.md). Sem comparação executada nova no 16; demais fundamentos, plataforma e famílias da auditoria permanecem no escopo.
+
+## Continuação — 09/11/2026: MiniTaBom 0.6.0
+
+- Previsões persistentes com modelo original fixado, casos digitados ou colunas por ID, intervalos/ausentes, exportação e reexecução. O histórico distingue recalcular casos salvos de reler colunas atuais; nenhuma dessas ações ajusta um modelo novo.
+- ANOVA de um fator integrada ao histórico: formatos colunas/resposta-fator, opções/comparações, ordem de níveis e boxplot histórico. Resultado anterior preservado em cada reexecução.
+- 314 testes e 22 exemplos aprovados. Relatório e logs em [entregas/2026-11-09-previsao-anova/ENTREGA.md](entregas/2026-11-09-previsao-anova/ENTREGA.md). Sem fixture nova executada no 16; demais métodos, modelos avançados, editor geral de cenas e tarefas longas permanecem pendentes.
+
+## Continuação — 09/11/2026: MiniTaBom 0.5.0
+
+- Regressão linear numérica integrada ao contrato de resultados e reexecução. Modelo SVD e estado de previsão persistidos; reabrir restaura modelo compatível sem novo ajuste.
+- Seleção de modelo por planilha, invalidação por entradas alteradas, identidade após renomear/reordenar e restauração por desfazer. Histórico oferece Usar modelo e Ver gráficos; cenas de diagnóstico são reconstruídas do snapshot numérico.
+- Armazenamento de diagnósticos reexecutável, preservando colunas/resultados anteriores e planilha ativa. Validação estrutural de modelos/seleções antes da instalação/gravação.
+- 298 testes e 20 exemplos aprovados. Relatório e logs em [entregas/2026-11-09-regressao/ENTREGA.md](entregas/2026-11-09-regressao/ENTREGA.md). Native16 permanece sem execução; previsões estruturadas, editor geral de cenas e demais modelos seguem pendentes.
+
+## Continuação — 06/11/2026: MiniTaBom 0.4.0
+
+- Histórico estruturado estendido aos sete formatos t disponíveis: uma amostra em coluna/resumo, pareado em colunas/resumo das diferenças, duas amostras em colunas/empilhadas/resumo.
+- Parâmetros efetivos, GL Welch inteiro/fracionário, alternativas, resumos e ordem dos grupos persistidos. Reexecução preserva resultados anteriores; armazenamento pareado cria novas colunas na origem.
+- Identidade/metadados de colunas incluídos nos snapshots de desfazer/refazer; fingerprint da entrada distingue mudanças relevantes de alterações em colunas alheias. Projetos/registros 0.3.0 continuam válidos.
+- 287 testes e 19 exemplos aprovados. Evidência e limites em [entregas/2026-11-06-testes-t/ENTREGA.md](entregas/2026-11-06-testes-t/ENTREGA.md). Nenhuma fixture executada no Minitab 16 adicionada; modelos/cenas e demais métodos no histórico seguem pendentes.
+
+## Atualização anterior — 06/11/2026: MiniTaBom 0.3.0
+
+Estado atual e aceite detalhados em [entregas/2026-11-06/ENTREGA.md](entregas/2026-11-06/ENTREGA.md). Os relatos abaixo preservam a cronologia e não são o inventário atual.
+
+- Auditoria enviada pelo usuário e prompt TXT lidos; baseline 257 testes / 17 exemplos confirmado. A referência 16.2.4.0 está documentada no ZIP, mas o executável não está disponível nesta máquina.
+- CAPACIDADES.json passa a ser o registro atual, com IDs estáveis, evidência, estados separados e proveniência da matriz histórica. Ajuda > Cobertura e exportações usam esse registro. Recursos do 22 ficam em backlog separado.
+- Projeto statlab v2: migração de v1, coleção de planilhas, IDs/revisões, metadados e persistência de resultados estruturados. Integração vertical inicial do t de uma amostra em coluna, com reexecução/exportação e resultado anterior preservado. Demais modelos/cenas/métodos ainda precisam de integração.
+- Regressão registrada: 273 testes aprovados e 18 exemplos válidos, incluindo exemplo v2. Benchmark sintético e ambiente registrados na pasta da entrega. Nenhuma fixture executada nova no 16; paridade continua pendente.
+- Abertura permanece vazia; os dados de exemplo só são carregados quando solicitados. Nenhuma publicação no GitHub ou alteração da instalação Minitab.
+
 ## Atualização de continuidade — 03/11/2026
 
 Esta seção atualiza o estado do pacote; o relato original abaixo é histórico.

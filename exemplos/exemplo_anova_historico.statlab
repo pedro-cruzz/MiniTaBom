@@ -1,0 +1,713 @@
+{
+  "format": "statlab",
+  "version": 2,
+  "project_id": "project-e19b4248b956490a96720fba48954f27",
+  "active_worksheet_id": "ws-f6d7004914b34364ae43f4838f2a464f",
+  "worksheets": [
+    {
+      "id": "ws-f6d7004914b34364ae43f4838f2a464f",
+      "name": "Worksheet 1",
+      "revision": 0,
+      "columns": [
+        {
+          "id": "col-c8960b3e60ba49d9bdaf1b74cbc6593f",
+          "name": "A",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        },
+        {
+          "id": "col-838c1f4dfb1c41659551c010648f3587",
+          "name": "B",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        },
+        {
+          "id": "col-b6c03039699943689fd77e2f3d2b888c",
+          "name": "C",
+          "type": "text",
+          "format": {},
+          "metadata": {}
+        }
+      ],
+      "rows": [
+        [
+          "1",
+          "4",
+          "7"
+        ],
+        [
+          "2",
+          "5",
+          "8"
+        ],
+        [
+          "3",
+          "6",
+          "9"
+        ]
+      ],
+      "metadata": {},
+      "fingerprint": "c2b29019c5f35b2ae1683708a4e643d908414a67a8477e7f5843d97cbbeb2e2c"
+    }
+  ],
+  "analyses": [
+    {
+      "analysis_id": "analysis-bf36dd7b259249c4a0b414d17e13cd3e",
+      "parent_analysis_id": null,
+      "method_id": "anova.one_way.v1",
+      "created_at": "2026-11-09T23:28:48.177209+00:00",
+      "parameters": {
+        "input_kind": "columns",
+        "group_order": null,
+        "equal_var": true,
+        "confidence": 95.0,
+        "comparisons": true,
+        "comparison_method": "tukey",
+        "show_graph": false
+      },
+      "source": {
+        "worksheet_id": "ws-f6d7004914b34364ae43f4838f2a464f",
+        "column_ids": [
+          "col-c8960b3e60ba49d9bdaf1b74cbc6593f",
+          "col-838c1f4dfb1c41659551c010648f3587",
+          "col-b6c03039699943689fd77e2f3d2b888c"
+        ],
+        "revision": 0,
+        "fingerprint": "c2b29019c5f35b2ae1683708a4e643d908414a67a8477e7f5843d97cbbeb2e2c",
+        "input_fingerprint": "7c0df82a1658cefab333a7285ded895c2ae764a3a33e86dc5d843e76fee34118",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.6.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "per_group",
+        "count": 0
+      },
+      "values": {
+        "groups": [
+          {
+            "n": 3,
+            "mean": 2.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258,
+            "label": "A",
+            "low": 0.5872747840581611,
+            "high": 3.4127252159418386
+          },
+          {
+            "n": 3,
+            "mean": 5.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258,
+            "label": "B",
+            "low": 3.5872747840581614,
+            "high": 6.412725215941839
+          },
+          {
+            "n": 3,
+            "mean": 8.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258,
+            "label": "C",
+            "low": 6.587274784058161,
+            "high": 9.412725215941839
+          }
+        ],
+        "n": 9,
+        "overall": 5.0,
+        "equal_var": true,
+        "ss_between": 54.0,
+        "ss_within": 6.0,
+        "ss_total": 60.0,
+        "mse": 1.0,
+        "df1": 2,
+        "df2": 6,
+        "df_error": 6,
+        "f": 27.0,
+        "p": 0.0010000000000000002,
+        "s": 1.0,
+        "r_squared": 90.0,
+        "confidence": 95.0,
+        "comparisons": [
+          {
+            "first": "A",
+            "second": "B",
+            "difference": -3.0,
+            "p": 0.024229053412424206,
+            "low": -5.505235676435387,
+            "high": -0.4947643235646133
+          },
+          {
+            "first": "A",
+            "second": "C",
+            "difference": -6.0,
+            "p": 0.000794217910489281,
+            "low": -8.505235676435387,
+            "high": -3.4947643235646133
+          },
+          {
+            "first": "B",
+            "second": "C",
+            "difference": -3.0,
+            "p": 0.024229053412424206,
+            "low": -5.505235676435387,
+            "high": -0.4947643235646133
+          }
+        ],
+        "comparison_method": "Tukey-Kramer"
+      },
+      "tables": [
+        {
+          "name": "grupos",
+          "rows": [
+            {
+              "n": 3,
+              "mean": 2.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258,
+              "label": "A",
+              "low": 0.5872747840581611,
+              "high": 3.4127252159418386
+            },
+            {
+              "n": 3,
+              "mean": 5.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258,
+              "label": "B",
+              "low": 3.5872747840581614,
+              "high": 6.412725215941839
+            },
+            {
+              "n": 3,
+              "mean": 8.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258,
+              "label": "C",
+              "low": 6.587274784058161,
+              "high": 9.412725215941839
+            }
+          ]
+        },
+        {
+          "name": "comparacoes",
+          "rows": [
+            {
+              "first": "A",
+              "second": "B",
+              "difference": -3.0,
+              "p": 0.024229053412424206,
+              "low": -5.505235676435387,
+              "high": -0.4947643235646133
+            },
+            {
+              "first": "A",
+              "second": "C",
+              "difference": -6.0,
+              "p": 0.000794217910489281,
+              "low": -8.505235676435387,
+              "high": -3.4947643235646133
+            },
+            {
+              "first": "B",
+              "second": "C",
+              "difference": -3.0,
+              "p": 0.024229053412424206,
+              "low": -5.505235676435387,
+              "high": -0.4947643235646133
+            }
+          ]
+        }
+      ],
+      "scenes": [
+        {
+          "kind": "group_boxplot",
+          "version": 1,
+          "groups": [
+            {
+              "label": "A",
+              "values": [
+                1.0,
+                2.0,
+                3.0
+              ],
+              "missing": 0
+            },
+            {
+              "label": "B",
+              "values": [
+                4.0,
+                5.0,
+                6.0
+              ],
+              "missing": 0
+            },
+            {
+              "label": "C",
+              "values": [
+                7.0,
+                8.0,
+                9.0
+              ],
+              "missing": 0
+            }
+          ],
+          "response_label": "Valores"
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "ANOVA DE UM FATOR — variâncias iguais\n\nH0: todas as médias populacionais são iguais.\nH1: pelo menos uma média populacional difere.\nObservações válidas: 9    Excluídas: 0\n\nFonte                   GL              SQ              QM\nFator                    2              54              27\nErro                     6               6               1\nTotal                    8              60\n\nS = 1    R² = 90%\nF = 27    GL1 = 2    GL2 = 6    Valor-p = 0.001\n\nGrupo                         N         Média       DesvPad          IC individual 95.0%\nA                             3             2             1    (0.587274784; 3.41272522)\nB                             3             5             1     (3.58727478; 6.41272522)\nC                             3             8             1     (6.58727478; 9.41272522)\n\nGrupos: A | B | C\nOs intervalos das médias são individuais, não simultâneos.\n\nComparações múltiplas: Tukey-Kramer\nConfiança familiar: 95%. Diferença = primeiro grupo − segundo grupo.\nA − B: diferença = -3; IC = (-5.50523568; -0.494764324); p ajustado = 0.0242290534\nA − C: diferença = -6; IC = (-8.50523568; -3.49476432); p ajustado = 0.00079421791\nB − C: diferença = -3; IC = (-5.50523568; -0.494764324); p ajustado = 0.0242290534\n"
+    },
+    {
+      "analysis_id": "analysis-8038f0cc70f841f5a8d15ce8770d89af",
+      "parent_analysis_id": null,
+      "method_id": "anova.one_way.v1",
+      "created_at": "2026-11-09T23:28:48.178965+00:00",
+      "parameters": {
+        "input_kind": "columns",
+        "group_order": null,
+        "equal_var": true,
+        "confidence": 95.0,
+        "comparisons": true,
+        "comparison_method": "lsd",
+        "show_graph": false
+      },
+      "source": {
+        "worksheet_id": "ws-f6d7004914b34364ae43f4838f2a464f",
+        "column_ids": [
+          "col-c8960b3e60ba49d9bdaf1b74cbc6593f",
+          "col-838c1f4dfb1c41659551c010648f3587",
+          "col-b6c03039699943689fd77e2f3d2b888c"
+        ],
+        "revision": 0,
+        "fingerprint": "c2b29019c5f35b2ae1683708a4e643d908414a67a8477e7f5843d97cbbeb2e2c",
+        "input_fingerprint": "7c0df82a1658cefab333a7285ded895c2ae764a3a33e86dc5d843e76fee34118",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.6.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "per_group",
+        "count": 0
+      },
+      "values": {
+        "groups": [
+          {
+            "n": 3,
+            "mean": 2.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258,
+            "label": "A",
+            "low": 0.5872747840581611,
+            "high": 3.4127252159418386
+          },
+          {
+            "n": 3,
+            "mean": 5.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258,
+            "label": "B",
+            "low": 3.5872747840581614,
+            "high": 6.412725215941839
+          },
+          {
+            "n": 3,
+            "mean": 8.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258,
+            "label": "C",
+            "low": 6.587274784058161,
+            "high": 9.412725215941839
+          }
+        ],
+        "n": 9,
+        "overall": 5.0,
+        "equal_var": true,
+        "ss_between": 54.0,
+        "ss_within": 6.0,
+        "ss_total": 60.0,
+        "mse": 1.0,
+        "df1": 2,
+        "df2": 6,
+        "df_error": 6,
+        "f": 27.0,
+        "p": 0.0010000000000000002,
+        "s": 1.0,
+        "r_squared": 90.0,
+        "confidence": 95.0,
+        "comparisons": [
+          {
+            "first": "A",
+            "second": "B",
+            "difference": -3.0,
+            "p": 0.010401720935464024,
+            "low": -4.997895160291408,
+            "high": -1.002104839708592
+          },
+          {
+            "first": "A",
+            "second": "C",
+            "difference": -6.0,
+            "p": 0.0003249746792710838,
+            "low": -7.997895160291408,
+            "high": -4.002104839708592
+          },
+          {
+            "first": "B",
+            "second": "C",
+            "difference": -3.0,
+            "p": 0.010401720935464024,
+            "low": -4.997895160291408,
+            "high": -1.002104839708592
+          }
+        ],
+        "comparison_method": "Fisher LSD (individual, sem ajuste)"
+      },
+      "tables": [
+        {
+          "name": "grupos",
+          "rows": [
+            {
+              "n": 3,
+              "mean": 2.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258,
+              "label": "A",
+              "low": 0.5872747840581611,
+              "high": 3.4127252159418386
+            },
+            {
+              "n": 3,
+              "mean": 5.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258,
+              "label": "B",
+              "low": 3.5872747840581614,
+              "high": 6.412725215941839
+            },
+            {
+              "n": 3,
+              "mean": 8.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258,
+              "label": "C",
+              "low": 6.587274784058161,
+              "high": 9.412725215941839
+            }
+          ]
+        },
+        {
+          "name": "comparacoes",
+          "rows": [
+            {
+              "first": "A",
+              "second": "B",
+              "difference": -3.0,
+              "p": 0.010401720935464024,
+              "low": -4.997895160291408,
+              "high": -1.002104839708592
+            },
+            {
+              "first": "A",
+              "second": "C",
+              "difference": -6.0,
+              "p": 0.0003249746792710838,
+              "low": -7.997895160291408,
+              "high": -4.002104839708592
+            },
+            {
+              "first": "B",
+              "second": "C",
+              "difference": -3.0,
+              "p": 0.010401720935464024,
+              "low": -4.997895160291408,
+              "high": -1.002104839708592
+            }
+          ]
+        }
+      ],
+      "scenes": [
+        {
+          "kind": "group_boxplot",
+          "version": 1,
+          "groups": [
+            {
+              "label": "A",
+              "values": [
+                1.0,
+                2.0,
+                3.0
+              ],
+              "missing": 0
+            },
+            {
+              "label": "B",
+              "values": [
+                4.0,
+                5.0,
+                6.0
+              ],
+              "missing": 0
+            },
+            {
+              "label": "C",
+              "values": [
+                7.0,
+                8.0,
+                9.0
+              ],
+              "missing": 0
+            }
+          ],
+          "response_label": "Valores"
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "ANOVA DE UM FATOR — variâncias iguais\n\nH0: todas as médias populacionais são iguais.\nH1: pelo menos uma média populacional difere.\nObservações válidas: 9    Excluídas: 0\n\nFonte                   GL              SQ              QM\nFator                    2              54              27\nErro                     6               6               1\nTotal                    8              60\n\nS = 1    R² = 90%\nF = 27    GL1 = 2    GL2 = 6    Valor-p = 0.001\n\nGrupo                         N         Média       DesvPad          IC individual 95.0%\nA                             3             2             1    (0.587274784; 3.41272522)\nB                             3             5             1     (3.58727478; 6.41272522)\nC                             3             8             1     (6.58727478; 9.41272522)\n\nGrupos: A | B | C\nOs intervalos das médias são individuais, não simultâneos.\n\nComparações múltiplas: Fisher LSD (individual, sem ajuste)\nConfiança individual: 95%. Diferença = primeiro grupo − segundo grupo.\nFisher LSD: não controla a taxa de erro familiar; intervalos e valores-p sem ajuste.\nA − B: diferença = -3; IC = (-4.99789516; -1.00210484); p sem ajuste = 0.0104017209\nA − C: diferença = -6; IC = (-7.99789516; -4.00210484); p sem ajuste = 0.000324974679\nB − C: diferença = -3; IC = (-4.99789516; -1.00210484); p sem ajuste = 0.0104017209\n"
+    },
+    {
+      "analysis_id": "analysis-8f3ad50b686343c99623ad4affe15472",
+      "parent_analysis_id": null,
+      "method_id": "anova.one_way.v1",
+      "created_at": "2026-11-09T23:28:49.434589+00:00",
+      "parameters": {
+        "input_kind": "columns",
+        "group_order": null,
+        "equal_var": false,
+        "confidence": 95.0,
+        "comparisons": true,
+        "comparison_method": "tukey",
+        "show_graph": false
+      },
+      "source": {
+        "worksheet_id": "ws-f6d7004914b34364ae43f4838f2a464f",
+        "column_ids": [
+          "col-c8960b3e60ba49d9bdaf1b74cbc6593f",
+          "col-838c1f4dfb1c41659551c010648f3587",
+          "col-b6c03039699943689fd77e2f3d2b888c"
+        ],
+        "revision": 0,
+        "fingerprint": "c2b29019c5f35b2ae1683708a4e643d908414a67a8477e7f5843d97cbbeb2e2c",
+        "input_fingerprint": "7c0df82a1658cefab333a7285ded895c2ae764a3a33e86dc5d843e76fee34118",
+        "kind": "columns"
+      },
+      "versions": {
+        "application": "0.6.0",
+        "method": 1,
+        "python": "3.14.2",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "per_group",
+        "count": 0
+      },
+      "values": {
+        "groups": [
+          {
+            "n": 3,
+            "mean": 2.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258,
+            "label": "A",
+            "low": -0.48413771175033027,
+            "high": 4.48413771175033
+          },
+          {
+            "n": 3,
+            "mean": 5.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258,
+            "label": "B",
+            "low": 2.5158622882496697,
+            "high": 7.48413771175033
+          },
+          {
+            "n": 3,
+            "mean": 8.0,
+            "sd": 1.0,
+            "se": 0.5773502691896258,
+            "label": "C",
+            "low": 5.51586228824967,
+            "high": 10.48413771175033
+          }
+        ],
+        "n": 9,
+        "overall": 5.0,
+        "equal_var": false,
+        "ss_between": 54.0,
+        "ss_within": 6.0,
+        "ss_total": 60.0,
+        "mse": 1.0,
+        "df1": 2,
+        "df2": 4.0,
+        "df_error": 6,
+        "f": 23.142857142857142,
+        "p": 0.006327479338842975,
+        "s": null,
+        "r_squared": null,
+        "confidence": 95.0,
+        "comparisons": [
+          {
+            "first": "A",
+            "second": "B",
+            "difference": -3.0,
+            "p": 0.04546498097599572,
+            "low": -5.909984645345208,
+            "high": -0.09001535465479149
+          },
+          {
+            "first": "A",
+            "second": "C",
+            "difference": -6.0,
+            "p": 0.004037733661209408,
+            "low": -8.909984645345208,
+            "high": -3.0900153546547915
+          },
+          {
+            "first": "B",
+            "second": "C",
+            "difference": -3.0,
+            "p": 0.04546498097599572,
+            "low": -5.909984645345208,
+            "high": -0.09001535465479149
+          }
+        ],
+        "comparison_method": "Games-Howell"
+      },
+      "tables": [
+        {
+          "name": "grupos",
+          "rows": [
+            {
+              "n": 3,
+              "mean": 2.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258,
+              "label": "A",
+              "low": -0.48413771175033027,
+              "high": 4.48413771175033
+            },
+            {
+              "n": 3,
+              "mean": 5.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258,
+              "label": "B",
+              "low": 2.5158622882496697,
+              "high": 7.48413771175033
+            },
+            {
+              "n": 3,
+              "mean": 8.0,
+              "sd": 1.0,
+              "se": 0.5773502691896258,
+              "label": "C",
+              "low": 5.51586228824967,
+              "high": 10.48413771175033
+            }
+          ]
+        },
+        {
+          "name": "comparacoes",
+          "rows": [
+            {
+              "first": "A",
+              "second": "B",
+              "difference": -3.0,
+              "p": 0.04546498097599572,
+              "low": -5.909984645345208,
+              "high": -0.09001535465479149
+            },
+            {
+              "first": "A",
+              "second": "C",
+              "difference": -6.0,
+              "p": 0.004037733661209408,
+              "low": -8.909984645345208,
+              "high": -3.0900153546547915
+            },
+            {
+              "first": "B",
+              "second": "C",
+              "difference": -3.0,
+              "p": 0.04546498097599572,
+              "low": -5.909984645345208,
+              "high": -0.09001535465479149
+            }
+          ]
+        }
+      ],
+      "scenes": [
+        {
+          "kind": "group_boxplot",
+          "version": 1,
+          "groups": [
+            {
+              "label": "A",
+              "values": [
+                1.0,
+                2.0,
+                3.0
+              ],
+              "missing": 0
+            },
+            {
+              "label": "B",
+              "values": [
+                4.0,
+                5.0,
+                6.0
+              ],
+              "missing": 0
+            },
+            {
+              "label": "C",
+              "values": [
+                7.0,
+                8.0,
+                9.0
+              ],
+              "missing": 0
+            }
+          ],
+          "response_label": "Valores"
+        }
+      ],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending"
+      },
+      "report": "ANOVA DE UM FATOR — Welch\n\nH0: todas as médias populacionais são iguais.\nH1: pelo menos uma média populacional difere.\nObservações válidas: 9    Excluídas: 0\n\nF = 23.1428571    GL1 = 2    GL2 = 4    Valor-p = 0.00632747934\n\nGrupo                         N         Média       DesvPad          IC individual 95.0%\nA                             3             2             1   (-0.484137712; 4.48413771)\nB                             3             5             1     (2.51586229; 7.48413771)\nC                             3             8             1     (5.51586229; 10.4841377)\n\nGrupos: A | B | C\nOs intervalos das médias são individuais, não simultâneos.\n\nComparações múltiplas: Games-Howell\nConfiança familiar: 95%. Diferença = primeiro grupo − segundo grupo.\nA − B: diferença = -3; IC = (-5.90998465; -0.0900153547); p ajustado = 0.045464981\nA − C: diferença = -6; IC = (-8.90998465; -3.09001535); p ajustado = 0.00403773366\nB − C: diferença = -3; IC = (-5.90998465; -0.0900153547); p ajustado = 0.045464981\n"
+    }
+  ],
+  "output": "EXEMPLO SINTÉTICO — ANOVA no histórico\nF=27 e p=0,001. Confira comparações e boxplots do resultado salvo.\n\nANOVA DE UM FATOR — variâncias iguais\n\nH0: todas as médias populacionais são iguais.\nH1: pelo menos uma média populacional difere.\nObservações válidas: 9    Excluídas: 0\n\nFonte                   GL              SQ              QM\nFator                    2              54              27\nErro                     6               6               1\nTotal                    8              60\n\nS = 1    R² = 90%\nF = 27    GL1 = 2    GL2 = 6    Valor-p = 0.001\n\nGrupo                         N         Média       DesvPad          IC individual 95.0%\nA                             3             2             1    (0.587274784; 3.41272522)\nB                             3             5             1     (3.58727478; 6.41272522)\nC                             3             8             1     (6.58727478; 9.41272522)\n\nGrupos: A | B | C\nOs intervalos das médias são individuais, não simultâneos.\n\nComparações múltiplas: Tukey-Kramer\nConfiança familiar: 95%. Diferença = primeiro grupo − segundo grupo.\nA − B: diferença = -3; IC = (-5.50523568; -0.494764324); p ajustado = 0.0242290534\nA − C: diferença = -6; IC = (-8.50523568; -3.49476432); p ajustado = 0.00079421791\nB − C: diferença = -3; IC = (-5.50523568; -0.494764324); p ajustado = 0.0242290534\n\nANOVA DE UM FATOR — variâncias iguais\n\nH0: todas as médias populacionais são iguais.\nH1: pelo menos uma média populacional difere.\nObservações válidas: 9    Excluídas: 0\n\nFonte                   GL              SQ              QM\nFator                    2              54              27\nErro                     6               6               1\nTotal                    8              60\n\nS = 1    R² = 90%\nF = 27    GL1 = 2    GL2 = 6    Valor-p = 0.001\n\nGrupo                         N         Média       DesvPad          IC individual 95.0%\nA                             3             2             1    (0.587274784; 3.41272522)\nB                             3             5             1     (3.58727478; 6.41272522)\nC                             3             8             1     (6.58727478; 9.41272522)\n\nGrupos: A | B | C\nOs intervalos das médias são individuais, não simultâneos.\n\nComparações múltiplas: Fisher LSD (individual, sem ajuste)\nConfiança individual: 95%. Diferença = primeiro grupo − segundo grupo.\nFisher LSD: não controla a taxa de erro familiar; intervalos e valores-p sem ajuste.\nA − B: diferença = -3; IC = (-4.99789516; -1.00210484); p sem ajuste = 0.0104017209\nA − C: diferença = -6; IC = (-7.99789516; -4.00210484); p sem ajuste = 0.000324974679\nB − C: diferença = -3; IC = (-4.99789516; -1.00210484); p sem ajuste = 0.0104017209\n\nANOVA DE UM FATOR — Welch\n\nH0: todas as médias populacionais são iguais.\nH1: pelo menos uma média populacional difere.\nObservações válidas: 9    Excluídas: 0\n\nF = 23.1428571    GL1 = 2    GL2 = 4    Valor-p = 0.00632747934\n\nGrupo                         N         Média       DesvPad          IC individual 95.0%\nA                             3             2             1   (-0.484137712; 4.48413771)\nB                             3             5             1     (2.51586229; 7.48413771)\nC                             3             8             1     (5.51586229; 10.4841377)\n\nGrupos: A | B | C\nOs intervalos das médias são individuais, não simultâneos.\n\nComparações múltiplas: Games-Howell\nConfiança familiar: 95%. Diferença = primeiro grupo − segundo grupo.\nA − B: diferença = -3; IC = (-5.90998465; -0.0900153547); p ajustado = 0.045464981\nA − C: diferença = -6; IC = (-8.90998465; -3.09001535); p ajustado = 0.00403773366\nB − C: diferença = -3; IC = (-5.90998465; -0.0900153547); p ajustado = 0.045464981\n",
+  "metadata": {}
+}

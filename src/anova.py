@@ -5,7 +5,7 @@ from core import numeric_column
 from inference import scientific_stats, summarize
 
 
-def prepare_groups(headers, rows, columns=None, response=None, factor=None):
+def prepare_groups(headers, rows, columns=None, response=None, factor=None, group_order=None):
     def valid(index):
         return type(index) is int and 0 <= index < len(headers)
     groups, excluded = [], 0
@@ -40,7 +40,12 @@ def prepare_groups(headers, rows, columns=None, response=None, factor=None):
             if not math.isfinite(value):
                 raise ValueError(f'Linha {line}: número não finito.')
             group['values'].append(value)
-        groups = list(levels.values())
+        if group_order is not None:
+            if (not isinstance(group_order,list) or any(not isinstance(v,str) for v in group_order)
+                    or len(set(group_order))!=len(group_order) or set(group_order)!=set(levels)):
+                raise ValueError('Os grupos originais mudaram; inicie uma nova ANOVA.')
+            groups=[levels[label] for label in group_order]
+        else:groups = list(levels.values())
     if len(groups) < 2:
         raise ValueError('São necessários pelo menos dois grupos.')
     for group in groups:

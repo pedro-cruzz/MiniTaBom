@@ -112,7 +112,7 @@ def linear_regression(headers, rows, response, predictors, confidence=95):
             b = vt.T @ ((u.T @ yt) / singular)
             residual_scaled = yt - design @ b
             tolerance = 32 * np.finfo(float).eps * max(n, k) * float(np.linalg.norm(yt))
-            perfect = float(np.linalg.norm(residual_scaled)) <= tolerance
+            perfect = bool(float(np.linalg.norm(residual_scaled)) <= tolerance)
             if perfect:
                 residual_scaled = np.zeros(n)
             residual = ys * residual_scaled

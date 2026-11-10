@@ -1,3 +1,15 @@
+> Estado atual 0.8.0: [abrir Excel sem intervalo e duas taxas Poisson](entregas/2026-11-10-excel-poisson/ENTREGA.md). As instruções antigas de intervalo não se aplicam à abertura padrão atual.
+
+> Estado atual 0.7.0: [normalidade, postos e variâncias no histórico](entregas/2026-11-10-diagnosticos/ENTREGA.md). As notas anteriores preservam a cronologia.
+
+> Estado atual 0.6.0: [previsões vinculadas e ANOVA no histórico](entregas/2026-11-09-previsao-anova/ENTREGA.md). As notas anteriores preservam a sequência de entregas.
+
+> Estado atual 0.5.0: [regressão persistente, previsão e gráficos históricos](entregas/2026-11-09-regressao/ENTREGA.md). As atualizações anteriores abaixo são históricas.
+
+> Estado atual 0.4.0: [histórico dos formatos t, grupos e armazenamento](entregas/2026-11-06-testes-t/ENTREGA.md). As notas anteriores registram as entregas precedentes.
+
+> Estado atual 0.3.0: consulte o README e [a entrega de 06/11/2026](entregas/2026-11-06/ENTREGA.md) para projeto v2, múltiplas planilhas, histórico e registro de capacidades. O conteúdo anterior abaixo é histórico.
+
 > Atualização 0.2.0: os recursos de estudo acrescentados estão descritos no README da raiz e em METODOS_ESTUDO.md. As seções antigas deste manual preservam o histórico; pendências citadas antes dessa atualização podem já ter implementação parcial.
 
 # Manual técnico do MiniTaBom

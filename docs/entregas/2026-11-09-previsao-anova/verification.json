@@ -1,0 +1,33 @@
+{
+  "python": "3.14.2",
+  "scipy": "1.18.1",
+  "numpy": "2.5.4",
+  "checks": [
+    {
+      "command": [
+        "C:\\Program Files\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "-q"
+      ],
+      "returncode": 0,
+      "log": "unittest.log"
+    },
+    {
+      "command": [
+        "C:\\Program Files\\Python314\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "tools/check_study_examples.py"
+      ],
+      "returncode": 0,
+      "log": "examples.log"
+    }
+  ],
+  "native16_fixtures_added": 0,
+  "native16_validation": "pending: reference executable absent here"
+}

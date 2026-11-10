@@ -58,13 +58,14 @@ def _mann(first, second, alternative, method, correction):
 
 
 def analyze_study(headers, rows, mode, columns=None, response=None, factor=None,
-                  alternative='two-sided', method='auto', correction=True, zero_method='wilcox', center='median'):
+                  alternative='two-sided', method='auto', correction=True, zero_method='wilcox', center='median', group_order=None):
     if mode not in TITLES or alternative not in ('two-sided', 'less', 'greater'):
         raise ValueError('Teste ou hipótese alternativa inválida.')
     if method not in ('auto', 'exact', 'asymptotic') or zero_method not in ('wilcox', 'pratt', 'zsplit'):
         raise ValueError('Método de cálculo inválido.')
     stats = scientific_stats()
     notes, details = [], []
+    zeros,ties=None,None
     if mode == 'wilcoxon':
         if columns is None or len(columns) != 2:
             raise ValueError('Selecione as duas colunas pareadas.')
@@ -89,7 +90,7 @@ def analyze_study(headers, rows, mode, columns=None, response=None, factor=None,
                     'H0: distribuição das diferenças simétrica em torno de zero.']
         df = None
     else:
-        groups, excluded = prepare_groups(headers, rows, columns=columns, response=response, factor=factor)
+        groups, excluded = prepare_groups(headers, rows, columns=columns, response=response, factor=factor,group_order=group_order)
         values = [g['values'] for g in groups]
         count = sum(map(len, values))
         if count > 200000 or len(groups) > 50:
@@ -137,7 +138,8 @@ def analyze_study(headers, rows, mode, columns=None, response=None, factor=None,
     if not all(math.isfinite(v) for v in (statistic, p)) or not 0 <= p <= 1:
         raise ValueError('O teste é indefinido para estas dispersões ou não pode ser calculado com esta precisão.')
     return dict(mode=mode, title=TITLES[mode], statistic=statistic, p=p, method=selected, df=df,
-                summaries=summaries, alternative=alternative, correction=correction, details=details, notes=notes)
+                summaries=summaries, alternative=alternative, correction=correction, details=details, notes=notes,
+                excluded=excluded,zeros=zeros,ties=ties)
 
 
 def format_study(result):

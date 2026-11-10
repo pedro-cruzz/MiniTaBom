@@ -51,6 +51,7 @@ def main():
             '--exclude-module', 'pytest', '--exclude-module', 'scipy.tests',
             '--exclude-module', 'numpy.tests',
             '--add-data', str(ROOT / 'INVENTARIO_FUNCIONAL.json') + os.pathsep + '.',
+            '--add-data', str(ROOT / 'CAPACIDADES.json') + os.pathsep + '.',
             '--add-data', str(metadata_file) + os.pathsep + '.',
             '--log-level', 'WARN']
     for scientific_path in dict.fromkeys(str(Path(package.__file__).resolve().parent.parent)
