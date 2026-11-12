@@ -1,0 +1,17 @@
+{
+  "version": "0.9.0",
+  "executable": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\minitab\\statlab-entrega-2026-10-22 (4)\\Aplicativo\\versoes\\0.9.0-20261110-174443-881537\\MiniTaBom.exe",
+  "installed_smoke_ok": true,
+  "frozen": true,
+  "smoke_checks": 14,
+  "zip": "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\minitab\\statlab-entrega-2026-10-22 (4)\\dist\\MiniTaBom-Windows-x64.zip",
+  "zip_bytes": 85387904,
+  "sha256": "8ae8a3df0b11453b1dc3bcdb6b2a68e1e3e7d74e97ac22786880b65d488aab30",
+  "sha256_matches": true,
+  "zip_crc_ok": true,
+  "examples": 25,
+  "reference_material_excluded": true,
+  "legacy_executable_preserved": true,
+  "launcher_points_to_current": true,
+  "publication": "local only; no GitHub upload"
+}

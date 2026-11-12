@@ -9,6 +9,7 @@ from prediction_contract import PREDICTION_METHOD
 from anova_contract import ANOVA_METHOD
 from diagnostic_contract import NORMALITY_METHOD,STUDY_METHODS
 from two_poisson_contract import TWO_POISSON_METHOD
+from random_contract import RANDOM_METHOD
 
 
 class AnalysisHistoryDialog(tk.Toplevel):
@@ -20,7 +21,7 @@ class AnalysisHistoryDialog(tk.Toplevel):
         self.geometry('900x590')
         body = ttk.Frame(self, padding=14)
         body.pack(fill='both', expand=True)
-        ttk.Label(body, text='Histórico: testes t, diagnósticos, postos, variâncias, ANOVA, regressão e previsões.\n'
+        ttk.Label(body, text='Histórico: testes t, diagnósticos, postos, variâncias, ANOVA, regressão, previsões e dados aleatórios.\n'
                   'As demais análises continuam disponíveis no texto da sessão.', wraplength=840).pack(anchor='w', pady=(0, 10))
         self.tree = ttk.Treeview(body, columns=('sheet', 'revision', 'status'), show='tree headings', height=7)
         for key, label in [('#0','Análise'), ('sheet','Planilha'), ('revision','Revisão'), ('status','Origem')]:
@@ -59,9 +60,11 @@ class AnalysisHistoryDialog(tk.Toplevel):
             if result['method_id']==NORMALITY_METHOD:title='Normalidade · '+result['values']['method']
             if result['method_id'] in STUDY_METHODS:title=result['values']['title']
             if result['method_id']==TWO_POISSON_METHOD:title='Duas taxas de Poisson'
+            if result['method_id']==RANDOM_METHOD:title='Dados aleatórios · '+result['parameters']['distribution']
             self.tree.insert('', 'end', iid=result['analysis_id'], text=title,
                              values=(sheet['name'], result['source']['revision'],
                                      'Modelo/casos fixos' if result['source'].get('kind')=='fixed_prediction' else
+                                     'Valores salvos' if result['source'].get('kind')=='fixed_generation' else
                                      'Resumo informado' if result['source'].get('kind') == 'summary' else
                                      'Dados alterados' if is_stale(result, sheet) else 'Entrada atual'))
         keys = self.tree.get_children()
@@ -75,6 +78,8 @@ class AnalysisHistoryDialog(tk.Toplevel):
     def show(self, event=None):
         result = self.selected()
         label='Reexecutar com dados atuais'
+        if result and result['method_id']==RANDOM_METHOD:
+            label='Reproduzir valores salvos'
         if result and result['method_id']==PREDICTION_METHOD:
             label='Recalcular casos salvos' if result['parameters']['input_kind']=='cases' else 'Recalcular colunas atuais'
         self.rerun_button.configure(text=label)

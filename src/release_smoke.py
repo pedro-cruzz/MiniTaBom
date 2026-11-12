@@ -4,6 +4,7 @@ import math
 from pathlib import Path
 import sys
 import traceback
+import time
 from app_resources import resource_path
 
 
@@ -14,6 +15,12 @@ def run(app_class, report_path):
         app = app_class()
         app.withdraw()
         app.update_idletasks()
+        def drain_task():
+            deadline = time.monotonic() + 30
+            while app._task_window is not None:
+                app.update()
+                if time.monotonic() > deadline:raise RuntimeError('Tarefa em segundo plano não concluiu no pacote.')
+                time.sleep(.005)
         if 'MiniTaBom' not in app.title() or not app.icons:
             raise RuntimeError('Interface ou ícones indisponíveis.')
         if app.rows or app.output.get('1.0', 'end-1c') or app.dirty:
@@ -177,7 +184,6 @@ def run(app_class, report_path):
             document=load_document(app.project_path)
             if not math.isclose(rerun_analysis(document,poisson_id)['values']['estimate'],1.65,abs_tol=1e-12):
                 raise RuntimeError('Reexecução de taxas inconsistente.')
-        from excel_import import read_excel_workbook
         import zipfile
         with tempfile.TemporaryDirectory() as directory:
             path=Path(directory)/'automatic.xlsx'
@@ -187,9 +193,52 @@ def run(app_class, report_path):
                 archive.writestr('xl/_rels/workbook.xml.rels','<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="r1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/></Relationships>')
                 archive.writestr('xl/worksheets/sheet1.xml',f'<worksheet xmlns="{ns}"><sheetData><row r="2"><c r="B2"><v>12</v></c></row></sheetData></worksheet>')
             app.dirty=False
-            if not app.import_excel_workbook(read_excel_workbook(path),path) or app.rows!=[['',''],['','12']]:
+            if not app.start_excel_import(path):raise RuntimeError('Tarefa de abertura Excel indisponível.')
+            drain_task()
+            if app.rows!=[['',''],['','12']]:
                 raise RuntimeError('Abertura automática do Excel indisponível.')
         report['checks'].append('Excel sem intervalo e duas taxas Poisson com persistência')
+        random_dialog = app.random_dialog()
+        random_dialog.withdraw(); random_dialog.destroy()
+        if not app.run_random('Normal', {'mean': 0., 'sd': 1.}, row_count=6, column_count=2, seed=123):
+            raise RuntimeError('Geração aleatória indisponível no pacote.')
+        random_id = app.document['analyses'][-1]['analysis_id']
+        generated = [row[-2:] for row in app.rows]
+        with tempfile.TemporaryDirectory() as directory:
+            app.project_path = str(Path(directory) / 'random.statlab')
+            if not app.save_project(): raise RuntimeError('Gravação dos valores aleatórios indisponível.')
+            document = load_document(app.project_path)
+            replay = rerun_analysis(document, random_id)
+            if replay['values'] != document['analyses'][-1]['values']:
+                raise RuntimeError('Valores aleatórios não preservados após reabrir.')
+        if not app.rerun_saved_analysis(random_id) or [row[-2:] for row in app.rows] != generated:
+            raise RuntimeError('Reprodução aleatória não preservou as células.')
+        width = len(app.headers)
+        app.undo_data()
+        if len(app.headers) != width - 2: raise RuntimeError('Desfazer geração indisponível.')
+        app.redo_data()
+        if len(app.headers) != width: raise RuntimeError('Refazer geração indisponível.')
+        if not app.run_random('Inteiros', {'lower': 7, 'upper': 7}, row_count=6, seed=0):
+            raise RuntimeError('Geração de inteiros indisponível.')
+        if any(row[-1] != '7' for row in app.rows): raise RuntimeError('Valores inteiros inconsistentes.')
+        report['checks'].append('geração PCG64, semente, persistência, reprodução exata e undo/redo')
+        if not app.start_random('Normal', {'mean': 0., 'sd': 1.}, row_count=5000, column_count=2, seed=2718):
+            raise RuntimeError('Tarefa de geração aleatória indisponível.')
+        drain_task()
+        if len(app.rows) != 5000 or app.document['analyses'][-1]['parameters']['seed'] != 2718:
+            raise RuntimeError('Resultado da geração em segundo plano inconsistente.')
+        before_headers=list(app.headers);before_rows=[list(row) for row in app.rows]
+        before_analyses=len(app.document['analyses'])
+        def cancelled_work(context):
+            while True:
+                context.cancelled.wait(.005);context.checkpoint()
+        def must_not_apply(value):raise RuntimeError('Tarefa cancelada aplicou dados.')
+        if not app.start_background_task('Verificação de cancelamento',cancelled_work,must_not_apply):
+            raise RuntimeError('Serviço de tarefas indisponível.')
+        app._task_window.cancel();drain_task()
+        if app.headers!=before_headers or app.rows!=before_rows or len(app.document['analyses'])!=before_analyses:
+            raise RuntimeError('Cancelar alterou a planilha ou o histórico.')
+        report['checks'].append('tarefas em segundo plano: Excel, geração e cancelamento sem alteração')
         report['ok'] = True
     except Exception:
         report['error'] = traceback.format_exc()

@@ -88,7 +88,7 @@
       ],
       "tests": [],
       "limitations": [
-        "Testes t, regressão linear, previsões e ANOVA de um fator integrados ao histórico. Demais métodos/modelos e edição geral de cenas ainda pendentes."
+        "Histórico integra testes t, regressão/predição, ANOVA, normalidade, postos/variâncias, duas taxas Poisson e geração aleatória. Demais métodos/modelos e editor geral de cenas seguem pendentes."
       ],
       "acceptance": "Reabrir projeto e recuperar parâmetros, números sem arredondamento, modelo e cenas gráficas; migrar v1 sem perda.",
       "priority": "P0",
@@ -142,7 +142,7 @@
       ],
       "tests": [],
       "limitations": [
-        "Testes t, regressão, previsões, ANOVA, normalidade, postos e igualdade de variâncias reexecutáveis. Demais análises/comandos e undo/redo persistido seguem pendentes."
+        "Métodos já integrados podem ser reexecutados, e a geração aleatória reproduz snapshots fixos. Demais análises/comandos e persistência do undo/redo seguem pendentes."
       ],
       "acceptance": "Reexecutar uma análise de um projeto reaberto; preservar a versão anterior e registrar mudança da fonte.",
       "priority": "P0",
@@ -178,25 +178,40 @@
       "evidence16": [
         {
           "source": "audit:2026-11-05",
-          "locator": "Mtbedt: EDT_Tools",
-          "status": "documentary_pointer_not_runtime_confirmation"
+          "locator": "Mtbedt/EDT_Session_Window/Interrupting_Commands_or_Macros.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbsc/susing_sc/Interrupting_Command_Execution.txt",
+          "status": "documentary_not_runtime_confirmation"
         }
       ],
       "states": {
         "specification": "partial",
-        "implementation": "pending",
-        "ui": "pending",
+        "implementation": "partial",
+        "ui": "partial",
         "validation16": "pending",
-        "persistence": "to_audit"
+        "persistence": "partial"
       },
       "dependencies": [],
       "files": [
-        "src/app.py:run_regression/run_anova",
-        "src/sheet_grid.py"
+        "src/background_tasks.py",
+        "src/task_dialog.py",
+        "src/app.py",
+        "src/random_service.py",
+        "src/excel_import.py",
+        "src/excel_service.py"
       ],
-      "tests": [],
+      "tests": [
+        "tests/test_background_tasks.py",
+        "src/release_smoke.py"
+      ],
       "limitations": [
-        "Cálculos são chamados na thread Tk. Faltam serviço de execução, progresso e cancelamento coerente. A grade já desenha apenas a região visível: não reimplementar sem medir."
+        "Serviço de uma tarefa por janela, progresso por polling e cancelamento cooperativo implementados. Geração aleatória e Abrir Excel usam o serviço pela UI.",
+        "Demais cálculos, reexecução histórica, salvamento e exportação seguem síncronos; migração de todas as rotas ainda pendente.",
+        "Cancelamento espera a chamada em curso retornar até o próximo checkpoint. Aplicação final no modelo/Tk é síncrona, sem cancelamento parcial.",
+        "Menus/edição ficam bloqueados durante a tarefa; tarefas em andamento não são retomadas após fechar o processo."
       ],
       "acceptance": "Benchmark com tamanho declarado; interface continua respondendo e cancelar não deixa projeto parcialmente alterado.",
       "priority": "P1",
@@ -600,7 +615,8 @@
       ],
       "tests": [],
       "limitations": [
-        "Abertura automática .xlsx com abas/posições; cabeçalhos opcionais por ação reversível. Estilos, mesclagens, cálculo de fórmulas, formatos legados e IO completo do 16 ainda pendentes."
+        "Abertura automática .xlsx com abas/posições; cabeçalhos opcionais por ação reversível. Estilos, mesclagens, cálculo de fórmulas, formatos legados e IO completo do 16 ainda pendentes.",
+        "Arquivo > Abrir Excel executa leitura/preparação em tarefa cancelável; instalação final e confirmação ocorrem na thread Tk."
       ],
       "acceptance": "Casos sintéticos com datas, cabeçalhos, ausentes e caches de fórmulas; documentar formatos aceitos e não aceitar arquivo incompleto silenciosamente.",
       "priority": "P1",
@@ -825,29 +841,55 @@
       "kind": "work_package",
       "area": "Distribuições",
       "name": "Geração aleatória e semente",
-      "menu_command16": null,
+      "menu_command16": "Calc > Random Data; Calc > Set Base",
       "options_defaults": {},
       "evidence16": [
         {
           "source": "audit:2026-11-05",
-          "locator": "Mtbmc",
-          "status": "documentary_pointer_not_runtime_confirmation"
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Normal_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Bernoulli_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Integer_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Set_Base.txt",
+          "status": "documentary_not_runtime_confirmation"
         }
       ],
       "states": {
         "specification": "partial",
-        "implementation": "pending",
-        "ui": "pending",
+        "implementation": "partial",
+        "ui": "partial",
         "validation16": "pending",
-        "persistence": "to_audit"
+        "persistence": "partial"
       },
       "dependencies": [],
       "files": [
-        "Sem gerador público dedicado"
+        "src/random_contract.py",
+        "src/random_service.py",
+        "src/random_dialog.py",
+        "src/app.py",
+        "src/workspace_model.py",
+        "src/analysis_history_dialog.py"
       ],
-      "tests": [],
+      "tests": [
+        "tests/test_random_generation.py",
+        "src/release_smoke.py"
+      ],
       "limitations": [
-        "Faltam simulação, amostragem, semente explícita, estado do gerador e gravação em colunas/matrizes."
+        "Geração em colunas para 14 famílias implementada; demais famílias e geração em matrizes pendentes.",
+        "A semente é independente por operação; Set Base global com avanço do estado, amostragem de colunas e equivalência das sequências do 16 não estão implementados.",
+        "Histórico preserva os valores e permite reprodução exata; novo sorteio com semente está sujeito às versões do sampler.",
+        "Geração pela UI usa tarefa cancelável; a API direta e a reprodução histórica permanecem síncronas. Limites da tabela: 200000 linhas, 512 colunas e 2000000 células."
       ],
       "acceptance": "Mesma semente e contrato do gerador reproduzem resultados no MiniTaBom; equivalência da sequência ao 16 só se demonstrada.",
       "priority": "P1",
@@ -3470,11 +3512,14 @@
       "files": [
         "tools/build_windows.py",
         "src/release_smoke.py",
-        ".github/workflows/windows.yml"
+        "MiniTaBom.bat"
       ],
-      "tests": [],
+      "tests": [
+        "tests/test_bundle_install.py",
+        "src/release_smoke.py"
+      ],
       "limitations": [
-        "Há pipeline e scripts; este download não contém Aplicativo/ nem dist/. deps locais têm SciPy/NumPy, mas executável final não foi gerado/testado nesta auditoria."
+        "Build e ZIP versionados, smoke test, checksum e cópia instalada verificados localmente. Validação em Windows limpo, execução do CI remoto e lockfile completo de dependências ainda pendentes."
       ],
       "acceptance": "Build reproduzível em ambiente limpo, smoke test, exemplos, migração, licenças e checksum; fixar versões validadas.",
       "priority": "P1",
@@ -3953,18 +3998,25 @@
       ],
       "states": {
         "specification": "partial",
-        "implementation": "pending",
-        "ui": "pending",
+        "implementation": "partial",
+        "ui": "partial",
         "validation16": "pending",
-        "persistence": "to_audit"
+        "persistence": "partial"
       },
       "dependencies": [],
       "files": [
-        "src/distributions.py cobre apenas 12 famílias"
+        "src/distributions.py",
+        "src/random_contract.py",
+        "src/random_service.py",
+        "src/random_dialog.py"
       ],
-      "tests": [],
+      "tests": [
+        "tests/test_random_generation.py",
+        "src/release_smoke.py"
+      ],
       "limitations": [
-        "A ajuda documenta Cauchy, geométrica, hipergeométrica, inteiros, Laplace, extremos mínimo/máximo, logística, loglogística, binomial negativa, triangular e discreta customizada; Bernoulli e normal multivariada aparecem na geração aleatória."
+        "Além das 12 famílias prévias, geração Bernoulli e de inteiros inclusivos implementada; demais operações dessas famílias e demais famílias da ajuda continuam pendentes.",
+        "Documentação histórica não comprova igualdade de sequências ou opções no executável16."
       ],
       "acceptance": "Decompor por distribuição e operação efetivamente documentada; conferir parametrizações/localizações e entradas por coluna antes do aceite.",
       "priority": "P1",
@@ -5295,6 +5347,374 @@
         {
           "source": "user_request:2026-11-10-excel"
         }
+      ]
+    },
+    {
+      "kind": "requirement",
+      "parent_id": "audit.GAP-017",
+      "area": "Distribuições",
+      "menu_command16": "Calc > Random Data; Calc > Set Base",
+      "evidence16": [
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Normal_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Bernoulli_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Integer_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Set_Base.txt",
+          "status": "documentary_not_runtime_confirmation"
+        }
+      ],
+      "dependencies": [],
+      "files": [
+        "src/random_contract.py",
+        "src/random_service.py",
+        "src/random_dialog.py",
+        "src/app.py",
+        "src/workspace_model.py",
+        "src/analysis_history_dialog.py"
+      ],
+      "tests": [
+        "tests/test_random_generation.py",
+        "src/release_smoke.py"
+      ],
+      "priority": "P1",
+      "provenance": [
+        {
+          "source": "delivery:2026-11-10-random"
+        }
+      ],
+      "id": "calc.random.generate",
+      "name": "Geração de dados em novas colunas",
+      "options_defaults": {
+        "distributions": [
+          "Normal",
+          "t de Student",
+          "Qui-quadrado",
+          "F",
+          "Binomial",
+          "Poisson",
+          "Exponencial",
+          "Uniforme",
+          "Weibull",
+          "Lognormal",
+          "Gama",
+          "Beta",
+          "Bernoulli",
+          "Inteiros"
+        ],
+        "application_defaults": {
+          "row_count": 100,
+          "column_count": 1,
+          "base_name": "Aleatorio",
+          "seed": null
+        }
+      },
+      "states": {
+        "specification": "partial",
+        "implementation": "implemented",
+        "ui": "implemented",
+        "validation16": "pending",
+        "persistence": "implemented"
+      },
+      "limitations": [
+        "Parâmetros do diálogo são explícitos; defaults não validados contra o16.",
+        "Sem destino em matrizes ou sobrescrita de colunas; armazenamento sempre acrescenta colunas."
+      ]
+    },
+    {
+      "kind": "requirement",
+      "parent_id": "audit.GAP-017",
+      "area": "Distribuições",
+      "menu_command16": "Calc > Random Data; Calc > Set Base",
+      "evidence16": [
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Normal_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Bernoulli_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Integer_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Set_Base.txt",
+          "status": "documentary_not_runtime_confirmation"
+        }
+      ],
+      "dependencies": [],
+      "files": [
+        "src/random_contract.py",
+        "src/random_service.py",
+        "src/random_dialog.py",
+        "src/app.py",
+        "src/workspace_model.py",
+        "src/analysis_history_dialog.py"
+      ],
+      "tests": [
+        "tests/test_random_generation.py",
+        "src/release_smoke.py"
+      ],
+      "priority": "P1",
+      "provenance": [
+        {
+          "source": "delivery:2026-11-10-random"
+        }
+      ],
+      "id": "calc.random.seed",
+      "name": "Semente reproduzível por operação",
+      "options_defaults": {
+        "engine": "PCG64",
+        "seed_min": 0,
+        "seed_max": 340282366920938463463374607431768211455,
+        "layout": "columns_then_rows"
+      },
+      "states": {
+        "specification": "partial",
+        "implementation": "implemented",
+        "ui": "implemented",
+        "validation16": "pending",
+        "persistence": "implemented"
+      },
+      "limitations": [
+        "Não reproduz a sequência Minitab16.",
+        "Sem estado global entre operações; novas execuções com semente dependem das versões NumPy/SciPy."
+      ]
+    },
+    {
+      "kind": "requirement",
+      "parent_id": "audit.GAP-017",
+      "area": "Distribuições",
+      "menu_command16": "Calc > Random Data; Calc > Set Base",
+      "evidence16": [
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Normal_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Bernoulli_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Integer_Random.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Set_Base.txt",
+          "status": "documentary_not_runtime_confirmation"
+        }
+      ],
+      "dependencies": [],
+      "files": [
+        "src/random_contract.py",
+        "src/random_service.py",
+        "src/random_dialog.py",
+        "src/app.py",
+        "src/workspace_model.py",
+        "src/analysis_history_dialog.py"
+      ],
+      "tests": [
+        "tests/test_random_generation.py",
+        "src/release_smoke.py"
+      ],
+      "priority": "P1",
+      "provenance": [
+        {
+          "source": "delivery:2026-11-10-random"
+        }
+      ],
+      "id": "calc.random.replay",
+      "name": "Reprodução de valores históricos sem novo sorteio",
+      "options_defaults": {
+        "source_kind": "fixed_generation",
+        "replay_policy": "saved_values",
+        "undo": "one_step_per_execution"
+      },
+      "states": {
+        "specification": "partial",
+        "implementation": "implemented",
+        "ui": "implemented",
+        "validation16": "pending",
+        "persistence": "implemented"
+      },
+      "limitations": [
+        "O histórico guarda os valores gerados; desfazer as colunas não remove o registro.",
+        "Valores no histórico e nas células ocupam espaço no projeto, sujeito ao limite de256MiB."
+      ]
+    },
+    {
+      "kind": "requirement",
+      "parent_id": "audit.GAP-004",
+      "area": "Plataforma",
+      "menu_command16": null,
+      "options_defaults": {},
+      "evidence16": [
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbedt/EDT_Session_Window/Interrupting_Commands_or_Macros.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbsc/susing_sc/Interrupting_Command_Execution.txt",
+          "status": "documentary_not_runtime_confirmation"
+        }
+      ],
+      "dependencies": [],
+      "files": [
+        "src/background_tasks.py",
+        "src/task_dialog.py",
+        "src/app.py",
+        "src/random_service.py",
+        "src/excel_import.py",
+        "src/excel_service.py"
+      ],
+      "tests": [
+        "tests/test_background_tasks.py",
+        "src/release_smoke.py"
+      ],
+      "priority": "P0",
+      "provenance": [
+        {
+          "source": "delivery:2026-11-10-background-tasks"
+        }
+      ],
+      "id": "platform.tasks.service",
+      "name": "Execução isolada, progresso e cancelamento cooperativo",
+      "states": {
+        "specification": "partial",
+        "implementation": "implemented",
+        "ui": "implemented",
+        "validation16": "pending",
+        "persistence": "not_applicable"
+      },
+      "limitations": [
+        "Uma tarefa por janela; status de tarefa é transitório, sem persistência/retomada.",
+        "Sem interrupção forçada de chamadas nativas; aplicação final síncrona."
+      ]
+    },
+    {
+      "kind": "requirement",
+      "parent_id": "audit.GAP-004",
+      "area": "Plataforma",
+      "menu_command16": null,
+      "options_defaults": {},
+      "evidence16": [
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbedt/EDT_Session_Window/Interrupting_Commands_or_Macros.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbsc/susing_sc/Interrupting_Command_Execution.txt",
+          "status": "documentary_not_runtime_confirmation"
+        }
+      ],
+      "dependencies": [],
+      "files": [
+        "src/background_tasks.py",
+        "src/task_dialog.py",
+        "src/app.py",
+        "src/random_service.py",
+        "src/excel_import.py",
+        "src/excel_service.py"
+      ],
+      "tests": [
+        "tests/test_background_tasks.py",
+        "src/release_smoke.py"
+      ],
+      "priority": "P0",
+      "provenance": [
+        {
+          "source": "delivery:2026-11-10-background-tasks"
+        }
+      ],
+      "id": "platform.tasks.random",
+      "name": "Gerar dados aleatórios pela tarefa da interface",
+      "states": {
+        "specification": "partial",
+        "implementation": "implemented",
+        "ui": "implemented",
+        "validation16": "pending",
+        "persistence": "implemented"
+      },
+      "limitations": [
+        "UI usa tarefa; API direta e reprodução histórica seguem síncronas.",
+        "Sorteios em blocos de 4096 valores por coluna; igualdade com sequências 16 não presumida."
+      ]
+    },
+    {
+      "kind": "requirement",
+      "parent_id": "audit.GAP-004",
+      "area": "Plataforma",
+      "menu_command16": null,
+      "options_defaults": {},
+      "evidence16": [
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbedt/EDT_Session_Window/Interrupting_Commands_or_Macros.txt",
+          "status": "documentary_not_runtime_confirmation"
+        },
+        {
+          "source": "audit:2026-11-05",
+          "locator": "Mtbsc/susing_sc/Interrupting_Command_Execution.txt",
+          "status": "documentary_not_runtime_confirmation"
+        }
+      ],
+      "dependencies": [],
+      "files": [
+        "src/background_tasks.py",
+        "src/task_dialog.py",
+        "src/app.py",
+        "src/random_service.py",
+        "src/excel_import.py",
+        "src/excel_service.py"
+      ],
+      "tests": [
+        "tests/test_background_tasks.py",
+        "src/release_smoke.py"
+      ],
+      "priority": "P0",
+      "provenance": [
+        {
+          "source": "delivery:2026-11-10-background-tasks"
+        }
+      ],
+      "id": "files.excel.background",
+      "name": "Leitura e preparação de Excel pela tarefa da interface",
+      "states": {
+        "specification": "partial",
+        "implementation": "implemented",
+        "ui": "implemented",
+        "validation16": "pending",
+        "persistence": "implemented"
+      },
+      "limitations": [
+        "Somente o fluxo automático .xlsx; demais operações de arquivos continuam síncronas.",
+        "Cancelamento ou snapshot do projeto alterado descartam o resultado preparado."
       ]
     }
   ],

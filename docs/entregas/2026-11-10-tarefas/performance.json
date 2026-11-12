@@ -1,0 +1,44 @@
+{
+  "python": "3.14.2",
+  "generation": {
+    "rows": 10000,
+    "new_columns": 3,
+    "start_seconds": 0.0642325000371784,
+    "total_seconds": 0.45747650001430884,
+    "main_loop_beats": 6,
+    "max_main_loop_gap_seconds": 0.2338144999812357,
+    "python_traced_current_bytes": 6633288,
+    "python_traced_peak_bytes": 8152548,
+    "outcome": "succeeded"
+  },
+  "cancellation": {
+    "request_after_ms": 20,
+    "rows": 100000,
+    "new_columns": 4,
+    "document_preserved": true,
+    "start_seconds": 0.14542950002942234,
+    "total_seconds": 0.1923524999874644,
+    "main_loop_beats": 3,
+    "max_main_loop_gap_seconds": 0.14979400002630427,
+    "python_traced_current_bytes": 42076,
+    "python_traced_peak_bytes": 2413791,
+    "outcome": "cancelled"
+  },
+  "excel": {
+    "sheets": 2,
+    "rows_per_sheet": 10000,
+    "columns": 3,
+    "start_seconds": 0.07342720002634451,
+    "total_seconds": 2.1261417000205256,
+    "main_loop_beats": 37,
+    "max_main_loop_gap_seconds": 0.1770859999815002,
+    "python_traced_current_bytes": 5788669,
+    "python_traced_peak_bytes": 29293932,
+    "outcome": "succeeded"
+  },
+  "limitations": [
+    "Bibliotecas aquecidas, Tk oculto, tracemalloc ativo; não mede toda a memória nativa.",
+    "O maior intervalo do pulso inclui a aplicação final síncrona e a medição; não extrapolar para o tamanho máximo.",
+    "Cancelamento é cooperativo; uma chamada nativa em curso precisa retornar antes do próximo checkpoint."
+  ]
+}

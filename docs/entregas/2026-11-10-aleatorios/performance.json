@@ -1,0 +1,13 @@
+{
+  "rows": 10000,
+  "original_columns": 3,
+  "generated_columns": 3,
+  "total_cells": 60000,
+  "history_states": 2,
+  "generation_seconds": 0.3097,
+  "undo_seconds": 0.0055,
+  "redo_seconds": 0.1624,
+  "python_traced_current_bytes": 6617972,
+  "python_traced_peak_bytes": 7981901,
+  "scope": "Processo Python/Tk oculto, bibliotecas aquecidas, tracemalloc ativo; não mede memória nativa total nem prova responsividade em todos os limites."
+}

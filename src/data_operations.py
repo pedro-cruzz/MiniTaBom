@@ -76,12 +76,18 @@ def unique_name(name, used):
     return name
 
 
-def _append_columns(headers, rows, names, columns):
+def _append_columns(headers, rows, names, columns, context=None):
     height, width = max([len(rows)] + [len(c) for c in columns]), len(headers) + len(names)
     if height > MAX_ROWS or width > MAX_COLUMNS or height * width > MAX_CELLS:
         raise ValueError(f'O resultado excede os limites desta operação: {MAX_ROWS} linhas, {MAX_COLUMNS} colunas e {MAX_CELLS} células.')
-    result = [(list(rows[i]) if i < len(rows) else [''] * len(headers)) +
-              [column[i] if i < len(column) else '' for column in columns] for i in range(height)]
+    result = []
+    for i in range(height):
+        if context is not None and i % 4096 == 0:
+            context.report(i / height, 'Preparando a tabela de destino…')
+        result.append((list(rows[i]) if i < len(rows) else [''] * len(headers)) +
+                      [column[i] if i < len(column) else '' for column in columns])
+    if context is not None:
+        context.report(1., 'Tabela de destino preparada')
     return list(headers) + names, result
 
 

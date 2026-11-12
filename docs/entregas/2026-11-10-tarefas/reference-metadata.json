@@ -1,0 +1,22 @@
+{
+  "target": "Minitab 16.2.4.0 / English 1033",
+  "date": "2026-11-10",
+  "executed_reference": false,
+  "native16_fixtures_added": 0,
+  "reference_runtime_exists": false,
+  "sources": [
+    {
+      "locator": "Mtbedt/EDT_Session_Window/Interrupting_Commands_or_Macros.txt",
+      "sha256": "df2d2cc3f809e5c05a9237c513fe07dd745968aca06fcb03c5a233ed8cdf9291"
+    },
+    {
+      "locator": "Mtbsc/susing_sc/Interrupting_Command_Execution.txt",
+      "sha256": "54535131c8a17a1de0f28097d2e8aaffb68d8b0fab4781d7ce5fcf32869364ce"
+    }
+  ],
+  "distinction": "Ajuda16 documenta Ctrl+Break em saída/comandos/macros. Não comprova equivalência aos diálogos de tarefas do MiniTaBom.",
+  "technical_sources": [
+    "https://docs.python.org/3.14/library/tkinter.html#threading-model",
+    "https://docs.python.org/3.14/library/threading.html#event-objects"
+  ]
+}

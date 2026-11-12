@@ -1,0 +1,30 @@
+{
+  "target": "Minitab 16.2.4.0 / English 1033",
+  "date": "2026-11-10",
+  "executed_reference": false,
+  "expected_runtime_path": "C:\\Program Files (x86)\\Minitab\\Minitab 16\\Mtb.exe",
+  "reference_executable_exists": false,
+  "sources": [
+    {
+      "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Normal_Random.txt",
+      "sha256": "c3a1399dc84edf7900fc7134d259eecfd17a0958f85a1de062e9c49d13ee268e"
+    },
+    {
+      "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Bernoulli_Random.txt",
+      "sha256": "19bc1cae655c1ee85c3e15f8799e8928c71a3f9ece582082ec156f9d3e5913df"
+    },
+    {
+      "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Integer_Random.txt",
+      "sha256": "b4a0a6f8b06f44d4c027b38d08da329c6a553f6c3172ca81074e72ffe0e683a1"
+    },
+    {
+      "locator": "Mtbmc/MC_Calc_Menu/Random_Data_and_Probability_Distributions/Set_Base.txt",
+      "sha256": "08cfc753ed267ce96b802566da72a398fd54f91aca2c750480c829ed718b3457"
+    }
+  ],
+  "distinction": "Presença e semântica documental; nenhuma sequência aleatória do16 foi executada ou usada como fixture.",
+  "primary_backend_sources": [
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.rv_continuous.rvs.html",
+    "https://numpy.org/doc/stable/reference/random/generator"
+  ]
+}

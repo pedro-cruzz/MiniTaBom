@@ -47,7 +47,8 @@
         "Atalhos básicos",
         "Grade com cabeçalhos fixos em duas faixas e gerenciador recolhível",
         "Ícones próprios nos comandos dos menus, barra de ferramentas e abas dos diálogos",
-        "Coleção de planilhas com IDs, seletor e histórico de desfazer independente; histórico estruturado/reexecução dos formatos disponíveis dos testes t"
+        "Coleção de planilhas com IDs, seletor e histórico de desfazer independente; histórico estruturado/reexecução dos formatos disponíveis dos testes t",
+        "Serviço de tarefas com progresso, Cancelar/Esc e fechamento cooperativo; integrado a Gerar dados aleatórios e Abrir Excel"
       ],
       "pendente": [
         "Inventário integral dos menus do 16",
@@ -96,7 +97,8 @@
         "Exportação de sessão em texto",
         "Importação .xlsx por aba e intervalo, cabeçalhos opcionais e prévia; valores/caches de fórmulas, sem executar macros ou links",
         "Projeto statlab v2 com migração de v1; planilhas, IDs, revisões e resultados estruturados dos testes t",
-        "Abrir Excel .xlsx automaticamente, com todas as abas/posições; fórmulas sem cache exibidas como texto e cabeçalho opcional reversível"
+        "Abrir Excel .xlsx automaticamente, com todas as abas/posições; fórmulas sem cache exibidas como texto e cabeçalho opcional reversível",
+        "Abrir Excel automático com leitura e preparação em segundo plano; cancelamento sem substituir o projeto atual"
       ],
       "pendente": [
         "Demais formatos/opções Excel, formatos de células, datas e metadados completos",
@@ -112,7 +114,9 @@
       "id": "calculo",
       "estado": "parcial_sem_validacao_16",
       "existente": [
-        "Calculadora de colunas com C1/C2, aritmética e abs/sqrt/log/log10/exp/round por AST permitido; ausentes e desfazer"
+        "Calculadora de colunas com C1/C2, aritmética e abs/sqrt/log/log10/exp/round por AST permitido; ausentes e desfazer",
+        "Geração aleatória em novas colunas: 14 famílias, semente por operação, histórico/snapshot e reprodução exata com desfazer/refazer",
+        "Geração aleatória pela UI em tarefa cancelável; números e tabela preparados antes da aplicação atômica"
       ],
       "pendente": [
         "Demais funções e opções da calculadora do 16",
@@ -121,7 +125,7 @@
         "Funções de texto e data",
         "Matrizes e constantes",
         "Geração de sequências",
-        "Geração aleatória e controle de semente"
+        "Geração: demais famílias, amostragem de colunas/matrizes, estado global do gerador e validação16"
       ]
     },
     {
@@ -195,15 +199,16 @@
         "Distribuição t via SciPy usada internamente nos testes t: CDF, cauda e quantil",
         "Calculador acessível em Calc > Distribuições de probabilidade",
         "Normal, t, qui-quadrado, F, binomial, Poisson, exponencial, uniforme, Weibull, lognormal, gama e beta",
-        "PDF/PMF, CDF, cauda superior, intervalo inclusivo e quantis acumulados/cauda superior"
+        "PDF/PMF, CDF, cauda superior, intervalo inclusivo e quantis acumulados/cauda superior",
+        "Dados aleatórios das 12 famílias existentes mais Bernoulli e inteiros inclusivos; semente128bits PCG64 e valores persistidos"
       ],
       "pendente": [
         "Inventariar todas as distribuições e parametrizações do 16",
         "Demais CDF e probabilidades de cauda",
         "Demais quantis",
-        "Geração aleatória",
         "Cálculo em lote por colunas, armazenamento, gráficos de distribuições e parâmetros de localização adicionais",
-        "Precisão nas caudas e limites e validação diferencial no 16"
+        "Precisão nas caudas e limites e validação diferencial no 16",
+        "Geração: famílias restantes, matrizes, amostragem e semântica global de Set Base do16"
       ]
     },
     {

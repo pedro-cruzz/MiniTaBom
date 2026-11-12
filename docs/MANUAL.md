@@ -1,4 +1,9 @@
-> Estado atual 0.8.0: [abrir Excel sem intervalo e duas taxas Poisson](entregas/2026-11-10-excel-poisson/ENTREGA.md). As instruções antigas de intervalo não se aplicam à abertura padrão atual.
+> Estado atual 0.10.0: [progresso e cancelamento em Excel e geração aleatória](entregas/2026-11-10-tarefas/ENTREGA.md).
+> Para abrir a compilação local mais recente, use `MiniTaBom.bat` na raiz ou `Aplicativo/Abrir.bat`. Os executáveis locais ficam em `Aplicativo/versoes/`; uma sessão já aberta continua na sua versão. No ZIP portátil, o usuário continua abrindo `MiniTaBom.exe` diretamente.
+>
+> Entrega 0.9.0: [dados aleatórios com semente e reprodução pelo histórico](entregas/2026-11-10-aleatorios/ENTREGA.md).
+>
+> Entrega 0.8.0: [abrir Excel sem intervalo e duas taxas Poisson](entregas/2026-11-10-excel-poisson/ENTREGA.md). As instruções antigas de intervalo não se aplicam à abertura padrão atual.
 
 > Estado atual 0.7.0: [normalidade, postos e variâncias no histórico](entregas/2026-11-10-diagnosticos/ENTREGA.md). As notas anteriores preservam a cronologia.
 
@@ -212,13 +217,35 @@ O relatório sinaliza preditores além do mínimo/máximo observados e alavancag
 
 Fontes complementares atuais: [métodos de Predict no Minitab](https://support.minitab.com/en-us/minitab/help-and-how-to/statistical-modeling/using-fitted-models/how-to/predict/methods-and-formulas/methods-and-formulas/) e [tipos de intervalo](https://support.minitab.com/en-us/minitab/help-and-how-to/statistical-modeling/using-fitted-models/how-to/predict/perform-the-analysis/specify-the-confidence-and-prediction-intervals/). Sem validação diferencial no Minitab 16. Ainda faltam armazenamento das previsões em colunas, persistência do modelo, gráficos de intervalos e demais modelos.
 
+## Progresso e cancelamento
+
+**Arquivo > Abrir Excel…** e **Calc > Dados aleatórios… > Gerar** iniciam tarefas com progresso. A janela mostra a etapa atual e o percentual dos dados/etapas preparados; não é uma previsão de tempo restante. Durante a operação, menus e edição da planilha ficam bloqueados.
+
+Use **Cancelar**, **Esc** ou o **X da janela de progresso** para descartar a operação. O cancelamento não acrescenta análises, colunas ou estados de desfazer e não substitui o projeto aberto. Um resultado que já esteja pronto, mas ainda não tenha sido aplicado, também pode ser descartado. O cancelamento é cooperativo e pode aguardar o término da chamada atual.
+
+Ao terminar, os dados preparados são aplicados em uma etapa na interface. Se a origem mudar durante a preparação, o resultado antigo não é aplicado; uma mensagem orienta iniciar novamente. No Excel, a confirmação de salvar o projeto atual continua ocorrendo antes da substituição, após a preparação bem-sucedida. Ao pedir para fechar o programa durante uma tarefa, ele solicita cancelamento e depois mantém o aviso de salvamento já existente.
+
+O fechamento do processo não retoma tarefas em andamento. A aplicação final, os demais cálculos, a reexecução do histórico e salvar/exportar continuam síncronos. Os mesmos serviços numéricos e de leitura permanecem disponíveis de forma síncrona para ferramentas internas.
+
+## Dados aleatórios
+
+Em **Calc > Dados aleatórios…**, selecione uma das 14 distribuições, informe os parâmetros e as quantidades. Normal, t, qui-quadrado, F, binomial, Poisson, exponencial, uniforme, Weibull, lognormal, gama e beta usam a mesma parametrização do calculador de distribuições. Bernoulli usa probabilidade de evento entre 0 e 1; inteiros usa mínimo e máximo inclusivos, permitindo limites iguais. Os limites inteiros ficam entre −(2⁵³−1) e 2⁵³−1.
+
+A semente aceita um inteiro entre 0 e 2¹²⁸−1, sem conversão para ponto flutuante. Vazia, ela é criada e mostrada no relatório. Cada operação inicia seu próprio gerador com essa semente. Repetir distribuição, parâmetros, quantidades e semente com as mesmas versões do motor reproduz os valores. Isso não é o fluxo global de **Set Base** do Minitab.
+
+O comando acrescenta novas colunas. Se gerar mais linhas que a tabela existente, as células antigas nas novas linhas ficam vazias. Se gerar menos, as novas colunas ficam vazias abaixo do último valor gerado. Um nome já usado recebe sufixo. Ctrl+Z desfaz toda a inclusão em uma etapa; Ctrl+Y a refaz. O histórico da análise permanece, inclusive quando as colunas são desfeitas.
+
+Ao salvar o `.statlab`, os valores gerados são preservados junto dos parâmetros e da proveniência. **Histórico de análises > Reproduzir valores salvos** copia esses valores para novas colunas da planilha original, sem novo sorteio; funciona após reabrir e preserva a aba ativa quando a original está inativa. **Exportar resultado JSON** inclui os valores e a semente.
+
+Limites: 200000 linhas, 512 colunas e 2000000 células na tabela resultante, contando os dados existentes. Erros de parâmetros, capacidade ou resultado não finito são recusados antes de alterar a planilha. O comando Gerar da interface usa a tarefa cancelável descrita acima; a API direta e a reprodução histórica permanecem síncronas. Demais famílias, amostragem de colunas, matrizes e estado global do gerador permanecem pendentes. Nenhuma igualdade de sequência com o 16 foi validada.
+
 ## Calculador de distribuições
 
 Em Calc > Distribuições de probabilidade, escolha Normal, t, qui-quadrado, F, binomial, Poisson, exponencial, uniforme, Weibull, lognormal, gama ou beta. As seis operações são densidade/massa pontual, acumulada P(X≤x), cauda P(X>x), probabilidade inclusiva entre limites e quantis pela acumulada ou cauda superior. O resultado entra na sessão e no navegador.
 
 Parâmetros: normal (média/desvio); t/qui-quadrado (GL); F (GL numerador/denominador); binomial (n,p); Poisson (média); exponencial (média/escala); uniforme (mínimo/máximo); Weibull (forma/escala); lognormal (média e desvio de ln(X)); gama (forma/escala, não taxa); beta (formas α,β e suporte 0–1). Não há deslocamento adicional nas famílias positivas. Binomial usa n inteiro de 0 a 2⁵³−1. Nas discretas, intervalos incluem os inteiros entre ceil(a) e floor(b); P(X>x) usa cauda estrita. Quantis requerem 0<p<1. Densidades podem exceder 1 e ser infinitas em singularidades dos limites; não representam probabilidade em um ponto.
 
-Fonte técnica: [distribuições e métodos do SciPy](https://docs.scipy.org/doc/scipy/tutorial/stats/probability_distributions.html). Testes analíticos cobrem relações normal/Cauchy/exponencial, somas binomiais/Poisson, parametrizações e inversões. A cauda superior usa SF diretamente, e intervalos na cauda usam diferença de SF para reduzir cancelamento. Ainda faltam cálculo em lote/armazenamento, geração aleatória, gráficos, outras distribuições/parametrizações e comparação com o 16.
+Fonte técnica: [distribuições e métodos do SciPy](https://docs.scipy.org/doc/scipy/tutorial/stats/probability_distributions.html). Testes analíticos cobrem relações normal/Cauchy/exponencial, somas binomiais/Poisson, parametrizações e inversões. A cauda superior usa SF diretamente, e intervalos na cauda usam diferença de SF para reduzir cancelamento. A geração em colunas está disponível no diálogo separado acima; ainda faltam cálculo de probabilidades em lote/armazenamento, gráficos, demais distribuições/parametrizações e comparação com o 16.
 
 ## Ícones da interface
 

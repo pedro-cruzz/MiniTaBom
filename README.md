@@ -4,7 +4,9 @@ Projeto independente para **fins educativos e estudo de estatística**, em portu
 
 ## Abrir o programa
 
-No computador em que o pacote foi gerado, abra **`Aplicativo/MiniTaBom.exe`**. Também é possível dar dois cliques em **`MiniTaBom.bat`**, na raiz desta pasta.
+No computador em que o pacote foi gerado, dê dois cliques em **`MiniTaBom.bat`**, na raiz desta pasta, ou em **`Aplicativo/Abrir.bat`**. Os dois abrem a compilação mais recente. O `.exe` local fica em uma pasta de `Aplicativo/versoes/`, indicada em `Aplicativo/atual.json`.
+
+Cada compilação usa uma pasta nova para permitir gerar uma atualização com o programa aberto. A sessão já aberta continua na sua versão; o atalho abre a nova. Projetos e arquivos pessoais são preservados.
 
 **Para abrir um Excel:** Arquivo > Abrir Excel…, escolha o `.xlsx` e pronto. As abas aparecem no seletor acima da grade; não precisa informar células ou intervalo.
 
@@ -18,7 +20,7 @@ O download do código-fonte pelo GitHub não inclui o executável; ele é distri
 
 | Pasta ou arquivo | Conteúdo |
 | --- | --- |
-| `Aplicativo/` | Programa pronto: **MiniTaBom.exe**, dependências, exemplos e licenças. Gerado localmente. |
+| `Aplicativo/` | Atalho **Abrir.bat**, seleção em `atual.json` e programa pronto em `versoes/`, com dependências, exemplos e licenças. Gerado localmente. |
 | `src/` | Código-fonte do programa. |
 | `tests/` | Testes automatizados e dados de referência em `fixtures/`. |
 | `exemplos/` | Projetos sintéticos `.statlab` para estudar. |
@@ -36,7 +38,7 @@ O download do código-fonte pelo GitHub não inclui o executável; ele é distri
 
 No programa, abra **Ajuda > Verificar atualizações…**. O repositório padrão já é `pedro-cruzz/MiniTaBom`. Clique em **Verificar** para consultar a última Release estável pública e em **Abrir página da versão** para baixar o pacote. A consulta não instala nem substitui arquivos automaticamente.
 
-Versão atual: **0.8.0**. Para uma atualização local, aumente `version` em `app_metadata.json`, gere o ZIP e publique uma Release com a mesma tag, por exemplo `v0.8.0`. No GitHub Actions, a versão da tag e o repositório são incluídos automaticamente. Uma alteração no código ou uma tag sem Release não aparece como atualização nesse botão.
+Versão atual: **0.10.0**. Para uma atualização local, aumente `version` em `app_metadata.json`, gere o ZIP e publique uma Release com a mesma tag, por exemplo `v0.10.0`. No GitHub Actions, a versão da tag e o repositório são incluídos automaticamente. Uma alteração no código ou uma tag sem Release não aparece como atualização nesse botão.
 
 ## Executar pelo código-fonte
 
@@ -160,3 +162,23 @@ Fórmulas usam resultados salvos no Excel; quando não há resultado, aparecem c
 **Estat > Estatísticas básicas > Duas taxas de Poisson…** compara taxas por exposição ou médias por observação. Aceita duas colunas, resposta/grupo e resumos; exposições diferentes; hipóteses unilateral/bilateral; Z separado/combinado e exato condicional para diferença zero. O IC usa aproximação normal com estimativas separadas, inclusive quando há teste exato. As opções e resultados ficam no histórico. Frequências opcionais do Minitab e demais opções continuam pendentes.
 
 Verificação: **342 testes e 24 exemplos**, incluindo o novo `exemplo_duas_taxas_poisson.statlab`. O exemplo da ajuda 16 foi conferido somente na precisão dos números publicados, sem execução no programa original. Veja a [entrega 0.8.0](docs/entregas/2026-11-10-excel-poisson/ENTREGA.md).
+
+## Novidades 0.9.0: dados aleatórios com semente
+
+Abra **Calc > Dados aleatórios…**, escolha a distribuição, os parâmetros e quantas linhas/colunas gerar. Os dados entram em novas colunas da planilha ativa, com Ctrl+Z/Ctrl+Y para desfazer/refazer. Dados existentes são preservados; nomes repetidos ganham sufixos.
+
+São 14 distribuições: normal, t, qui-quadrado, F, binomial, Poisson, exponencial, uniforme, Weibull, lognormal, gama, beta, Bernoulli e inteiros com limites inclusivos. A semente é opcional: se ficar vazia, o programa cria uma e registra na sessão.
+
+O projeto salva parâmetros, semente, versões do gerador e os valores originais. No **Histórico de análises**, **Reproduzir valores salvos** acrescenta uma cópia exata dos dados, mesmo depois de reabrir o projeto. A semente é aplicada por operação; não reproduz o estado global nem as sequências do Minitab 16. Novos sorteios podem mudar com versões do NumPy/SciPy; a reprodução pelo histórico usa o snapshot salvo.
+
+Verificação: **363 testes e 25 exemplos válidos**, além do teste do executável instalado. Exemplo sintético: `exemplo_dados_aleatorios.statlab`. Detalhes, validação e limites na [entrega 0.9.0](docs/entregas/2026-11-10-aleatorios/ENTREGA.md).
+
+## Novidades 0.10.0: progresso e cancelamento
+
+**Arquivo > Abrir Excel…** e **Calc > Dados aleatórios… > Gerar** agora exibem uma janela de progresso. Use **Cancelar**, **Esc** ou o **X dessa janela** para interromper a operação e manter os dados atuais. O Excel continua abrindo normalmente, sem seleção de células.
+
+Enquanto a tarefa roda, os menus e a edição ficam bloqueados; a janela de progresso continua respondendo. Os dados são preparados separadamente e aplicados ao concluir. Se o projeto mudar durante a preparação, o programa descarta o resultado antigo para preservar as alterações atuais. A geração concluída continua com Ctrl+Z/Ctrl+Y e histórico persistente.
+
+Cancelar pode levar alguns instantes até a etapa em curso terminar. A aplicação final dos dados e os demais procedimentos ainda são síncronos. Esta entrega inicia o serviço comum de tarefas, com migração das outras rotas ainda pendente.
+
+Verificação: **386 testes e 25 exemplos válidos**, com executável instalado e ZIP aprovados. Detalhes, medições e limites na [entrega 0.10.0](docs/entregas/2026-11-10-tarefas/ENTREGA.md).

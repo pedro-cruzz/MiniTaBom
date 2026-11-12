@@ -7,7 +7,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 
-from project import load_project
+from project import load_project, load_document
 from extended_inference import analyze_extended
 from contingency import categorical_table, matrix_table
 from normality import analyze_normality
@@ -47,6 +47,15 @@ def main():
                               summaries=[dict(n=3, mean=2, sd=2), dict(n=3, mean=3, sd=2)])
     assert raw['estimate'] == stacked['estimate'] == summary['estimate'] == -1
     assert raw['p'] == stacked['p'] == summary['p']
+    from analysis_service import rerun_analysis
+    from workspace_model import active_sheet
+    random_document = load_document(ROOT / 'exemplos/exemplo_dados_aleatorios.statlab')
+    sheet = active_sheet(random_document)
+    for record in random_document['analyses']:
+        assert rerun_analysis(random_document, record['analysis_id'])['values'] == record['values']
+        for name, values in zip(record['storage']['names'], record['values']['columns']):
+            index = next(i for i, column in enumerate(sheet['columns']) if column['name'] == name)
+            assert [row[index] for row in sheet['rows']] == [str(value) for value in values]
     print(f'{len(examples)} exemplos válidos; novos cálculos e inventários conferidos.')
 
 

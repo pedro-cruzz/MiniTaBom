@@ -1,0 +1,737 @@
+{
+  "format": "statlab",
+  "version": 2,
+  "project_id": "project-5590370328a543b0be4c4e44d42fd43d",
+  "active_worksheet_id": "ws-917e72ffebce4f5a9999daf9bf3c6afc",
+  "worksheets": [
+    {
+      "id": "ws-917e72ffebce4f5a9999daf9bf3c6afc",
+      "name": "Worksheet 1",
+      "revision": 5,
+      "columns": [
+        {
+          "id": "col-e48be201b01d4cb188ef02da0d5d5618",
+          "type": "text",
+          "format": {},
+          "metadata": {},
+          "name": "Ensaio"
+        },
+        {
+          "id": "col-04d263971c5a49478fe3cea0ab7bb2d2",
+          "type": "text",
+          "format": {},
+          "metadata": {},
+          "name": "Normal 1"
+        },
+        {
+          "id": "col-c09ae001992a4c64a0471d9960b33cf0",
+          "type": "text",
+          "format": {},
+          "metadata": {},
+          "name": "Normal 2"
+        },
+        {
+          "id": "col-e9e3a5dc41974112b9658d600a261077",
+          "type": "text",
+          "format": {},
+          "metadata": {},
+          "name": "Poisson"
+        },
+        {
+          "id": "col-1a0e092265e9455d9f400202c516bd00",
+          "type": "text",
+          "format": {},
+          "metadata": {},
+          "name": "Inteiros"
+        },
+        {
+          "id": "col-ee43d1adb69c4b45acf6dee5f53500ec",
+          "type": "text",
+          "format": {},
+          "metadata": {},
+          "name": "Bernoulli"
+        }
+      ],
+      "rows": [
+        [
+          "1",
+          "51.523585398772155",
+          "60.70823800435231",
+          "1",
+          "5",
+          "0"
+        ],
+        [
+          "2",
+          "44.80007946879752",
+          "47.967924918076925",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "3",
+          "53.752255979032284",
+          "47.43878635464231",
+          "4",
+          "5",
+          "0"
+        ],
+        [
+          "4",
+          "54.70282358195607",
+          "45.93113635876061",
+          "4",
+          "2",
+          "1"
+        ],
+        [
+          "5",
+          "40.24482405673082",
+          "53.079897112877475",
+          "2",
+          "4",
+          "0"
+        ],
+        [
+          "6",
+          "43.48910246568841",
+          "55.64486146360446",
+          "6",
+          "3",
+          "0"
+        ],
+        [
+          "7",
+          "50.639202015836425",
+          "49.430262711725625",
+          "2",
+          "1",
+          "0"
+        ],
+        [
+          "8",
+          "48.41878703828209",
+          "45.79921761518736",
+          "2",
+          "6",
+          "0"
+        ],
+        [
+          "9",
+          "49.91599421247856",
+          "45.877593921543806",
+          "3",
+          "4",
+          "0"
+        ],
+        [
+          "10",
+          "45.7347803621321",
+          "53.252963939123504",
+          "2",
+          "1",
+          "0"
+        ],
+        [
+          "11",
+          "54.396989874314144",
+          "53.71627085601721",
+          "3",
+          "6",
+          "0"
+        ],
+        [
+          "12",
+          "53.88895967714474",
+          "52.71577134152597",
+          "1",
+          "6",
+          "1"
+        ],
+        [
+          "13",
+          "50.33015348780608",
+          "46.67245146355653",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "14",
+          "55.636206034840164",
+          "51.1608066153336",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "15",
+          "52.33754671126023",
+          "50.58342904570364",
+          "3",
+          "1",
+          "1"
+        ],
+        [
+          "16",
+          "45.70353768558381",
+          "51.09344298364506",
+          "3",
+          "3",
+          "0"
+        ],
+        [
+          "17",
+          "51.843753920412496",
+          "54.35714388974095",
+          "0",
+          "3",
+          "1"
+        ],
+        [
+          "18",
+          "45.20558699585501",
+          "51.11797774387341",
+          "6",
+          "5",
+          "1"
+        ],
+        [
+          "19",
+          "54.39225150653636",
+          "53.39456781535947",
+          "1",
+          "5",
+          "0"
+        ],
+        [
+          "20",
+          "49.75037044506873",
+          "50.33789534744446",
+          "5",
+          "4",
+          "0"
+        ],
+        [
+          "21",
+          "49.075688182273694",
+          "51.44559699344992",
+          "3",
+          "3",
+          "0"
+        ],
+        [
+          "22",
+          "46.5953522779803",
+          "53.1564411291927",
+          "6",
+          "6",
+          "0"
+        ],
+        [
+          "23",
+          "56.11270669337015",
+          "42.71422090072167",
+          "6",
+          "3",
+          "0"
+        ],
+        [
+          "24",
+          "49.227352589655986",
+          "48.401643918213495",
+          "3",
+          "3",
+          "0"
+        ],
+        [
+          "25",
+          "47.85836088918447",
+          "47.648136728536024",
+          "4",
+          "3",
+          "0"
+        ],
+        [
+          "26",
+          "48.23933224755885",
+          "46.80561075878329",
+          "6",
+          "6",
+          "0"
+        ],
+        [
+          "27",
+          "52.661545927766745",
+          "48.62428874386658",
+          "2",
+          "6",
+          "0"
+        ],
+        [
+          "28",
+          "51.82722032182039",
+          "57.47470655617198",
+          "4",
+          "6",
+          "0"
+        ],
+        [
+          "29",
+          "52.063663057979944",
+          "45.670844421533786",
+          "8",
+          "4",
+          "0"
+        ],
+        [
+          "30",
+          "52.15410501503941",
+          "54.84139177295741",
+          "6",
+          "5",
+          "0"
+        ]
+      ],
+      "metadata": {},
+      "fingerprint": "ad115335b05bb7ce090d70661ff53cffe216ec62f22a2411e91bc07bb447a828"
+    }
+  ],
+  "analyses": [
+    {
+      "analysis_id": "analysis-694d362e66b0448ebe110f555ceb8126",
+      "parent_analysis_id": null,
+      "method_id": "calc.random.generate.v1",
+      "created_at": "2026-11-10T20:43:08.692866+00:00",
+      "parameters": {
+        "distribution": "Normal",
+        "distribution_parameters": {
+          "mean": 50.0,
+          "sd": 5.0
+        },
+        "row_count": 30,
+        "column_count": 2,
+        "seed": 42,
+        "base_name": "Normal"
+      },
+      "source": {
+        "worksheet_id": "ws-917e72ffebce4f5a9999daf9bf3c6afc",
+        "column_ids": [],
+        "revision": 1,
+        "fingerprint": "07ae43eea94a48e1a03af8727a27da844ac6e82dbee046ba3e877e4f0cefe122",
+        "kind": "fixed_generation"
+      },
+      "versions": {
+        "application": "0.9.0",
+        "method": 1,
+        "python": "3.14.2",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "generated_no_missing"
+      },
+      "values": {
+        "columns": [
+          [
+            51.523585398772155,
+            44.80007946879752,
+            53.752255979032284,
+            54.70282358195607,
+            40.24482405673082,
+            43.48910246568841,
+            50.639202015836425,
+            48.41878703828209,
+            49.91599421247856,
+            45.7347803621321,
+            54.396989874314144,
+            53.88895967714474,
+            50.33015348780608,
+            55.636206034840164,
+            52.33754671126023,
+            45.70353768558381,
+            51.843753920412496,
+            45.20558699585501,
+            54.39225150653636,
+            49.75037044506873,
+            49.075688182273694,
+            46.5953522779803,
+            56.11270669337015,
+            49.227352589655986,
+            47.85836088918447,
+            48.23933224755885,
+            52.661545927766745,
+            51.82722032182039,
+            52.063663057979944,
+            52.15410501503941
+          ],
+          [
+            60.70823800435231,
+            47.967924918076925,
+            47.43878635464231,
+            45.93113635876061,
+            53.079897112877475,
+            55.64486146360446,
+            49.430262711725625,
+            45.79921761518736,
+            45.877593921543806,
+            53.252963939123504,
+            53.71627085601721,
+            52.71577134152597,
+            46.67245146355653,
+            51.1608066153336,
+            50.58342904570364,
+            51.09344298364506,
+            54.35714388974095,
+            51.11797774387341,
+            53.39456781535947,
+            50.33789534744446,
+            51.44559699344992,
+            53.1564411291927,
+            42.71422090072167,
+            48.401643918213495,
+            47.648136728536024,
+            46.80561075878329,
+            48.62428874386658,
+            57.47470655617198,
+            45.670844421533786,
+            54.84139177295741
+          ]
+        ],
+        "discrete": false
+      },
+      "tables": [],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente; sequência aleatória própria do MiniTaBom."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending",
+        "execution": "generate",
+        "generation": {
+          "engine": "PCG64",
+          "layout": "columns_then_rows",
+          "application": "0.9.0",
+          "python": "3.14.2",
+          "numpy": "2.5.4",
+          "scipy": "1.18.1"
+        }
+      },
+      "report": "DADOS ALEATÓRIOS — Normal\n\nParâmetros: Média μ=50.0; Desvio padrão σ=5.0\nLinhas por coluna: 30; colunas: 2\nSemente: 42\nGerador original: PCG64; NumPy 2.5.4; SciPy 1.18.1\nValores gerados em novas colunas. Ctrl+Z desfaz a inclusão.\nA semente é aplicada a cada geração; o histórico conserva os valores exatos.\n\nColunas armazenadas: Normal 1, Normal 2\n",
+      "storage": {
+        "policy": "append_new_column_per_execution",
+        "worksheet_id": "ws-917e72ffebce4f5a9999daf9bf3c6afc",
+        "column_ids": [
+          "col-04d263971c5a49478fe3cea0ab7bb2d2",
+          "col-c09ae001992a4c64a0471d9960b33cf0"
+        ],
+        "names": [
+          "Normal 1",
+          "Normal 2"
+        ]
+      }
+    },
+    {
+      "analysis_id": "analysis-4a2666b8bf26473787dea7fd54a856ac",
+      "parent_analysis_id": null,
+      "method_id": "calc.random.generate.v1",
+      "created_at": "2026-11-10T20:43:08.698019+00:00",
+      "parameters": {
+        "distribution": "Poisson",
+        "distribution_parameters": {
+          "mean": 3.0
+        },
+        "row_count": 30,
+        "column_count": 1,
+        "seed": 43,
+        "base_name": "Poisson"
+      },
+      "source": {
+        "worksheet_id": "ws-917e72ffebce4f5a9999daf9bf3c6afc",
+        "column_ids": [],
+        "revision": 2,
+        "fingerprint": "00a68b36c0f5a456a75435e2579d9ae20bbeea2df689154b38be4bcd7e23a4e7",
+        "kind": "fixed_generation"
+      },
+      "versions": {
+        "application": "0.9.0",
+        "method": 1,
+        "python": "3.14.2",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "generated_no_missing"
+      },
+      "values": {
+        "columns": [
+          [
+            1,
+            0,
+            4,
+            4,
+            2,
+            6,
+            2,
+            2,
+            3,
+            2,
+            3,
+            1,
+            1,
+            1,
+            3,
+            3,
+            0,
+            6,
+            1,
+            5,
+            3,
+            6,
+            6,
+            3,
+            4,
+            6,
+            2,
+            4,
+            8,
+            6
+          ]
+        ],
+        "discrete": true
+      },
+      "tables": [],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente; sequência aleatória própria do MiniTaBom."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending",
+        "execution": "generate",
+        "generation": {
+          "engine": "PCG64",
+          "layout": "columns_then_rows",
+          "application": "0.9.0",
+          "python": "3.14.2",
+          "numpy": "2.5.4",
+          "scipy": "1.18.1"
+        }
+      },
+      "report": "DADOS ALEATÓRIOS — Poisson\n\nParâmetros: Média λ=3.0\nLinhas por coluna: 30; colunas: 1\nSemente: 43\nGerador original: PCG64; NumPy 2.5.4; SciPy 1.18.1\nValores gerados em novas colunas. Ctrl+Z desfaz a inclusão.\nA semente é aplicada a cada geração; o histórico conserva os valores exatos.\n\nColunas armazenadas: Poisson\n",
+      "storage": {
+        "policy": "append_new_column_per_execution",
+        "worksheet_id": "ws-917e72ffebce4f5a9999daf9bf3c6afc",
+        "column_ids": [
+          "col-e9e3a5dc41974112b9658d600a261077"
+        ],
+        "names": [
+          "Poisson"
+        ]
+      }
+    },
+    {
+      "analysis_id": "analysis-6222b0b3c6bf41b8a38fe6e9d4a45969",
+      "parent_analysis_id": null,
+      "method_id": "calc.random.generate.v1",
+      "created_at": "2026-11-10T20:43:08.700450+00:00",
+      "parameters": {
+        "distribution": "Inteiros",
+        "distribution_parameters": {
+          "lower": 1,
+          "upper": 6
+        },
+        "row_count": 30,
+        "column_count": 1,
+        "seed": 44,
+        "base_name": "Inteiros"
+      },
+      "source": {
+        "worksheet_id": "ws-917e72ffebce4f5a9999daf9bf3c6afc",
+        "column_ids": [],
+        "revision": 3,
+        "fingerprint": "c7c217d42eb7bfd3d87f27525f4aed97c5b003fbbebcb719a3075663a4d3ab21",
+        "kind": "fixed_generation"
+      },
+      "versions": {
+        "application": "0.9.0",
+        "method": 1,
+        "python": "3.14.2",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "generated_no_missing"
+      },
+      "values": {
+        "columns": [
+          [
+            5,
+            1,
+            5,
+            2,
+            4,
+            3,
+            1,
+            6,
+            4,
+            1,
+            6,
+            6,
+            1,
+            1,
+            1,
+            3,
+            3,
+            5,
+            5,
+            4,
+            3,
+            6,
+            3,
+            3,
+            3,
+            6,
+            6,
+            6,
+            4,
+            5
+          ]
+        ],
+        "discrete": true
+      },
+      "tables": [],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente; sequência aleatória própria do MiniTaBom."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending",
+        "execution": "generate",
+        "generation": {
+          "engine": "PCG64",
+          "layout": "columns_then_rows",
+          "application": "0.9.0",
+          "python": "3.14.2",
+          "numpy": "2.5.4",
+          "scipy": "1.18.1"
+        }
+      },
+      "report": "DADOS ALEATÓRIOS — Inteiros\n\nParâmetros: Inteiro mínimo (inclusivo)=1; Inteiro máximo (inclusivo)=6\nLinhas por coluna: 30; colunas: 1\nSemente: 44\nGerador original: PCG64; NumPy 2.5.4; SciPy 1.18.1\nValores gerados em novas colunas. Ctrl+Z desfaz a inclusão.\nA semente é aplicada a cada geração; o histórico conserva os valores exatos.\n\nColunas armazenadas: Inteiros\n",
+      "storage": {
+        "policy": "append_new_column_per_execution",
+        "worksheet_id": "ws-917e72ffebce4f5a9999daf9bf3c6afc",
+        "column_ids": [
+          "col-1a0e092265e9455d9f400202c516bd00"
+        ],
+        "names": [
+          "Inteiros"
+        ]
+      }
+    },
+    {
+      "analysis_id": "analysis-08da3b5a6f0e457899d834ec7530dd23",
+      "parent_analysis_id": null,
+      "method_id": "calc.random.generate.v1",
+      "created_at": "2026-11-10T20:43:08.703177+00:00",
+      "parameters": {
+        "distribution": "Bernoulli",
+        "distribution_parameters": {
+          "p": 0.2
+        },
+        "row_count": 30,
+        "column_count": 1,
+        "seed": 45,
+        "base_name": "Bernoulli"
+      },
+      "source": {
+        "worksheet_id": "ws-917e72ffebce4f5a9999daf9bf3c6afc",
+        "column_ids": [],
+        "revision": 4,
+        "fingerprint": "2aa24c38b65c652f3a493029d1a1bf4b82907928617f2dfb6b0093706f80ae42",
+        "kind": "fixed_generation"
+      },
+      "versions": {
+        "application": "0.9.0",
+        "method": 1,
+        "python": "3.14.2",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1"
+      },
+      "missing": {
+        "policy": "generated_no_missing"
+      },
+      "values": {
+        "columns": [
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "discrete": true
+      },
+      "tables": [],
+      "warnings": [
+        "Validação diferencial Minitab 16 pendente; sequência aleatória própria do MiniTaBom."
+      ],
+      "status": "completed",
+      "provenance": {
+        "origin": "MiniTaBom",
+        "reference16": "pending",
+        "execution": "generate",
+        "generation": {
+          "engine": "PCG64",
+          "layout": "columns_then_rows",
+          "application": "0.9.0",
+          "python": "3.14.2",
+          "numpy": "2.5.4",
+          "scipy": "1.18.1"
+        }
+      },
+      "report": "DADOS ALEATÓRIOS — Bernoulli\n\nParâmetros: Probabilidade de evento p=0.2\nLinhas por coluna: 30; colunas: 1\nSemente: 45\nGerador original: PCG64; NumPy 2.5.4; SciPy 1.18.1\nValores gerados em novas colunas. Ctrl+Z desfaz a inclusão.\nA semente é aplicada a cada geração; o histórico conserva os valores exatos.\n\nColunas armazenadas: Bernoulli\n",
+      "storage": {
+        "policy": "append_new_column_per_execution",
+        "worksheet_id": "ws-917e72ffebce4f5a9999daf9bf3c6afc",
+        "column_ids": [
+          "col-ee43d1adb69c4b45acf6dee5f53500ec"
+        ],
+        "names": [
+          "Bernoulli"
+        ]
+      }
+    }
+  ],
+  "output": "\nDADOS ALEATÓRIOS — Normal\n\nParâmetros: Média μ=50.0; Desvio padrão σ=5.0\nLinhas por coluna: 30; colunas: 2\nSemente: 42\nGerador original: PCG64; NumPy 2.5.4; SciPy 1.18.1\nValores gerados em novas colunas. Ctrl+Z desfaz a inclusão.\nA semente é aplicada a cada geração; o histórico conserva os valores exatos.\n\nColunas armazenadas: Normal 1, Normal 2\n\nDADOS ALEATÓRIOS — Poisson\n\nParâmetros: Média λ=3.0\nLinhas por coluna: 30; colunas: 1\nSemente: 43\nGerador original: PCG64; NumPy 2.5.4; SciPy 1.18.1\nValores gerados em novas colunas. Ctrl+Z desfaz a inclusão.\nA semente é aplicada a cada geração; o histórico conserva os valores exatos.\n\nColunas armazenadas: Poisson\n\nDADOS ALEATÓRIOS — Inteiros\n\nParâmetros: Inteiro mínimo (inclusivo)=1; Inteiro máximo (inclusivo)=6\nLinhas por coluna: 30; colunas: 1\nSemente: 44\nGerador original: PCG64; NumPy 2.5.4; SciPy 1.18.1\nValores gerados em novas colunas. Ctrl+Z desfaz a inclusão.\nA semente é aplicada a cada geração; o histórico conserva os valores exatos.\n\nColunas armazenadas: Inteiros\n\nDADOS ALEATÓRIOS — Bernoulli\n\nParâmetros: Probabilidade de evento p=0.2\nLinhas por coluna: 30; colunas: 1\nSemente: 45\nGerador original: PCG64; NumPy 2.5.4; SciPy 1.18.1\nValores gerados em novas colunas. Ctrl+Z desfaz a inclusão.\nA semente é aplicada a cada geração; o histórico conserva os valores exatos.\n\nColunas armazenadas: Bernoulli\n",
+  "metadata": {}
+}

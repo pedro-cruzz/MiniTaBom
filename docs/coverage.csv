@@ -2,7 +2,7 @@
 audit.GAP-001,work_package,Plataforma,Várias planilhas e gerenciador de projeto,partial,partial,pending,partial,P0
 audit.GAP-002,work_package,Plataforma,"Resultados, modelos e gráficos persistentes",partial,partial,pending,partial,P0
 audit.GAP-003,work_package,Plataforma,Histórico reexecutável e rastreabilidade,partial,partial,pending,partial,P0
-audit.GAP-004,work_package,Plataforma,"Execução longa, progresso e cancelamento",pending,pending,pending,to_audit,P1
+audit.GAP-004,work_package,Plataforma,"Execução longa, progresso e cancelamento",partial,partial,pending,partial,P1
 audit.GAP-005,work_package,Plataforma,"Recuperação, preferências, impressão e ajuda contextual",partial,partial,pending,to_audit,P1
 audit.GAP-006,work_package,Dados,"Tipos de colunas, datas e metadados",partial,partial,pending,partial,P0
 audit.GAP-007,work_package,Dados,"Inserir, excluir e mover linhas/colunas",partial,partial,pending,to_audit,P1
@@ -15,7 +15,7 @@ audit.GAP-013,work_package,Arquivos,MTW e MPJ,pending,pending,pending,to_audit,P
 audit.GAP-014,work_package,Cálculo,Calculadora e fórmulas vinculadas,partial,partial,pending,to_audit,P1
 audit.GAP-015,work_package,Cálculo,Constantes e matrizes,pending,pending,pending,to_audit,P2
 audit.GAP-016,work_package,Distribuições,"Probabilidades, densidades e quantis",partial,partial,pending,to_audit,P1
-audit.GAP-017,work_package,Distribuições,Geração aleatória e semente,pending,pending,pending,to_audit,P1
+audit.GAP-017,work_package,Distribuições,Geração aleatória e semente,partial,partial,pending,partial,P1
 audit.GAP-018,work_package,Descritivas,Estatísticas univariadas e por grupo,partial,partial,pending,to_audit,P1
 audit.GAP-019,work_package,Descritivas,Armazenar estatísticas e resumo gráfico,pending,pending,pending,to_audit,P1
 audit.GAP-020,work_package,Descritivas,Percentis e tabelas de frequências,partial,partial,pending,to_audit,P1
@@ -78,7 +78,7 @@ audit.GAP-076,work_package,Qualidade,"Causa e efeito, multi-vari e run chart",pe
 audit.GAP-077,work_package,Confiabilidade,Análise Probit,pending,pending,pending,to_audit,P2
 audit.GAP-078,work_package,Regressão,Regressão ortogonal,pending,pending,pending,to_audit,P2
 audit.GAP-079,work_package,Multivariada,Análise de itens,pending,pending,pending,to_audit,P2
-audit.GAP-080,work_package,Distribuições,Famílias adicionais confirmadas na ajuda,pending,pending,pending,to_audit,P1
+audit.GAP-080,work_package,Distribuições,Famílias adicionais confirmadas na ajuda,partial,partial,pending,partial,P1
 platform.project.v2,requirement,Plataforma,Projeto v2 com migração explícita de v1,implemented,implemented,pending,implemented,P0
 platform.worksheets.collection,requirement,Plataforma,Criar e alternar planilhas com IDs,implemented,implemented,pending,implemented,P0
 platform.columns.identity,requirement,Plataforma,"IDs de coluna, revisão e fingerprint",implemented,implemented,pending,implemented,P0
@@ -107,3 +107,9 @@ anova.history,requirement,ANOVA,ANOVA/comparações e boxplots persistentes,impl
 normality.history,requirement,Inferência,Normalidade e gráfico de probabilidade no histórico,implemented,implemented,pending,implemented,P0
 study.history,requirement,Não paramétricos,Postos e igualdade de variâncias no histórico,implemented,implemented,pending,implemented,P0
 files.excel.open_workbook,requirement,Arquivos,"Abrir Excel sem intervalo, com todas as abas",implemented,implemented,pending,implemented,P0
+calc.random.generate,requirement,Distribuições,Geração de dados em novas colunas,implemented,implemented,pending,implemented,P1
+calc.random.seed,requirement,Distribuições,Semente reproduzível por operação,implemented,implemented,pending,implemented,P1
+calc.random.replay,requirement,Distribuições,Reprodução de valores históricos sem novo sorteio,implemented,implemented,pending,implemented,P1
+platform.tasks.service,requirement,Plataforma,"Execução isolada, progresso e cancelamento cooperativo",implemented,implemented,pending,not_applicable,P0
+platform.tasks.random,requirement,Plataforma,Gerar dados aleatórios pela tarefa da interface,implemented,implemented,pending,implemented,P0
+files.excel.background,requirement,Plataforma,Leitura e preparação de Excel pela tarefa da interface,implemented,implemented,pending,implemented,P0

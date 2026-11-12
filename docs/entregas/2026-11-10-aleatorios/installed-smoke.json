@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "frozen": true,
+  "checks": [
+    "inicialização com planilha e sessão vazias",
+    "Tk, interface e ícones",
+    "recurso JSON de cobertura",
+    "diálogo de atualizações e versão (sem acesso à rede)",
+    "SciPy: teste t e distribuição de comparações",
+    "regressão NumPy/SciPy",
+    "postos, Ryan–Joiner, frequências, calculadora e novos gráficos",
+    "registro, projeto v2, duas planilhas, resultado persistente e reexecução",
+    "testes t pareado, resumos, empilhadas e ordem persistida dos grupos",
+    "modelo linear salvo, restauração, previsão sem novo ajuste e gráfico histórico",
+    "previsões vinculadas, ANOVA/comparações persistentes e boxplots históricos",
+    "normalidade/gráfico histórico, postos, variâncias e reexecução persistente",
+    "Excel sem intervalo e duas taxas Poisson com persistência",
+    "geração PCG64, semente, persistência, reprodução exata e undo/redo"
+  ]
+}

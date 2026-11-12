@@ -67,6 +67,10 @@ def rerun_analysis(document, analysis_id):
     results=[r for r in document['analyses'] if r['analysis_id']==analysis_id]
     if len(results)!=1:raise ValueError('Análise não encontrada.')
     result=results[0]
+    from random_contract import RANDOM_METHOD
+    if result['method_id'] == RANDOM_METHOD:
+        from random_service import replay_random
+        return replay_random(document, result)
     from two_poisson_contract import TWO_POISSON_METHOD
     if result['method_id']==TWO_POISSON_METHOD:
         from two_poisson_service import execute_two_poisson

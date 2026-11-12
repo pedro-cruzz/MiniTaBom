@@ -10,6 +10,7 @@ from prediction_contract import PREDICTION_METHOD, validate_prediction_parameter
 from anova_contract import ANOVA_METHOD, validate_anova_parameters, validate_anova_result
 from diagnostic_contract import NORMALITY_METHOD,STUDY_METHODS,validate_diagnostic_parameters,validate_diagnostic_result
 from two_poisson_contract import TWO_POISSON_METHOD,validate_two_poisson_parameters,validate_two_poisson_result
+from random_contract import RANDOM_METHOD, validate_random_result
 
 
 def identifier(prefix):
@@ -112,7 +113,7 @@ def unpack_numbers(value):
 
 
 def is_stale(result, sheet):
-    if result['source'].get('kind') == 'fixed_prediction':
+    if result['source'].get('kind') in ('fixed_prediction', 'fixed_generation'):
         return False
     if result['source'].get('kind') == 'summary':
         return False
@@ -208,6 +209,8 @@ def validate_document(document):
                 raise ValueError('Valores de análise inválidos.')
             unpack_numbers(result['values'])
             unpack_numbers(result['tables'])
+            if result['method_id'] == RANDOM_METHOD:
+                validate_random_result(result)
             if result['method_id']==TWO_POISSON_METHOD:
                 validate_two_poisson_parameters(result['parameters'],len(source['column_ids']))
                 validate_two_poisson_result(dict(result,values=unpack_numbers(result['values'])))

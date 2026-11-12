@@ -7,6 +7,8 @@ from core import read_table, numeric_column
 from project import load_document, save_document
 from workspace_model import new_document, new_sheet, active_sheet, sync_sheet, is_stale, validate_document
 from excel_import import read_excel_workbook
+from excel_service import prepare_excel_import
+from task_dialog import TaskDialog
 from analysis_service import execute_t, rerun_analysis
 from regression_service import execute_regression, archived_model, model_for_prediction
 from regression_contract import REGRESSION_METHOD
@@ -43,6 +45,9 @@ from prediction import parse_cases, predict_linear, predict_columns, format_pred
 from prediction_dialog import PredictionDialog
 from distributions import distribution_calculation, format_distribution
 from distribution_dialog import DistributionDialog
+from random_dialog import RandomDialog
+from random_contract import RANDOM_METHOD
+from random_service import execute_random, random_columns, prepare_random, generate_random
 from icons import create_icons
 from xy_graphs import prepare_xy, XYGraphWindow
 from xy_graph_dialog import XYGraphDialog
@@ -72,6 +77,8 @@ class MiniTaBom(tk.Tk):
         self.minsize(900, 650)
         self.project_path = None
         self.dirty = False
+        self._task_window = None
+        self._task_menu_states = []
         self.last_regression = None
         self.last_regression_id = None
         self.headers = ['Coluna 1', 'Coluna 2', 'Coluna 3']
@@ -130,7 +137,7 @@ class MiniTaBom(tk.Tk):
         file_menu.add_command(label='Salvar projeto como…', command=lambda: self.save_project(save_as=True))
         file_menu.add_separator()
         file_menu.add_command(label='Abrir CSV…', command=self.open_csv)
-        file_menu.add_command(label='Abrir Excel…',command=self.open_excel)
+        file_menu.add_command(label='Abrir Excel…',command=lambda: self.open_excel(background=True))
         file_menu.add_command(label='Exportar CSV…', command=self.save_csv)
         file_menu.add_command(label='Exportar sessão…', command=self.export)
         file_menu.add_separator()
@@ -157,6 +164,7 @@ class MiniTaBom(tk.Tk):
         calc_menu = tk.Menu(menu, tearoff=False)
         calc_menu.add_command(label='Calculadora…', command=self.calculator_dialog)
         calc_menu.add_command(label='Distribuições de probabilidade…', command=self.distribution_dialog)
+        calc_menu.add_command(label='Dados aleatórios…', command=self.random_dialog)
         menu.add_cascade(label='Calc', menu=calc_menu)
         stat_menu = tk.Menu(menu, tearoff=False)
         basic_menu = tk.Menu(stat_menu, tearoff=False)
@@ -229,6 +237,7 @@ class MiniTaBom(tk.Tk):
             'Copiar da planilha': 'copy', 'Colar na planilha': 'paste', 'Limpar células selecionadas': 'clear',
             'Selecionar toda a planilha': 'table', 'Adicionar linha': 'table', 'Adicionar coluna…': 'table',
             'Renomear coluna atual…': 'options', 'Distribuições de probabilidade…': 'distribution',
+            'Dados aleatórios…': 'distribution',
             'Exibir estatísticas descritivas…': 'summary', 'Correlação…': 'correlation',
             'Estatísticas básicas': 'summary', 'ANOVA': 'anova', 'Um fator…': 'anova',
             'Regressão': 'regression', 'Ajustar modelo linear…': 'regression', 'Prever novos casos…': 'predict',
@@ -413,6 +422,7 @@ class MiniTaBom(tk.Tk):
         self.result_positions = {}
         self.output.tag_remove('report-title', '1.0', 'end')
         starts = ('DUAS TAXAS DE POISSON', 'TAXA DE POISSON DE UMA AMOSTRA', 'MANN–WHITNEY', 'WILCOXON PAREADO', 'KRUSKAL–WALLIS', 'IGUALDADE DE VARIÂNCIAS', 'TABELA DE FREQUÊNCIAS', 'PERCENTIS DA AMOSTRA', 'CALCULADORA DE COLUNAS', 'Estatísticas descritivas:', 'T DE UMA AMOSTRA', 'T PAREADO', 'T DE WELCH', 'T DE DUAS AMOSTRAS', 'Z DE UMA AMOSTRA', 'TESTE DE UMA PROPORÇÃO', 'TESTE DE DUAS PROPORÇÕES', 'TESTE DE UMA VARIÂNCIA', 'TESTE DE DUAS VARIÂNCIAS', 'QUI-QUADRADO DE ASSOCIAÇÃO', 'TESTE DE NORMALIDADE', 'ANOVA DE UM FATOR', 'CORRELAÇÃO DE', 'REGRESSÃO LINEAR', 'PREVISÃO LINEAR', 'DISTRIBUIÇÃO —', 'OPERAÇÃO DE DADOS —')
+        starts += ('DADOS ALEATÓRIOS —',)
         for line, text in enumerate(self.output.get('1.0', 'end-1c').splitlines(), 1):
             if text.startswith(starts):
                 key = f'result:{line}'
@@ -560,9 +570,48 @@ class MiniTaBom(tk.Tk):
         return self.save_project() if answer else True
 
     def close(self):
+        if self._task_window is not None:
+            self._task_window.close_app_requested = True
+            self._task_window.cancel()
+            return
         self.worksheet.commit_edit()
         if self.confirm_replace():
             self.destroy()
+
+    def destroy(self):
+        task = getattr(self, '_task_window', None)
+        if task is not None:
+            task.destroy()
+        super().destroy()
+
+    def set_task_busy(self, busy):
+        menu = self.nametowidget(self.cget('menu'))
+        if busy:
+            self._task_menu_states = [(i, menu.entrycget(i, 'state')) for i in range(menu.index('end') + 1)
+                                      if menu.type(i) != 'tearoff']
+            for index, _ in self._task_menu_states:menu.entryconfigure(index, state='disabled')
+        else:
+            for index, state in self._task_menu_states:menu.entryconfigure(index, state=state)
+            self._task_menu_states = []
+
+    def start_background_task(self, title, work, apply_result):
+        if self._task_window is not None:
+            self._task_window.lift()
+            return False
+        try:
+            TaskDialog(self, title, work, apply_result)
+        except (RuntimeError, tk.TclError) as error:
+            messagebox.showerror('Não foi possível iniciar', str(error), parent=self)
+            return False
+        return True
+
+    def document_stamp(self):
+        self.sync_document()
+        return (self.document['project_id'], self.document['active_worksheet_id'], self.project_path,
+                tuple((s['id'], s['name'], s['revision'], s['fingerprint'],
+                       json.dumps([s['metadata'], s['columns']], sort_keys=True, ensure_ascii=False)) for s in self.document['worksheets']),
+                tuple(r['analysis_id'] for r in self.document['analyses']), self.document['output'],
+                json.dumps(self.document['metadata'], sort_keys=True, ensure_ascii=False))
 
     def save_project(self, save_as=False):
         self.worksheet.commit_edit()
@@ -702,6 +751,9 @@ class MiniTaBom(tk.Tk):
         return True
 
     def prepare_analysis_storage(self, result):
+        if result['method_id'] == RANDOM_METHOD:
+            sheet = next(s for s in self.document['worksheets'] if s['id'] == result['source']['worksheet_id'])
+            return sheet['id'], random_columns([c['name'] for c in sheet['columns']], sheet['rows'], result)
         if result['method_id']==REGRESSION_METHOD:
             if not result['parameters']['store']:return None
             sheet=next(s for s in self.document['worksheets'] if s['id']==result['source']['worksheet_id'])
@@ -730,7 +782,7 @@ class MiniTaBom(tk.Tk):
         result['storage'] = dict(policy='append_new_column_per_execution', worksheet_id=sheet_id,
                                  column_ids=[c['id'] for c in sheet['columns'] if c['name'] in generated[2]],
                                  names=generated[2])
-        result['report'] += ('\nColunas armazenadas: ' if result['method_id']==REGRESSION_METHOD else '\nDiferenças armazenadas em: ') + ', '.join(generated[2]) + '\n'
+        result['report'] += ('\nColunas armazenadas: ' if result['method_id'] in (REGRESSION_METHOD, RANDOM_METHOD) else '\nDiferenças armazenadas em: ') + ', '.join(generated[2]) + '\n'
 
     def open_csv(self):
         self.worksheet.commit_edit()
@@ -752,33 +804,37 @@ class MiniTaBom(tk.Tk):
             except (ValueError, OSError, UnicodeError) as error:
                 messagebox.showerror('Falha ao importar', str(error))
 
-    def open_excel(self):
+    def open_excel(self, background=False):
         self.worksheet.commit_edit()
         path=filedialog.askopenfilename(filetypes=[('Excel (.xlsx)','*.xlsx')])
         if not path:return None
+        if background:return self.start_excel_import(path)
         try:return self.import_excel_workbook(read_excel_workbook(path),path)
         except (ValueError,OSError) as error:
             messagebox.showerror('Falha ao abrir Excel',str(error),parent=self);return None
 
+    def start_excel_import(self, path):
+        if self._task_window is not None:return False
+        self.worksheet.commit_edit()
+        expected = self.document_stamp()
+        def work(context):
+            workbook = read_excel_workbook(path, context.phase(0., .78))
+            return prepare_excel_import(workbook, path, context.phase(.78, 1.))
+        def apply_result(prepared):
+            if self.document_stamp() != expected:
+                raise ValueError('O projeto mudou durante a leitura. Abra o Excel novamente para preservar as alterações atuais.')
+            return self.apply_excel_import(prepared, path)
+        return self.start_background_task('Abrindo Excel', work, apply_result)
+
     def import_excel_workbook(self,workbook,path):
-        document=new_document()
-        document['worksheets']=[new_sheet(item['name'],item['headers'],item['rows']) for item in workbook['worksheets']]
-        for sheet,item in zip(document['worksheets'],workbook['worksheets']):sheet['metadata']['excel_import']=item['metadata']
-        document['active_worksheet_id']=next(s['id'] for s in document['worksheets'] if s['name']==workbook['active_name'])
-        document['metadata']['excel_source']=Path(path).name
-        lines=['EXCEL ABERTO — '+Path(path).name,
-               f"{len(document['worksheets'])} aba(s). Troque de aba pelo seletor acima da planilha.",
-               'Todas as linhas foram mantidas, com colunas A, B, C...; nenhum intervalo precisa ser informado.']
-        for item in workbook['worksheets']:
-            if item['metadata']['uncached_formulas']:lines.append(item['name']+': '+item['metadata']['note'])
-        if any(item['metadata']['excel_state']!='visible' for item in workbook['worksheets']):
-            lines.append('Abas ocultas do arquivo também foram incluídas no seletor.')
-        document['output']='\n'.join(lines)+'\n'
-        validate_document(document)
+        return self.apply_excel_import(prepare_excel_import(workbook, path), path)
+
+    def apply_excel_import(self, prepared, path):
+        document=prepared['document']
         if not self.confirm_replace():return False
         self.document=document;sheet=active_sheet(document)
         self.headers,self.rows=[c['name'] for c in sheet['columns']],sheet['rows']
-        self.history=WorksheetHistory(self.headers,self.rows,columns=sheet['columns']);self.sheet_histories={sheet['id']:self.history}
+        self.history=prepared['history'];self.sheet_histories={sheet['id']:self.history}
         self.output.delete('1.0','end');self.output.insert('1.0',document['output']);self.output.edit_reset();self.output.edit_modified(False)
         self.project_path=None;self.dirty=True;self.refresh();self.update_title()
         self.status.set('Excel aberto · '+Path(path).name+' · todas as abas disponíveis')
@@ -1175,6 +1231,60 @@ class MiniTaBom(tk.Tk):
     def distribution_dialog(self):
         self.worksheet.commit_edit()
         return DistributionDialog(self)
+
+    def random_dialog(self):
+        self.worksheet.commit_edit()
+        return RandomDialog(self)
+
+    def start_random(self, distribution, parameters, **options):
+        if self._task_window is not None:return False
+        self.worksheet.commit_edit()
+        self.sync_document()
+        try:
+            if len(self.document['analyses']) >= 10000:
+                raise ValueError('Limite de 10000 análises por projeto atingido.')
+            request = prepare_random(active_sheet(self.document), distribution, parameters, **options)
+        except (ValueError, ArithmeticError) as error:
+            messagebox.showerror('Não foi possível gerar os dados', str(error), parent=self.grab_current() or self)
+            return False
+        project_id = self.document['project_id']
+        headers, rows = list(self.headers), [list(row) for row in self.rows]
+        def work(context):
+            result = generate_random(request, context.phase(0., .8))
+            generated = random_columns(headers, rows, result, context.phase(.8, 1.))
+            return result, (request['source']['worksheet_id'], generated)
+        def apply_result(prepared):
+            self.worksheet.commit_edit()
+            self.sync_document()
+            source = request['source']
+            sheet = next((s for s in self.document['worksheets'] if s['id'] == source['worksheet_id']), None)
+            if (self.document['project_id'] != project_id or sheet is None
+                    or (sheet['revision'], sheet['fingerprint']) != (source['revision'], source['fingerprint'])):
+                raise ValueError('A planilha mudou durante a geração. Gere novamente para preservar os dados atuais.')
+            if len(self.document['analyses']) >= 10000:
+                raise ValueError('Limite de 10000 análises por projeto atingido.')
+            result, storage = prepared
+            self.apply_analysis_storage(result, storage)
+            self.document['analyses'].append(result)
+            self.append_analysis(result['report'], 'Dados aleatórios adicionados · Ctrl+Z desfaz as colunas')
+            return True
+        return self.start_background_task('Gerando dados aleatórios', work, apply_result)
+
+    def run_random(self, distribution, parameters, **options):
+        self.worksheet.commit_edit()
+        self.sync_document()
+        try:
+            if len(self.document['analyses']) >= 10000:
+                raise ValueError('Limite de 10000 análises por projeto atingido.')
+            result = execute_random(active_sheet(self.document), distribution, parameters, **options)
+            storage = self.prepare_analysis_storage(result)
+        except (ValueError, ArithmeticError) as error:
+            messagebox.showerror('Não foi possível gerar os dados', str(error), parent=self.grab_current() or self)
+            return False
+        self.apply_analysis_storage(result, storage)
+        self.document['analyses'].append(result)
+        self.append_analysis(result['report'], 'Dados aleatórios adicionados · Ctrl+Z desfaz as colunas')
+        return True
 
     def run_distribution(self, name, parameters, operation, value, upper=None):
         self.worksheet.commit_edit()

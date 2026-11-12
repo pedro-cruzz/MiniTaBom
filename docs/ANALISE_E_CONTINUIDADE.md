@@ -1,5 +1,21 @@
 # MiniTaBom — relatório técnico de investigação e continuidade
 
+## Continuação — 10/11/2026: MiniTaBom 0.10.0
+
+- Serviço comum de tarefas, com trabalho fora de Tk, progresso coalescido, cancelamento cooperativo e entrega única do resultado na thread principal. Uma tarefa por janela; fechamento normal aguarda o cancelamento antes do aviso de salvamento já existente.
+- Arquivo > Abrir Excel e Gerar dados aleatórios integrados. Leitura XML em blocos, sorteios por coluna/blocos e preparação de projeto/tabela antes da aplicação. Cancelamento, erro e origem alterada preservam dados/resultados anteriores; metadados também participam da proteção do Excel.
+- 386 testes e 25 exemplos aprovados; 23 testes novos e medição com pulso Tk, memória rastreada, geração, Excel e cancelamento. Relatório em [entregas/2026-11-10-tarefas/ENTREGA.md](entregas/2026-11-10-tarefas/ENTREGA.md).
+- Bundle e cópia instalada 0.10.0 aprovados nos 15 grupos do smoke test; CRC/SHA256 do ZIP conferidos. Atalho da raiz atualizado; executáveis anteriores e sessão aberta preservados.
+- Registro com 114 entradas (80 pacotes e 34 requisitos atômicos), sem percentual de completude. GAP-004 continua parcial: demais análises, reexecução, salvar/exportar e aplicação final ainda síncronos. Nenhuma fixture executada no Minitab 16 adicionada.
+
+## Continuação — 10/11/2026: MiniTaBom 0.9.0
+
+- Calc > Dados aleatórios: geração em novas colunas para 14 famílias, com parâmetros explícitos e semente opcional de 128 bits por operação. Nomes únicos, preenchimento de linhas e undo/redo em uma etapa.
+- Snapshot persistente com semente, observações, motor e versões; histórico reproduz os valores salvos sem novo sorteio, inclusive em aba inativa, com exportação JSON. O fluxo global de Set Base e a igualdade de sequências com o 16 permanecem pendentes.
+- 363 testes e 25 exemplos aprovados; medição local de geração/undo/redo registrada. Logs, fontes documentais e limites em [entregas/2026-11-10-aleatorios/ENTREGA.md](entregas/2026-11-10-aleatorios/ENTREGA.md).
+- Executável e ZIP aprovados. A sessão 0.8.0 estava aberta; empacotador passou a instalar versões em pastas independentes, com abertura pelo MiniTaBom.bat da raiz. Versão antiga preservada; cópia instalada nova verificada com smoke test, CRC e SHA256.
+- Registro canônico com 111 entradas (80 pacotes e 31 requisitos atômicos), sem percentual de completude. GAP-017 e famílias adicionais continuam parciais; sem nova fixture executada no Minitab 16.
+
 ## Continuação — 10/11/2026: MiniTaBom 0.8.0
 
 - Pedido do usuário priorizado: Arquivo > Abrir Excel abre o workbook sem tela de intervalo, com abas/posições/primeira linha preservadas. Ação opcional de cabeçalhos com undo/redo; leitor por intervalo mantido como API legada.

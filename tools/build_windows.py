@@ -6,12 +6,61 @@ import json
 import os
 from pathlib import Path
 import platform
+import re
 import shutil
 import subprocess
 import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def install_bundle(bundle, application, version, stamp):
+    """Instala uma cópia nova; nunca reescreve arquivos de uma sessão aberta."""
+    from updates import version_key
+    version_key(version)
+    if not isinstance(stamp, str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,80}', stamp):
+        raise ValueError('Identificador da compilação inválido.')
+    application = Path(application).resolve()
+    destination = application / 'versoes' / f'{version}-{stamp}'
+    if not destination.resolve().is_relative_to(application) or destination.exists():
+        raise ValueError('Destino da compilação inválido ou já existente.')
+    shutil.copytree(bundle, destination)
+    relative = destination.relative_to(application) / 'MiniTaBom.exe'
+    # O atalho só muda depois de a cópia inteira estar pronta.
+    selected = dict(version=version, executable=relative.as_posix())
+    pointer = application / ('atual-' + stamp + '.tmp')
+    pointer.write_text(json.dumps(selected, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    os.replace(pointer, application / 'atual.json')
+    launcher = application / ('abrir-' + stamp + '.tmp')
+    launcher.write_text('@echo off\nstart "" "%~dp0' + str(relative) + '"\n', encoding='ascii')
+    os.replace(launcher, application / 'Abrir.bat')
+    return destination
+
+
+def finish_bundle(bundle, build, metadata):
+    """Empacota somente um bundle já aprovado pelo smoke test congelado."""
+    report_path = build / 'smoke-test.json'
+    report = json.loads(report_path.read_text(encoding='utf-8'))
+    manifest = json.loads((bundle / 'versao.json').read_text(encoding='utf-8'))
+    if not report.get('ok') or not report.get('frozen') or manifest['version'] != metadata['version']:
+        raise ValueError('Bundle não aprovado ou versão inconsistente.')
+    dist = ROOT / 'dist'
+    dist.mkdir(exist_ok=True)
+    archive = dist / 'MiniTaBom-Windows-x64.zip'
+    temporary = build / archive.name
+    with zipfile.ZipFile(temporary, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as stream:
+        for path in sorted(bundle.rglob('*')):
+            if path.is_file():
+                stream.write(path, Path('MiniTaBom') / path.relative_to(bundle))
+    shutil.copy2(temporary, archive)
+    with archive.open('rb') as stream:
+        digest = hashlib.file_digest(stream, 'sha256').hexdigest()
+    archive.with_suffix('.zip.sha256').write_text(f'{digest}  {archive.name}\n', encoding='ascii')
+    shutil.copy2(report_path, dist / 'smoke-test.json')
+    installed = install_bundle(bundle, ROOT / 'Aplicativo', metadata['version'], build.name)
+    print(f'Aplicativo: {installed / "MiniTaBom.exe"}\nPacote: {archive}\nTamanho: {archive.stat().st_size / 1024**2:.1f} MB\nSHA256: {digest}', flush=True)
+    return installed
 
 
 def main():
@@ -103,24 +152,8 @@ def main():
     if completed.returncode != 0 or not report.get('ok') or not report.get('frozen'):
         raise SystemExit('Pacote reprovado no teste: ' + json.dumps(report, ensure_ascii=True))
     print('Teste do executável aprovado: ' + ', '.join(report['checks']), flush=True)
-    # Cópia local fácil de encontrar. Preserva arquivos extras salvos pelo usuário.
-    shutil.copytree(bundle, ROOT / 'Aplicativo', dirs_exist_ok=True)
-    dist = ROOT / 'dist'
-    dist.mkdir(exist_ok=True)
-    archive = dist / 'MiniTaBom-Windows-x64.zip'
-    # Só distribui os arquivos desta compilação, sem material da instalação Minitab.
-    temporary = build / archive.name
-    with zipfile.ZipFile(temporary, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as stream:
-        for path in sorted(bundle.rglob('*')):
-            if path.is_file():
-                stream.write(path, path.relative_to(output))
-    shutil.copy2(temporary, archive)
-    with archive.open('rb') as stream:
-        digest = hashlib.file_digest(stream, 'sha256').hexdigest()
-    checksum = archive.with_suffix('.zip.sha256')
-    checksum.write_text(f'{digest}  {archive.name}\n', encoding='ascii')
-    shutil.copy2(report_path, dist / 'smoke-test.json')
-    print(f'Pacote: {archive}\nTamanho: {archive.stat().st_size / 1024**2:.1f} MB\nSHA256: {digest}', flush=True)
+    # Só distribui esta compilação, sem material da instalação Minitab.
+    finish_bundle(bundle, build, metadata)
 
 
 if __name__ == '__main__':

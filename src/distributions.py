@@ -28,7 +28,8 @@ OPERATIONS = {
 }
 
 
-def frozen_distribution(name, parameters):
+def parse_distribution_parameters(name, parameters):
+    """Valida a parametrização sem carregar o motor científico."""
     if name not in DISTRIBUTIONS:
         raise ValueError('Distribuição não suportada.')
     expected = {key for key, _, _ in DISTRIBUTIONS[name]}
@@ -49,6 +50,19 @@ def frozen_distribution(name, parameters):
         raise ValueError('A média de Poisson não pode ser negativa.')
     if name == 'Uniforme' and p['lower'] >= p['upper']:
         raise ValueError('O mínimo da uniforme deve ser menor que o máximo.')
+    if name == 'Uniforme' and not math.isfinite(p['upper'] - p['lower']):
+        raise ValueError('A amplitude da uniforme excede a precisão suportada.')
+    if name == 'Lognormal':
+        try:
+            if not math.isfinite(math.exp(p['meanlog'])) or not math.exp(p['meanlog']):
+                raise ValueError('A escala da lognormal excede a precisão suportada.')
+        except OverflowError as error:
+            raise ValueError('A escala da lognormal excede a precisão suportada.') from error
+    return p
+
+
+def frozen_distribution(name, parameters):
+    p = parse_distribution_parameters(name, parameters)
     stats = scientific_stats()
     try:
         if name == 'Normal':
